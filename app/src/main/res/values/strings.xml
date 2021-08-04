@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">proyecto dante</string>
+    <string name="logotipo_name">Logotipo</string>
+    <string name="button_abecedario">Abecedario</string>
+    <string name="button_math">Matematicas</string>
+    <string name="button_animales">Animales</string>
+    <string name="button_dibujo">dibujar</string>
+    <string name="txt_version">Version 0.01</string>
+</resources>
