@@ -1,7 +1,7 @@
 <resources>
 
 
-    <string name="txt_version">Version 0.02</string>
+    <string name="txt_version">Version 0.04</string>
 
 
     <string name="app_name">proyecto dante</string>
@@ -43,5 +43,9 @@
     <string name="button_z">Z</string>
 
     <string name="txt_titulo_letra">Letra ?</string>
+    <string name="txt_ej1">Palabra 1</string>
+    <string name="txt_ej2">Palabra 2</string>
+    <string name="txt_ej3">Palabra 3</string>
+    <string name="txt_img_ej">Imagen ejemeplo</string>
 
 </resources>
