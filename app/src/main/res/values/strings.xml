@@ -42,4 +42,6 @@
     <string name="button_y">Y</string>
     <string name="button_z">Z</string>
 
+    <string name="txt_titulo_letra">Letra ?</string>
+
 </resources>

@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ProyectoDante">
-        <activity android:name=".Abecedario"></activity>
+        <activity android:name=".LetraActivity"></activity>
+        <activity android:name=".AbecedarioActivity" />
         <activity
             android:name=".MainActivity"
             android:exported="true">

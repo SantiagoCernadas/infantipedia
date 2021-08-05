@@ -18,16 +18,20 @@ public class MainActivity extends AppCompatActivity {
 
     public void activity_abecedario(View view){
         //activity Abecedario
-        Intent i = new Intent(this, Abecedario.class);
+        Intent i = new Intent(this, AbecedarioActivity.class);
         startActivity(i);
     }
     public void activity_matematicas(View view){
-        Toast.makeText(this,"Entrando en matematicas...",Toast.LENGTH_SHORT).show();
+        getMensajeProximamente();
     }
     public void activity_animales(View view){
-        Toast.makeText(this,"Entrando en animales...",Toast.LENGTH_SHORT).show();
+        getMensajeProximamente();
     }
     public void activity_dibujo(View view){
-        Toast.makeText(this,"Entrando en dibujo...",Toast.LENGTH_SHORT).show();
+        getMensajeProximamente();
+    }
+
+    public void getMensajeProximamente(){
+        Toast.makeText(this,"Proximamente...",Toast.LENGTH_SHORT).show();
     }
 }
