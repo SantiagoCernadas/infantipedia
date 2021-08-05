@@ -2,6 +2,7 @@ package com.example.proyectodante;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
@@ -16,7 +17,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void activity_abecedario(View view){
-        Toast.makeText(this,"Entrando en abecedario...",Toast.LENGTH_SHORT).show();
+        //activity Abecedario
+        Intent i = new Intent(this, Abecedario.class);
+        startActivity(i);
     }
     public void activity_matematicas(View view){
         Toast.makeText(this,"Entrando en matematicas...",Toast.LENGTH_SHORT).show();

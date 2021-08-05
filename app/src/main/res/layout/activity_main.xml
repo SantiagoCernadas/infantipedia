@@ -62,7 +62,7 @@
             android:id="@+id/button5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="activity_matematicas"
+            android:onClick="activity_dibujo"
             android:padding="20sp"
             android:text="@string/button_dibujo"
             app:backgroundTint="#4CAF50" />
