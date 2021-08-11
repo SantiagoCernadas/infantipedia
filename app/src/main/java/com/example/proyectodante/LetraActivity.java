@@ -35,14 +35,36 @@ public class LetraActivity extends AppCompatActivity {
         switch (letra){
             case "A":
                 tv1.setText("Arbol");
-                img1.setImageResource(R.drawable.aejuno);
+                img1.setImageResource(R.drawable.aejarbol);
                 tv2.setText("Abeja");
-                img2.setImageResource(R.drawable.aejdos);
-                tv3.setText("Avion");
-                img3.setImageResource(R.drawable.aejtres);
+                img2.setImageResource(R.drawable.aejabeja);
+                tv3.setText("Agua");
+                img3.setImageResource(R.drawable.aejagua);
+                break;
+            case "B":
+                tv1.setText("Barco");
+                tv2.setText("Ballena");
+                tv3.setText("Botella");
+                break;
+            case "C":
+                tv1.setText("Casa");
+                tv2.setText("Caramelo");
+                tv3.setText("Castillo");
+                break;
+            case "D":
+                tv1.setText("Dado");
+                tv2.setText("Delfin");
+                tv3.setText("Dinosaurio");
+                break;
+            case "E":
+                tv1.setText("Elefante");
+                tv2.setText("Estrella");
+                tv3.setText("Escalera");
                 break;
             default:
                 tv1.setText("Error");
+                tv2.setText("Error");
+                tv3.setText("Error");
                 break;
         }
     }

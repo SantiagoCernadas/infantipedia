@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -11,7 +11,9 @@
         android:id="@+id/image_logotipo"
         android:layout_width="370dp"
         android:layout_height="96dp"
-        android:layout_marginTop="56dp"
+        android:layout_centerInParent="false"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="0sp"
         android:contentDescription="@string/logotipo_name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.487"
@@ -19,66 +21,77 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logotipo_prueba" />
 
-    <LinearLayout
-        android:id="@+id/sec_buttons"
-        android:layout_width="393dp"
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="140dp"
-        android:orientation="vertical"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/image_logotipo">
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="152dp"
+        android:text="Bienvenido!"
+        android:textSize="20sp" />
 
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="activity_abecedario"
-            android:padding="20sp"
-            android:paddingBottom="10sp"
-            android:text="@string/button_abecedario"
-            app:backgroundTint="#00BCD4" />
-
-        <Button
-            android:id="@+id/button3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="activity_matematicas"
-            android:padding="20sp"
-            android:text="@string/button_math"
-            app:backgroundTint="#FF5722" />
+    <LinearLayout
+        android:layout_width="323dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="241dp"
+        android:orientation="vertical">
 
         <Button
             android:id="@+id/button4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="activity_animales"
-            android:padding="20sp"
-            android:text="@string/button_animales"
-            app:backgroundTint="#3F51B5" />
+            android:layout_marginBottom="20sp"
+            android:background="#00BCD4"
+            android:onClick="activity_abecedario"
+            android:padding="25sp"
+            android:text="@string/button_abecedario" />
 
         <Button
             android:id="@+id/button5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="20sp"
+            android:background="#FF0000"
+            android:onClick="activity_matematicas"
+            android:padding="25sp"
+            android:text="@string/button_math" />
+
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20sp"
+            android:background="#4CAF50"
+            android:onClick="activity_animales"
+            android:padding="25sp"
+            android:text="@string/button_animales" />
+
+        <Button
+            android:id="@+id/button7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20sp"
+            android:background="#FFEB3B"
             android:onClick="activity_dibujo"
-            android:padding="20sp"
-            android:text="@string/button_dibujo"
-            app:backgroundTint="#4CAF50" />
+            android:padding="25sp"
+            android:text="@string/button_dibujo" />
     </LinearLayout>
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="304dp"
-        android:layout_marginLeft="304dp"
-        android:layout_marginTop="692dp"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentTop="false"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="705dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="3dp"
         android:text="@string/txt_version"
-        android:textColor="#000000"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textSize="20sp" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

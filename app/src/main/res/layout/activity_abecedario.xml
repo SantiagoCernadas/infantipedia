@@ -28,7 +28,7 @@
                 android:layout_margin="5sp"
                 android:layout_weight="1"
                 android:onClick="teclaPresionada"
-                android:padding="15sp"
+                android:padding="20sp"
                 android:text="@string/button_a"
                 android:textColor="@color/black"
                 app:backgroundTint="#E91E63" />
@@ -40,7 +40,7 @@
                 android:layout_margin="5sp"
                 android:layout_weight="1"
                 android:onClick="teclaPresionada"
-                android:padding="15sp"
+                android:padding="20sp"
                 android:text="@string/button_b"
                 android:textColor="@color/black"
                 app:backgroundTint="#00BCD4" />
@@ -52,7 +52,7 @@
                 android:layout_margin="5sp"
                 android:layout_weight="1"
                 android:onClick="teclaPresionada"
-                android:padding="15sp"
+                android:padding="20sp"
                 android:text="@string/button_c"
                 android:textColor="@color/black"
                 app:backgroundTint="#4CAF50" />
@@ -64,7 +64,7 @@
                 android:layout_margin="5sp"
                 android:layout_weight="1"
                 android:onClick="teclaPresionada"
-                android:padding="15sp"
+                android:padding="20sp"
                 android:text="@string/button_d"
                 android:textColor="@color/black"
                 app:backgroundTint="#FF5722" />
@@ -76,7 +76,7 @@
                 android:layout_margin="5sp"
                 android:layout_weight="1"
                 android:onClick="teclaPresionada"
-                android:padding="15sp"
+                android:padding="20sp"
                 android:text="@string/button_e"
                 android:textColor="@color/black"
                 app:backgroundTint="#9C27B0" />
@@ -93,7 +93,7 @@
                 android:layout_margin="5sp"
                 android:layout_weight="1"
                 android:onClick="teclaPresionada"
-                android:padding="15sp"
+                android:padding="20sp"
                 android:text="@string/button_f"
                 android:textColor="@color/black"
                 app:backgroundTint="#E91E63" />
@@ -105,7 +105,7 @@
                 android:layout_margin="5sp"
                 android:layout_weight="1"
                 android:onClick="teclaPresionada"
-                android:padding="15sp"
+                android:padding="20sp"
                 android:text="@string/button_g"
                 android:textColor="@color/black"
                 app:backgroundTint="#00BCD4" />
@@ -117,7 +117,7 @@
                 android:layout_margin="5sp"
                 android:layout_weight="1"
                 android:onClick="teclaPresionada"
-                android:padding="15sp"
+                android:padding="20sp"
                 android:text="@string/button_h"
                 android:textColor="@color/black"
                 app:backgroundTint="#4CAF50" />
@@ -129,7 +129,7 @@
                 android:layout_margin="5sp"
                 android:layout_weight="1"
                 android:onClick="teclaPresionada"
-                android:padding="15sp"
+                android:padding="20sp"
                 android:text="@string/button_i"
                 android:textColor="@color/black"
                 app:backgroundTint="#FF5722" />
@@ -141,7 +141,7 @@
                 android:layout_margin="5sp"
                 android:layout_weight="1"
                 android:onClick="teclaPresionada"
-                android:padding="15sp"
+                android:padding="20sp"
                 android:text="@string/button_j"
                 android:textColor="@color/black"
                 app:backgroundTint="#9C27B0" />
@@ -158,7 +158,7 @@
                 android:layout_margin="5sp"
                 android:layout_weight="1"
                 android:onClick="teclaPresionada"
-                android:padding="15sp"
+                android:padding="20sp"
                 android:text="@string/button_k"
                 android:textColor="@color/black"
                 app:backgroundTint="#E91E63" />
@@ -170,7 +170,7 @@
                 android:layout_margin="5sp"
                 android:layout_weight="1"
                 android:onClick="teclaPresionada"
-                android:padding="15sp"
+                android:padding="20sp"
                 android:text="@string/button_l"
                 android:textColor="@color/black"
                 app:backgroundTint="#00BCD4" />
@@ -182,7 +182,7 @@
                 android:layout_margin="5sp"
                 android:layout_weight="1"
                 android:onClick="teclaPresionada"
-                android:padding="15sp"
+                android:padding="20sp"
                 android:text="@string/button_m"
                 android:textColor="@color/black"
                 app:backgroundTint="#4CAF50" />
@@ -194,7 +194,7 @@
                 android:layout_margin="5sp"
                 android:layout_weight="1"
                 android:onClick="teclaPresionada"
-                android:padding="15sp"
+                android:padding="20sp"
                 android:text="@string/button_n"
                 android:textColor="@color/black"
                 app:backgroundTint="#FF5722" />
@@ -206,7 +206,7 @@
                 android:layout_margin="5sp"
                 android:layout_weight="1"
                 android:onClick="teclaPresionada"
-                android:padding="15sp"
+                android:padding="20sp"
                 android:text="@string/button_ñ"
                 android:textColor="@color/black"
                 app:backgroundTint="#9C27B0" />
@@ -223,7 +223,7 @@
                 android:layout_margin="5sp"
                 android:layout_weight="1"
                 android:onClick="teclaPresionada"
-                android:padding="15sp"
+                android:padding="20sp"
                 android:text="@string/button_o"
                 android:textColor="@color/black"
                 app:backgroundTint="#E91E63" />
@@ -235,7 +235,7 @@
                 android:layout_margin="5sp"
                 android:layout_weight="1"
                 android:onClick="teclaPresionada"
-                android:padding="15sp"
+                android:padding="20sp"
                 android:text="@string/button_p"
                 android:textColor="@color/black"
                 app:backgroundTint="#00BCD4" />
@@ -247,7 +247,7 @@
                 android:layout_margin="5sp"
                 android:layout_weight="1"
                 android:onClick="teclaPresionada"
-                android:padding="15sp"
+                android:padding="20sp"
                 android:text="@string/button_q"
                 android:textColor="@color/black"
                 app:backgroundTint="#4CAF50" />
@@ -259,7 +259,7 @@
                 android:layout_margin="5sp"
                 android:layout_weight="1"
                 android:onClick="teclaPresionada"
-                android:padding="15sp"
+                android:padding="20sp"
                 android:text="@string/button_r"
                 android:textColor="@color/black"
                 app:backgroundTint="#FF5722" />
@@ -271,7 +271,7 @@
                 android:layout_margin="5sp"
                 android:layout_weight="1"
                 android:onClick="teclaPresionada"
-                android:padding="15sp"
+                android:padding="20sp"
                 android:text="@string/button_s"
                 android:textColor="@color/black"
                 app:backgroundTint="#9C27B0" />
@@ -288,7 +288,7 @@
                 android:layout_margin="5sp"
                 android:layout_weight="1"
                 android:onClick="teclaPresionada"
-                android:padding="15sp"
+                android:padding="20sp"
                 android:text="@string/button_t"
                 android:textColor="@color/black"
                 app:backgroundTint="#E91E63" />
@@ -300,7 +300,7 @@
                 android:layout_margin="5sp"
                 android:layout_weight="1"
                 android:onClick="teclaPresionada"
-                android:padding="15sp"
+                android:padding="20sp"
                 android:text="@string/button_u"
                 android:textColor="@color/black"
                 app:backgroundTint="#00BCD4" />
@@ -312,7 +312,7 @@
                 android:layout_margin="5sp"
                 android:layout_weight="1"
                 android:onClick="teclaPresionada"
-                android:padding="15sp"
+                android:padding="20sp"
                 android:text="@string/button_v"
                 android:textColor="@color/black"
                 app:backgroundTint="#4CAF50" />
@@ -324,7 +324,7 @@
                 android:layout_margin="5sp"
                 android:layout_weight="1"
                 android:onClick="teclaPresionada"
-                android:padding="15sp"
+                android:padding="20sp"
                 android:text="@string/button_w"
                 android:textColor="@color/black"
                 app:backgroundTint="#FF5722" />
@@ -336,7 +336,7 @@
                 android:layout_margin="5sp"
                 android:layout_weight="1"
                 android:onClick="teclaPresionada"
-                android:padding="15sp"
+                android:padding="20sp"
                 android:text="@string/button_x"
                 android:textColor="@color/black"
                 app:backgroundTint="#9C27B0" />
@@ -352,7 +352,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5sp"
                 android:onClick="teclaPresionada"
-                android:padding="15sp"
+                android:padding="20sp"
                 android:text="@string/button_y"
                 android:textColor="@color/black"
                 app:backgroundTint="#E91E63" />
@@ -363,7 +363,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5sp"
                 android:onClick="teclaPresionada"
-                android:padding="15sp"
+                android:padding="20sp"
                 android:text="@string/button_z"
                 android:textColor="@color/black"
                 app:backgroundTint="#00BCD4" />
@@ -375,7 +375,7 @@
         android:id="@+id/txt_abcedeario"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="88dp"
+        android:layout_marginTop="80dp"
         android:fontFamily="sans-serif-smallcaps"
         android:text="@string/txt_tv_abecedario"
         android:textColor="#122BFF"

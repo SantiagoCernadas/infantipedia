@@ -1,7 +1,7 @@
 <resources>
 
-
-    <string name="txt_version">Version 0.04</string>
+    <string name="txt_Bienvenida">Bienvenido!</string>
+    <string name="txt_version">Version 0.06</string>
 
 
     <string name="app_name">proyecto dante</string>
@@ -12,8 +12,8 @@
     <string name="button_dibujo">dibujar</string>
 
 
-    <string name="txt_tv_abecedario">Presiona una letra!</string>
 
+    <string name="txt_tv_abecedario">Presiona una letra!</string>
     <string name="button_a">A</string>
     <string name="button_b">B</string>
     <string name="button_c">C</string>
