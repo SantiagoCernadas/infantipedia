@@ -11,9 +11,10 @@
         android:id="@+id/image_logotipo"
         android:layout_width="370dp"
         android:layout_height="96dp"
+        android:layout_alignParentTop="true"
         android:layout_centerInParent="false"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="0sp"
+        android:layout_marginTop="52dp"
         android:contentDescription="@string/logotipo_name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.487"
@@ -22,13 +23,14 @@
         app:srcCompat="@drawable/logotipo_prueba" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/txt_welcome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="152dp"
-        android:text="Bienvenido!"
+        android:layout_marginTop="198dp"
+        android:fontFamily="@font/splurge"
+        android:text="@string/txt_Bienvenida"
         android:textSize="20sp" />
 
     <LinearLayout
@@ -36,7 +38,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerInParent="true"
-        android:layout_marginTop="241dp"
+        android:layout_marginTop="307dp"
         android:orientation="vertical">
 
         <Button
@@ -45,9 +47,11 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="20sp"
             android:background="#00BCD4"
+            android:fontFamily="@font/splurge"
             android:onClick="activity_abecedario"
             android:padding="25sp"
-            android:text="@string/button_abecedario" />
+            android:text="@string/button_abecedario"
+            android:textSize="20sp" />
 
         <Button
             android:id="@+id/button5"
@@ -55,9 +59,11 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="20sp"
             android:background="#FF0000"
+            android:fontFamily="@font/splurge"
             android:onClick="activity_matematicas"
             android:padding="25sp"
-            android:text="@string/button_math" />
+            android:text="@string/button_math"
+            android:textSize="20sp" />
 
         <Button
             android:id="@+id/button6"
@@ -65,9 +71,11 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="20sp"
             android:background="#4CAF50"
+            android:fontFamily="@font/splurge"
             android:onClick="activity_animales"
             android:padding="25sp"
-            android:text="@string/button_animales" />
+            android:text="@string/button_animales"
+            android:textSize="20sp" />
 
         <Button
             android:id="@+id/button7"
@@ -75,9 +83,11 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="20sp"
             android:background="#FFEB3B"
+            android:fontFamily="@font/splurge"
             android:onClick="activity_dibujo"
             android:padding="25sp"
-            android:text="@string/button_dibujo" />
+            android:text="@string/button_dibujo"
+            android:textSize="20sp" />
     </LinearLayout>
 
     <TextView

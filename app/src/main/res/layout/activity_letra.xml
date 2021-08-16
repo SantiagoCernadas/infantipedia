@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -20,10 +20,10 @@
                 android:id="@+id/txt_letra_titulo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-black"
+                android:fontFamily="@font/splurge"
                 android:gravity="center"
                 android:text="@string/txt_titulo_letra"
-                android:textColor="#000000"
+                android:textColor="#9EFF0000"
                 android:textColorHint="#000000"
                 android:textSize="50sp" />
 
@@ -32,10 +32,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="70sp"
-                android:fontFamily="sans-serif-black"
+                android:fontFamily="@font/splurge"
                 android:gravity="center"
                 android:text="@string/txt_ej1"
-                android:textColor="#009688"
+                android:textColor="#002696"
                 android:textSize="40sp" />
 
             <ImageView
@@ -52,10 +52,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="50sp"
-                android:fontFamily="sans-serif-black"
+                android:fontFamily="@font/splurge"
                 android:gravity="center"
                 android:text="@string/txt_ej2"
-                android:textColor="#009688"
+                android:textColor="#FF3223"
                 android:textSize="40sp" />
 
             <ImageView
@@ -72,7 +72,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="50sp"
-                android:fontFamily="sans-serif-black"
+                android:fontFamily="@font/splurge"
                 android:gravity="center"
                 android:text="@string/txt_ej3"
                 android:textColor="#009688"
@@ -89,4 +89,4 @@
 
         </LinearLayout>
     </ScrollView>
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
