@@ -2,7 +2,6 @@ package com.example.proyectodante;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.ActionBar;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -18,27 +17,31 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         String nombre = getIntent().getStringExtra("usuario");
         tv1 = findViewById(R.id.txt_welcome);
-        if(!nombre.equals("invitado")){
-            tv1.setText("Bienvenido " + nombre +"!");
+        if (!nombre.equals("invitado")) {
+            tv1.setText("Bienvenido " + nombre + "!");
         }
     }
 
-    public void activity_abecedario(View view){
+    public void activity_abecedario(View view) {
         //activity Abecedario
         Intent i = new Intent(this, AbecedarioActivity.class);
         startActivity(i);
     }
-    public void activity_matematicas(View view){
-        getMensajeProximamente();
+
+    public void activity_matematicas(View view) {
+        Intent i = new Intent(this, MathActivity.class);
+        startActivity(i);
     }
-    public void activity_animales(View view){
-        getMensajeProximamente();
-    }
-    public void activity_dibujo(View view){
+
+    public void activity_animales(View view) {
         getMensajeProximamente();
     }
 
-    public void getMensajeProximamente(){
-        Toast.makeText(this,"Proximamente...",Toast.LENGTH_SHORT).show();
+    public void activity_dibujo(View view) {
+        getMensajeProximamente();
+    }
+
+    public void getMensajeProximamente() {
+        Toast.makeText(this, "Proximamente...", Toast.LENGTH_SHORT).show();
     }
 }

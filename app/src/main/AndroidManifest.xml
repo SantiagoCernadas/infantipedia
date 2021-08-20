@@ -19,7 +19,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MatActivity" />
+        <activity android:name=".MathActivity" />
         <activity android:name=".LetraActivity" />
         <activity
             android:name=".AbecedarioActivity"

@@ -53,4 +53,8 @@
     <string name="txt_ej3">Palabra 3</string>
     <string name="txt_img_ej">Imagen ejemeplo</string>
 
+    <string name="txt_math">Vamos a calcular!</string>
+    <string name="button_sum">Sumar</string>
+    <string name="button_rest">Restar</string>
+
 </resources>
