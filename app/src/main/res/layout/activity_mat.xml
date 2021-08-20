@@ -31,6 +31,7 @@
         android:layout_marginTop="225sp"
         android:background="#26FF00"
         android:fontFamily="@font/grandstanderclean"
+        android:onClick="signoSumar"
         android:padding="7sp"
         android:text="@string/button_sum"
         android:textSize="30sp" />
@@ -44,6 +45,7 @@
         android:layout_marginTop="320dp"
         android:background="#00FFF7"
         android:fontFamily="@font/grandstanderclean"
+        android:onClick="signoRestar"
         android:padding="7sp"
         android:text="@string/button_rest"
         android:textSize="30sp" />

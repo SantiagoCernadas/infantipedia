@@ -23,16 +23,20 @@ public class PrimerActivity extends AppCompatActivity {
         if(nombre.equals("")){
             Toast.makeText(this,"Porfavor ingrese un nombre.",Toast.LENGTH_SHORT).show();
         }
+        else if(nombre.equals("invitado")){
+            Toast.makeText(this,"Nombre invalido. Porfavor ingrese otro",Toast.LENGTH_SHORT).show();
+        }
         else{
-            Intent i = new Intent(this,MainActivity.class);
-            i.putExtra("usuario",nombre);
-            startActivity(i);
-            finish();
+            iniciarAPP(nombre);
         }
     }
 
     public void logInvitado(View view){
         String nombre = "invitado";
+        iniciarAPP(nombre);
+    }
+
+    public void iniciarAPP(String nombre){
         Intent i = new Intent(this,MainActivity.class);
         i.putExtra("usuario",nombre);
         startActivity(i);
