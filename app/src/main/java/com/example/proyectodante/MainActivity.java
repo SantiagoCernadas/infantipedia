@@ -34,7 +34,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void activity_animales(View view) {
-        getMensajeProximamente();
+        Intent i = new Intent(this,AnimalesActivity.class);
+        startActivity(i);
     }
 
     public void activity_dibujo(View view) {

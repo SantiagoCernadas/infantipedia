@@ -1,0 +1,505 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".AnimalesActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/grandstanderclean"
+                android:gravity="center"
+                android:text="Conoce a los animales!"
+                android:textSize="40sp" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50sp"
+                android:fontFamily="@font/grandstanderclean"
+                android:gravity="center"
+                android:text="Ballena"
+                android:textSize="40sp" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="match_parent"
+                android:layout_height="200sp"
+                app:srcCompat="@drawable/bejballena" />
+
+            <ImageButton
+                android:id="@+id/sonido_ballena"
+                android:layout_width="100sp"
+                android:layout_height="100sp"
+                android:layout_gravity="center"
+                android:background="#00FFFFFF"
+                android:onClick="sonidoAnimal"
+                app:srcCompat="@android:drawable/ic_lock_silent_mode_off"
+                app:tint="#0066FF" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50sp"
+                android:fontFamily="@font/grandstanderclean"
+                android:gravity="center"
+                android:text="Caballo"
+                android:textSize="40sp" />
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="match_parent"
+                android:layout_height="200sp"
+                app:srcCompat="@drawable/imagencaballo" />
+
+            <ImageButton
+                android:id="@+id/sonido_caballo"
+                android:layout_width="100sp"
+                android:layout_height="100sp"
+                android:layout_gravity="center"
+                android:background="#00FFFFFF"
+                android:onClick="sonidoAnimal"
+                app:srcCompat="@android:drawable/ic_lock_silent_mode_off"
+                app:tint="#0066FF" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50sp"
+                android:fontFamily="@font/grandstanderclean"
+                android:gravity="center"
+                android:text="Cerdo"
+                android:textSize="40sp" />
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="match_parent"
+                android:layout_height="200sp"
+                app:srcCompat="@drawable/imagencerdo" />
+
+            <ImageButton
+                android:id="@+id/sonido_cerdo"
+                android:layout_width="100sp"
+                android:layout_height="100sp"
+                android:layout_gravity="center"
+                android:background="#00FFFFFF"
+                android:onClick="sonidoAnimal"
+                app:srcCompat="@android:drawable/ic_lock_silent_mode_off"
+                app:tint="#0066FF" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50sp"
+                android:fontFamily="@font/grandstanderclean"
+                android:gravity="center"
+                android:text="Delfin"
+                android:textSize="40sp" />
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="match_parent"
+                android:layout_height="200sp"
+                app:srcCompat="@drawable/dejdelfin" />
+
+            <ImageButton
+                android:id="@+id/sonido_delfin"
+                android:layout_width="100sp"
+                android:layout_height="100sp"
+                android:layout_gravity="center"
+                android:background="#00FFFFFF"
+                android:onClick="sonidoAnimal"
+                app:srcCompat="@android:drawable/ic_lock_silent_mode_off"
+                app:tint="#0066FF" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50sp"
+                android:fontFamily="@font/grandstanderclean"
+                android:gravity="center"
+                android:text="Elefante"
+                android:textSize="40sp" />
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="match_parent"
+                android:layout_height="200sp"
+                app:srcCompat="@drawable/eejelefante" />
+
+            <ImageButton
+                android:id="@+id/sonido_elefante"
+                android:layout_width="100sp"
+                android:layout_height="100sp"
+                android:layout_gravity="center"
+                android:background="#00FFFFFF"
+                android:onClick="sonidoAnimal"
+                app:srcCompat="@android:drawable/ic_lock_silent_mode_off"
+                app:tint="#0066FF" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50sp"
+                android:fontFamily="@font/grandstanderclean"
+                android:gravity="center"
+                android:text="Foca"
+                android:textSize="40sp" />
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="match_parent"
+                android:layout_height="200sp"
+                app:srcCompat="@drawable/imagenfoca" />
+
+            <ImageButton
+                android:id="@+id/sonido_foca"
+                android:layout_width="100sp"
+                android:layout_height="100sp"
+                android:layout_gravity="center"
+                android:background="#00FFFFFF"
+                android:onClick="sonidoAnimal"
+                app:srcCompat="@android:drawable/ic_lock_silent_mode_off"
+                app:tint="#0066FF" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50sp"
+                android:fontFamily="@font/grandstanderclean"
+                android:gravity="center"
+                android:text="Gallina"
+                android:textSize="40sp" />
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="match_parent"
+                android:layout_height="200sp"
+                app:srcCompat="@drawable/gejgallina" />
+
+            <ImageButton
+                android:id="@+id/sonido_gallina"
+                android:layout_width="100sp"
+                android:layout_height="100sp"
+                android:layout_gravity="center"
+                android:background="#00FFFFFF"
+                android:onClick="sonidoAnimal"
+                app:srcCompat="@android:drawable/ic_lock_silent_mode_off"
+                app:tint="#0066FF" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50sp"
+                android:fontFamily="@font/grandstanderclean"
+                android:gravity="center"
+                android:text="Gato"
+                android:textSize="40sp" />
+
+            <ImageView
+                android:id="@+id/imageView9"
+                android:layout_width="match_parent"
+                android:layout_height="200sp"
+                app:srcCompat="@drawable/gejgato" />
+
+            <ImageButton
+                android:id="@+id/sonido_gato"
+                android:layout_width="100sp"
+                android:layout_height="100sp"
+                android:layout_gravity="center"
+                android:background="#00FFFFFF"
+                android:onClick="sonidoAnimal"
+                app:srcCompat="@android:drawable/ic_lock_silent_mode_off"
+                app:tint="#0066FF" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50sp"
+                android:fontFamily="@font/grandstanderclean"
+                android:gravity="center"
+                android:text="Leon"
+                android:textSize="40sp" />
+
+            <ImageView
+                android:id="@+id/imageView10"
+                android:layout_width="match_parent"
+                android:layout_height="200sp"
+                app:srcCompat="@drawable/lejleon" />
+
+            <ImageButton
+                android:id="@+id/sonido_leon"
+                android:layout_width="100sp"
+                android:layout_height="100sp"
+                android:layout_gravity="center"
+                android:background="#00FFFFFF"
+                android:onClick="sonidoAnimal"
+                app:srcCompat="@android:drawable/ic_lock_silent_mode_off"
+                app:tint="#0066FF" />
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50sp"
+                android:fontFamily="@font/grandstanderclean"
+                android:gravity="center"
+                android:text="Lobo"
+                android:textSize="40sp" />
+
+            <ImageView
+                android:id="@+id/imageView11"
+                android:layout_width="match_parent"
+                android:layout_height="200sp"
+                app:srcCompat="@drawable/imagenlobo" />
+
+            <ImageButton
+                android:id="@+id/sonido_lobo"
+                android:layout_width="100sp"
+                android:layout_height="100sp"
+                android:layout_gravity="center"
+                android:background="#00FFFFFF"
+                android:onClick="sonidoAnimal"
+                app:srcCompat="@android:drawable/ic_lock_silent_mode_off"
+                app:tint="#0066FF" />
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50sp"
+                android:fontFamily="@font/grandstanderclean"
+                android:gravity="center"
+                android:text="Oso"
+                android:textSize="40sp" />
+
+            <ImageView
+                android:id="@+id/imageView12"
+                android:layout_width="match_parent"
+                android:layout_height="200sp"
+                app:srcCompat="@drawable/oejoso" />
+
+            <ImageButton
+                android:id="@+id/sonido_oso"
+                android:layout_width="100sp"
+                android:layout_height="100sp"
+                android:layout_gravity="center"
+                android:background="#00FFFFFF"
+                android:onClick="sonidoAnimal"
+                app:srcCompat="@android:drawable/ic_lock_silent_mode_off"
+                app:tint="#0066FF" />
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50sp"
+                android:fontFamily="@font/grandstanderclean"
+                android:gravity="center"
+                android:text="Oveja"
+                android:textSize="40sp" />
+
+            <ImageView
+                android:id="@+id/imageView13"
+                android:layout_width="match_parent"
+                android:layout_height="200sp"
+                app:srcCompat="@drawable/oejoveja" />
+
+            <ImageButton
+                android:id="@+id/sonido_oveja"
+                android:layout_width="100sp"
+                android:layout_height="100sp"
+                android:layout_gravity="center"
+                android:background="#00FFFFFF"
+                android:onClick="sonidoAnimal"
+                app:srcCompat="@android:drawable/ic_lock_silent_mode_off"
+                app:tint="#0066FF" />
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50sp"
+                android:fontFamily="@font/grandstanderclean"
+                android:gravity="center"
+                android:text="Pato"
+                android:textSize="40sp" />
+
+            <ImageView
+                android:id="@+id/imageView14"
+                android:layout_width="match_parent"
+                android:layout_height="200sp"
+                app:srcCompat="@drawable/imagenpato" />
+
+            <ImageButton
+                android:id="@+id/sonido_pato"
+                android:layout_width="100sp"
+                android:layout_height="100sp"
+                android:layout_gravity="center"
+                android:background="#00FFFFFF"
+                android:onClick="sonidoAnimal"
+                app:srcCompat="@android:drawable/ic_lock_silent_mode_off"
+                app:tint="#0066FF" />
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50sp"
+                android:fontFamily="@font/grandstanderclean"
+                android:gravity="center"
+                android:text="Perro"
+                android:textSize="40sp" />
+
+            <ImageView
+                android:id="@+id/imageView15"
+                android:layout_width="match_parent"
+                android:layout_height="200sp"
+                app:srcCompat="@drawable/imagenperro" />
+
+            <ImageButton
+                android:id="@+id/sonido_perro"
+                android:layout_width="100sp"
+                android:layout_height="100sp"
+                android:layout_gravity="center"
+                android:background="#00FFFFFF"
+                android:onClick="sonidoAnimal"
+                app:srcCompat="@android:drawable/ic_lock_silent_mode_off"
+                app:tint="#0066FF" />
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50sp"
+                android:fontFamily="@font/grandstanderclean"
+                android:gravity="center"
+                android:text="Rana"
+                android:textSize="40sp" />
+
+            <ImageView
+                android:id="@+id/imageView16"
+                android:layout_width="match_parent"
+                android:layout_height="200sp"
+                app:srcCompat="@drawable/rejrana" />
+
+            <ImageButton
+                android:id="@+id/sonido_rana"
+                android:layout_width="100sp"
+                android:layout_height="100sp"
+                android:layout_gravity="center"
+                android:background="#00FFFFFF"
+                android:onClick="sonidoAnimal"
+                app:srcCompat="@android:drawable/ic_lock_silent_mode_off"
+                app:tint="#0066FF" />
+
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50sp"
+                android:fontFamily="@font/grandstanderclean"
+                android:gravity="center"
+                android:text="Serpiente"
+                android:textSize="40sp" />
+
+            <ImageView
+                android:id="@+id/imageView17"
+                android:layout_width="match_parent"
+                android:layout_height="200sp"
+                app:srcCompat="@drawable/sejserpiente" />
+
+            <ImageButton
+                android:id="@+id/sonido_serpiente"
+                android:layout_width="100sp"
+                android:layout_height="100sp"
+                android:layout_gravity="center"
+                android:background="#00FFFFFF"
+                android:onClick="sonidoAnimal"
+                app:srcCompat="@android:drawable/ic_lock_silent_mode_off"
+                app:tint="#0066FF" />
+
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50sp"
+                android:fontFamily="@font/grandstanderclean"
+                android:gravity="center"
+                android:text="Vaca"
+                android:textSize="40sp" />
+
+            <ImageView
+                android:id="@+id/imageView18"
+                android:layout_width="match_parent"
+                android:layout_height="200sp"
+                app:srcCompat="@drawable/vejvaca" />
+
+            <ImageButton
+                android:id="@+id/sonido_vaca"
+                android:layout_width="100sp"
+                android:layout_height="100sp"
+                android:layout_gravity="center"
+                android:background="#00FFFFFF"
+                android:onClick="sonidoAnimal"
+                app:srcCompat="@android:drawable/ic_lock_silent_mode_off"
+                app:tint="#0066FF" />
+
+            <TextView
+                android:id="@+id/textView21"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50sp"
+                android:fontFamily="@font/grandstanderclean"
+                android:gravity="center"
+                android:text="Zorro"
+                android:textSize="40sp" />
+
+            <ImageView
+                android:id="@+id/imageView19"
+                android:layout_width="match_parent"
+                android:layout_height="200sp"
+                app:srcCompat="@drawable/zejzorro" />
+
+            <ImageButton
+                android:id="@+id/imageButton18"
+                android:layout_width="100sp"
+                android:layout_height="100sp"
+                android:layout_gravity="center"
+                android:background="#00FFFFFF"
+                android:onClick="sonidoAnimal"
+                app:srcCompat="@android:drawable/ic_lock_silent_mode_off"
+                app:tint="#0066FF" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
