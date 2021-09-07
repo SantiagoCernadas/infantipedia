@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PalabraPlayActivity">
+
+    <TextView
+        android:id="@+id/textView22"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="131dp"
+        android:fontFamily="@font/grandstanderclean"
+        android:gravity="center_horizontal"
+        android:text="¿Que es?"
+        android:textSize="25sp"
+        tools:layout_editor_absoluteX="129dp"
+        tools:layout_editor_absoluteY="60dp" />
+
+    <ImageView
+        android:id="@+id/txt_palabraplay_imagen"
+        android:layout_width="match_parent"
+        android:layout_height="250sp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="-2dp"
+        android:layout_marginLeft="-2dp"
+        android:layout_marginTop="188dp"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <Button
+        android:id="@+id/button_opc1"
+        android:layout_width="180sp"
+        android:layout_height="75sp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="23dp"
+        android:layout_marginLeft="23dp"
+        android:layout_marginTop="491dp"
+        android:fontFamily="@font/grandstanderclean"
+        android:text="gato"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/button_opc2"
+        android:layout_width="180sp"
+        android:layout_height="75sp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="215dp"
+        android:layout_marginLeft="215dp"
+        android:layout_marginTop="492dp"
+        android:fontFamily="@font/grandstanderclean"
+        android:text="koala"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/button_opc3"
+        android:layout_width="180sp"
+        android:layout_height="75sp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="26dp"
+        android:layout_marginLeft="26dp"
+        android:layout_marginTop="593dp"
+        android:fontFamily="@font/grandstanderclean"
+        android:text="kiwi"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/button_opc4"
+        android:layout_width="180sp"
+        android:layout_height="75sp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="215dp"
+        android:layout_marginLeft="215dp"
+        android:layout_marginTop="593dp"
+        android:fontFamily="@font/grandstanderclean"
+        android:text="Castillo"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="0dp"
+        android:fontFamily="@font/grandstanderclean"
+        android:text="Puntos = 0"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/textView24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="52dp"
+        android:fontFamily="@font/grandstanderclean"
+        android:text="Vidas = 3"
+        android:textSize="20sp" />
+</RelativeLayout>

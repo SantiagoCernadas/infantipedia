@@ -39,7 +39,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void activity_dibujo(View view) {
-        getMensajeProximamente();
+        Intent i = new Intent(this,DibujarActivity.class);
+        startActivity(i);
     }
 
     public void getMensajeProximamente() {

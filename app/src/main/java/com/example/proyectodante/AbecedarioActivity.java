@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
+import com.example.proyectodante.Manager.PalabraPlayManager;
+
 public class AbecedarioActivity extends AppCompatActivity {
 
     @Override
@@ -129,6 +131,11 @@ public class AbecedarioActivity extends AppCompatActivity {
     public void startLetraActivity(String letra){
         Intent i = new Intent(this,LetraActivity.class);
         i.putExtra("letra",letra);
+        startActivity(i);
+    }
+
+    public void jugarPalabra(View view){
+        Intent i = new Intent(this, PalabraPlayActivity.class);
         startActivity(i);
     }
 }
