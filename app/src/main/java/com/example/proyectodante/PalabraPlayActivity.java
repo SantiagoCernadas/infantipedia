@@ -2,64 +2,168 @@ package com.example.proyectodante;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Color;
+import android.media.AudioManager;
+import android.media.SoundPool;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.proyectodante.Manager.PalabraPlayManager;
 
 public class PalabraPlayActivity extends AppCompatActivity {
     private final int NUM_PALABRAS = 81;
-
+    private TextView vidasTxt,puntosTxt;
     private Button[] opciones;
     private ImageView imagen;
     private String palabraCorrecta;
-
+    private int opcCorrecta;
     private String[] palabras;
     private int[] idImagen;
+    private int vidas,puntos;
+    private SoundPool[] sp;
+    private int[] sonidosRep;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_palabra_play);
         PalabraPlayManager manager = new PalabraPlayManager();
-
+        vidas = 3;
+        puntos = 0;
+        vidasTxt = findViewById(R.id.txt_palabra_vidas);
+        puntosTxt = findViewById(R.id.txt_palabra_puntos);
         opciones = new Button[4];
         palabras = new String[NUM_PALABRAS];
         idImagen = new int[NUM_PALABRAS];
+        asignarSonidos();
         conectarID();
         manager.setImagenes(idImagen);
         manager.setPalabras(palabras);
         generarProblema();
     }
 
+    public void asignarSonidos() {
+        sp = new SoundPool[3];
+        sonidosRep = new int[3];
+
+        for(int i = 0;i < sp.length;i++){
+            sp[i] = new SoundPool(1,AudioManager.STREAM_MUSIC,1);
+        }
+        sonidosRep[0] = sp[0].load(this,R.raw.sonidocorrecto,1);
+        sonidosRep[1] = sp[1].load(this,R.raw.sonidofallar,1);
+        sonidosRep[2] = sp[2].load(this,R.raw.sonidoohno,1);
+    }
+    public void generarSonido(int i){
+        sp[i].play(sonidosRep[i],1,1,1,0,1);
+    }
+
     public void opcionPresionada(View view){
         int id = view.getId();
-
         switch (id){
-            case R.id.button:
+            case R.id.button_opc1:
+                esCorrecto(0);
+                break;
+            case R.id.button_opc2:
+                esCorrecto(1);
+                break;
+            case R.id.button_opc3:
+                esCorrecto(2);
+                break;
+            case R.id.button_opc4:
+                esCorrecto(3);
                 break;
             default:
                 Toast.makeText(this,"ERROR",Toast.LENGTH_SHORT).show();
+                break;
+        }
+
+        bloquearOpciones(opciones);
+        actualizarDatos();
+
+        Handler handler = new Handler();
+        handler. postDelayed(new Runnable() {
+            public void run() {
+                    habilitarOpciones(opciones);
+                    generarProblema();
+                }
+                }, 2000);
+
+    }
+
+    public void bloquearOpciones(Button[] opciones) {
+        for(int i = 0; i < opciones.length; i++){
+            opciones[i].setEnabled(false);
         }
     }
 
-    public void generarProblema(){
-        int numcorrecto = (int)(Math.random()*NUM_PALABRAS+0);
-        palabraCorrecta = palabras[numcorrecto];
-        imagen.setImageResource(idImagen[numcorrecto]);
+    public void habilitarOpciones(Button[] opciones) {
+        for(int i = 0; i < opciones.length; i++){
+            opciones[i].setEnabled(true);
+        }
+    }
 
-        int opcCorrecta = (int)(Math.random()*4+0);
-        opciones[opcCorrecta].setText(palabraCorrecta);
 
-        for(int i = 0;i < opciones.length;i++){
-            if(i != opcCorrecta){
-                do{
-                    opciones[i].setText(palabras[(int)(Math.random()*NUM_PALABRAS+0)]);
-                }while (esRepetido(i));
+    public void actualizarDatos() {
+        puntosTxt.setText("Puntos = " + puntos);
+        vidasTxt.setText("Vidas = " + vidas);
+    }
 
+    public void esCorrecto(int i) {
+
+        if(opciones[i].getText().toString().equals(palabraCorrecta)){
+            opciones[i].setBackgroundColor(Color.GREEN);
+            generarSonido(0);
+            Toast.makeText(this,"Bien Hecho!",Toast.LENGTH_SHORT).show();
+            puntos++;
+        }
+        else{
+            opciones[i].setBackgroundColor(Color.RED);
+            opciones[opcCorrecta].setBackgroundColor(Color.GREEN);
+            generarSonido(1);
+            generarSonido(2);
+            vidas--;
+            if(vidas > 0){
+                Toast.makeText(this,"Ups.. no era, te quedan " + vidas  + " vidas",Toast.LENGTH_SHORT).show();
             }
+        }
+
+    }
+
+
+
+    public void generarProblema(){
+        pintarBotones(opciones);
+        if(vidas < 1){
+            Toast.makeText(this,"Ya no te quedan vidas :(",Toast.LENGTH_SHORT).show();
+            finish();
+        }
+        else{
+            int numCorrecto = (int)(Math.random()*NUM_PALABRAS+0);
+            palabraCorrecta = palabras[numCorrecto];
+            imagen.setImageResource(idImagen[numCorrecto]);
+
+            opcCorrecta = (int)(Math.random()*4+0);
+            opciones[opcCorrecta].setText(palabraCorrecta);
+
+            for(int i = 0;i < opciones.length;i++){
+                if(i != opcCorrecta){
+                    do{
+                        opciones[i].setText(palabras[(int)(Math.random()*NUM_PALABRAS+0)]);
+                    }while (esRepetido(i));
+
+                }
+            }
+        }
+    }
+
+    public void pintarBotones(Button[] opciones) {
+        for(int i = 0; i < opciones.length; i++){
+            opciones[i].setBackgroundColor(Color.WHITE);
         }
     }
 

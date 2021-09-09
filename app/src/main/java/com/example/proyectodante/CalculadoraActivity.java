@@ -11,12 +11,10 @@ import android.widget.Toast;
 public class CalculadoraActivity extends AppCompatActivity {
 
     private TextView txtNum1, txtNum2, txtSigno, txtResultado, txtIgual;
-    private String signo;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calculadora);
-        signo = getIntent().getStringExtra("signo");
         txtNum1 = findViewById(R.id.txt_num1);
         txtNum2 = findViewById(R.id.txt_num2);
         txtSigno = findViewById(R.id.txt_signo);
@@ -34,11 +32,14 @@ public class CalculadoraActivity extends AppCompatActivity {
             int num1Int = Integer.parseInt(txtNum1.getText().toString());
             int num2Int = Integer.parseInt(txtNum2.getText().toString());
             int resultado;
-            if (signo.equals("+")){
+            if (txtSigno.getText().toString().equals("+")){
                 resultado = num1Int + num2Int;
             }
-            else {
+            else if(txtSigno.getText().toString().equals("-")){
                 resultado = num1Int - num2Int;
+            }
+            else{
+                resultado = num1Int * num2Int;
             }
             txtIgual.setText("=");
             txtResultado.setText(String.valueOf(resultado));
@@ -50,11 +51,28 @@ public class CalculadoraActivity extends AppCompatActivity {
         int idNum = view.getId();
         if(txtNum1.getText().toString().equals("")){
             asignarNumero(txtNum1,idNum);
-            txtSigno.setText(signo);
         }
-        else if(txtNum2.getText().toString().equals("")){
+        else if(txtNum2.getText().toString().equals("") && !txtSigno.getText().toString().equals("")){
             asignarNumero(txtNum2,idNum);
         }
+    }
+
+    public void asignarSigno(View view) {
+        if (!txtNum1.getText().toString().equals("") && txtNum2.getText().toString().equals("")){
+            switch (view.getId()){
+                case R.id.button_sign_sumar:
+                    txtSigno.setText("+");
+                    break;
+                case R.id.button_sign_restar:
+                    txtSigno.setText("-");
+                    break;
+                case R.id.button_sign_mult:
+                    txtSigno.setText("X");
+                    break;
+            }
+        }
+
+
     }
 
     public void Retroceder(View view){
@@ -65,8 +83,10 @@ public class CalculadoraActivity extends AppCompatActivity {
         else if(!txtNum2.getText().toString().equals("")){
             txtNum2.setText("");
         }
-        else if(!txtNum1.getText().toString().equals("")){
+        else if(!txtSigno.getText().toString().equals("")){
             txtSigno.setText("");
+        }
+        else if(!txtNum1.getText().toString().equals("")){
             txtNum1.setText("");
         }
     }

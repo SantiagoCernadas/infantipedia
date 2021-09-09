@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     tools:context=".PalabraPlayActivity">
 
     <TextView
@@ -41,7 +42,9 @@
         android:layout_marginStart="23dp"
         android:layout_marginLeft="23dp"
         android:layout_marginTop="491dp"
+        android:background="#FFFFFF"
         android:fontFamily="@font/grandstanderclean"
+        android:onClick="opcionPresionada"
         android:text="gato"
         android:textSize="20sp" />
 
@@ -55,7 +58,9 @@
         android:layout_marginStart="215dp"
         android:layout_marginLeft="215dp"
         android:layout_marginTop="492dp"
+        android:background="#FFFFFF"
         android:fontFamily="@font/grandstanderclean"
+        android:onClick="opcionPresionada"
         android:text="koala"
         android:textSize="20sp" />
 
@@ -69,7 +74,9 @@
         android:layout_marginStart="26dp"
         android:layout_marginLeft="26dp"
         android:layout_marginTop="593dp"
+        android:background="#FFFFFF"
         android:fontFamily="@font/grandstanderclean"
+        android:onClick="opcionPresionada"
         android:text="kiwi"
         android:textSize="20sp" />
 
@@ -83,12 +90,14 @@
         android:layout_marginStart="215dp"
         android:layout_marginLeft="215dp"
         android:layout_marginTop="593dp"
+        android:background="#FFFFFF"
         android:fontFamily="@font/grandstanderclean"
+        android:onClick="opcionPresionada"
         android:text="Castillo"
         android:textSize="20sp" />
 
     <TextView
-        android:id="@+id/textView23"
+        android:id="@+id/txt_palabra_puntos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -98,7 +107,7 @@
         android:textSize="20sp" />
 
     <TextView
-        android:id="@+id/textView24"
+        android:id="@+id/txt_palabra_vidas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"

@@ -3,6 +3,7 @@ package com.example.proyectodante;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -10,6 +11,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     private TextView tv1;
+    private MediaPlayer mp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,12 +20,22 @@ public class MainActivity extends AppCompatActivity {
         String nombre = getIntent().getStringExtra("usuario");
         tv1 = findViewById(R.id.txt_welcome);
         if (!nombre.equals("invitado")) {
-            tv1.setText("Bienvenido " + nombre + "!");
+            tv1.setText("Hola " + nombre + "!");
         }
+        mp = MediaPlayer.create(this,R.raw.cancionfondo);
+        mp.setLooping(true);
+        mp.setVolume(0.5f,0.5f);
+        mp.start();
     }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        mp.stop();
+    }
+
+
     public void activity_abecedario(View view) {
-        //activity Abecedario
         Intent i = new Intent(this, AbecedarioActivity.class);
         startActivity(i);
     }

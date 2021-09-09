@@ -288,4 +288,52 @@
         android:text="@string/button_cal_res"
         android:textSize="22sp" />
 
+    <Button
+        android:id="@+id/button_sign_sumar"
+        android:layout_width="75sp"
+        android:layout_height="75sp"
+        android:layout_below="@+id/button_num0"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="20sp"
+        android:layout_marginLeft="20sp"
+        android:layout_marginTop="15sp"
+        android:background="#3A43F4"
+        android:fontFamily="@font/grandstanderclean"
+        android:onClick="asignarSigno"
+        android:text="+"
+        android:textSize="22sp" />
+
+    <Button
+        android:id="@+id/button_sign_restar"
+        android:layout_width="75sp"
+        android:layout_height="75sp"
+        android:layout_below="@+id/button_num0"
+        android:layout_marginStart="20sp"
+        android:layout_marginLeft="20sp"
+        android:layout_marginTop="15sp"
+        android:layout_toEndOf="@+id/button_sign_sumar"
+        android:layout_toRightOf="@+id/button_sign_sumar"
+        android:background="#3A43F4"
+        android:fontFamily="@font/grandstanderclean"
+        android:onClick="asignarSigno"
+        android:text="-"
+        android:textSize="22sp" />
+
+    <Button
+        android:id="@+id/button_sign_mult"
+        android:layout_width="75sp"
+        android:layout_height="75sp"
+        android:layout_below="@+id/button_num0"
+        android:layout_marginStart="20sp"
+        android:layout_marginLeft="20sp"
+        android:layout_marginTop="15sp"
+        android:layout_toEndOf="@+id/button_sign_restar"
+        android:layout_toRightOf="@+id/button_sign_restar"
+        android:background="#3A43F4"
+        android:fontFamily="@font/grandstanderclean"
+        android:onClick="asignarSigno"
+        android:text="x"
+        android:textSize="22sp" />
+
 </RelativeLayout>

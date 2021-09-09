@@ -30,23 +30,11 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="225sp"
         android:background="#26FF00"
+        android:contentDescription="@string/txt_vacio"
         android:fontFamily="@font/grandstanderclean"
         android:onClick="signoSumar"
         android:padding="7sp"
-        android:text="@string/button_sum"
+        android:text="@string/button_cal"
         android:textSize="30sp" />
 
-    <Button
-        android:id="@+id/button8"
-        android:layout_width="323sp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="320dp"
-        android:background="#00FFF7"
-        android:fontFamily="@font/grandstanderclean"
-        android:onClick="signoRestar"
-        android:padding="7sp"
-        android:text="@string/button_rest"
-        android:textSize="30sp" />
 </RelativeLayout>
