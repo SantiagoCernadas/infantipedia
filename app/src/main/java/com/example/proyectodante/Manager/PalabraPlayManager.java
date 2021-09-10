@@ -109,7 +109,7 @@ public class PalabraPlayManager {
         palabras[i] = setPalabra("Escalera");
         palabras[i] = setPalabra("Fantasma");
         palabras[i] = setPalabra("Flor");
-        palabras[i] = setPalabra("Fruta");
+        palabras[i] = setPalabra("Frutas");
         palabras[i] = setPalabra("Gato");
         palabras[i] = setPalabra("Gallina");
         palabras[i] = setPalabra("Globo");
@@ -121,7 +121,7 @@ public class PalabraPlayManager {
         palabras[i] = setPalabra("Iglu");
         palabras[i] = setPalabra("Jirafa");
         palabras[i] = setPalabra("Jugo");
-        palabras[i] = setPalabra("Juguete");
+        palabras[i] = setPalabra("Juguetes");
         palabras[i] = setPalabra("Kiwi");
         palabras[i] = setPalabra("Koala");
         palabras[i] = setPalabra("Ketchup");
@@ -170,7 +170,7 @@ public class PalabraPlayManager {
         palabras[i] = setPalabra("Yoyo");
         palabras[i] = setPalabra("Yogurt");
         palabras[i] = setPalabra("Yoga");
-        palabras[i] = setPalabra("Zapato");
+        palabras[i] = setPalabra("Zapatos");
         palabras[i] = setPalabra("Zanahoria");
         palabras[i] = setPalabra("Zorro");
     }

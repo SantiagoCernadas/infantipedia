@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
-    tools:context=".CalculadoraActivity">
+    tools:context=".PlaysActivity.MatPlayActivity">
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="102dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginLeft="0dp"
         android:layout_marginTop="75dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
@@ -69,7 +68,7 @@
             android:layout_weight="0"
             android:fontFamily="@font/grandstanderclean"
             android:gravity="center"
-            android:text="@string/txt_vacio"
+            android:text="@string/button_cal_res"
             android:textColor="#000000"
             android:textSize="50sp" />
 
@@ -82,45 +81,50 @@
             android:layout_weight="0"
             android:fontFamily="@font/grandstanderclean"
             android:gravity="center"
+            android:maxLength="3"
             android:text="@string/txt_vacio"
-            android:textSize="50sp"
-            android:textColor="#000000" />
+            android:textColor="#000000"
+            android:textSize="50sp" />
     </LinearLayout>
 
     <Button
-        android:id="@+id/button_num1"
+        android:id="@+id/button_num_play1"
         android:layout_width="75sp"
         android:layout_height="75sp"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20sp"
+        android:layout_marginLeft="20sp"
         android:layout_marginTop="270sp"
         android:background="#FBF216"
         android:fontFamily="@font/grandstanderclean"
-        android:onClick="numPresionado"
+        android:onClick="botonPresionado"
         android:text="@string/button_cal1"
-        android:textSize="22sp" />
+        android:textSize="22sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button_num2"
+        android:id="@+id/button_num_play2"
         android:layout_width="75sp"
         android:layout_height="75sp"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20sp"
+        android:layout_marginLeft="20sp"
         android:layout_marginTop="270sp"
         android:layout_toEndOf="@+id/button_num1"
         android:layout_toRightOf="@+id/button_num1"
         android:background="#FF5CE9"
         android:fontFamily="@font/grandstanderclean"
-        android:onClick="numPresionado"
+        android:onClick="botonPresionado"
         android:text="@string/button_cal2"
-        android:textSize="22sp" />
+        android:textSize="22sp"
+        app:layout_constraintStart_toEndOf="@+id/button_num_play1"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button_num3"
+        android:id="@+id/button_num_play3"
         android:layout_width="75sp"
         android:layout_height="75sp"
         android:layout_alignParentTop="true"
@@ -131,44 +135,48 @@
         android:layout_toRightOf="@+id/button_num2"
         android:background="#FBF216"
         android:fontFamily="@font/grandstanderclean"
-        android:onClick="numPresionado"
+        android:onClick="botonPresionado"
         android:text="@string/button_cal3"
-        android:textSize="22sp" />
+        android:textSize="22sp"
+        app:layout_constraintStart_toEndOf="@+id/button_num_play2"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button_num4"
-        android:layout_width="75sp"
-        android:layout_height="75sp"
-        android:layout_below="@+id/button_num1"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="20sp"
-        android:background="#FF5CE9"
+        android:id="@+id/button8"
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="20sp"
+        android:layout_marginLeft="20sp"
+        android:layout_marginTop="270sp"
+        android:layout_toEndOf="@+id/button_num3"
+        android:layout_toRightOf="@+id/button_num3"
+        android:background="#FF0000"
         android:fontFamily="@font/grandstanderclean"
-        android:onClick="numPresionado"
-        android:text="@string/button_cal4"
-        android:textSize="22sp" />
+        android:onClick="atras"
+        android:text="@string/button_cal_borrar"
+        app:layout_constraintStart_toEndOf="@+id/button_num_play3"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button_num5"
-        android:layout_width="75sp"
+        android:id="@+id/button10"
+        android:layout_width="100sp"
         android:layout_height="75sp"
-        android:layout_below="@+id/button_num2"
+        android:layout_below="@+id/button20"
         android:layout_marginStart="20sp"
         android:layout_marginLeft="20sp"
         android:layout_marginTop="20sp"
-        android:layout_toEndOf="@+id/button_num4"
-        android:layout_toRightOf="@+id/button_num4"
-        android:background="#FBF216"
+        android:layout_toEndOf="@+id/button_num6"
+        android:layout_toRightOf="@+id/button_num6"
+        android:background="#FF0000"
         android:fontFamily="@font/grandstanderclean"
-        android:onClick="numPresionado"
-        android:text="@string/button_cal5"
-        android:textSize="22sp" />
+        android:onClick="borrarTodo"
+        android:text="@string/button_cal_borrartodo"
+        app:layout_constraintStart_toEndOf="@+id/button_num_play6"
+        app:layout_constraintTop_toBottomOf="@+id/button8" />
 
     <Button
-        android:id="@+id/button_num6"
+        android:id="@+id/button_num_play6"
         android:layout_width="75sp"
         android:layout_height="75sp"
         android:layout_below="@+id/button_num3"
@@ -179,28 +187,68 @@
         android:layout_toRightOf="@+id/button_num5"
         android:background="#FF5CE9"
         android:fontFamily="@font/grandstanderclean"
-        android:onClick="numPresionado"
+        android:onClick="botonPresionado"
         android:text="@string/button_cal6"
-        android:textSize="22sp" />
+        android:textSize="22sp"
+        app:layout_constraintStart_toEndOf="@+id/button_num_play5"
+        app:layout_constraintTop_toBottomOf="@+id/button_num_play3" />
 
     <Button
-        android:id="@+id/button_num7"
+        android:id="@+id/button_num_play4"
+        android:layout_width="75sp"
+        android:layout_height="75sp"
+        android:layout_below="@+id/button_num1"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="20sp"
+        android:layout_marginLeft="20sp"
+        android:layout_marginTop="20sp"
+        android:background="#FF5CE9"
+        android:fontFamily="@font/grandstanderclean"
+        android:onClick="botonPresionado"
+        android:text="@string/button_cal4"
+        android:textSize="22sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_num_play1" />
+
+    <Button
+        android:id="@+id/button_num_play7"
         android:layout_width="75sp"
         android:layout_height="75sp"
         android:layout_below="@+id/button_num4"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20sp"
+        android:layout_marginLeft="20sp"
         android:layout_marginTop="20sp"
         android:background="#FBF216"
         android:fontFamily="@font/grandstanderclean"
-        android:onClick="numPresionado"
+        android:onClick="botonPresionado"
         android:text="@string/button_cal7"
-        android:textSize="22sp" />
+        android:textSize="22sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_num_play4" />
 
     <Button
-        android:id="@+id/button_num8"
+        android:id="@+id/button_num_play5"
+        android:layout_width="75sp"
+        android:layout_height="75sp"
+        android:layout_below="@+id/button_num2"
+        android:layout_marginStart="20sp"
+        android:layout_marginLeft="20sp"
+        android:layout_marginTop="20sp"
+        android:layout_toEndOf="@+id/button_num4"
+        android:layout_toRightOf="@+id/button_num4"
+        android:background="#FBF216"
+        android:fontFamily="@font/grandstanderclean"
+        android:onClick="botonPresionado"
+        android:text="@string/button_cal5"
+        android:textSize="22sp"
+        app:layout_constraintStart_toEndOf="@+id/button_num_play4"
+        app:layout_constraintTop_toBottomOf="@+id/button_num_play2" />
+
+    <Button
+        android:id="@+id/button_num_play8"
         android:layout_width="75sp"
         android:layout_height="75sp"
         android:layout_below="@+id/button_num5"
@@ -211,12 +259,14 @@
         android:layout_toRightOf="@+id/button_num7"
         android:background="#FF5CE9"
         android:fontFamily="@font/grandstanderclean"
-        android:onClick="numPresionado"
+        android:onClick="botonPresionado"
         android:text="@string/button_cal8"
-        android:textSize="22sp" />
+        android:textSize="22sp"
+        app:layout_constraintStart_toEndOf="@+id/button_num_play7"
+        app:layout_constraintTop_toBottomOf="@+id/button_num_play5" />
 
     <Button
-        android:id="@+id/button_num9"
+        android:id="@+id/button_num_play9"
         android:layout_width="75sp"
         android:layout_height="75sp"
         android:layout_below="@+id/button_num6"
@@ -227,118 +277,71 @@
         android:layout_toRightOf="@+id/button_num8"
         android:background="#FBF216"
         android:fontFamily="@font/grandstanderclean"
-        android:onClick="numPresionado"
+        android:onClick="botonPresionado"
         android:text="@string/button_cal9"
-        android:textSize="22sp" />
+        android:textSize="22sp"
+        app:layout_constraintStart_toEndOf="@+id/button_num_play8"
+        app:layout_constraintTop_toBottomOf="@+id/button_num_play6" />
 
     <Button
-        android:id="@+id/button_num0"
-        android:layout_width="268dp"
-        android:layout_height="75dp"
-        android:layout_below="@+id/button_num8"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
-        android:background="#C8C2C0"
-        android:fontFamily="@font/grandstanderclean"
-        android:onClick="numPresionado"
-        android:text="@string/button_cal0"
-        android:textSize="22sp" />
-
-    <Button
-        android:id="@+id/button20"
-        android:layout_width="100dp"
-        android:layout_height="75dp"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="270dp"
-        android:layout_toEndOf="@+id/button_num3"
-        android:layout_toRightOf="@+id/button_num3"
-        android:background="#FF0000"
-        android:fontFamily="@font/grandstanderclean"
-        android:onClick="Retroceder"
-        android:text="@string/button_cal_borrar" />
-
-    <Button
-        android:id="@+id/button21"
-        android:layout_width="100sp"
-        android:layout_height="75sp"
-        android:layout_below="@+id/button20"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_toEndOf="@+id/button_num6"
-        android:layout_toRightOf="@+id/button_num6"
-        android:background="#FF0000"
-        android:fontFamily="@font/grandstanderclean"
-        android:onClick="borrarTodo"
-        android:text="@string/button_cal_borrartodo" />
-
-    <Button
-        android:id="@+id/button23"
+        android:id="@+id/button11"
         android:layout_width="100dp"
         android:layout_height="75dp"
         android:layout_below="@+id/button21"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginStart="20sp"
+        android:layout_marginLeft="20sp"
+        android:layout_marginTop="20sp"
         android:layout_toEndOf="@+id/button_num9"
         android:layout_toRightOf="@+id/button_num9"
         android:background="#5DF81C"
         android:fontFamily="@font/grandstanderclean"
         android:onClick="calcular"
         android:text="@string/button_cal_res"
-        android:textSize="22sp" />
+        android:textSize="22sp"
+        app:layout_constraintStart_toEndOf="@+id/button_num_play9"
+        app:layout_constraintTop_toBottomOf="@+id/button10" />
 
     <Button
-        android:id="@+id/button_sign_sumar"
-        android:layout_width="75sp"
-        android:layout_height="75sp"
-        android:layout_below="@+id/button_num0"
+        android:id="@+id/button_num_play0"
+        android:layout_width="268dp"
+        android:layout_height="75dp"
+        android:layout_below="@+id/button_num8"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_marginStart="20sp"
         android:layout_marginLeft="20sp"
-        android:layout_marginTop="15sp"
-        android:background="#7EFAEE"
+        android:layout_marginTop="20sp"
+        android:background="#C8C2C0"
         android:fontFamily="@font/grandstanderclean"
-        android:onClick="asignarSigno"
-        android:text="+"
-        android:textSize="22sp" />
+        android:onClick="botonPresionado"
+        android:text="@string/button_cal0"
+        android:textSize="22sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_num_play8" />
 
-    <Button
-        android:id="@+id/button_sign_restar"
-        android:layout_width="75sp"
-        android:layout_height="75sp"
-        android:layout_below="@+id/button_num0"
-        android:layout_marginStart="20sp"
-        android:layout_marginLeft="20sp"
-        android:layout_marginTop="15sp"
-        android:layout_toEndOf="@+id/button_sign_sumar"
-        android:layout_toRightOf="@+id/button_sign_sumar"
-        android:background="#7EFAEE"
+    <TextView
+        android:id="@+id/txt_mat_vidas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
         android:fontFamily="@font/grandstanderclean"
-        android:onClick="asignarSigno"
-        android:text="-"
-        android:textSize="22sp" />
+        android:text="Vidas = 3"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/button_sign_mult"
-        android:layout_width="75sp"
-        android:layout_height="75sp"
-        android:layout_below="@+id/button_num0"
-        android:layout_marginStart="20sp"
-        android:layout_marginLeft="20sp"
-        android:layout_marginTop="15sp"
-        android:layout_toEndOf="@+id/button_sign_restar"
-        android:layout_toRightOf="@+id/button_sign_restar"
-        android:background="#7EFAEE"
+    <TextView
+        android:id="@+id/txt_mat_puntos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
         android:fontFamily="@font/grandstanderclean"
-        android:onClick="asignarSigno"
-        android:text="x"
-        android:textSize="22sp" />
-
-</RelativeLayout>
+        android:text="Puntos = 0"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

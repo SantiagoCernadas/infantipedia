@@ -74,7 +74,7 @@ public class LetraActivity extends AppCompatActivity {
                 img1.setImageResource(R.drawable.fejfantasma);
                 tv2.setText("Flor");
                 img2.setImageResource(R.drawable.fejflor);
-                tv3.setText("Fruta");
+                tv3.setText("Frutas");
                 img3.setImageResource(R.drawable.fejfruta);
                 break;
             case "G":
@@ -106,7 +106,7 @@ public class LetraActivity extends AppCompatActivity {
                 img1.setImageResource(R.drawable.jejjirafa);
                 tv2.setText("Jugo");
                 img2.setImageResource(R.drawable.jejjugo);
-                tv3.setText("Juguete");
+                tv3.setText("Juguetes");
                 img3.setImageResource(R.drawable.jejjuguete);
                 break;
             case "K":
@@ -211,7 +211,7 @@ public class LetraActivity extends AppCompatActivity {
                 setImagenes(R.drawable.yejyoyo,R.drawable.yejyogurt,R.drawable.yejyoga);
                 break;
             case "Z":
-                tv1.setText("Zapato");
+                tv1.setText("Zapatos");
                 tv2.setText("Zanahoria");
                 tv3.setText("Zorro");
                 setImagenes(R.drawable.zejzapato,R.drawable.zejzanahoria,R.drawable.zejzorro);

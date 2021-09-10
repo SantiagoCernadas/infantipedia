@@ -1,4 +1,4 @@
-package com.example.proyectodante;
+package com.example.proyectodante.PlaysActivity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -14,6 +14,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.proyectodante.Manager.PalabraPlayManager;
+import com.example.proyectodante.R;
 
 public class PalabraPlayActivity extends AppCompatActivity {
     private final int NUM_PALABRAS = 81;
@@ -27,6 +28,7 @@ public class PalabraPlayActivity extends AppCompatActivity {
     private int vidas,puntos;
     private SoundPool[] sp;
     private int[] sonidosRep;
+    private TextView txt_titulo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +42,7 @@ public class PalabraPlayActivity extends AppCompatActivity {
         opciones = new Button[4];
         palabras = new String[NUM_PALABRAS];
         idImagen = new int[NUM_PALABRAS];
+        txt_titulo = findViewById(R.id.txt_palabra_titulo);
         asignarSonidos();
         conectarID();
         manager.setImagenes(idImagen);
@@ -88,6 +91,7 @@ public class PalabraPlayActivity extends AppCompatActivity {
         Handler handler = new Handler();
         handler. postDelayed(new Runnable() {
             public void run() {
+                    txt_titulo.setText("¿Que es?");
                     habilitarOpciones(opciones);
                     generarProblema();
                 }
@@ -118,7 +122,7 @@ public class PalabraPlayActivity extends AppCompatActivity {
         if(opciones[i].getText().toString().equals(palabraCorrecta)){
             opciones[i].setBackgroundColor(Color.GREEN);
             generarSonido(0);
-            Toast.makeText(this,"Bien Hecho!",Toast.LENGTH_SHORT).show();
+            txt_titulo.setText("Bien Hecho!");
             puntos++;
         }
         else{
@@ -127,9 +131,7 @@ public class PalabraPlayActivity extends AppCompatActivity {
             generarSonido(1);
             generarSonido(2);
             vidas--;
-            if(vidas > 0){
-                Toast.makeText(this,"Ups.. no era, te quedan " + vidas  + " vidas",Toast.LENGTH_SHORT).show();
-            }
+            txt_titulo.setText("Ups.. no era.");
         }
 
     }
@@ -137,12 +139,11 @@ public class PalabraPlayActivity extends AppCompatActivity {
 
 
     public void generarProblema(){
-        pintarBotones(opciones);
         if(vidas < 1){
-            Toast.makeText(this,"Ya no te quedan vidas :(",Toast.LENGTH_SHORT).show();
             finish();
         }
         else{
+            pintarBotones(opciones);
             int numCorrecto = (int)(Math.random()*NUM_PALABRAS+0);
             palabraCorrecta = palabras[numCorrecto];
             imagen.setImageResource(idImagen[numCorrecto]);

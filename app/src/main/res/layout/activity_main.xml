@@ -46,7 +46,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20sp"
-            android:background="#00BCD4"
+            android:background="#1CE5FF"
             android:fontFamily="@font/grandstanderclean"
             android:onClick="activity_abecedario"
             android:padding="15sp"
@@ -58,7 +58,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20sp"
-            android:background="#FF0000"
+            android:background="#FF1947"
             android:fontFamily="@font/grandstanderclean"
             android:onClick="activity_matematicas"
             android:padding="15sp"
@@ -70,7 +70,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20sp"
-            android:background="#4CAF50"
+            android:background="#58FF5E"
             android:fontFamily="@font/grandstanderclean"
             android:onClick="activity_animales"
             android:padding="15sp"
@@ -103,5 +103,36 @@
         android:layout_marginBottom="3dp"
         android:text="@string/txt_version"
         android:textSize="20sp" />
+
+    <ImageButton
+        android:id="@+id/iv_musica"
+        android:layout_width="50sp"
+        android:layout_height="50sp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginBottom="0sp"
+        android:background="#00FFFFFF"
+        android:onClick="modificarEstadoMusica"
+        app:srcCompat="@android:drawable/ic_lock_silent_mode_off"
+        app:tint="#000000" />
+
+    <ImageButton
+        android:id="@+id/iv_musica_off"
+        android:layout_width="50sp"
+        android:layout_height="50sp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginBottom="0sp"
+        android:background="#00FFFFFF"
+        android:onClick="modificarEstadoMusica"
+        android:visibility="invisible"
+        app:srcCompat="@android:drawable/ic_lock_silent_mode"
+        app:tint="#000000" />
 
 </RelativeLayout>

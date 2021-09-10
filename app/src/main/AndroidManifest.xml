@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".PalabraPlayActivity"></activity>
+        <activity android:name=".PlaysActivity.MatPlayActivity"></activity>
+        <activity android:name=".PlaysActivity.PalabraPlayActivity" />
         <activity android:name=".DibujarActivity" />
         <activity android:name=".AnimalesActivity" />
         <activity android:name=".CalculadoraActivity" />

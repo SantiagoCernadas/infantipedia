@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.example.proyectodante.PlaysActivity.MatPlayActivity;
+
 public class MathActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -13,16 +15,14 @@ public class MathActivity extends AppCompatActivity {
         setContentView(R.layout.activity_mat);
     }
 
-    public void signoSumar(View view){
-        iniciarCalculadora("+");
-    }
-    public void signoRestar(View view){
-        iniciarCalculadora("-");
+
+    public void iniciarCalculadora(View view){
+        Intent i = new Intent(this,CalculadoraActivity.class);
+        startActivity(i);
     }
 
-    public void iniciarCalculadora(String signo){
-        Intent i = new Intent(this,CalculadoraActivity.class);
-        i.putExtra("signo",signo);
+    public void jugarCalculadora(View view){
+        Intent i = new Intent(this, MatPlayActivity.class);
         startActivity(i);
     }
 }

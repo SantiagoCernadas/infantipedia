@@ -6,22 +6,29 @@ import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     private TextView tv1;
     private MediaPlayer mp;
+    private ImageButton iv,iv2;
+    private boolean musicaRep;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         String nombre = getIntent().getStringExtra("usuario");
+        iv = findViewById(R.id.iv_musica);
+        iv2 = findViewById(R.id.iv_musica_off);
         tv1 = findViewById(R.id.txt_welcome);
         if (!nombre.equals("invitado")) {
             tv1.setText("Hola " + nombre + "!");
         }
+        musicaRep = true;
         mp = MediaPlayer.create(this,R.raw.cancionfondo);
         mp.setLooping(true);
         mp.setVolume(0.5f,0.5f);
@@ -57,5 +64,20 @@ public class MainActivity extends AppCompatActivity {
 
     public void getMensajeProximamente() {
         Toast.makeText(this, "Proximamente...", Toast.LENGTH_SHORT).show();
+    }
+
+    public void modificarEstadoMusica(View view){
+        if(musicaRep){
+            iv.setVisibility(View.INVISIBLE);
+            iv2.setVisibility(View.VISIBLE);
+            musicaRep = false;
+            mp.setVolume(0,0);
+        }
+        else{
+            iv2.setVisibility(View.INVISIBLE);
+            iv.setVisibility(View.VISIBLE);
+            musicaRep = true;
+            mp.setVolume(0.5f,0.5f);
+        }
     }
 }

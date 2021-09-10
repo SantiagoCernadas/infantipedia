@@ -9,23 +9,28 @@
 
     <Button
         android:id="@+id/button9"
-        android:layout_width="163dp"
-        android:layout_height="wrap_content"
+        android:layout_width="266dp"
+        android:layout_height="77dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="125dp"
-        android:layout_marginLeft="125dp"
-        android:layout_marginTop="668dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="68dp"
+        android:layout_marginLeft="68dp"
+        android:layout_marginTop="633dp"
+        android:background="#FFEA33"
+        android:fontFamily="@font/grandstanderclean"
         android:onClick="jugarPalabra"
-        android:text="Button" />
+        android:text="minijuego: ¿que es?"
+        android:textSize="20sp" />
 
     <TableLayout
         android:layout_width="394dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginLeft="4dp"
-        android:layout_marginTop="200dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="6sp"
+        android:layout_marginLeft="6sp"
+        android:layout_marginTop="160sp"
         android:padding="15sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -46,7 +51,7 @@
                 android:text="@string/button_a"
                 android:textColor="#000000"
                 android:textSize="16sp"
-                app:backgroundTint="#E91E63" />
+                app:backgroundTint="#E44078" />
 
             <Button
                 android:id="@+id/button_b"
@@ -74,7 +79,7 @@
                 android:text="@string/button_c"
                 android:textColor="#000000"
                 android:textSize="16sp"
-                app:backgroundTint="#4CAF50" />
+                app:backgroundTint="#68F16E" />
 
             <Button
                 android:id="@+id/button_d"
@@ -88,7 +93,7 @@
                 android:text="@string/button_d"
                 android:textColor="#000000"
                 android:textSize="16sp"
-                app:backgroundTint="#FF5722" />
+                app:backgroundTint="#FB9343" />
 
             <Button
                 android:id="@+id/button_e"
@@ -102,7 +107,7 @@
                 android:text="@string/button_e"
                 android:textColor="#000000"
                 android:textSize="16sp"
-                app:backgroundTint="#9C27B0" />
+                app:backgroundTint="#BF58FF" />
         </TableRow>
 
         <TableRow
@@ -121,7 +126,7 @@
                 android:text="@string/button_f"
                 android:textColor="#000000"
                 android:textSize="16sp"
-                app:backgroundTint="#E91E63" />
+                app:backgroundTint="#E44078" />
 
             <Button
                 android:id="@+id/button_g"
@@ -149,7 +154,7 @@
                 android:text="@string/button_h"
                 android:textColor="#000000"
                 android:textSize="16sp"
-                app:backgroundTint="#4CAF50" />
+                app:backgroundTint="#68F16E" />
 
             <Button
                 android:id="@+id/button_i"
@@ -163,7 +168,7 @@
                 android:text="@string/button_i"
                 android:textColor="#000000"
                 android:textSize="16sp"
-                app:backgroundTint="#FF5722" />
+                app:backgroundTint="#FB9343" />
 
             <Button
                 android:id="@+id/button_j"
@@ -177,7 +182,7 @@
                 android:text="@string/button_j"
                 android:textColor="#000000"
                 android:textSize="16sp"
-                app:backgroundTint="#9C27B0" />
+                app:backgroundTint="#BF58FF" />
         </TableRow>
 
         <TableRow
@@ -196,7 +201,7 @@
                 android:text="@string/button_k"
                 android:textColor="#000000"
                 android:textSize="16sp"
-                app:backgroundTint="#E91E63" />
+                app:backgroundTint="#E44078" />
 
             <Button
                 android:id="@+id/button_L"
@@ -224,7 +229,7 @@
                 android:text="@string/button_m"
                 android:textColor="#000000"
                 android:textSize="16sp"
-                app:backgroundTint="#4CAF50" />
+                app:backgroundTint="#68F16E" />
 
             <Button
                 android:id="@+id/button_n"
@@ -238,7 +243,7 @@
                 android:text="@string/button_n"
                 android:textColor="#000000"
                 android:textSize="16sp"
-                app:backgroundTint="#FF5722" />
+                app:backgroundTint="#FB9343" />
 
             <Button
                 android:id="@+id/button_ñ"
@@ -252,7 +257,7 @@
                 android:text="@string/button_ñ"
                 android:textColor="#000000"
                 android:textSize="16sp"
-                app:backgroundTint="#9C27B0" />
+                app:backgroundTint="#BF58FF" />
         </TableRow>
 
         <TableRow
@@ -271,7 +276,7 @@
                 android:text="@string/button_o"
                 android:textColor="#000000"
                 android:textSize="16sp"
-                app:backgroundTint="#E91E63" />
+                app:backgroundTint="#E44078" />
 
             <Button
                 android:id="@+id/button_p"
@@ -299,7 +304,7 @@
                 android:text="@string/button_q"
                 android:textColor="#000000"
                 android:textSize="16sp"
-                app:backgroundTint="#4CAF50" />
+                app:backgroundTint="#68F16E" />
 
             <Button
                 android:id="@+id/button_r"
@@ -313,7 +318,7 @@
                 android:text="@string/button_r"
                 android:textColor="#000000"
                 android:textSize="16sp"
-                app:backgroundTint="#FF5722" />
+                app:backgroundTint="#FB9343" />
 
             <Button
                 android:id="@+id/button_s"
@@ -327,7 +332,7 @@
                 android:text="@string/button_s"
                 android:textColor="#000000"
                 android:textSize="16sp"
-                app:backgroundTint="#9C27B0" />
+                app:backgroundTint="#BF58FF" />
         </TableRow>
 
         <TableRow
@@ -345,7 +350,7 @@
                 android:padding="15sp"
                 android:text="@string/button_t"
                 android:textColor="#000000"
-                app:backgroundTint="#E91E63" />
+                app:backgroundTint="#E44078" />
 
             <Button
                 android:id="@+id/button_u"
@@ -373,7 +378,7 @@
                 android:text="@string/button_v"
                 android:textColor="#000000"
                 android:textSize="16sp"
-                app:backgroundTint="#4CAF50" />
+                app:backgroundTint="#68F16E" />
 
             <Button
                 android:id="@+id/button_w"
@@ -387,7 +392,7 @@
                 android:text="@string/button_w"
                 android:textColor="#000000"
                 android:textSize="16sp"
-                app:backgroundTint="#FF5722" />
+                app:backgroundTint="#FB9343" />
 
             <Button
                 android:id="@+id/button_x"
@@ -401,7 +406,7 @@
                 android:text="@string/button_x"
                 android:textColor="#000000"
                 android:textSize="16sp"
-                app:backgroundTint="#9C27B0" />
+                app:backgroundTint="#BF58FF" />
         </TableRow>
 
         <TableRow
@@ -419,7 +424,7 @@
                 android:text="@string/button_y"
                 android:textColor="#000000"
                 android:textSize="16sp"
-                app:backgroundTint="#E91E63" />
+                app:backgroundTint="#E44078" />
 
             <Button
                 android:id="@+id/button_z"
@@ -442,7 +447,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="40sp"
         android:fontFamily="@font/grandstanderclean"
         android:text="@string/txt_tv_abecedario"
         android:textColor="#122BFF"
