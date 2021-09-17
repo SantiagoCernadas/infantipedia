@@ -6,7 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import com.example.proyectodante.PlaysActivity.MatPlayActivity;
+import com.example.proyectodante.PlaysActivity.HowPlayActivity;
 
 public class MathActivity extends AppCompatActivity {
     @Override
@@ -21,8 +21,15 @@ public class MathActivity extends AppCompatActivity {
         startActivity(i);
     }
 
-    public void jugarCalculadora(View view){
-        Intent i = new Intent(this, MatPlayActivity.class);
+    public void howPlayActivity(View view){
+        Intent i = new Intent(this, HowPlayActivity.class);
+        i.putExtra("titulo","Problemas matematicos");
+        i.putExtra("descripcion","En este minijuego tendrás problemas matemáticos que " +
+                "varían según la dificultad seleccionada, después de resolver el problema " +
+                "tienes 3 opciones: ver si el problema es correcto con el botón de “=”, " +
+                "borrar un número con el botón “borrar” y borrar el numero completo con el botón " +
+                "“borrar todo”. la partida se acabará si pierdes todas " +
+                "las vidas. ¡Buena suerte y diviértete!");
         startActivity(i);
     }
 }

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".PlaysActivity.HowPlayActivity">
+
+    <TextView
+        android:id="@+id/txt_titulo_juego"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="false"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp"
+        android:fontFamily="@font/grandstanderclean"
+        android:gravity="center"
+        android:text="nombre minijuego"
+        android:textSize="30sp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="236dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="160dp">
+
+        <TextView
+            android:id="@+id/txt_descripcion_juego"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="false"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/grandstanderclean"
+            android:lineSpacingExtra="10sp"
+            android:text="desripcion"
+            android:textSize="20sp" />
+    </ScrollView>
+
+    <Button
+        android:id="@+id/button13"
+        android:layout_width="247dp"
+        android:layout_height="78dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="83dp"
+        android:layout_marginLeft="83dp"
+        android:layout_marginTop="607dp"
+        android:background="#EB49FD"
+        android:fontFamily="@font/grandstanderclean"
+        android:onClick="jugar"
+        android:text="Jugar"
+        android:textSize="30sp" />
+
+</RelativeLayout>

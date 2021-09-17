@@ -2,6 +2,7 @@ package com.example.proyectodante.PlaysActivity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.media.AudioManager;
 import android.media.SoundPool;
 import android.os.Bundle;
@@ -21,6 +22,9 @@ public class MatPlayActivity extends AppCompatActivity {
     private int vidas,puntos;
     private SoundPool[] sp;
     private int[] sonidosRep;
+    private int cantSignos;
+    private int rangoSumRes;
+    private int rangoMult;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,6 +37,9 @@ public class MatPlayActivity extends AppCompatActivity {
         txtPuntos = findViewById(R.id.txt_mat_vidas);
         vidas = 3;
         puntos = 0;
+        cantSignos = Integer.parseInt(getIntent().getStringExtra("signos"));
+        rangoSumRes = Integer.parseInt(getIntent().getStringExtra("rango_suma_resta"));
+        rangoMult = Integer.parseInt(getIntent().getStringExtra("rango_multiplicacion"));
         actualizarDatos();
         asignarSonidos();
         setSignos();
@@ -60,16 +67,20 @@ public class MatPlayActivity extends AppCompatActivity {
 
     public void generarProblema() {
         if(vidas > 0){
-            signoSeleccionado = signos[(int)(Math.random()*3+0)];
+            signoSeleccionado = signos[(int)(Math.random()*cantSignos+0)];
             int num2Int;
             int num1Int;
             if(signoSeleccionado.equals("-")){
-                num1Int = (int)(Math.random()*9+1);
+                num1Int = (int)(Math.random()*rangoSumRes+1);
                 num2Int = (int)(Math.random()* num1Int +1);
             }
+            else if (signoSeleccionado.equals("+")){
+                num1Int = (int)(Math.random()*rangoSumRes+1);
+                num2Int = (int)(Math.random()*rangoSumRes+1);
+            }
             else{
-                num1Int = (int)(Math.random()*9+1);
-                num2Int = (int)(Math.random()*9+1);
+                num1Int = (int)(Math.random()*rangoMult+1);
+                num2Int = (int)(Math.random()*rangoMult+1);
             }
             txtNum1.setText(String.valueOf(num1Int));
             txtSigno.setText(signoSeleccionado);
@@ -77,7 +88,9 @@ public class MatPlayActivity extends AppCompatActivity {
             resultadoInt = calcularProblema(num1Int,num2Int);
         }
         else{
-            Toast.makeText(this,"ya no te quedan vidas :(",Toast.LENGTH_SHORT).show();
+            Intent i = new Intent(this,FinJuegoActivity.class);
+            i.putExtra("puntos",puntos);
+            startActivity(i);
             finish();
         }
 

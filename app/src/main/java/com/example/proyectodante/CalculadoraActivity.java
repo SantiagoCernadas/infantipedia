@@ -49,10 +49,10 @@ public class CalculadoraActivity extends AppCompatActivity {
     public void numPresionado(View view){
 
         int idNum = view.getId();
-        if(txtNum1.getText().toString().equals("")){
+        if(txtSigno.getText().toString().equals("")){
             asignarNumero(txtNum1,idNum);
         }
-        else if(txtNum2.getText().toString().equals("") && !txtSigno.getText().toString().equals("")){
+        else{
             asignarNumero(txtNum2,idNum);
         }
     }
@@ -76,18 +76,21 @@ public class CalculadoraActivity extends AppCompatActivity {
     }
 
     public void Retroceder(View view){
+
         if(!txtResultado.getText().toString().equals("")){
             txtResultado.setText("");
             txtIgual.setText("");
         }
         else if(!txtNum2.getText().toString().equals("")){
-            txtNum2.setText("");
+            String numAct = txtNum2.getText().toString();
+            txtNum2.setText(numAct.substring(0,numAct.length()-1));
         }
         else if(!txtSigno.getText().toString().equals("")){
             txtSigno.setText("");
         }
         else if(!txtNum1.getText().toString().equals("")){
-            txtNum1.setText("");
+            String numAct = txtNum1.getText().toString();
+            txtNum1.setText(numAct.substring(0,numAct.length()-1));
         }
     }
     public void borrarTodo(View view){
@@ -99,36 +102,37 @@ public class CalculadoraActivity extends AppCompatActivity {
     }
 
     public void asignarNumero(TextView tv,int idNum){
+        String numActual = tv.getText().toString();
         switch (idNum){
             case R.id.button_num1:
-                tv.setText("1");
+                tv.setText(numActual + "1");
                 break;
             case R.id.button_num2:
-                tv.setText("2");
+                tv.setText(numActual + "2");
                 break;
             case R.id.button_num3:
-                tv.setText("3");
+                tv.setText(numActual + "3");
                 break;
             case R.id.button_num4:
-                tv.setText("4");
+                tv.setText(numActual + "4");
                 break;
             case R.id.button_num5:
-                tv.setText("5");
+                tv.setText(numActual + "5");
                 break;
             case R.id.button_num6:
-                tv.setText("6");
+                tv.setText(numActual + "6");
                 break;
             case R.id.button_num7:
-                tv.setText("7");
+                tv.setText(numActual + "7");
                 break;
             case R.id.button_num8:
-                tv.setText("8");
+                tv.setText(numActual + "8");
                 break;
             case R.id.button_num9:
-                tv.setText("9");
+                tv.setText(numActual + "9");
                 break;
             case R.id.button_num0:
-                tv.setText("0");
+                tv.setText(numActual + "0");
                 break;
             default:
                 tv.setText("ERROR");

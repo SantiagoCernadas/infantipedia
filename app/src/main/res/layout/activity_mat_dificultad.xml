@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".MatDificultadActivity">
+
+    <TextView
+        android:id="@+id/textView22"
+        android:layout_width="407dp"
+        android:layout_height="72dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="false"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="3dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="1dp"
+        android:fontFamily="@font/grandstanderclean"
+        android:text="Seleccione una dificultad"
+        android:textColor="#FF0000"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/dif_principiante"
+        android:layout_width="323sp"
+        android:layout_height="80sp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="110sp"
+        android:background="#26FF00"
+        android:contentDescription="@string/txt_vacio"
+        android:fontFamily="@font/grandstanderclean"
+        android:onClick="getDificultad"
+        android:padding="7sp"
+        android:text="Principiante"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dif_principiante"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="114dp"
+        android:layout_marginLeft="114dp"
+        android:layout_marginTop="0sp"
+        android:fontFamily="@font/grandstanderclean"
+        android:text="Sumas y Restas Simples" />
+
+    <Button
+        android:id="@+id/dif_intermedia"
+        android:layout_width="323sp"
+        android:layout_height="80sp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="260sp"
+        android:background="#F4E900"
+        android:contentDescription="@string/txt_vacio"
+        android:fontFamily="@font/grandstanderclean"
+        android:onClick="getDificultad"
+        android:padding="7sp"
+        android:text="Intermedio"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dif_intermedia"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="98dp"
+        android:layout_marginLeft="98dp"
+        android:layout_marginTop="0sp"
+        android:fontFamily="@font/grandstanderclean"
+        android:text="Sumas y Restas Intermedias" />
+
+    <Button
+        android:id="@+id/dif_avanzada"
+        android:layout_width="323sp"
+        android:layout_height="80sp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="420sp"
+        android:background="#E18904"
+        android:contentDescription="@string/txt_vacio"
+        android:fontFamily="@font/grandstanderclean"
+        android:onClick="getDificultad"
+        android:padding="7sp"
+        android:text="Avanzado"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView26"
+        android:layout_width="329dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dif_avanzada"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="43dp"
+        android:layout_marginLeft="43dp"
+        android:layout_marginTop="0sp"
+        android:fontFamily="@font/grandstanderclean"
+        android:gravity="center"
+        android:text="sumas y restas intermedias multiplicaciones simples" />
+
+    <Button
+        android:id="@+id/dif_experta"
+        android:layout_width="323sp"
+        android:layout_height="80sp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="580sp"
+        android:background="#FF0000"
+        android:contentDescription="@string/txt_vacio"
+        android:fontFamily="@font/grandstanderclean"
+        android:onClick="getDificultad"
+        android:padding="7sp"
+        android:text="Experto"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView27"
+        android:layout_width="329dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dif_experta"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="38dp"
+        android:layout_marginLeft="38dp"
+        android:layout_marginTop="0sp"
+        android:fontFamily="@font/grandstanderclean"
+        android:gravity="center"
+        android:text="sumas y restas avanzadas multiplicaciones intermedias" />
+
+</RelativeLayout>

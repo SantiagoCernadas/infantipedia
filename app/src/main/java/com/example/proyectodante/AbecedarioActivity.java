@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.example.proyectodante.PlaysActivity.HowPlayActivity;
 import com.example.proyectodante.PlaysActivity.PalabraPlayActivity;
 
 public class AbecedarioActivity extends AppCompatActivity {
@@ -133,8 +134,13 @@ public class AbecedarioActivity extends AppCompatActivity {
         startActivity(i);
     }
 
-    public void jugarPalabra(View view){
-        Intent i = new Intent(this, PalabraPlayActivity.class);
+    public void howPlayActivity(View view){
+        Intent i = new Intent(this, HowPlayActivity.class);
+        i.putExtra("titulo","¿Que es?");
+        i.putExtra("descripcion","En este minijuego tendrás 4 palabras y 1 imagen, " +
+                "cada vez que aciertes la palabra que sea la de la imagen mostrada ganarás 1 punto " +
+                "mientras que si fallas perderás 1 vida. la partida se acabará si pierdes todas " +
+                "las vidas. elige sabiamente y diviértete!");
         startActivity(i);
     }
 }

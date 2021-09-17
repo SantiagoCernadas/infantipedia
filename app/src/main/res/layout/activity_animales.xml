@@ -29,6 +29,7 @@
                 android:fontFamily="@font/grandstanderclean"
                 android:gravity="center"
                 android:text="Conoce a los animales!"
+                android:textColor="#33FFEE"
                 android:textSize="40sp" />
 
             <TextView
@@ -39,6 +40,7 @@
                 android:fontFamily="@font/grandstanderclean"
                 android:gravity="center"
                 android:text="Ballena"
+                android:textColor="#000000"
                 android:textSize="40sp" />
 
             <ImageView
@@ -65,6 +67,7 @@
                 android:fontFamily="@font/grandstanderclean"
                 android:gravity="center"
                 android:text="Caballo"
+                android:textColor="#000000"
                 android:textSize="40sp" />
 
             <ImageView
@@ -91,6 +94,7 @@
                 android:fontFamily="@font/grandstanderclean"
                 android:gravity="center"
                 android:text="Cerdo"
+                android:textColor="#000000"
                 android:textSize="40sp" />
 
             <ImageView
@@ -117,6 +121,7 @@
                 android:fontFamily="@font/grandstanderclean"
                 android:gravity="center"
                 android:text="Delfin"
+                android:textColor="#000000"
                 android:textSize="40sp" />
 
             <ImageView
@@ -143,6 +148,7 @@
                 android:fontFamily="@font/grandstanderclean"
                 android:gravity="center"
                 android:text="Elefante"
+                android:textColor="#000000"
                 android:textSize="40sp" />
 
             <ImageView
@@ -169,6 +175,7 @@
                 android:fontFamily="@font/grandstanderclean"
                 android:gravity="center"
                 android:text="Foca"
+                android:textColor="#000000"
                 android:textSize="40sp" />
 
             <ImageView
@@ -195,6 +202,7 @@
                 android:fontFamily="@font/grandstanderclean"
                 android:gravity="center"
                 android:text="Gallina"
+                android:textColor="#000000"
                 android:textSize="40sp" />
 
             <ImageView
@@ -221,6 +229,7 @@
                 android:fontFamily="@font/grandstanderclean"
                 android:gravity="center"
                 android:text="Gato"
+                android:textColor="#000000"
                 android:textSize="40sp" />
 
             <ImageView
@@ -247,6 +256,7 @@
                 android:fontFamily="@font/grandstanderclean"
                 android:gravity="center"
                 android:text="Leon"
+                android:textColor="#000000"
                 android:textSize="40sp" />
 
             <ImageView
@@ -273,6 +283,7 @@
                 android:fontFamily="@font/grandstanderclean"
                 android:gravity="center"
                 android:text="Lobo"
+                android:textColor="#000000"
                 android:textSize="40sp" />
 
             <ImageView
@@ -299,6 +310,7 @@
                 android:fontFamily="@font/grandstanderclean"
                 android:gravity="center"
                 android:text="Oso"
+                android:textColor="#000000"
                 android:textSize="40sp" />
 
             <ImageView
@@ -325,6 +337,7 @@
                 android:fontFamily="@font/grandstanderclean"
                 android:gravity="center"
                 android:text="Oveja"
+                android:textColor="#000000"
                 android:textSize="40sp" />
 
             <ImageView
@@ -351,6 +364,7 @@
                 android:fontFamily="@font/grandstanderclean"
                 android:gravity="center"
                 android:text="Pato"
+                android:textColor="#000000"
                 android:textSize="40sp" />
 
             <ImageView
@@ -377,6 +391,7 @@
                 android:fontFamily="@font/grandstanderclean"
                 android:gravity="center"
                 android:text="Perro"
+                android:textColor="#000000"
                 android:textSize="40sp" />
 
             <ImageView
@@ -403,6 +418,7 @@
                 android:fontFamily="@font/grandstanderclean"
                 android:gravity="center"
                 android:text="Rana"
+                android:textColor="#000000"
                 android:textSize="40sp" />
 
             <ImageView
@@ -429,6 +445,7 @@
                 android:fontFamily="@font/grandstanderclean"
                 android:gravity="center"
                 android:text="Serpiente"
+                android:textColor="#000000"
                 android:textSize="40sp" />
 
             <ImageView
@@ -455,6 +472,7 @@
                 android:fontFamily="@font/grandstanderclean"
                 android:gravity="center"
                 android:text="Vaca"
+                android:textColor="#000000"
                 android:textSize="40sp" />
 
             <ImageView
@@ -481,6 +499,7 @@
                 android:fontFamily="@font/grandstanderclean"
                 android:gravity="center"
                 android:text="Zorro"
+                android:textColor="#000000"
                 android:textSize="40sp" />
 
             <ImageView

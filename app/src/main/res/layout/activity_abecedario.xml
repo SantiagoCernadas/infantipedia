@@ -20,8 +20,8 @@
         android:layout_marginTop="633dp"
         android:background="#FFEA33"
         android:fontFamily="@font/grandstanderclean"
-        android:onClick="jugarPalabra"
-        android:text="minijuego: ¿que es?"
+        android:onClick="howPlayActivity"
+        android:text="minijuego ¿que es?"
         android:textSize="20sp" />
 
     <TableLayout

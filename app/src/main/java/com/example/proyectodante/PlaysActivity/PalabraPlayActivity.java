@@ -2,6 +2,7 @@ package com.example.proyectodante.PlaysActivity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.media.AudioManager;
 import android.media.SoundPool;
@@ -140,6 +141,9 @@ public class PalabraPlayActivity extends AppCompatActivity {
 
     public void generarProblema(){
         if(vidas < 1){
+            Intent i = new Intent(this,FinJuegoActivity.class);
+            i.putExtra("puntos",puntos);
+            startActivity(i);
             finish();
         }
         else{

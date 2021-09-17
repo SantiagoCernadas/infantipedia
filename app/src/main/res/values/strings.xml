@@ -7,7 +7,7 @@
     <string name="button_play">InfantiPlay</string>
 
     <string name="txt_Bienvenida">Hola!</string>
-    <string name="txt_version">Version 0.40</string>
+    <string name="txt_version">Version 0.51</string>
 
 
     <string name="app_name">proyecto dante</string>
@@ -69,7 +69,7 @@
     <string name="button_cal9">9</string>
     <string name="button_cal0">0</string>
     <string name="button_cal_res">=</string>
-    <string name="button_cal_borrar">Atras</string>
+    <string name="button_cal_borrar">Borrar</string>
     <string name="button_cal_borrartodo">Borrar todo</string>
 
     <string name="txt_animal_gato">Gato</string>
