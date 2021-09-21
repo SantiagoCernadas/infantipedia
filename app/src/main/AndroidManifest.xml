@@ -14,7 +14,6 @@
         <activity android:name=".MatDificultadActivity" />
         <activity android:name=".PlaysActivity.MatPlayActivity" />
         <activity android:name=".PlaysActivity.PalabraPlayActivity" />
-        <activity android:name=".DibujarActivity" />
         <activity android:name=".AnimalesActivity" />
         <activity android:name=".CalculadoraActivity" />
         <activity

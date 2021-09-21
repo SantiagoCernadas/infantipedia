@@ -30,6 +30,8 @@ public class MathActivity extends AppCompatActivity {
                 "borrar un número con el botón “borrar” y borrar el numero completo con el botón " +
                 "“borrar todo”. la partida se acabará si pierdes todas " +
                 "las vidas. ¡Buena suerte y diviértete!");
+        i.putExtra("idimg1",R.drawable.matplayej1);
+        i.putExtra("idimg2",R.drawable.matplayej2);
         startActivity(i);
     }
 }

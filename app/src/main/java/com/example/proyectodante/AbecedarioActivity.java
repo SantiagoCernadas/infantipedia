@@ -141,6 +141,8 @@ public class AbecedarioActivity extends AppCompatActivity {
                 "cada vez que aciertes la palabra que sea la de la imagen mostrada ganarás 1 punto " +
                 "mientras que si fallas perderás 1 vida. la partida se acabará si pierdes todas " +
                 "las vidas. elige sabiamente y diviértete!");
+        i.putExtra("idimg1",R.drawable.palabraplayej1);
+        i.putExtra("idimg2",R.drawable.palabraplayej2);
         startActivity(i);
     }
 }

@@ -1,11 +1,15 @@
 package com.example.proyectodante.PlaysActivity;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
 import android.media.AudioManager;
 import android.media.SoundPool;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -14,7 +18,7 @@ import com.example.proyectodante.CalculadoraActivity;
 import com.example.proyectodante.R;
 
 public class MatPlayActivity extends AppCompatActivity {
-    private TextView txtNum1, txtNum2, txtSigno, txtResultado;
+    private TextView txtNum1, txtNum2, txtSigno, txtResultado, txtDescripcion;
     private TextView txtPuntos,txtVidas;
     private int resultadoInt;
     private String[] signos;
@@ -25,6 +29,7 @@ public class MatPlayActivity extends AppCompatActivity {
     private int cantSignos;
     private int rangoSumRes;
     private int rangoMult;
+    private boolean botonesDisponibles;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,13 +38,16 @@ public class MatPlayActivity extends AppCompatActivity {
         txtNum2 = findViewById(R.id.txt_num2);
         txtSigno = findViewById(R.id.txt_signo);
         txtResultado = findViewById(R.id.txt_resultado);
-        txtVidas = findViewById(R.id.txt_mat_puntos);
-        txtPuntos = findViewById(R.id.txt_mat_vidas);
+        txtVidas = findViewById(R.id.txt_mat_vidas);
+        txtPuntos = findViewById(R.id.txt_mat_puntos);
+        txtDescripcion = findViewById(R.id.txt_mat_play_desc);
         vidas = 3;
         puntos = 0;
         cantSignos = Integer.parseInt(getIntent().getStringExtra("signos"));
         rangoSumRes = Integer.parseInt(getIntent().getStringExtra("rango_suma_resta"));
         rangoMult = Integer.parseInt(getIntent().getStringExtra("rango_multiplicacion"));
+        botonesDisponibles = true;
+        txtDescripcion.setText("");
         actualizarDatos();
         asignarSonidos();
         setSignos();
@@ -112,64 +120,80 @@ public class MatPlayActivity extends AppCompatActivity {
     }
 
     public void botonPresionado(View view){
-        String resultadoAct = txtResultado.getText().toString();
-        switch (view.getId()){
-            case R.id.button_num_play1:
-                txtResultado.setText(resultadoAct + "1");
-                break;
-            case R.id.button_num_play2:
-                txtResultado.setText(resultadoAct + "2");
-                break;
-            case R.id.button_num_play3:
-                txtResultado.setText(resultadoAct + "3");
-                break;
-            case R.id.button_num_play4:
-                txtResultado.setText(resultadoAct + "4");
-                break;
-            case R.id.button_num_play5:
-                txtResultado.setText(resultadoAct + "5");
-                break;
-            case R.id.button_num_play6:
-                txtResultado.setText(resultadoAct + "6");
-                break;
-            case R.id.button_num_play7:
-                txtResultado.setText(resultadoAct + "7");
-                break;
-            case R.id.button_num_play8:
-                txtResultado.setText(resultadoAct + "8");
-                break;
-            case R.id.button_num_play9:
-                txtResultado.setText(resultadoAct + "9");
-                break;
-            case R.id.button_num_play0:
-                txtResultado.setText(resultadoAct + "0");
-                break;
-            default:
-                txtResultado.setText("ERROR");
-                break;
+        if (botonesDisponibles){
+            String resultadoAct = txtResultado.getText().toString();
+            switch (view.getId()){
+                case R.id.button_num_play1:
+                    txtResultado.setText(resultadoAct + "1");
+                    break;
+                case R.id.button_num_play2:
+                    txtResultado.setText(resultadoAct + "2");
+                    break;
+                case R.id.button_num_play3:
+                    txtResultado.setText(resultadoAct + "3");
+                    break;
+                case R.id.button_num_play4:
+                    txtResultado.setText(resultadoAct + "4");
+                    break;
+                case R.id.button_num_play5:
+                    txtResultado.setText(resultadoAct + "5");
+                    break;
+                case R.id.button_num_play6:
+                    txtResultado.setText(resultadoAct + "6");
+                    break;
+                case R.id.button_num_play7:
+                    txtResultado.setText(resultadoAct + "7");
+                    break;
+                case R.id.button_num_play8:
+                    txtResultado.setText(resultadoAct + "8");
+                    break;
+                case R.id.button_num_play9:
+                    txtResultado.setText(resultadoAct + "9");
+                    break;
+                case R.id.button_num_play0:
+                    txtResultado.setText(resultadoAct + "0");
+                    break;
+                default:
+                    txtResultado.setText("ERROR");
+                    break;
+            }
         }
     }
 
     public void calcular(View view){
-        if(!txtResultado.getText().toString().equals("")){
-            int resultadoUsuario = Integer.parseInt(txtResultado.getText().toString());
-            if(resultadoUsuario == resultadoInt){
-                puntos++;
-                generarSonido(0);
-                Toast.makeText(this,"Bien Hecho!",Toast.LENGTH_SHORT).show();
+        if (botonesDisponibles){
+            if(!txtResultado.getText().toString().equals("")){
+                int resultadoUsuario = Integer.parseInt(txtResultado.getText().toString());
+                if(resultadoUsuario == resultadoInt){
+                    puntos++;
+                    generarSonido(0);
+                    txtDescripcion.setText("Bien Hecho!");
+                    txtResultado.setTextColor(Color.GREEN);
+                }
+                else{
+                    vidas--;
+                    generarSonido(1);
+                    generarSonido(2);
+                    txtDescripcion.setText("Ups.. la respuesta correcta es " + resultadoInt);
+                    txtResultado.setTextColor(Color.RED);
+                }
+                actualizarDatos();
+
+                botonesDisponibles = false;
+                Handler handler = new Handler();
+                handler. postDelayed(new Runnable() {
+                    public void run() {
+                        txtResultado.setTextColor(Color.BLACK);
+                        txtDescripcion.setText("");
+                        botonesDisponibles = true;
+                        txtResultado.setText("");
+                        generarProblema();
+                    }
+                }, 3000);
             }
             else{
-                vidas--;
-                generarSonido(1);
-                generarSonido(2);
-                Toast.makeText(this,"ups.. no era",Toast.LENGTH_SHORT).show();
+                Toast.makeText(this,"Ingrese un numero.",Toast.LENGTH_SHORT).show();
             }
-            actualizarDatos();
-            generarProblema();
-            txtResultado.setText("");
-        }
-        else{
-            Toast.makeText(this,"Ingrese un numero.",Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -183,15 +207,44 @@ public class MatPlayActivity extends AppCompatActivity {
     }
 
     public void borrarTodo(View view){
-        txtResultado.setText("");
+        if(botonesDisponibles){
+            txtResultado.setText("");
+        }
+
     }
 
     public void atras(View view){
-        String resultadoAct = txtResultado.getText().toString();
-        if(resultadoAct.length() > 0){
-            txtResultado.setText(resultadoAct.substring(0,resultadoAct.length()-1));
+        if(botonesDisponibles){
+            String resultadoAct = txtResultado.getText().toString();
+            if(resultadoAct.length() > 0){
+                txtResultado.setText(resultadoAct.substring(0,resultadoAct.length()-1));
+            }
         }
     }
 
+    @Override
+    public void onBackPressed() {
+        AlertDialog.Builder alerta = new AlertDialog.Builder(MatPlayActivity.this);
+        alerta.setMessage("Perderas todo tu progreso");
+        alerta.setCancelable(true);
+        alerta.setPositiveButton("Salir", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                Intent salir = new Intent(MatPlayActivity.this,FinJuegoActivity.class);
+                salir.putExtra("puntos",puntos);
+                startActivity(salir);
+                finish();
+            }
 
+        });
+        alerta.setNegativeButton("Continuar", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                dialogInterface.cancel();
+            }
+        });
+        AlertDialog titulo = alerta.create();
+        titulo.setTitle("¿Deseas salir?");
+        titulo.show();
+    }
 }

@@ -1,7 +1,9 @@
 package com.example.proyectodante.PlaysActivity;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.media.AudioManager;
@@ -213,6 +215,32 @@ public class PalabraPlayActivity extends AppCompatActivity {
         opciones[2] = findViewById(R.id.button_opc3);
         opciones[3] = findViewById(R.id.button_opc4);
         imagen = findViewById(R.id.txt_palabraplay_imagen);
+    }
+
+    @Override
+    public void onBackPressed() {
+        AlertDialog.Builder alerta = new AlertDialog.Builder(PalabraPlayActivity.this);
+        alerta.setMessage("Perderas todo tu progreso");
+        alerta.setCancelable(true);
+        alerta.setPositiveButton("Salir", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                Intent salir = new Intent(PalabraPlayActivity.this,FinJuegoActivity.class);
+                salir.putExtra("puntos",puntos);
+                startActivity(salir);
+                finish();
+            }
+
+        });
+        alerta.setNegativeButton("Continuar", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                dialogInterface.cancel();
+            }
+        });
+        AlertDialog titulo = alerta.create();
+        titulo.setTitle("¿Deseas salir?");
+        titulo.show();
     }
 
 }
