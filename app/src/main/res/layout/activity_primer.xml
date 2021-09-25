@@ -9,26 +9,20 @@
 
     <EditText
         android:id="@+id/txt_nombreUser"
-        android:layout_width="280dp"
+        android:layout_width="311dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="67dp"
-        android:layout_marginLeft="67dp"
         android:layout_marginTop="234dp"
-        android:layout_marginEnd="64dp"
-        android:layout_marginRight="64dp"
-        android:fontFamily="@font/grandstanderclean"
+        android:background="#00FFFFFF"
+        android:fontFamily="@font/grandstanderdos"
+        android:gravity="center"
         android:hint="@string/et_nombre"
         android:inputType="textPersonName"
         android:maxLength="20"
         android:textColor="#03A9F4"
         android:textColorHint="#03A9F4"
-        android:textSize="24sp" />
+        android:textSize="30sp" />
 
     <Button
         android:id="@+id/button"
@@ -68,10 +62,10 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="476dp"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="42dp"
+        android:layout_marginTop="-108dp"
         android:contentDescription="@string/txt_img_ej"
-        app:srcCompat="@drawable/logotipo_prueba" />
+        app:srcCompat="@drawable/infantipedialogo" />
 </RelativeLayout>

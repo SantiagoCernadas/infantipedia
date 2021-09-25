@@ -3,6 +3,7 @@ package com.example.proyectodante;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.text.style.BackgroundColorSpan;
 import android.view.View;
 import android.widget.Switch;
 import android.widget.TextView;

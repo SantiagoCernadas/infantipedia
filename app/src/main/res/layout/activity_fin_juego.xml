@@ -14,11 +14,11 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="53dp"
-        android:fontFamily="@font/grandstanderclean"
+        android:fontFamily="@font/grandstanderdos"
         android:gravity="center"
         android:text="FIN DEL JUEGO"
         android:textColor="#000000"
-        android:textSize="30sp" />
+        android:textSize="40sp" />
 
     <TextView
         android:id="@+id/txt_msj_puntos"
@@ -28,11 +28,11 @@
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="false"
         android:layout_marginTop="262dp"
-        android:fontFamily="@font/grandstanderclean"
+        android:fontFamily="@font/grandstanderdos"
         android:gravity="center"
         android:text="Obtuviste 0 puntos"
         android:textColor="#000000"
-        android:textSize="30sp" />
+        android:textSize="40sp" />
 
     <Button
         android:id="@+id/button14"
@@ -45,8 +45,8 @@
         android:layout_marginLeft="83dp"
         android:layout_marginTop="540dp"
         android:background="#F61515"
-        android:fontFamily="@font/grandstanderclean"
+        android:fontFamily="@font/grandstanderdos"
         android:onClick="volverMenu"
         android:text="Volver al menu"
-        android:textSize="25sp" />
+        android:textSize="27sp" />
 </RelativeLayout>

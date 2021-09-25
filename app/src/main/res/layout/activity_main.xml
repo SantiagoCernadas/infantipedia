@@ -5,22 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
-    tools:context=".MainActivity" >
+    tools:context=".MainActivity">
 
     <ImageView
-        android:id="@+id/image_logotipo"
-        android:layout_width="370dp"
-        android:layout_height="96dp"
+        android:id="@+id/imageView19"
+        android:layout_width="match_parent"
+        android:layout_height="476dp"
         android:layout_alignParentTop="true"
-        android:layout_centerInParent="false"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="52dp"
-        android:contentDescription="@string/logotipo_name"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.487"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logotipo_prueba" />
+        android:layout_marginTop="-108dp"
+        android:contentDescription="@string/txt_img_ej"
+        app:srcCompat="@drawable/infantipedialogo" />
 
     <TextView
         android:id="@+id/txt_welcome"
@@ -28,17 +22,18 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="198dp"
-        android:fontFamily="@font/grandstanderclean"
+        android:layout_marginTop="240sp"
+        android:fontFamily="@font/grandstanderdos"
         android:text="@string/txt_Bienvenida"
-        android:textSize="20sp" />
+        android:textColor="#000000"
+        android:textSize="25sp" />
 
     <LinearLayout
         android:layout_width="323dp"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerInParent="true"
-        android:layout_marginTop="307dp"
+        android:layout_marginTop="310sp"
         android:orientation="vertical">
 
         <Button
@@ -46,7 +41,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20sp"
-            android:background="#1CE5FF"
+            android:background="#F8CA9A"
             android:fontFamily="@font/grandstanderclean"
             android:onClick="activity_abecedario"
             android:padding="15sp"
@@ -58,7 +53,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20sp"
-            android:background="#FF1947"
+            android:background="#BAF5A9"
             android:fontFamily="@font/grandstanderclean"
             android:onClick="activity_matematicas"
             android:padding="15sp"
@@ -70,7 +65,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20sp"
-            android:background="#58FF5E"
+            android:background="#9FADEE"
             android:fontFamily="@font/grandstanderclean"
             android:onClick="activity_animales"
             android:padding="15sp"
@@ -82,11 +77,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20sp"
-            android:background="#FFEB3B"
+            android:background="#CF9FEE"
             android:fontFamily="@font/grandstanderclean"
             android:onClick="activity_dibujo"
             android:padding="15sp"
-            android:text="@string/button_dibujo"
+            android:text="@string/button_juegos"
             android:textSize="20sp" />
     </LinearLayout>
 

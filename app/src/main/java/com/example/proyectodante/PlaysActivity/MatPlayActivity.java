@@ -101,7 +101,6 @@ public class MatPlayActivity extends AppCompatActivity {
             startActivity(i);
             finish();
         }
-
     }
 
     public int calcularProblema(int num1, int num2){
@@ -174,7 +173,7 @@ public class MatPlayActivity extends AppCompatActivity {
                     vidas--;
                     generarSonido(1);
                     generarSonido(2);
-                    txtDescripcion.setText("Ups.. la respuesta correcta es " + resultadoInt);
+                    txtDescripcion.setText("Ups.. la respuesta correcta era " + resultadoInt);
                     txtResultado.setTextColor(Color.RED);
                 }
                 actualizarDatos();

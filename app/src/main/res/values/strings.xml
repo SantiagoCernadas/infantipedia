@@ -4,18 +4,17 @@
     <string name="button_user">Entrar</string>
     <string name="button_invitado">Entrar sin nombre</string>
 
-    <string name="button_play">InfantiPlay</string>
 
     <string name="txt_Bienvenida">Hola!</string>
-    <string name="txt_version">Version 0.59</string>
+    <string name="txt_version">Version 0.63</string>
 
 
-    <string name="app_name">proyecto dante</string>
+    <string name="app_name">Infantipedia</string>
     <string name="logotipo_name">Logotipo</string>
     <string name="button_abecedario">Abecedario</string>
-    <string name="button_math">Matematicas</string>
+    <string name="button_math">Matemáticas</string>
     <string name="button_animales">Animales</string>
-    <string name="button_dibujo">dibujar</string>
+    <string name="button_juegos">Juegos</string>
 
 
     <string name="txt_tv_abecedario">Presiona una letra!</string>
