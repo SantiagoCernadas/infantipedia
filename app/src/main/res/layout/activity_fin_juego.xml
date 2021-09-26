@@ -44,7 +44,7 @@
         android:layout_marginStart="83dp"
         android:layout_marginLeft="83dp"
         android:layout_marginTop="540dp"
-        android:background="#F61515"
+        android:background="#F8A69A"
         android:fontFamily="@font/grandstanderdos"
         android:onClick="volverMenu"
         android:text="Volver al menu"

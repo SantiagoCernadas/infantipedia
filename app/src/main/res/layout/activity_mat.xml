@@ -13,11 +13,15 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="71dp"
+        android:layout_marginTop="40sp"
         android:fontFamily="@font/grandstanderclean"
         android:gravity="center"
+        android:shadowColor="#000000"
+        android:shadowDx="2"
+        android:shadowDy="5"
+        android:shadowRadius="5"
         android:text="@string/txt_math"
-        android:textColor="#0033FF"
+        android:textColor="#84b6f4"
         android:textSize="35sp" />
 
     <Button
@@ -27,11 +31,15 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="225sp"
-        android:background="#26FF00"
+        android:background="#BAF5A9"
         android:contentDescription="@string/txt_vacio"
         android:fontFamily="@font/grandstanderclean"
         android:onClick="iniciarCalculadora"
         android:padding="7sp"
+        android:shadowColor="#888a8a"
+        android:shadowDx="3"
+        android:shadowDy="2"
+        android:shadowRadius="1"
         android:text="@string/button_cal"
         android:textSize="30sp" />
 
@@ -46,9 +54,13 @@
         android:layout_marginStart="44dp"
         android:layout_marginLeft="44dp"
         android:layout_marginTop="351dp"
-        android:background="#29FFC3"
+        android:background="#9FADEE"
         android:fontFamily="@font/grandstanderdos"
         android:onClick="howPlayActivity"
+        android:shadowColor="#888a8a"
+        android:shadowDx="3"
+        android:shadowDy="2"
+        android:shadowRadius="1"
         android:text="Minijuego                        problemas matematicos"
         android:textSize="25sp" />
 

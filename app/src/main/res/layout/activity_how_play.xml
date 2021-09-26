@@ -16,8 +16,12 @@
         android:layout_marginTop="35dp"
         android:fontFamily="@font/grandstanderclean"
         android:gravity="center"
+        android:shadowColor="#000000"
+        android:shadowDx="5"
+        android:shadowDy="2"
+        android:shadowRadius="1"
         android:text="nombre minijuego"
-        android:textColor="#000000"
+        android:textColor="#9FADEE"
         android:textSize="30sp" />
 
     <ScrollView
@@ -38,6 +42,10 @@
             android:layout_centerHorizontal="true"
             android:fontFamily="@font/grandstanderdos"
             android:lineSpacingExtra="10sp"
+            android:shadowColor="#888a8a"
+            android:shadowDx="3"
+            android:shadowDy="2"
+            android:shadowRadius="1"
             android:text="desripcion"
             android:textColor="#000000"
             android:textSize="20sp" />
@@ -53,9 +61,13 @@
         android:layout_marginStart="83dp"
         android:layout_marginLeft="83dp"
         android:layout_marginTop="607dp"
-        android:background="#EB49FD"
+        android:background="#CF9FEE"
         android:fontFamily="@font/grandstanderclean"
         android:onClick="jugar"
+        android:shadowColor="#888a8a"
+        android:shadowDx="3"
+        android:shadowDy="2"
+        android:shadowRadius="1"
         android:text="Jugar"
         android:textSize="30sp" />
 
