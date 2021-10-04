@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".familiasActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/familia_0"
+                android:layout_width="300sp"
+                android:layout_height="80sp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="25sp"
+                android:background="#9FEEEE"
+                android:contentDescription="@string/txt_vacio"
+                android:fontFamily="@font/grandstanderclean"
+                android:onClick="familiaNumActivity"
+                android:padding="7sp"
+                android:shadowColor="#888a8a"
+                android:shadowDx="3"
+                android:shadowDy="2"
+                android:shadowRadius="1"
+                android:text="familia del 0"
+                android:textSize="25sp" />
+
+            <Button
+                android:id="@+id/familia_10"
+                android:layout_width="300sp"
+                android:layout_height="80sp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="25sp"
+                android:background="#F8CA9A"
+                android:contentDescription="@string/txt_vacio"
+                android:fontFamily="@font/grandstanderclean"
+                android:onClick="familiaNumActivity"
+                android:padding="7sp"
+                android:shadowColor="#888a8a"
+                android:shadowDx="3"
+                android:shadowDy="2"
+                android:shadowRadius="1"
+                android:text="familia del 10"
+                android:textSize="25sp" />
+
+            <Button
+                android:id="@+id/familia_20"
+                android:layout_width="300sp"
+                android:layout_height="80sp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="25sp"
+                android:background="#BAF5A9"
+                android:contentDescription="@string/txt_vacio"
+                android:fontFamily="@font/grandstanderclean"
+                android:onClick="familiaNumActivity"
+                android:padding="7sp"
+                android:shadowColor="#888a8a"
+                android:shadowDx="3"
+                android:shadowDy="2"
+                android:shadowRadius="1"
+                android:text="familia del 20"
+                android:textSize="25sp" />
+
+            <Button
+                android:id="@+id/familia_30"
+                android:layout_width="300sp"
+                android:layout_height="80sp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="25sp"
+                android:background="#CF9FEE"
+                android:contentDescription="@string/txt_vacio"
+                android:fontFamily="@font/grandstanderclean"
+                android:onClick="familiaNumActivity"
+                android:padding="7sp"
+                android:shadowColor="#888a8a"
+                android:shadowDx="3"
+                android:shadowDy="2"
+                android:shadowRadius="1"
+                android:text="familia del 30"
+                android:textSize="25sp" />
+
+            <Button
+                android:id="@+id/familia_40"
+                android:layout_width="300sp"
+                android:layout_height="80sp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="25sp"
+                android:background="#9FEEEE"
+                android:contentDescription="@string/txt_vacio"
+                android:fontFamily="@font/grandstanderclean"
+                android:onClick="familiaNumActivity"
+                android:padding="7sp"
+                android:shadowColor="#888a8a"
+                android:shadowDx="3"
+                android:shadowDy="2"
+                android:shadowRadius="1"
+                android:text="familia del 40"
+                android:textSize="25sp" />
+
+            <Button
+                android:id="@+id/familia_50"
+                android:layout_width="300sp"
+                android:layout_height="80sp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="25sp"
+                android:background="#F8CA9A"
+                android:contentDescription="@string/txt_vacio"
+                android:fontFamily="@font/grandstanderclean"
+                android:onClick="familiaNumActivity"
+                android:padding="7sp"
+                android:shadowColor="#888a8a"
+                android:shadowDx="3"
+                android:shadowDy="2"
+                android:shadowRadius="1"
+                android:text="familia del 50"
+                android:textSize="25sp" />
+
+            <Button
+                android:id="@+id/familia_60"
+                android:layout_width="300sp"
+                android:layout_height="80sp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="25sp"
+                android:background="#BAF5A9"
+                android:contentDescription="@string/txt_vacio"
+                android:fontFamily="@font/grandstanderclean"
+                android:onClick="familiaNumActivity"
+                android:padding="7sp"
+                android:shadowColor="#888a8a"
+                android:shadowDx="3"
+                android:shadowDy="2"
+                android:shadowRadius="1"
+                android:text="familia del 60"
+                android:textSize="25sp" />
+
+            <Button
+                android:id="@+id/familia_70"
+                android:layout_width="300sp"
+                android:layout_height="80sp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="25sp"
+                android:background="#CF9FEE"
+                android:contentDescription="@string/txt_vacio"
+                android:fontFamily="@font/grandstanderclean"
+                android:onClick="familiaNumActivity"
+                android:padding="7sp"
+                android:shadowColor="#888a8a"
+                android:shadowDx="3"
+                android:shadowDy="2"
+                android:shadowRadius="1"
+                android:text="familia del 70"
+                android:textSize="25sp" />
+
+            <Button
+                android:id="@+id/familia_80"
+                android:layout_width="300sp"
+                android:layout_height="80sp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="25sp"
+                android:background="#9FEEEE"
+                android:contentDescription="@string/txt_vacio"
+                android:fontFamily="@font/grandstanderclean"
+                android:onClick="familiaNumActivity"
+                android:padding="7sp"
+                android:shadowColor="#888a8a"
+                android:shadowDx="3"
+                android:shadowDy="2"
+                android:shadowRadius="1"
+                android:text="familia del 80"
+                android:textSize="25sp" />
+
+            <Button
+                android:id="@+id/familia_90"
+                android:layout_width="300sp"
+                android:layout_height="80sp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="25sp"
+                android:background="#F8CA9A"
+                android:contentDescription="@string/txt_vacio"
+                android:fontFamily="@font/grandstanderclean"
+                android:onClick="familiaNumActivity"
+                android:padding="7sp"
+                android:shadowColor="#888a8a"
+                android:shadowDx="3"
+                android:shadowDy="2"
+                android:shadowRadius="1"
+                android:text="familia del 90"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/textView21"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/grandstanderclean"
+                android:gravity="center"
+                android:shadowColor="#000000"
+                android:shadowDx="3"
+                android:shadowDy="2"
+                android:shadowRadius="1"
+                android:text="100 (CIEN)"
+                android:textColor="#F8A69A"
+                android:textSize="70sp" />
+
+            <ImageButton
+                android:id="@+id/imageButton4"
+                android:layout_width="100sp"
+                android:layout_height="100sp"
+                android:layout_gravity="center"
+                android:background="#00FFFFFF"
+                android:contentDescription="@string/txt_vacio"
+                android:onClick="repCien"
+                app:srcCompat="@android:drawable/ic_lock_silent_mode_off"
+                app:tint="#000000" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

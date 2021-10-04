@@ -21,6 +21,10 @@
         android:background="#FFF3A6"
         android:fontFamily="@font/grandstanderdos"
         android:onClick="howPlayActivity"
+        android:shadowColor="#888a8a"
+        android:shadowDx="3"
+        android:shadowDy="2"
+        android:shadowRadius="1"
         android:text="minijuego ¿que es?"
         android:textSize="25sp" />
 

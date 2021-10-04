@@ -34,4 +34,9 @@ public class MathActivity extends AppCompatActivity {
         i.putExtra("idimg2",R.drawable.matplayej2);
         startActivity(i);
     }
+
+    public void familiaActivity(View view){
+        Intent i = new Intent(this, familiasActivity.class);
+        startActivity(i);
+    }
 }
