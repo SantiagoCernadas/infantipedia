@@ -224,7 +224,7 @@ public class MatPlayActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         AlertDialog.Builder alerta = new AlertDialog.Builder(MatPlayActivity.this);
-        alerta.setMessage("Perderas todo tu progreso");
+        alerta.setMessage("Perderás todo tu progreso");
         alerta.setCancelable(true);
         alerta.setPositiveButton("Salir", new DialogInterface.OnClickListener() {
             @Override

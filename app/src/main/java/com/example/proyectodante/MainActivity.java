@@ -15,13 +15,23 @@ public class MainActivity extends AppCompatActivity {
     private TextView tv1;
     private MediaPlayer mp;
     private ImageButton iv,iv2;
+    private static String nombre;
+
+    public static String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
     private boolean musicaRep;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        String nombre = getIntent().getStringExtra("usuario");
+        nombre = getIntent().getStringExtra("usuario");
         iv = findViewById(R.id.iv_musica);
         iv2 = findViewById(R.id.iv_musica_off);
         tv1 = findViewById(R.id.txt_welcome);
@@ -58,7 +68,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void activity_dibujo(View view) {
-        getMensajeProximamente();
+        Intent i = new Intent(this,JuegosActivity.class);
+        startActivity(i);
     }
 
     public void getMensajeProximamente() {

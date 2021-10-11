@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".TablasActivity"></activity>
+        <activity android:name=".PptActivityDosJugadores"></activity>
+        <activity android:name=".PlaysActivity.PptActivity" />
+        <activity android:name=".JuegosActivity" />
+        <activity android:name=".NumTablaActivity" />
+        <activity android:name=".TablasActivity" />
         <activity android:name=".NumFamiliaActivity" />
         <activity android:name=".familiasActivity" />
         <activity android:name=".PlaysActivity.FinJuegoActivity" />

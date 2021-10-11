@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".PlaysActivity.PptActivity">
+
+    <Button
+        android:id="@+id/ppt_salir"
+        android:layout_width="120dp"
+        android:layout_height="66dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="6sp"
+        android:layout_marginLeft="6sp"
+        android:layout_marginTop="472dp"
+        android:background="#ff6961"
+        android:fontFamily="@font/grandstanderclean"
+        android:onClick="salirppt"
+        android:text="Salir"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/ppt_volver_jugar"
+        android:layout_width="120dp"
+        android:layout_height="66dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="6dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="393dp"
+        android:background="#77dd77"
+        android:fontFamily="@font/grandstanderclean"
+        android:onClick="volverAJugar"
+        android:text="Volver a jugar"
+        android:textSize="20sp" />
+
+    <ImageButton
+        android:id="@+id/imagen_tijera"
+        android:layout_width="100sp"
+        android:layout_height="100sp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="37dp"
+        android:layout_marginLeft="37dp"
+        android:layout_marginTop="610dp"
+        android:background="#BAF5A9"
+        android:onClick="opcion"
+        android:scaleType="centerInside"
+        android:src="@drawable/tijera" />
+
+    <ImageButton
+        android:id="@+id/imagen_papel"
+        android:layout_width="100sp"
+        android:layout_height="100sp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="157dp"
+        android:layout_marginLeft="157dp"
+        android:layout_marginTop="610sp"
+        android:background="#FFF3A6"
+        android:onClick="opcion"
+        android:scaleType="centerInside"
+        android:src="@drawable/papel" />
+
+    <ImageButton
+        android:id="@+id/imagen_piedra"
+        android:layout_width="100sp"
+        android:layout_height="100sp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="277sp"
+        android:layout_marginLeft="277sp"
+        android:layout_marginTop="610sp"
+        android:background="#F8A69A"
+        android:onClick="opcion"
+        android:scaleType="centerInside"
+        android:src="@drawable/piedra" />
+
+    <ImageView
+        android:id="@+id/imagen_cpu"
+        android:layout_width="150sp"
+        android:layout_height="150sp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="134sp"
+        android:layout_marginLeft="134sp"
+        android:layout_marginTop="134sp"
+        android:background="#00FFFFFF"
+        android:scaleType="centerInside"
+        app:srcCompat="@drawable/tijera" />
+
+    <ImageView
+        android:id="@+id/imagen_jugador"
+        android:layout_width="150sp"
+        android:layout_height="150sp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="134sp"
+        android:layout_marginLeft="134sp"
+        android:layout_marginTop="389sp"
+        android:background="#00FFFFFF"
+        android:scaleType="centerInside"
+        app:srcCompat="@drawable/tijera" />
+
+    <TextView
+        android:id="@+id/txt_puntos_jugador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="551dp"
+        android:fontFamily="@font/grandstanderdos"
+        android:gravity="center"
+        android:text="Jugador: 0/5"
+        android:textColor="#000000"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/txt_ganador_ronda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="316dp"
+        android:fontFamily="@font/grandstanderdos"
+        android:gravity="center"
+        android:text="Punto para el jugador!"
+        android:textColor="#000000"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/txt_puntos_cpu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="78dp"
+        android:fontFamily="@font/grandstanderdos"
+        android:gravity="center"
+        android:text="Duxi: 0/5"
+        android:textColor="#000000"
+        android:textSize="30sp" />
+
+</RelativeLayout>

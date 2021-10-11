@@ -73,16 +73,16 @@ public class NumFamiliaActivity extends AppCompatActivity {
     }
 
     private void conectarID() {
-        tv[0] = findViewById(R.id.familia_num_0);
-        tv[1] = findViewById(R.id.familia_num_1);
-        tv[2] = findViewById(R.id.familia_num_2);
-        tv[3] = findViewById(R.id.familia_num_3);
-        tv[4] = findViewById(R.id.familia_num_4);
-        tv[5] = findViewById(R.id.familia_num_5);
-        tv[6] = findViewById(R.id.familia_num_6);
-        tv[7] = findViewById(R.id.familia_num_7);
-        tv[8] = findViewById(R.id.familia_num_8);
-        tv[9] = findViewById(R.id.familia_num_9);
+        tv[0] = findViewById(R.id.tabla_ec_1);
+        tv[1] = findViewById(R.id.tabla_ec_2);
+        tv[2] = findViewById(R.id.tabla_ec_3);
+        tv[3] = findViewById(R.id.tabla_ec_4);
+        tv[4] = findViewById(R.id.tabla_ec_5);
+        tv[5] = findViewById(R.id.tabla_ec_6);
+        tv[6] = findViewById(R.id.tabla_ec_7);
+        tv[7] = findViewById(R.id.tabla_ec_8);
+        tv[8] = findViewById(R.id.tabla_ec_9);
+        tv[9] = findViewById(R.id.tabla_ec_10);
         tv[10] = findViewById(R.id.familia_nombre_0);
         tv[11] = findViewById(R.id.familia_nombre_1);
         tv[12] = findViewById(R.id.familia_nombre_2);

@@ -16,8 +16,23 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <TextView
+                android:id="@+id/txt_letra_titulo3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/grandstanderdos"
+                android:gravity="center"
+                android:shadowColor="#000000"
+                android:shadowDx="5"
+                android:shadowDy="2"
+                android:shadowRadius="1"
+                android:text="Familias del 0 al 100"
+                android:textColor="#9FADEE"
+                android:textColorHint="#000000"
+                android:textSize="40sp" />
+
             <Button
-                android:id="@+id/familia_0"
+                android:id="@+id/tablas_1"
                 android:layout_width="300sp"
                 android:layout_height="80sp"
                 android:layout_alignParentTop="true"
@@ -37,7 +52,7 @@
                 android:textSize="25sp" />
 
             <Button
-                android:id="@+id/familia_10"
+                android:id="@+id/tablas_2"
                 android:layout_width="300sp"
                 android:layout_height="80sp"
                 android:layout_alignParentTop="true"
@@ -57,7 +72,7 @@
                 android:textSize="25sp" />
 
             <Button
-                android:id="@+id/familia_20"
+                android:id="@+id/tablas_3"
                 android:layout_width="300sp"
                 android:layout_height="80sp"
                 android:layout_alignParentTop="true"
@@ -77,7 +92,7 @@
                 android:textSize="25sp" />
 
             <Button
-                android:id="@+id/familia_30"
+                android:id="@+id/tablas_4"
                 android:layout_width="300sp"
                 android:layout_height="80sp"
                 android:layout_alignParentTop="true"
@@ -97,7 +112,7 @@
                 android:textSize="25sp" />
 
             <Button
-                android:id="@+id/familia_40"
+                android:id="@+id/tablas_5"
                 android:layout_width="300sp"
                 android:layout_height="80sp"
                 android:layout_alignParentTop="true"
@@ -117,7 +132,7 @@
                 android:textSize="25sp" />
 
             <Button
-                android:id="@+id/familia_50"
+                android:id="@+id/tablas_6"
                 android:layout_width="300sp"
                 android:layout_height="80sp"
                 android:layout_alignParentTop="true"
@@ -137,7 +152,7 @@
                 android:textSize="25sp" />
 
             <Button
-                android:id="@+id/familia_60"
+                android:id="@+id/tablas_7"
                 android:layout_width="300sp"
                 android:layout_height="80sp"
                 android:layout_alignParentTop="true"
@@ -157,7 +172,7 @@
                 android:textSize="25sp" />
 
             <Button
-                android:id="@+id/familia_70"
+                android:id="@+id/tablas_8"
                 android:layout_width="300sp"
                 android:layout_height="80sp"
                 android:layout_alignParentTop="true"
@@ -177,7 +192,7 @@
                 android:textSize="25sp" />
 
             <Button
-                android:id="@+id/familia_80"
+                android:id="@+id/tablas_9"
                 android:layout_width="300sp"
                 android:layout_height="80sp"
                 android:layout_alignParentTop="true"
@@ -197,7 +212,7 @@
                 android:textSize="25sp" />
 
             <Button
-                android:id="@+id/familia_90"
+                android:id="@+id/tablas_10"
                 android:layout_width="300sp"
                 android:layout_height="80sp"
                 android:layout_alignParentTop="true"

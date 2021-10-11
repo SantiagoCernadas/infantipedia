@@ -39,4 +39,9 @@ public class MathActivity extends AppCompatActivity {
         Intent i = new Intent(this, familiasActivity.class);
         startActivity(i);
     }
+
+    public void tablasActivity(View view){
+        Intent i = new Intent(this, TablasActivity.class);
+        startActivity(i);
+    }
 }
