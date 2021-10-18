@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".PptModoActivity">
+
+    <Button
+        android:id="@+id/button19"
+        android:layout_width="323sp"
+        android:layout_height="120sp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="200sp"
+        android:background="#9FEEEE"
+        android:contentDescription="@string/txt_vacio"
+        android:fontFamily="@font/grandstanderclean"
+        android:onClick="modoCpu"
+        android:padding="7sp"
+        android:shadowColor="#888a8a"
+        android:shadowDx="3"
+        android:shadowDy="2"
+        android:shadowRadius="1"
+        android:text="Jugador vs CPU"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/button18"
+        android:layout_width="323sp"
+        android:layout_height="120sp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="400sp"
+        android:background="#FFF3A6"
+        android:contentDescription="@string/txt_vacio"
+        android:fontFamily="@font/grandstanderclean"
+        android:onClick="dosJugadores"
+        android:padding="7sp"
+        android:shadowColor="#888a8a"
+        android:shadowDx="3"
+        android:shadowDy="2"
+        android:shadowRadius="1"
+        android:text="Jugador 1 vs jugador 2"
+        android:textSize="30sp" />
+</RelativeLayout>

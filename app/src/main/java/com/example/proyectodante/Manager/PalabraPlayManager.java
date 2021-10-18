@@ -25,7 +25,7 @@ public class PalabraPlayManager {
         idImagenes[i] = setIdImagen(R.drawable.eejescalera);
         idImagenes[i] = setIdImagen(R.drawable.fejfantasma);
         idImagenes[i] = setIdImagen(R.drawable.fejflor);
-        idImagenes[i] = setIdImagen(R.drawable.fejfruta);
+        idImagenes[i] = setIdImagen(R.drawable.imagenfoca);
         idImagenes[i] = setIdImagen(R.drawable.gejgato);
         idImagenes[i] = setIdImagen(R.drawable.gejgallina);
         idImagenes[i] = setIdImagen(R.drawable.gejglobo);
@@ -92,7 +92,7 @@ public class PalabraPlayManager {
     }
     public void setPalabras(String []palabras){
         i = 0;
-        palabras[i] = setPalabra("Arbol");
+        palabras[i] = setPalabra("Árbol");
         palabras[i] = setPalabra("Abeja");
         palabras[i] = setPalabra("Agua");
         palabras[i] = setPalabra("Barco");
@@ -102,14 +102,14 @@ public class PalabraPlayManager {
         palabras[i] = setPalabra("Caramelo");
         palabras[i] = setPalabra("Castillo");
         palabras[i] = setPalabra("Dado");
-        palabras[i] = setPalabra("Delfin");
+        palabras[i] = setPalabra("Delfín");
         palabras[i] = setPalabra("Dinosaurio");
         palabras[i] = setPalabra("Elefante");
         palabras[i] = setPalabra("Estrella");
         palabras[i] = setPalabra("Escalera");
         palabras[i] = setPalabra("Fantasma");
         palabras[i] = setPalabra("Flor");
-        palabras[i] = setPalabra("Frutas");
+        palabras[i] = setPalabra("Foca");
         palabras[i] = setPalabra("Gato");
         palabras[i] = setPalabra("Gallina");
         palabras[i] = setPalabra("Globo");
@@ -118,7 +118,7 @@ public class PalabraPlayManager {
         palabras[i] = setPalabra("Helicóptero");
         palabras[i] = setPalabra("Indio");
         palabras[i] = setPalabra("Isla");
-        palabras[i] = setPalabra("Iglu");
+        palabras[i] = setPalabra("Iglú");
         palabras[i] = setPalabra("Jirafa");
         palabras[i] = setPalabra("Jugo");
         palabras[i] = setPalabra("Juguetes");
@@ -126,7 +126,7 @@ public class PalabraPlayManager {
         palabras[i] = setPalabra("Koala");
         palabras[i] = setPalabra("Ketchup");
         palabras[i] = setPalabra("Leche");
-        palabras[i] = setPalabra("Leon");
+        palabras[i] = setPalabra("León");
         palabras[i] = setPalabra("Libro");
         palabras[i] = setPalabra("Manzana");
         palabras[i] = setPalabra("Mapa");
@@ -134,7 +134,7 @@ public class PalabraPlayManager {
         palabras[i] = setPalabra("Naranja");
         palabras[i] = setPalabra("Niño y Niña");
         palabras[i] = setPalabra("Nieve");
-        palabras[i] = setPalabra("Ñandu");
+        palabras[i] = setPalabra("Ñandú");
         palabras[i] = setPalabra("Ñoquis");
         palabras[i] = setPalabra("Araña");
         palabras[i] = setPalabra("Oso");
@@ -147,24 +147,24 @@ public class PalabraPlayManager {
         palabras[i] = setPalabra("Quimica");
         palabras[i] = setPalabra("Quesadilla");
         palabras[i] = setPalabra("Rana");
-        palabras[i] = setPalabra("Rio");
+        palabras[i] = setPalabra("Río");
         palabras[i] = setPalabra("Rueda");
         palabras[i] = setPalabra("Sandia");
         palabras[i] = setPalabra("Serpiente");
         palabras[i] = setPalabra("Sol");
         palabras[i] = setPalabra("Taza");
         palabras[i] = setPalabra("Tigre");
-        palabras[i] = setPalabra("Titere");
+        palabras[i] = setPalabra("Títere");
         palabras[i] = setPalabra("Uña");
         palabras[i] = setPalabra("Uva");
         palabras[i] = setPalabra("Unicornio");
         palabras[i] = setPalabra("Vaca");
         palabras[i] = setPalabra("Vela");
-        palabras[i] = setPalabra("Volcan");
+        palabras[i] = setPalabra("Volcán");
         palabras[i] = setPalabra("Waterpolo");
         palabras[i] = setPalabra("Waffle");
         palabras[i] = setPalabra("Wi-Fi");
-        palabras[i] = setPalabra("Xilofono");
+        palabras[i] = setPalabra("Xilófono");
         palabras[i] = setPalabra("Taxi");
         palabras[i] = setPalabra("Extraterrestre");
         palabras[i] = setPalabra("Yoyo");

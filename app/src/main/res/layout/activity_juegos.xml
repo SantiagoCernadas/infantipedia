@@ -8,13 +8,13 @@
     tools:context=".JuegosActivity">
 
     <Button
-        android:id="@+id/button17"
+        android:id="@+id/button22"
         android:layout_width="323sp"
         android:layout_height="80sp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="175sp"
-        android:background="#9FADEE"
+        android:background="#BAF5A9"
         android:contentDescription="@string/txt_vacio"
         android:fontFamily="@font/grandstanderclean"
         android:onClick="PPT"
@@ -24,6 +24,25 @@
         android:shadowDy="2"
         android:shadowRadius="1"
         android:text="Piedra papel o tijeras"
+        android:textSize="25sp" />
+
+    <Button
+        android:id="@+id/button17"
+        android:layout_width="323sp"
+        android:layout_height="80sp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="300sp"
+        android:background="#CF9FEE"
+        android:contentDescription="@string/txt_vacio"
+        android:fontFamily="@font/grandstanderclean"
+        android:onClick="tateti"
+        android:padding="7sp"
+        android:shadowColor="#888a8a"
+        android:shadowDx="3"
+        android:shadowDy="2"
+        android:shadowRadius="1"
+        android:text="ta te ti / tres en raya"
         android:textSize="25sp" />
 
     <TextView

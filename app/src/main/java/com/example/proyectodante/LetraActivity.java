@@ -38,7 +38,7 @@ public class LetraActivity extends AppCompatActivity {
     public void generarActivity(String letra){
         switch (letra){
             case "A":
-                setPalabras("Arbol","Abeja","Agua");
+                setPalabras("Árbol","Abeja","Agua");
                 setImagenes(R.drawable.aejarbol,R.drawable.aejabeja,R.drawable.aejagua);
                 setSonidos(R.raw.audioarbol,R.raw.audioabeja,R.raw.audioagua);
                 break;
@@ -79,9 +79,9 @@ public class LetraActivity extends AppCompatActivity {
                 img1.setImageResource(R.drawable.fejfantasma);
                 tv2.setText("Flor");
                 img2.setImageResource(R.drawable.fejflor);
-                tv3.setText("Frutas");
-                img3.setImageResource(R.drawable.fejfruta);
-                setSonidos(R.raw.audiofantasma,R.raw.audioflor,R.raw.audiofrutas);
+                tv3.setText("Foca");
+                img3.setImageResource(R.drawable.imagenfoca);
+                setSonidos(R.raw.audiofantasma,R.raw.audioflor,R.raw.audiofoca);
                 break;
             case "G":
                 tv1.setText("Gato");

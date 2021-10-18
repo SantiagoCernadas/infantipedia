@@ -13,7 +13,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     private TextView tv1;
-    private MediaPlayer mp;
+    private static MediaPlayer mp;
     private ImageButton iv,iv2;
     private static String nombre;
 
@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         iv = findViewById(R.id.iv_musica);
         iv2 = findViewById(R.id.iv_musica_off);
         tv1 = findViewById(R.id.txt_welcome);
-        if (!nombre.equals("invitado")) {
+        if (!nombre.equals("")) {
             tv1.setText("Hola " + nombre + "!");
         }
         musicaRep = true;

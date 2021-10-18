@@ -9,21 +9,23 @@ import android.view.View;
 import com.example.proyectodante.PlaysActivity.PptActivity;
 import com.example.proyectodante.PlaysActivity.PptActivityDosJugadores;
 
-public class JuegosActivity extends AppCompatActivity {
+public class PptModoActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_juegos);
+        setContentView(R.layout.activity_ppt_modo);
     }
 
-    public void PPT(View view){
-        Intent i = new Intent(this, PptModoActivity.class);
+    public void modoCpu(View view){
+        Intent i = new Intent(this, PptActivity.class);
         startActivity(i);
+        finish();
     }
 
-    public void tateti(View view){
-        Intent i = new Intent(this, TatetiModoActivity.class);
+    public void dosJugadores(View view){
+        Intent i = new Intent(this, PptActivityDosJugadores.class);
         startActivity(i);
+        finish();
     }
 }
