@@ -11,6 +11,9 @@ import android.widget.TextView;
 import com.example.proyectodante.MatDificultadActivity;
 import com.example.proyectodante.R;
 
+import static com.example.proyectodante.MainActivity.pause;
+import static com.example.proyectodante.MainActivity.start;
+
 public class HowPlayActivity extends AppCompatActivity {
     private TextView txtTitulo,txtDescripcion;
     private ImageView img1,img2;
@@ -40,5 +43,16 @@ public class HowPlayActivity extends AppCompatActivity {
         }
         startActivity(i);
         finish();
+    }
+
+    public void onPause() {
+        super.onPause();
+        pause();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        start();
     }
 }

@@ -1,7 +1,9 @@
 package com.example.proyectodante.PlaysActivity;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.media.AudioManager;
@@ -16,11 +18,15 @@ import com.example.proyectodante.MainActivity;
 import com.example.proyectodante.Manager.StatsJugadorTateti;
 import com.example.proyectodante.R;
 
+import static com.example.proyectodante.MainActivity.pause;
+import static com.example.proyectodante.MainActivity.start;
+
 public class TatetiActivity extends AppCompatActivity {
     private int[] tablero;
     private Button[] botones;
     private StatsJugadorTateti jugador,cpu;
     private TextView txtMsgGanador;
+    private Button botonSalir,botonVolver;
     private int casillerosUsados;
     private int condicionVictoria;
     private String nombre;
@@ -47,6 +53,9 @@ public class TatetiActivity extends AppCompatActivity {
         jugador = new StatsJugadorTateti(findViewById(R.id.txt_puntos_jugador_tateti));
         cpu = new StatsJugadorTateti(findViewById(R.id.txt_puntos_cpu_tateti));
         txtMsgGanador = findViewById(R.id.txt_msg_ganador_tateti);
+        botonVolver = findViewById(R.id.ttt_volver_jugar);
+        botonSalir = findViewById(R.id.ttt_salir);
+        estadoBotones(View.INVISIBLE);
         casillerosUsados = 0;
         setBotones();
         limpiarPantalla();
@@ -125,7 +134,8 @@ public class TatetiActivity extends AppCompatActivity {
                     actualizarDatos();
                     botonesDips = false;
                     if(jugador.getPuntos() == condicionVictoria){
-                        txtMsgGanador.setText("Gano el jugador!");
+                        txtMsgGanador.setText("Ganó el jugador!");
+                        estadoBotones(View.VISIBLE);
                     }
                     else{
                         Handler handler = new Handler();
@@ -158,7 +168,7 @@ public class TatetiActivity extends AppCompatActivity {
                         public void run() {
                             setCasilleroCpu();
                         }
-                    }, 2000);
+                    }, 1000);
                 }
             }
         }
@@ -178,7 +188,8 @@ public class TatetiActivity extends AppCompatActivity {
             cpu.setPuntos(cpu.getPuntos() + 1);
             actualizarDatos();
             if(cpu.getPuntos() == condicionVictoria){
-                txtMsgGanador.setText("Gano Duxi!");
+                txtMsgGanador.setText("Ganó Duxi!");
+                estadoBotones(View.VISIBLE);
             }
             else{
                 Handler handler = new Handler();
@@ -316,5 +327,54 @@ public class TatetiActivity extends AppCompatActivity {
         botones[i].setText(signo);
         tablero[i] = tableroJugador;
         botones[i].setTextColor(Color.parseColor(color));
+    }
+    public void salirTTT(View view){
+        finish();
+    }
+    public void volverTTT(View view){
+        jugador.setPuntos(0);
+        cpu.setPuntos(0);
+        limpiarPantalla();
+        actualizarDatos();
+        txtMsgGanador.setText("Turno del jugador");
+        botonesDips = true;
+        estadoBotones(View.INVISIBLE);
+    }
+    private void estadoBotones(int estado) {
+        botonSalir.setVisibility(estado);
+        botonVolver.setVisibility(estado);
+    }
+    @Override
+    public void onBackPressed() {
+        AlertDialog.Builder alerta = new AlertDialog.Builder(TatetiActivity.this);
+        alerta.setMessage("Perderás todo tu progreso");
+        alerta.setCancelable(true);
+        alerta.setPositiveButton("Salir", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                finish();
+            }
+
+        });
+        alerta.setNegativeButton("Continuar", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                dialogInterface.cancel();
+            }
+        });
+        AlertDialog titulo = alerta.create();
+        titulo.setTitle("¿Deseas salir?");
+        titulo.show();
+    }
+
+    public void onPause() {
+        super.onPause();
+        pause();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        start();
     }
 }

@@ -9,6 +9,9 @@ import android.view.View;
 import com.example.proyectodante.PlaysActivity.HowPlayActivity;
 import com.example.proyectodante.PlaysActivity.PalabraPlayActivity;
 
+import static com.example.proyectodante.MainActivity.pause;
+import static com.example.proyectodante.MainActivity.start;
+
 public class AbecedarioActivity extends AppCompatActivity {
 
     @Override
@@ -140,9 +143,20 @@ public class AbecedarioActivity extends AppCompatActivity {
         i.putExtra("descripcion","En este minijuego tendrás 4 palabras y 1 imagen, " +
                 "cada vez que aciertes la palabra que sea la de la imagen mostrada ganarás 1 punto " +
                 "mientras que si fallas perderás 1 vida. la partida se acabará si pierdes todas " +
-                "las vidas. elige sabiamente y diviértete!");
+                "las vidas. Si quieres una pista pulsa el botón “¿?”. elige sabiamente y diviértete!");
         i.putExtra("idimg1",R.drawable.palabraplayej1);
         i.putExtra("idimg2",R.drawable.palabraplayej2);
         startActivity(i);
+    }
+
+    public void onPause() {
+        super.onPause();
+        pause();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        start();
     }
 }

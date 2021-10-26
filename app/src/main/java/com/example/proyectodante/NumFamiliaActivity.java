@@ -8,6 +8,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import static com.example.proyectodante.MainActivity.pause;
+import static com.example.proyectodante.MainActivity.start;
+
 public class NumFamiliaActivity extends AppCompatActivity {
     private int[] nums;
     private String[] nombreNums;
@@ -267,5 +270,16 @@ public class NumFamiliaActivity extends AppCompatActivity {
         spRep[7] = sp[7].load(this,R.raw.sonidonoventaysiete,1);
         spRep[8] = sp[8].load(this,R.raw.sonidonoventayocho,1);
         spRep[9] = sp[9].load(this,R.raw.sonidonoventaynueve,1);
+    }
+
+    public void onPause() {
+        super.onPause();
+        pause();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        start();
     }
 }

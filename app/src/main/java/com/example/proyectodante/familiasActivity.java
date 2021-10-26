@@ -10,6 +10,9 @@ import android.view.View;
 
 import com.example.proyectodante.Manager.NombreNumsManager;
 
+import static com.example.proyectodante.MainActivity.pause;
+import static com.example.proyectodante.MainActivity.start;
+
 public class familiasActivity extends AppCompatActivity {
     private int[] nums;
     private String[] nombreNums;
@@ -88,5 +91,16 @@ public class familiasActivity extends AppCompatActivity {
         }
 
         return nums;
+    }
+
+    public void onPause() {
+        super.onPause();
+        pause();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        start();
     }
 }

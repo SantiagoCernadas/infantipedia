@@ -9,6 +9,9 @@ import android.widget.TextView;
 
 import com.example.proyectodante.R;
 
+import static com.example.proyectodante.MainActivity.pause;
+import static com.example.proyectodante.MainActivity.start;
+
 public class FinJuegoActivity extends AppCompatActivity {
     private TextView msjPuntos;
     @Override
@@ -29,5 +32,15 @@ public class FinJuegoActivity extends AppCompatActivity {
         finish();
     }
 
+    public void onPause() {
+        super.onPause();
+        pause();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        start();
+    }
 
 }

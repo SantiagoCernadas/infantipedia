@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/mainb"
+    tools:context=".PrimerActivity">
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="400sp"
+        android:layout_height="140sp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="400sp"
+        android:background="#BAF5A9"
+        android:fontFamily="@font/grandstanderclean"
+        android:onClick="logUsuario"
+        android:shadowColor="#888a8a"
+        android:shadowDx="3"
+        android:shadowDy="2"
+        android:shadowRadius="1"
+        android:text="@string/button_user"
+        android:textColor="#000000"
+        android:textSize="40sp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="400sp"
+        android:layout_height="140sp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="600sp"
+        android:background="#9FADEE"
+        android:fontFamily="@font/grandstanderclean"
+        android:onClick="logInvitado"
+        android:shadowColor="#888a8a"
+        android:shadowDx="3"
+        android:shadowDy="2"
+        android:shadowRadius="1"
+        android:text="@string/button_invitado"
+        android:textColor="#000000"
+        android:textSize="40sp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="476dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="-108dp"
+        android:contentDescription="@string/txt_img_ej"
+        app:srcCompat="@drawable/infantipedialogo" />
+
+    <EditText
+        android:id="@+id/txt_nombreUser"
+        android:layout_width="450sp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="270sp"
+        android:background="#43CF9FEE"
+        android:fontFamily="@font/grandstanderdos"
+        android:gravity="center"
+        android:hint="@string/et_nombre"
+        android:inputType="textPersonName"
+        android:maxLength="20"
+        android:shadowColor="#000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="5"
+        android:textColor="#75f9f2"
+        android:textColorHint="#75f9f2"
+        android:textSize="45sp" />
+</RelativeLayout>

@@ -140,7 +140,7 @@
                 android:shadowDx="3"
                 android:shadowDy="2"
                 android:shadowRadius="1"
-                android:text="Delfin"
+                android:text="Delfín"
                 android:textColor="#000000"
                 android:textSize="50sp" />
 
@@ -295,7 +295,7 @@
                 android:shadowDx="3"
                 android:shadowDy="2"
                 android:shadowRadius="1"
-                android:text="Leon"
+                android:text="León"
                 android:textColor="#000000"
                 android:textSize="50sp" />
 

@@ -1,7 +1,9 @@
 package com.example.proyectodante.PlaysActivity;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.graphics.Color;
 import android.media.AudioManager;
 import android.media.SoundPool;
@@ -16,11 +18,15 @@ import com.example.proyectodante.Manager.StatsJugadorTateti;
 import com.example.proyectodante.Manager.StatsJugadorTatetiDos;
 import com.example.proyectodante.R;
 
+import static com.example.proyectodante.MainActivity.pause;
+import static com.example.proyectodante.MainActivity.start;
+
 public class TatetiActivityDosJugadores extends AppCompatActivity {
     private int[] tablero;
     private Button[] botones;
     private StatsJugadorTatetiDos[] jugadores;
     private TextView txtMsgGanador;
+    private Button botonSalir,botonVolver;
     private int casillerosUsados;
     private int condicionVictoria;
     private boolean botonesDips;
@@ -40,7 +46,7 @@ public class TatetiActivityDosJugadores extends AppCompatActivity {
         };
         nombre = MainActivity.getNombre();
         if(nombre.equals("")){
-            nombre = "el jugador";
+            nombre = "jugador";
         }
         comienzojugador = 0;
         turnoJugador = comienzojugador;
@@ -50,15 +56,44 @@ public class TatetiActivityDosJugadores extends AppCompatActivity {
         jugadores = new StatsJugadorTatetiDos[2];
         setJugadores();
         txtMsgGanador = findViewById(R.id.txt_msg_ganador_tateti);
+        botonVolver = findViewById(R.id.ttt_volver_jugar);
+        botonSalir = findViewById(R.id.ttt_salir);
+        estadoBotones(View.INVISIBLE);
         casillerosUsados = 0;
         condicionVictoria = 5;
         botonesDips = true;
         setBotones();
         limpiarPantalla();
         actualizarDatos();
-        txtMsgGanador.setText("Turno de " + jugadores[comienzojugador].getNombre());
+        imprimirTurnoJugador(comienzojugador);
 
     }
+
+    public void imprimirTurnoJugador(int i){
+        if(jugadores[i].getNombre().equals("jugador")){
+            txtMsgGanador.setText("Turno de el jugador ");
+        }
+        else{
+            txtMsgGanador.setText("Turno de " + jugadores[i].getNombre()+ " ");
+        }
+    }
+    public void imprimirPuntoJugador(int i){
+        if(jugadores[i].getNombre().equals("jugador")){
+            txtMsgGanador.setText("Punto para el jugador! ");
+        }
+        else{
+            txtMsgGanador.setText("Punto para " + jugadores[i].getNombre() + "! ");
+        }
+    }
+    public void imprimirGanadorJugador(int i){
+        if(jugadores[i].getNombre().equals("jugador")){
+            txtMsgGanador.setText("Ganó el jugador! ");
+        }
+        else{
+            txtMsgGanador.setText("Ganó " + jugadores[i].getNombre()+ "! ");
+        }
+    }
+
 
     public void setJugadores() {
         jugadores[0] = new StatsJugadorTatetiDos(findViewById(R.id.txt_puntos_jugador_tateti),"X","#F8A69A",1,3,nombre);
@@ -138,13 +173,14 @@ public class TatetiActivityDosJugadores extends AppCompatActivity {
 
 
                 if(verificarGanador(linea,tablero)){
-                    txtMsgGanador.setText("Punto para " + nombreAct);
+                    imprimirPuntoJugador(turnoJugador);
                     jugadores[turnoJugador].setPuntos(jugadores[turnoJugador].getPuntos() + 1);
                     actualizarDatos();
                     botonesDips = false;
 
                     if(jugadores[turnoJugador].getPuntos() == condicionVictoria){
-                        txtMsgGanador.setText("Gano " + jugadores[turnoJugador].getNombre() + "! ");
+                        imprimirGanadorJugador(turnoJugador);
+                        estadoBotones(View.VISIBLE);
                     }
                     else{
                         Handler handler = new Handler();
@@ -158,7 +194,7 @@ public class TatetiActivityDosJugadores extends AppCompatActivity {
                                 }
                                 turnoJugador = comienzojugador;
                                 limpiarPantalla();
-                                txtMsgGanador.setText("Turno de " + jugadores[comienzojugador].getNombre());
+                                imprimirTurnoJugador(comienzojugador);
                                 botonesDips = true;
                             }
                         }, 2000);
@@ -177,7 +213,7 @@ public class TatetiActivityDosJugadores extends AppCompatActivity {
                             }
                             turnoJugador = comienzojugador;
                             limpiarPantalla();
-                            txtMsgGanador.setText("Turno de " + jugadores[comienzojugador].getNombre());
+                            imprimirTurnoJugador(comienzojugador);
                             botonesDips = true;
                         }
                     }, 2000);
@@ -189,7 +225,7 @@ public class TatetiActivityDosJugadores extends AppCompatActivity {
                     else{
                         turnoJugador = 0;
                     }
-                    txtMsgGanador.setText("Turno de " + jugadores[turnoJugador].getNombre());
+                    imprimirTurnoJugador(turnoJugador);
                 }
             }
 
@@ -317,5 +353,57 @@ public class TatetiActivityDosJugadores extends AppCompatActivity {
         botones[i].setText(signo);
         tablero[i] = tableroJugador;
         botones[i].setTextColor(Color.parseColor(color));
+    }
+
+    public void salirTTT(View view){
+        finish();
+    }
+    public void volverTTT(View view){
+        jugadores[0].setPuntos(0);
+        jugadores[1].setPuntos(0);
+        limpiarPantalla();
+        actualizarDatos();
+        botonesDips = true;
+        comienzojugador = 0;
+        turnoJugador = comienzojugador;
+        txtMsgGanador.setText("Turno de " + jugadores[comienzojugador].getNombre());
+        estadoBotones(View.INVISIBLE);
+    }
+    private void estadoBotones(int estado) {
+        botonSalir.setVisibility(estado);
+        botonVolver.setVisibility(estado);
+    }
+    @Override
+    public void onBackPressed() {
+        AlertDialog.Builder alerta = new AlertDialog.Builder(TatetiActivityDosJugadores.this);
+        alerta.setMessage("Perderás todo tu progreso");
+        alerta.setCancelable(true);
+        alerta.setPositiveButton("Salir", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                finish();
+            }
+
+        });
+        alerta.setNegativeButton("Continuar", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                dialogInterface.cancel();
+            }
+        });
+        AlertDialog titulo = alerta.create();
+        titulo.setTitle("¿Deseas salir?");
+        titulo.show();
+    }
+
+    public void onPause() {
+        super.onPause();
+        pause();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        start();
     }
 }

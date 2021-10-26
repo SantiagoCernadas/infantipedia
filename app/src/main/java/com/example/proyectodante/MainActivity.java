@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private boolean musicaRep;
-
+    static boolean pause;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,13 +39,11 @@ public class MainActivity extends AppCompatActivity {
             tv1.setText("Hola " + nombre + "!");
         }
         musicaRep = true;
-        mp = MediaPlayer.create(this,R.raw.cancionfondo);
-        mp.setLooping(true);
+        mp = MediaPlayer.create(this, R.raw.cancionfondo);
         mp.setVolume(0.5f,0.5f);
-        mp.start();
+        mp.setLooping(true);
     }
 
-    @Override
     public void onBackPressed() {
         super.onBackPressed();
         mp.stop();
@@ -90,4 +88,38 @@ public class MainActivity extends AppCompatActivity {
             mp.setVolume(0.5f,0.5f);
         }
     }
+
+    public static void start(){
+        pause= false;
+        startLoop();
+    }
+    public static void pause(){
+        pause = true;
+        new android.os.Handler().postDelayed(
+                new Runnable() {
+                    public void run() {
+                        if(pause) {
+                            mp.pause();
+                        }
+                    }
+                }, 100);
+    }
+
+    private static void startLoop(){
+        if(!mp.isPlaying()){
+            mp.start();
+        }
+    }
+
+    public void onPause() {
+        super.onPause();
+        pause();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        start();
+    }
 }
+

@@ -9,6 +9,9 @@ import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import static com.example.proyectodante.MainActivity.pause;
+import static com.example.proyectodante.MainActivity.start;
+
 public class CalculadoraActivity extends AppCompatActivity {
 
     private TextView txtNum1, txtNum2, txtSigno, txtResultado, txtIgual;
@@ -139,5 +142,16 @@ public class CalculadoraActivity extends AppCompatActivity {
                 tv.setText("ERROR");
                 break;
         }
+    }
+
+    public void onPause() {
+        super.onPause();
+        pause();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        start();
     }
 }

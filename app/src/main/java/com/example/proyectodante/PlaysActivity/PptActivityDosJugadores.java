@@ -16,6 +16,9 @@ import com.example.proyectodante.MainActivity;
 import com.example.proyectodante.Manager.StatsJugadorPpt;
 import com.example.proyectodante.R;
 
+import static com.example.proyectodante.MainActivity.pause;
+import static com.example.proyectodante.MainActivity.start;
+
 public class PptActivityDosJugadores extends AppCompatActivity {
     private boolean botonesDisp;
     private boolean ganador;
@@ -28,7 +31,7 @@ public class PptActivityDosJugadores extends AppCompatActivity {
     private int[] spRep;
     private String nombre;
     private boolean cerrado;
-
+    private boolean jugador1bloq,jugador2bloq;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -109,6 +112,8 @@ public class PptActivityDosJugadores extends AppCompatActivity {
         handler. postDelayed(new Runnable() {
             public void run() {
                 botonesDisp = false;
+                jugador1bloq = false;
+                jugador2bloq = false;
                 ganador();
                 }
             }, 2750);
@@ -218,7 +223,7 @@ public class PptActivityDosJugadores extends AppCompatActivity {
     }
 
     public void presionOpcion1(View view){
-        if (botonesDisp){
+        if (botonesDisp && !jugador1bloq){
             switch (view.getId()){
                 case R.id.imagen_tijera_jugador_1:
                     jugador1.setOpcion(0);
@@ -230,13 +235,14 @@ public class PptActivityDosJugadores extends AppCompatActivity {
                     jugador1.setOpcion(2);
                     break;
             }
+            jugador1bloq = true;
             jugador1.getImagen().setImageResource(idImagenes[jugador1.getOpcion()]);
             jugador1.getImagen().setVisibility(View.VISIBLE);
         }
     }
 
     public void presionOpcion2(View view){
-        if(botonesDisp){
+        if(botonesDisp && !jugador2bloq){
             switch (view.getId()){
                 case R.id.imagen_tijera_jugador_2:
                     jugador2.setOpcion(0);
@@ -248,6 +254,7 @@ public class PptActivityDosJugadores extends AppCompatActivity {
                     jugador2.setOpcion(2);
                     break;
             }
+            jugador2bloq = true;
             jugador2.getImagen().setImageResource(idImagenes[jugador2.getOpcion()]);
             jugador2.getImagen().setVisibility(View.VISIBLE);
         }
@@ -282,11 +289,13 @@ public class PptActivityDosJugadores extends AppCompatActivity {
     protected void onPause() {
         super.onPause();
         cerrado = true;
+        pause();
     }
 
     @Override
     protected void onResume() {
         super.onResume();
         cerrado = false;
+        start();
     }
 }

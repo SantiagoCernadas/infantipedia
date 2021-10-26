@@ -9,6 +9,9 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import static com.example.proyectodante.MainActivity.pause;
+import static com.example.proyectodante.MainActivity.start;
+
 public class PrimerActivity extends AppCompatActivity {
     private EditText et1;
     @Override

@@ -6,6 +6,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import static com.example.proyectodante.MainActivity.pause;
+import static com.example.proyectodante.MainActivity.start;
+
 public class TablasActivity extends AppCompatActivity {
 
     @Override
@@ -49,5 +52,16 @@ public class TablasActivity extends AppCompatActivity {
                 break;
         }
         startActivity(i);
+    }
+
+    public void onPause() {
+        super.onPause();
+        pause();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        start();
     }
 }

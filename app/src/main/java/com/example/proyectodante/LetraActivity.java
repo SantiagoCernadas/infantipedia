@@ -10,6 +10,9 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import static com.example.proyectodante.MainActivity.pause;
+import static com.example.proyectodante.MainActivity.start;
+
 public class LetraActivity extends AppCompatActivity {
 
     private TextView titulo,tv1,tv2,tv3;
@@ -279,5 +282,16 @@ public class LetraActivity extends AppCompatActivity {
     }
     public void repSon3(View view){
         sp3.play(sRep3,1,1,1,0,1);
+    }
+
+    public void onPause() {
+        super.onPause();
+        pause();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        start();
     }
 }

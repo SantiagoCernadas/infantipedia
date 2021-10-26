@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
+    android:background="@drawable/backgroundjuego"
     tools:context=".PlaysActivity.HowPlayActivity">
 
     <TextView
@@ -42,12 +42,12 @@
             android:layout_centerHorizontal="true"
             android:fontFamily="@font/grandstanderdos"
             android:lineSpacingExtra="10sp"
-            android:shadowColor="#888a8a"
+            android:shadowColor="#000000"
             android:shadowDx="3"
             android:shadowDy="2"
             android:shadowRadius="1"
             android:text="desripcion"
-            android:textColor="#000000"
+            android:textColor="#CF9FEE"
             android:textSize="20sp" />
     </ScrollView>
 

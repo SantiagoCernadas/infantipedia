@@ -8,6 +8,9 @@ import android.view.View;
 
 import com.example.proyectodante.PlaysActivity.HowPlayActivity;
 
+import static com.example.proyectodante.MainActivity.pause;
+import static com.example.proyectodante.MainActivity.start;
+
 public class MathActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +32,7 @@ public class MathActivity extends AppCompatActivity {
                 "tienes 3 opciones: ver si el problema es correcto con el botón de “=”, " +
                 "borrar un número con el botón “borrar” y borrar el numero completo con el botón " +
                 "“borrar todo”. la partida se acabará si pierdes todas " +
-                "las vidas. ¡Buena suerte y diviértete!");
+                "las vidas. Si quieres una pista pulsa el botón “¿?”. ¡Buena suerte y diviértete!");
         i.putExtra("idimg1",R.drawable.matplayej1);
         i.putExtra("idimg2",R.drawable.matplayej2);
         startActivity(i);
@@ -43,5 +46,15 @@ public class MathActivity extends AppCompatActivity {
     public void tablasActivity(View view){
         Intent i = new Intent(this, TablasActivity.class);
         startActivity(i);
+    }
+    public void onPause() {
+        super.onPause();
+        pause();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        start();
     }
 }

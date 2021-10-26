@@ -6,6 +6,9 @@ import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.widget.TextView;
 
+import static com.example.proyectodante.MainActivity.pause;
+import static com.example.proyectodante.MainActivity.start;
+
 public class NumTablaActivity extends AppCompatActivity {
     private int numero;
     private TextView tv[];
@@ -39,5 +42,15 @@ public class NumTablaActivity extends AppCompatActivity {
         tv[7] = findViewById(R.id.tabla_ec_8);
         tv[8] = findViewById(R.id.tabla_ec_9);
         tv[9] = findViewById(R.id.tabla_ec_10);
+    }
+    public void onPause() {
+        super.onPause();
+        pause();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        start();
     }
 }

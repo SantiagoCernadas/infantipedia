@@ -9,24 +9,42 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".TatetiModoActivity"></activity>
-        <activity android:name=".PlaysActivity.TatetiActivityDosJugadores" />
-        <activity android:name=".PlaysActivity.TatetiActivity" />
-        <activity android:name=".PptModoActivity" />
-        <activity android:name=".PlaysActivity.PptActivityDosJugadores" />
-        <activity android:name=".PlaysActivity.PptActivity" />
-        <activity android:name=".JuegosActivity" />
-        <activity android:name=".NumTablaActivity" />
-        <activity android:name=".TablasActivity" />
-        <activity android:name=".NumFamiliaActivity" />
-        <activity android:name=".familiasActivity" />
-        <activity android:name=".PlaysActivity.FinJuegoActivity" />
-        <activity android:name=".PlaysActivity.HowPlayActivity" />
-        <activity android:name=".MatDificultadActivity" />
-        <activity android:name=".PlaysActivity.MatPlayActivity" />
-        <activity android:name=".PlaysActivity.PalabraPlayActivity" />
-        <activity android:name=".AnimalesActivity" />
-        <activity android:name=".CalculadoraActivity" />
+        <activity android:name=".TatetiModoActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".PlaysActivity.TatetiActivityDosJugadores"
+                    android:screenOrientation="portrait"/>
+        <activity android:name=".PlaysActivity.TatetiActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".PptModoActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".PlaysActivity.PptActivityDosJugadores"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".PlaysActivity.PptActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".JuegosActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".NumTablaActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".TablasActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".NumFamiliaActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".familiasActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".PlaysActivity.FinJuegoActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".PlaysActivity.HowPlayActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".MatDificultadActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".PlaysActivity.MatPlayActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".PlaysActivity.PalabraPlayActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".AnimalesActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".CalculadoraActivity"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".PrimerActivity"
             android:exported="true"
@@ -37,8 +55,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MathActivity" />
-        <activity android:name=".LetraActivity" />
+        <activity android:name=".MathActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".LetraActivity"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".AbecedarioActivity"
             android:screenOrientation="portrait" />
@@ -46,5 +66,6 @@
             android:name=".MainActivity"
             android:screenOrientation="portrait" />
     </application>
+
 
 </manifest>

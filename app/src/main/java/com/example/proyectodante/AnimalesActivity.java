@@ -9,6 +9,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
+import static com.example.proyectodante.MainActivity.pause;
+import static com.example.proyectodante.MainActivity.start;
+
 
 public class AnimalesActivity extends AppCompatActivity {
     private  SoundPool[] sp;
@@ -145,4 +148,14 @@ public class AnimalesActivity extends AppCompatActivity {
         sp[ruta].play(sonido_reproduccion[ruta],1,1,1,0,1);
     }
 
+    public void onPause() {
+        super.onPause();
+        pause();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        start();
+    }
 }

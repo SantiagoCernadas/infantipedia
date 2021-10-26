@@ -19,10 +19,14 @@ import android.widget.Toast;
 import com.example.proyectodante.Manager.PalabraPlayManager;
 import com.example.proyectodante.R;
 
+import static com.example.proyectodante.MainActivity.pause;
+import static com.example.proyectodante.MainActivity.start;
+
 public class PalabraPlayActivity extends AppCompatActivity {
     private final int NUM_PALABRAS = 81;
-    private TextView vidasTxt,puntosTxt;
+    private TextView vidasTxt,puntosTxt,txtPista;
     private Button[] opciones;
+    private Button pista;
     private ImageView imagen;
     private String palabraCorrecta;
     private int opcCorrecta;
@@ -46,11 +50,15 @@ public class PalabraPlayActivity extends AppCompatActivity {
         palabras = new String[NUM_PALABRAS];
         idImagen = new int[NUM_PALABRAS];
         txt_titulo = findViewById(R.id.txt_palabra_titulo);
+        pista = findViewById(R.id.button_pista_palabra);
+        txtPista = findViewById(R.id.txt_pista_palabra);
         asignarSonidos();
         conectarID();
         manager.setImagenes(idImagen);
         manager.setPalabras(palabras);
         generarProblema();
+        txtPista.setText("");
+        pista.setEnabled(true);
     }
 
     public void asignarSonidos() {
@@ -95,6 +103,8 @@ public class PalabraPlayActivity extends AppCompatActivity {
         handler. postDelayed(new Runnable() {
             public void run() {
                     txt_titulo.setText("¿Que es?");
+                    pista.setEnabled(true);
+                    txtPista.setText("");
                     habilitarOpciones(opciones);
                     generarProblema();
                 }
@@ -243,4 +253,32 @@ public class PalabraPlayActivity extends AppCompatActivity {
         titulo.show();
     }
 
+    public void getPista(View view){
+        if(pista.isEnabled()){
+            if(opciones[opcCorrecta].getText().toString().contains(" ")){
+                txtPista.setText("Empieza con " + opciones[opcCorrecta].getText().toString().charAt(0));
+            }
+            else{
+                int numero = (int)(Math.random()*2+1);
+                if(numero == 1){
+                    txtPista.setText("Tiene " + opciones[opcCorrecta].getText().toString().length() + " Letras ");
+                }
+                else{
+                    txtPista.setText("Empieza con " + opciones[opcCorrecta].getText().toString().charAt(0));
+                }
+            }
+            pista.setEnabled(false);
+        }
+    }
+
+    public void onPause() {
+        super.onPause();
+        pause();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        start();
+    }
 }

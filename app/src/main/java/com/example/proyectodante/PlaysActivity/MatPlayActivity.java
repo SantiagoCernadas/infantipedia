@@ -11,11 +11,15 @@ import android.media.SoundPool;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.proyectodante.CalculadoraActivity;
 import com.example.proyectodante.R;
+
+import static com.example.proyectodante.MainActivity.pause;
+import static com.example.proyectodante.MainActivity.start;
 
 public class MatPlayActivity extends AppCompatActivity {
     private TextView txtNum1, txtNum2, txtSigno, txtResultado, txtDescripcion;
@@ -30,6 +34,8 @@ public class MatPlayActivity extends AppCompatActivity {
     private int rangoSumRes;
     private int rangoMult;
     private boolean botonesDisponibles;
+    private Button pista;
+    private TextView txtPista;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,6 +47,8 @@ public class MatPlayActivity extends AppCompatActivity {
         txtVidas = findViewById(R.id.txt_mat_vidas);
         txtPuntos = findViewById(R.id.txt_mat_puntos);
         txtDescripcion = findViewById(R.id.txt_mat_play_desc);
+        pista = findViewById(R.id.button_pista_mat);
+        txtPista = findViewById(R.id.txt_pista_mat);
         vidas = 3;
         puntos = 0;
         cantSignos = Integer.parseInt(getIntent().getStringExtra("signos"));
@@ -52,6 +60,11 @@ public class MatPlayActivity extends AppCompatActivity {
         asignarSonidos();
         setSignos();
         generarProblema();
+        if(cantSignos == 3){
+            pista.setVisibility(View.INVISIBLE);
+        }
+        pista.setEnabled(true);
+        txtPista.setText("");
     }
 
     private void asignarSonidos() {
@@ -184,6 +197,8 @@ public class MatPlayActivity extends AppCompatActivity {
                     public void run() {
                         txtResultado.setTextColor(Color.BLACK);
                         txtDescripcion.setText("");
+                        pista.setEnabled(true);
+                        txtPista.setText("");
                         botonesDisponibles = true;
                         txtResultado.setText("");
                         generarProblema();
@@ -221,6 +236,19 @@ public class MatPlayActivity extends AppCompatActivity {
         }
     }
 
+    public void getPista(View view){
+        if(pista.isEnabled() && botonesDisponibles){
+            int numero = (int)(Math.random()*2+1);
+            if(numero == 1){
+                txtPista.setText("detras del " + (resultadoInt + 1) + " ");
+            }
+            else{
+                txtPista.setText("delante del " + (resultadoInt - 1)+ " ");
+            }
+            pista.setEnabled(false);
+        }
+    }
+
     @Override
     public void onBackPressed() {
         AlertDialog.Builder alerta = new AlertDialog.Builder(MatPlayActivity.this);
@@ -245,5 +273,15 @@ public class MatPlayActivity extends AppCompatActivity {
         AlertDialog titulo = alerta.create();
         titulo.setTitle("¿Deseas salir?");
         titulo.show();
+    }
+    public void onPause() {
+        super.onPause();
+        pause();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        start();
     }
 }

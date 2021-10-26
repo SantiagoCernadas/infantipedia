@@ -8,6 +8,9 @@ import android.view.View;
 
 import com.example.proyectodante.PlaysActivity.MatPlayActivity;
 
+import static com.example.proyectodante.MainActivity.pause;
+import static com.example.proyectodante.MainActivity.start;
+
 public class MatDificultadActivity extends AppCompatActivity {
 
     @Override
@@ -41,5 +44,15 @@ public class MatDificultadActivity extends AppCompatActivity {
         i.putExtra("rango_multiplicacion",rangoMult);
         startActivity(i);
         finish();
+    }
+    public void onPause() {
+        super.onPause();
+        pause();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        start();
     }
 }

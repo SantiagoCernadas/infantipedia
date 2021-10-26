@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
+    android:background="@drawable/backgroundmat"
     tools:context=".MatDificultadActivity">
 
     <TextView
@@ -144,7 +144,7 @@
         android:shadowDx="3"
         android:shadowDy="2"
         android:shadowRadius="1"
-        android:text="sumas y restas intermedias multiplicaciones simples"
+        android:text="sumas y restas intermedias multiplicaciones simples                               sin pistas"
         android:textColor="#000000" />
 
     <Button
@@ -185,7 +185,7 @@
         android:shadowDx="3"
         android:shadowDy="2"
         android:shadowRadius="1"
-        android:text="sumas y restas avanzadas multiplicaciones intermedias"
+        android:text="sumas y restas avanzadas multiplicaciones intermedias                                sin pistas"
         android:textColor="#000000" />
 
 </RelativeLayout>

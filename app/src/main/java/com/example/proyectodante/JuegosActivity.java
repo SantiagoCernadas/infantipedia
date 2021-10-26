@@ -9,6 +9,9 @@ import android.view.View;
 import com.example.proyectodante.PlaysActivity.PptActivity;
 import com.example.proyectodante.PlaysActivity.PptActivityDosJugadores;
 
+import static com.example.proyectodante.MainActivity.pause;
+import static com.example.proyectodante.MainActivity.start;
+
 public class JuegosActivity extends AppCompatActivity {
 
     @Override
@@ -25,5 +28,16 @@ public class JuegosActivity extends AppCompatActivity {
     public void tateti(View view){
         Intent i = new Intent(this, TatetiModoActivity.class);
         startActivity(i);
+    }
+
+    public void onPause() {
+        super.onPause();
+        pause();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        start();
     }
 }

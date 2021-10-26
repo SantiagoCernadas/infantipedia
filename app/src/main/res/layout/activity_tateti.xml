@@ -4,8 +4,40 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
+    android:background="@drawable/backgroundjuego"
     tools:context=".PlaysActivity.TatetiActivity">
+
+    <Button
+        android:id="@+id/ttt_volver_jugar"
+        android:layout_width="180sp"
+        android:layout_height="60sp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="15sp"
+        android:layout_marginLeft="15sp"
+        android:layout_marginTop="487dp"
+        android:background="#77dd77"
+        android:fontFamily="@font/grandstanderclean"
+        android:onClick="volverTTT"
+        android:text="Volver a jugar"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/ttt_salir"
+        android:layout_width="180sp"
+        android:layout_height="60sp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="216dp"
+        android:layout_marginLeft="216dp"
+        android:layout_marginTop="487sp"
+        android:background="#ff6961"
+        android:fontFamily="@font/grandstanderclean"
+        android:onClick="salirTTT"
+        android:text="Salir"
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/txt_puntos_jugador_tateti"
@@ -61,7 +93,8 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="70sp"
-        android:src="@drawable/tablerotateti" />
+        android:src="@drawable/tablerotateti"
+        app:tint="#4CFF00" />
 
     <Button
         android:id="@+id/tateti_boton_1"

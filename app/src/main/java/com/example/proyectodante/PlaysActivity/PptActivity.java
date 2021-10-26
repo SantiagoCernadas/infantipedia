@@ -18,6 +18,9 @@ import android.widget.TextView;
 import com.example.proyectodante.MainActivity;
 import com.example.proyectodante.R;
 
+import static com.example.proyectodante.MainActivity.pause;
+import static com.example.proyectodante.MainActivity.start;
+
 public class PptActivity extends AppCompatActivity {
     private boolean botonesDisp;
     private int condicionVictoria;
@@ -133,7 +136,7 @@ public class PptActivity extends AppCompatActivity {
                     txtGanadorRonda.setText("Gano el jugador! ");
                 }
                 else{
-                    txtGanadorRonda.setText("Gano " + nombreJugador + "! ");
+                    txtGanadorRonda.setText("Ganó " + nombreJugador + "! ");
                 }
                 ganador = true;
             }
@@ -149,7 +152,7 @@ public class PptActivity extends AppCompatActivity {
         else{
             puntosCPU++;
             if(puntosCPU == condicionVictoria){
-                txtGanadorRonda.setText("Gano Duxi! ");
+                txtGanadorRonda.setText("Ganó Duxi! ");
                 ganador = true;
             }
             else{
@@ -198,5 +201,16 @@ public class PptActivity extends AppCompatActivity {
         AlertDialog titulo = alerta.create();
         titulo.setTitle("¿Deseas salir?");
         titulo.show();
+    }
+
+    public void onPause() {
+        super.onPause();
+        pause();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        start();
     }
 }

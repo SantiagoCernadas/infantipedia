@@ -1,12 +1,12 @@
 <resources>
 
-    <string name="et_nombre">¿Cual es tu nombre?</string>
+    <string name="et_nombre">¿Cuál es tu nombre?</string>
     <string name="button_user">Entrar</string>
     <string name="button_invitado">Entrar sin nombre</string>
 
 
     <string name="txt_Bienvenida">Hola!</string>
-    <string name="txt_version">Version 0.81</string>
+    <string name="txt_version">Version 1.0</string>
 
 
     <string name="app_name">Infantipedia</string>
