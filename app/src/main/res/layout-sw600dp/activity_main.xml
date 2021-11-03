@@ -117,7 +117,7 @@
         android:layout_marginRight="0dp"
         android:layout_marginBottom="3dp"
         android:text="@string/txt_version"
-        android:textSize="20sp" />
+        android:textSize="30sp" />
 
     <ImageButton
         android:id="@+id/iv_musica"

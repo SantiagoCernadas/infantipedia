@@ -93,8 +93,9 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="70sp"
+        android:background="#FFFFFF"
         android:src="@drawable/tablerotateti"
-        app:tint="#4CFF00" />
+        app:tint="#000000" />
 
     <Button
         android:id="@+id/tateti_boton_1"

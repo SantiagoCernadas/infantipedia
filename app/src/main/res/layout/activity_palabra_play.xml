@@ -39,8 +39,8 @@
 
     <Button
         android:id="@+id/button_opc1"
-        android:layout_width="180sp"
-        android:layout_height="75sp"
+        android:layout_width="170sp"
+        android:layout_height="70sp"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
@@ -55,7 +55,7 @@
         android:shadowDy="2"
         android:shadowRadius="1"
         android:text="gato"
-        android:textSize="24sp" />
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/button_pista_palabra"
@@ -64,8 +64,8 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="10dp"
-        android:layout_marginLeft="10dp"
+        android:layout_marginStart="50sp"
+        android:layout_marginLeft="50sp"
         android:layout_marginTop="654dp"
         android:background="@drawable/boton_redondo"
         android:fontFamily="@font/grandstanderdos"
@@ -80,14 +80,14 @@
 
     <Button
         android:id="@+id/button_opc2"
-        android:layout_width="180sp"
-        android:layout_height="75sp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
+        android:layout_width="170sp"
+        android:layout_height="70sp"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="215dp"
-        android:layout_marginLeft="215dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
         android:layout_marginTop="450dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
         android:background="#FFFFFF"
         android:fontFamily="@font/grandstanderdos"
         android:onClick="opcionPresionada"
@@ -96,12 +96,12 @@
         android:shadowDy="2"
         android:shadowRadius="1"
         android:text="koala"
-        android:textSize="24sp" />
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/button_opc3"
-        android:layout_width="180sp"
-        android:layout_height="75sp"
+        android:layout_width="170sp"
+        android:layout_height="70sp"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
@@ -116,18 +116,18 @@
         android:shadowDy="2"
         android:shadowRadius="1"
         android:text="kiwi"
-        android:textSize="24sp" />
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/button_opc4"
-        android:layout_width="180sp"
-        android:layout_height="75sp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
+        android:layout_width="170sp"
+        android:layout_height="70sp"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="215dp"
-        android:layout_marginLeft="215dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
         android:layout_marginTop="550dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
         android:background="#FFFFFF"
         android:fontFamily="@font/grandstanderdos"
         android:onClick="opcionPresionada"
@@ -136,7 +136,7 @@
         android:shadowDy="2"
         android:shadowRadius="1"
         android:text="extraterrestre"
-        android:textSize="24sp" />
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/txt_palabra_puntos"
@@ -160,8 +160,8 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="86dp"
-        android:layout_marginLeft="86dp"
+        android:layout_marginStart="126sp"
+        android:layout_marginLeft="126sp"
         android:layout_marginTop="660dp"
         android:fontFamily="@font/grandstanderclean"
         android:shadowColor="#888a8a"
@@ -171,6 +171,25 @@
         android:text="tiene 7 letras"
         android:textColor="#000000"
         android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/txt_pista_palabra_cant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="34dp"
+        android:layout_marginLeft="34dp"
+        android:layout_marginTop="663dp"
+        android:fontFamily="@font/grandstanderclean"
+        android:shadowColor="#888a8a"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="5"
+        android:text="3"
+        android:textColor="#000000"
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/txt_palabra_vidas"

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.proyectodante">
+    package="com.santidev.proyectodante">
 
     <application
         android:allowBackup="true"
@@ -9,44 +9,44 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".TatetiModoActivity"
+        <activity android:name="com.santidev.proyectodante.TatetiModoActivity"
             android:screenOrientation="portrait"></activity>
-        <activity android:name=".PlaysActivity.TatetiActivityDosJugadores"
+        <activity android:name="com.santidev.proyectodante.PlaysActivity.TatetiActivityDosJugadores"
                     android:screenOrientation="portrait"/>
-        <activity android:name=".PlaysActivity.TatetiActivity"
+        <activity android:name="com.santidev.proyectodante.PlaysActivity.TatetiActivity"
             android:screenOrientation="portrait"/>
-        <activity android:name=".PptModoActivity"
+        <activity android:name="com.santidev.proyectodante.PptModoActivity"
             android:screenOrientation="portrait"/>
-        <activity android:name=".PlaysActivity.PptActivityDosJugadores"
+        <activity android:name="com.santidev.proyectodante.PlaysActivity.PptActivityDosJugadores"
             android:screenOrientation="portrait"/>
-        <activity android:name=".PlaysActivity.PptActivity"
+        <activity android:name="com.santidev.proyectodante.PlaysActivity.PptActivity"
             android:screenOrientation="portrait"/>
-        <activity android:name=".JuegosActivity"
+        <activity android:name="com.santidev.proyectodante.JuegosActivity"
             android:screenOrientation="portrait"/>
-        <activity android:name=".NumTablaActivity"
+        <activity android:name="com.santidev.proyectodante.NumTablaActivity"
             android:screenOrientation="portrait"/>
-        <activity android:name=".TablasActivity"
+        <activity android:name="com.santidev.proyectodante.TablasActivity"
             android:screenOrientation="portrait"/>
-        <activity android:name=".NumFamiliaActivity"
+        <activity android:name="com.santidev.proyectodante.NumFamiliaActivity"
             android:screenOrientation="portrait"/>
-        <activity android:name=".familiasActivity"
+        <activity android:name="com.santidev.proyectodante.familiasActivity"
             android:screenOrientation="portrait"/>
-        <activity android:name=".PlaysActivity.FinJuegoActivity"
+        <activity android:name="com.santidev.proyectodante.PlaysActivity.FinJuegoActivity"
             android:screenOrientation="portrait"/>
-        <activity android:name=".PlaysActivity.HowPlayActivity"
+        <activity android:name="com.santidev.proyectodante.PlaysActivity.HowPlayActivity"
             android:screenOrientation="portrait"/>
-        <activity android:name=".MatDificultadActivity"
+        <activity android:name="com.santidev.proyectodante.MatDificultadActivity"
             android:screenOrientation="portrait"/>
-        <activity android:name=".PlaysActivity.MatPlayActivity"
+        <activity android:name="com.santidev.proyectodante.PlaysActivity.MatPlayActivity"
             android:screenOrientation="portrait"/>
-        <activity android:name=".PlaysActivity.PalabraPlayActivity"
+        <activity android:name="com.santidev.proyectodante.PlaysActivity.PalabraPlayActivity"
             android:screenOrientation="portrait"/>
-        <activity android:name=".AnimalesActivity"
+        <activity android:name="com.santidev.proyectodante.AnimalesActivity"
             android:screenOrientation="portrait"/>
-        <activity android:name=".CalculadoraActivity"
+        <activity android:name="com.santidev.proyectodante.CalculadoraActivity"
             android:screenOrientation="portrait"/>
         <activity
-            android:name=".PrimerActivity"
+            android:name="com.santidev.proyectodante.PrimerActivity"
             android:exported="true"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -55,15 +55,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MathActivity"
+        <activity android:name="com.santidev.proyectodante.MathActivity"
             android:screenOrientation="portrait"/>
-        <activity android:name=".LetraActivity"
+        <activity android:name="com.santidev.proyectodante.LetraActivity"
             android:screenOrientation="portrait"/>
         <activity
-            android:name=".AbecedarioActivity"
+            android:name="com.santidev.proyectodante.AbecedarioActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".MainActivity"
+            android:name="com.santidev.proyectodante.MainActivity"
             android:screenOrientation="portrait" />
     </application>
 

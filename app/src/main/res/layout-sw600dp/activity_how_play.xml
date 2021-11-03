@@ -26,29 +26,110 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="236dp"
+        android:layout_height="270sp"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="0dp"
         android:layout_marginLeft="0dp"
-        android:layout_marginTop="160dp">
+        android:layout_marginTop="160dp"
+        android:background="#BEFFFFFF">
 
-        <TextView
-            android:id="@+id/txt_descripcion_juego"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="false"
-            android:layout_centerHorizontal="true"
-            android:fontFamily="@font/grandstanderdos"
-            android:lineSpacingExtra="10sp"
-            android:shadowColor="#000000"
-            android:shadowDx="3"
-            android:shadowDy="2"
-            android:shadowRadius="1"
-            android:text="desripcion"
-            android:textColor="#CF9FEE"
-            android:textSize="30sp" />
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_descripcion_juego"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="false"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/grandstanderdos"
+                android:gravity="center"
+                android:lineSpacingExtra="10sp"
+                android:shadowColor="#000000"
+                android:shadowDx="3"
+                android:shadowDy="2"
+                android:shadowRadius="1"
+                android:text="4 Palabras, 1 Correcta"
+                android:textColor="#CF9FEE"
+                android:textSize="35sp" />
+
+            <TextView
+                android:id="@+id/txt_descripcion_juego6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="false"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="25sp"
+                android:fontFamily="@font/grandstanderdos"
+                android:gravity="center"
+                android:lineSpacingExtra="10sp"
+                android:shadowColor="#000000"
+                android:shadowDx="3"
+                android:shadowDy="2"
+                android:shadowRadius="1"
+                android:text="¡Gana puntos por cada respuesta correcta!"
+                android:textColor="#77dd77"
+                android:textSize="35sp" />
+
+            <TextView
+                android:id="@+id/txt_descripcion_juego7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="false"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="25sp"
+                android:fontFamily="@font/grandstanderdos"
+                android:gravity="center"
+                android:lineSpacingExtra="10sp"
+                android:shadowColor="#000000"
+                android:shadowDx="3"
+                android:shadowDy="2"
+                android:shadowRadius="1"
+                android:text="Tienes 3 vidas"
+                android:textColor="#ff6961"
+                android:textSize="35sp" />
+
+            <TextView
+                android:id="@+id/txt_descripcion_juego8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="false"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="25sp"
+                android:fontFamily="@font/grandstanderdos"
+                android:gravity="center"
+                android:lineSpacingExtra="10sp"
+                android:shadowColor="#000000"
+                android:shadowDx="3"
+                android:shadowDy="2"
+                android:shadowRadius="1"
+                android:text="Tienes 3 pistas. úsalas sabiamente"
+                android:textColor="#F8CA9A"
+                android:textSize="35sp" />
+
+            <TextView
+                android:id="@+id/txt_descripcion_juego10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="false"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="25sp"
+                android:fontFamily="@font/grandstanderdos"
+                android:gravity="center"
+                android:lineSpacingExtra="10sp"
+                android:shadowColor="#000000"
+                android:shadowDx="3"
+                android:shadowDy="2"
+                android:shadowRadius="1"
+                android:text="Diviértete!"
+                android:textColor="#9FEEEE"
+                android:textSize="35sp" />
+
+        </LinearLayout>
     </ScrollView>
 
     <Button
@@ -74,25 +155,29 @@
     <ImageView
         android:id="@+id/imagen_ejemplo1"
         android:layout_width="150dp"
-        android:layout_height="250sp"
+        android:layout_height="250dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
         android:layout_marginStart="105dp"
         android:layout_marginLeft="105dp"
         android:layout_marginTop="469dp"
+        android:layout_marginBottom="243dp"
         tools:srcCompat="@drawable/matplayej1" />
 
     <ImageView
         android:id="@+id/imagen_ejemplo2"
-        android:layout_width="150sp"
-        android:layout_height="250sp"
+        android:layout_width="150dp"
+        android:layout_height="250dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
         android:layout_marginStart="357dp"
         android:layout_marginLeft="357dp"
         android:layout_marginTop="469sp"
+        android:layout_marginBottom="243dp"
         tools:srcCompat="@drawable/palabraplayej2" />
 
 </RelativeLayout>
