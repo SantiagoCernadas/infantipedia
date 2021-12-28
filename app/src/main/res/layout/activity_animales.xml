@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
+    android:background="@drawable/animalesbackground"
     tools:context=".AnimalesActivity">
 
     <ScrollView
@@ -54,18 +54,19 @@
             <ImageView
                 android:id="@+id/imageView2"
                 android:layout_width="match_parent"
-                android:layout_height="200sp"
+                android:layout_height="200dp"
                 app:srcCompat="@drawable/bejballena" />
 
             <ImageButton
                 android:id="@+id/sonido_ballena"
-                android:layout_width="100sp"
-                android:layout_height="100sp"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
                 android:layout_gravity="center"
-                android:background="#00FFFFFF"
+                android:layout_marginTop="40sp"
+                android:background="@drawable/boton_microfono"
                 android:onClick="sonidoAnimal"
                 app:srcCompat="@android:drawable/ic_lock_silent_mode_off"
-                app:tint="#0066FF" />
+                app:tint="#000000" />
 
             <TextView
                 android:id="@+id/textView7"
@@ -85,18 +86,19 @@
             <ImageView
                 android:id="@+id/imageView3"
                 android:layout_width="match_parent"
-                android:layout_height="200sp"
+                android:layout_height="200dp"
                 app:srcCompat="@drawable/imagencaballo" />
 
             <ImageButton
                 android:id="@+id/sonido_caballo"
-                android:layout_width="100sp"
-                android:layout_height="100sp"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
                 android:layout_gravity="center"
-                android:background="#00FFFFFF"
+                android:layout_marginTop="40sp"
+                android:background="@drawable/boton_microfono"
                 android:onClick="sonidoAnimal"
                 app:srcCompat="@android:drawable/ic_lock_silent_mode_off"
-                app:tint="#0066FF" />
+                app:tint="#000000" />
 
             <TextView
                 android:id="@+id/textView8"
@@ -116,18 +118,19 @@
             <ImageView
                 android:id="@+id/imageView4"
                 android:layout_width="match_parent"
-                android:layout_height="200sp"
+                android:layout_height="200dp"
                 app:srcCompat="@drawable/imagencerdo" />
 
             <ImageButton
                 android:id="@+id/sonido_cerdo"
-                android:layout_width="100sp"
-                android:layout_height="100sp"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
                 android:layout_gravity="center"
-                android:background="#00FFFFFF"
+                android:layout_marginTop="40sp"
+                android:background="@drawable/boton_microfono"
                 android:onClick="sonidoAnimal"
                 app:srcCompat="@android:drawable/ic_lock_silent_mode_off"
-                app:tint="#0066FF" />
+                app:tint="#000000" />
 
             <TextView
                 android:id="@+id/textView3"
@@ -147,18 +150,19 @@
             <ImageView
                 android:id="@+id/imageView5"
                 android:layout_width="match_parent"
-                android:layout_height="200sp"
+                android:layout_height="200dp"
                 app:srcCompat="@drawable/dejdelfin" />
 
             <ImageButton
                 android:id="@+id/sonido_delfin"
-                android:layout_width="100sp"
-                android:layout_height="100sp"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
                 android:layout_gravity="center"
-                android:background="#00FFFFFF"
+                android:layout_marginTop="40sp"
+                android:background="@drawable/boton_microfono"
                 android:onClick="sonidoAnimal"
                 app:srcCompat="@android:drawable/ic_lock_silent_mode_off"
-                app:tint="#0066FF" />
+                app:tint="#000000" />
 
             <TextView
                 android:id="@+id/textView4"
@@ -178,18 +182,19 @@
             <ImageView
                 android:id="@+id/imageView6"
                 android:layout_width="match_parent"
-                android:layout_height="200sp"
+                android:layout_height="200dp"
                 app:srcCompat="@drawable/eejelefante" />
 
             <ImageButton
                 android:id="@+id/sonido_elefante"
-                android:layout_width="100sp"
-                android:layout_height="100sp"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
                 android:layout_gravity="center"
-                android:background="#00FFFFFF"
+                android:layout_marginTop="40sp"
+                android:background="@drawable/boton_microfono"
                 android:onClick="sonidoAnimal"
                 app:srcCompat="@android:drawable/ic_lock_silent_mode_off"
-                app:tint="#0066FF" />
+                app:tint="#000000" />
 
             <TextView
                 android:id="@+id/textView9"
@@ -209,18 +214,19 @@
             <ImageView
                 android:id="@+id/imageView7"
                 android:layout_width="match_parent"
-                android:layout_height="200sp"
+                android:layout_height="200dp"
                 app:srcCompat="@drawable/imagenfoca" />
 
             <ImageButton
                 android:id="@+id/sonido_foca"
-                android:layout_width="100sp"
-                android:layout_height="100sp"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
                 android:layout_gravity="center"
-                android:background="#00FFFFFF"
+                android:layout_marginTop="40sp"
+                android:background="@drawable/boton_microfono"
                 android:onClick="sonidoAnimal"
                 app:srcCompat="@android:drawable/ic_lock_silent_mode_off"
-                app:tint="#0066FF" />
+                app:tint="#000000" />
 
             <TextView
                 android:id="@+id/textView10"
@@ -240,18 +246,19 @@
             <ImageView
                 android:id="@+id/imageView8"
                 android:layout_width="match_parent"
-                android:layout_height="200sp"
+                android:layout_height="200dp"
                 app:srcCompat="@drawable/gejgallina" />
 
             <ImageButton
                 android:id="@+id/sonido_gallina"
-                android:layout_width="100sp"
-                android:layout_height="100sp"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
                 android:layout_gravity="center"
-                android:background="#00FFFFFF"
+                android:layout_marginTop="40sp"
+                android:background="@drawable/boton_microfono"
                 android:onClick="sonidoAnimal"
                 app:srcCompat="@android:drawable/ic_lock_silent_mode_off"
-                app:tint="#0066FF" />
+                app:tint="#000000" />
 
             <TextView
                 android:id="@+id/textView11"
@@ -271,18 +278,19 @@
             <ImageView
                 android:id="@+id/imageView9"
                 android:layout_width="match_parent"
-                android:layout_height="200sp"
+                android:layout_height="200dp"
                 app:srcCompat="@drawable/gejgato" />
 
             <ImageButton
                 android:id="@+id/sonido_gato"
-                android:layout_width="100sp"
-                android:layout_height="100sp"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
                 android:layout_gravity="center"
-                android:background="#00FFFFFF"
+                android:layout_marginTop="40sp"
+                android:background="@drawable/boton_microfono"
                 android:onClick="sonidoAnimal"
                 app:srcCompat="@android:drawable/ic_lock_silent_mode_off"
-                app:tint="#0066FF" />
+                app:tint="#000000" />
 
             <TextView
                 android:id="@+id/textView12"
@@ -302,18 +310,19 @@
             <ImageView
                 android:id="@+id/imageView10"
                 android:layout_width="match_parent"
-                android:layout_height="200sp"
+                android:layout_height="200dp"
                 app:srcCompat="@drawable/lejleon" />
 
             <ImageButton
                 android:id="@+id/sonido_leon"
-                android:layout_width="100sp"
-                android:layout_height="100sp"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
                 android:layout_gravity="center"
-                android:background="#00FFFFFF"
+                android:layout_marginTop="40sp"
+                android:background="@drawable/boton_microfono"
                 android:onClick="sonidoAnimal"
                 app:srcCompat="@android:drawable/ic_lock_silent_mode_off"
-                app:tint="#0066FF" />
+                app:tint="#000000" />
 
             <TextView
                 android:id="@+id/textView13"
@@ -333,18 +342,19 @@
             <ImageView
                 android:id="@+id/imageView11"
                 android:layout_width="match_parent"
-                android:layout_height="200sp"
+                android:layout_height="200dp"
                 app:srcCompat="@drawable/imagenlobo" />
 
             <ImageButton
                 android:id="@+id/sonido_lobo"
-                android:layout_width="100sp"
-                android:layout_height="100sp"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
                 android:layout_gravity="center"
-                android:background="#00FFFFFF"
+                android:layout_marginTop="40sp"
+                android:background="@drawable/boton_microfono"
                 android:onClick="sonidoAnimal"
                 app:srcCompat="@android:drawable/ic_lock_silent_mode_off"
-                app:tint="#0066FF" />
+                app:tint="#000000" />
 
             <TextView
                 android:id="@+id/textView14"
@@ -364,18 +374,19 @@
             <ImageView
                 android:id="@+id/imageView12"
                 android:layout_width="match_parent"
-                android:layout_height="200sp"
+                android:layout_height="200dp"
                 app:srcCompat="@drawable/oejoso" />
 
             <ImageButton
                 android:id="@+id/sonido_oso"
-                android:layout_width="100sp"
-                android:layout_height="100sp"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
                 android:layout_gravity="center"
-                android:background="#00FFFFFF"
+                android:layout_marginTop="40sp"
+                android:background="@drawable/boton_microfono"
                 android:onClick="sonidoAnimal"
                 app:srcCompat="@android:drawable/ic_lock_silent_mode_off"
-                app:tint="#0066FF" />
+                app:tint="#000000" />
 
             <TextView
                 android:id="@+id/textView15"
@@ -395,18 +406,19 @@
             <ImageView
                 android:id="@+id/imageView13"
                 android:layout_width="match_parent"
-                android:layout_height="200sp"
+                android:layout_height="200dp"
                 app:srcCompat="@drawable/oejoveja" />
 
             <ImageButton
                 android:id="@+id/sonido_oveja"
-                android:layout_width="100sp"
-                android:layout_height="100sp"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
                 android:layout_gravity="center"
-                android:background="#00FFFFFF"
+                android:layout_marginTop="40sp"
+                android:background="@drawable/boton_microfono"
                 android:onClick="sonidoAnimal"
                 app:srcCompat="@android:drawable/ic_lock_silent_mode_off"
-                app:tint="#0066FF" />
+                app:tint="#000000" />
 
             <TextView
                 android:id="@+id/textView16"
@@ -426,18 +438,19 @@
             <ImageView
                 android:id="@+id/imageView14"
                 android:layout_width="match_parent"
-                android:layout_height="200sp"
+                android:layout_height="200dp"
                 app:srcCompat="@drawable/imagenpato" />
 
             <ImageButton
                 android:id="@+id/sonido_pato"
-                android:layout_width="100sp"
-                android:layout_height="100sp"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
                 android:layout_gravity="center"
-                android:background="#00FFFFFF"
+                android:layout_marginTop="40sp"
+                android:background="@drawable/boton_microfono"
                 android:onClick="sonidoAnimal"
                 app:srcCompat="@android:drawable/ic_lock_silent_mode_off"
-                app:tint="#0066FF" />
+                app:tint="#000000" />
 
             <TextView
                 android:id="@+id/textView17"
@@ -457,18 +470,19 @@
             <ImageView
                 android:id="@+id/imageView15"
                 android:layout_width="match_parent"
-                android:layout_height="200sp"
+                android:layout_height="200dp"
                 app:srcCompat="@drawable/imagenperro" />
 
             <ImageButton
                 android:id="@+id/sonido_perro"
-                android:layout_width="100sp"
-                android:layout_height="100sp"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
                 android:layout_gravity="center"
-                android:background="#00FFFFFF"
+                android:layout_marginTop="40sp"
+                android:background="@drawable/boton_microfono"
                 android:onClick="sonidoAnimal"
                 app:srcCompat="@android:drawable/ic_lock_silent_mode_off"
-                app:tint="#0066FF" />
+                app:tint="#000000" />
 
             <TextView
                 android:id="@+id/textView18"
@@ -488,18 +502,19 @@
             <ImageView
                 android:id="@+id/imageView16"
                 android:layout_width="match_parent"
-                android:layout_height="200sp"
+                android:layout_height="200dp"
                 app:srcCompat="@drawable/rejrana" />
 
             <ImageButton
                 android:id="@+id/sonido_rana"
-                android:layout_width="100sp"
-                android:layout_height="100sp"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
                 android:layout_gravity="center"
-                android:background="#00FFFFFF"
+                android:layout_marginTop="40sp"
+                android:background="@drawable/boton_microfono"
                 android:onClick="sonidoAnimal"
                 app:srcCompat="@android:drawable/ic_lock_silent_mode_off"
-                app:tint="#0066FF" />
+                app:tint="#000000" />
 
             <TextView
                 android:id="@+id/textView19"
@@ -519,18 +534,19 @@
             <ImageView
                 android:id="@+id/imageView17"
                 android:layout_width="match_parent"
-                android:layout_height="200sp"
+                android:layout_height="200dp"
                 app:srcCompat="@drawable/sejserpiente" />
 
             <ImageButton
                 android:id="@+id/sonido_serpiente"
-                android:layout_width="100sp"
-                android:layout_height="100sp"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
                 android:layout_gravity="center"
-                android:background="#00FFFFFF"
+                android:layout_marginTop="40sp"
+                android:background="@drawable/boton_microfono"
                 android:onClick="sonidoAnimal"
                 app:srcCompat="@android:drawable/ic_lock_silent_mode_off"
-                app:tint="#0066FF" />
+                app:tint="#000000" />
 
             <TextView
                 android:id="@+id/textView20"
@@ -550,18 +566,20 @@
             <ImageView
                 android:id="@+id/imageView18"
                 android:layout_width="match_parent"
-                android:layout_height="200sp"
+                android:layout_height="200dp"
                 app:srcCompat="@drawable/vejvaca" />
 
             <ImageButton
                 android:id="@+id/sonido_vaca"
-                android:layout_width="100sp"
-                android:layout_height="100sp"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
                 android:layout_gravity="center"
-                android:background="#00FFFFFF"
+                android:layout_marginTop="40sp"
+                android:layout_marginBottom="40sp"
+                android:background="@drawable/boton_microfono"
                 android:onClick="sonidoAnimal"
                 app:srcCompat="@android:drawable/ic_lock_silent_mode_off"
-                app:tint="#0066FF" />
+                app:tint="#000000" />
 
         </LinearLayout>
     </ScrollView>

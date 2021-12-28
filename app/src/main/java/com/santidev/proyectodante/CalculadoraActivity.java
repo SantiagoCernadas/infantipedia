@@ -133,7 +133,9 @@ public class CalculadoraActivity extends AppCompatActivity {
             case R.id.button_num9:
                 tv.setText(numActual + "9");
                 break;
-            case R.id.button_num0:
+            case R.id.button_num0 :
+            case R.id.button_num01:
+            case R.id.button_num02:
                 tv.setText(numActual + "0");
                 break;
             default:

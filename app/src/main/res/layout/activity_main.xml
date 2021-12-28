@@ -7,128 +7,143 @@
     android:background="@drawable/mainb"
     tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/imageView19"
-        android:layout_width="match_parent"
-        android:layout_height="476dp"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="-108dp"
-        android:contentDescription="@string/txt_img_ej"
-        app:srcCompat="@drawable/infantipedialogo" />
-
-    <TextView
-        android:id="@+id/txt_welcome"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="240sp"
-        android:fontFamily="@font/grandstanderdos"
-        android:shadowColor="#000000"
-        android:shadowDx="3"
-        android:shadowDy="2"
-        android:shadowRadius="1"
-        android:text="@string/txt_Bienvenida"
-        android:textColor="#F8A69A"
-        android:textSize="25sp" />
-
     <LinearLayout
-        android:layout_width="323dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerInParent="true"
-        android:layout_marginTop="310sp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/iv_musica"
+        android:layout_marginBottom="10dp"
         android:orientation="vertical">
 
-        <Button
-            android:id="@+id/button4"
+        <ImageView
+            android:id="@+id/imageView19"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20sp"
-            android:background="#F8CA9A"
-            android:fontFamily="@font/grandstanderclean"
-            android:onClick="activity_abecedario"
-            android:padding="15sp"
-            android:shadowColor="#888a8a"
-            android:shadowDx="3"
-            android:shadowDy="2"
-            android:shadowRadius="1"
-            android:text="@string/button_abecedario"
-            android:textSize="20sp"/>
+            android:layout_height="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_weight="5"
+            android:contentDescription="@string/txt_img_ej"
+            android:scaleType="fitXY"
+            android:scaleY="1.7"
+            android:scrollY="-10dp"
+            app:srcCompat="@drawable/infantipedialogo" />
 
-        <Button
-            android:id="@+id/button5"
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/txt_welcome"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="20sp"
-            android:background="#BAF5A9"
-            android:fontFamily="@font/grandstanderclean"
-            android:onClick="activity_matematicas"
-            android:padding="15sp"
-            android:shadowColor="#888a8a"
+            android:layout_gravity="center"
+            android:layout_marginTop="0dp"
+            android:layout_weight=".1"
+            android:fontFamily="@font/grandstanderdos"
+            android:gravity="clip_horizontal"
+            android:shadowColor="#000000"
             android:shadowDx="3"
             android:shadowDy="2"
             android:shadowRadius="1"
-            android:text="@string/button_math"
-            android:textSize="20sp" />
+            android:text="@string/txt_Bienvenida"
+            android:textColor="#F8A69A"
+            android:textSize="22sp" />
 
-        <Button
-            android:id="@+id/button6"
+        <LinearLayout
+            android:id="@+id/menu_botones_main"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="20sp"
-            android:background="#9FADEE"
-            android:fontFamily="@font/grandstanderclean"
-            android:onClick="activity_animales"
-            android:padding="15sp"
-            android:shadowColor="#888a8a"
-            android:shadowDx="3"
-            android:shadowDy="2"
-            android:shadowRadius="1"
-            android:text="@string/button_animales"
-            android:textSize="20sp" />
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1.5"
+            android:gravity="center"
+            android:orientation="vertical">
 
-        <Button
-            android:id="@+id/button7"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20sp"
-            android:background="#CF9FEE"
-            android:fontFamily="@font/grandstanderclean"
-            android:onClick="activity_dibujo"
-            android:padding="15sp"
-            android:shadowColor="#888a8a"
-            android:shadowDx="3"
-            android:shadowDy="2"
-            android:shadowRadius="1"
-            android:text="@string/button_juegos"
-            android:textSize="20sp" />
+            <Button
+                android:id="@+id/button4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_weight=".8"
+                android:background="#F8CA9A"
+                android:fontFamily="@font/grandstanderclean"
+                android:onClick="activity_abecedario"
+                android:shadowColor="#888a8a"
+                android:shadowDx="3"
+                android:shadowDy="2"
+                android:shadowRadius="1"
+                android:text="@string/button_abecedario"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/button5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_weight=".8"
+                android:background="#BAF5A9"
+                android:fontFamily="@font/grandstanderclean"
+                android:onClick="activity_matematicas"
+                android:shadowColor="#888a8a"
+                android:shadowDx="3"
+                android:shadowDy="2"
+                android:shadowRadius="1"
+                android:text="@string/button_math"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/button6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_weight=".8"
+                android:background="#9FADEE"
+                android:fontFamily="@font/grandstanderclean"
+                android:onClick="activity_animales"
+                android:shadowColor="#888a8a"
+                android:shadowDx="3"
+                android:shadowDy="2"
+                android:shadowRadius="1"
+                android:text="@string/button_animales"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/button7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".8"
+                android:background="#CF9FEE"
+                android:fontFamily="@font/grandstanderclean"
+                android:onClick="activity_dibujo"
+                android:shadowColor="#888a8a"
+                android:shadowDx="3"
+                android:shadowDy="2"
+                android:shadowRadius="1"
+                android:text="@string/button_juegos"
+                android:textSize="18sp" />
+
+        </LinearLayout>
     </LinearLayout>
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="false"
-        android:layout_alignParentTop="false"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginTop="705dp"
-        android:layout_marginRight="0dp"
-        android:layout_marginBottom="3dp"
+        android:layout_marginEnd="-1dp"
+        android:layout_marginRight="-1dp"
+        android:layout_marginBottom="0dp"
         android:text="@string/txt_version"
         android:textSize="20sp" />
 
     <ImageButton
         android:id="@+id/iv_musica"
-        android:layout_width="50sp"
-        android:layout_height="50sp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="5sp"
-        android:layout_marginLeft="5sp"
-        android:layout_marginBottom="5sp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginBottom="5dp"
         android:background="#FFF3A6"
         android:onClick="modificarEstadoMusica"
         app:srcCompat="@android:drawable/ic_lock_silent_mode_off"
@@ -136,14 +151,14 @@
 
     <ImageButton
         android:id="@+id/iv_musica_off"
-        android:layout_width="50sp"
-        android:layout_height="50sp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="5sp"
-        android:layout_marginLeft="5sp"
-        android:layout_marginBottom="5sp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginBottom="5dp"
         android:background="#F8A69A"
         android:onClick="modificarEstadoMusica"
         android:visibility="invisible"

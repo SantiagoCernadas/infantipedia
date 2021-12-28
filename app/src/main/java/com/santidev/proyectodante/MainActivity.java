@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         }
         musicaRep = true;
         mp = MediaPlayer.create(this, R.raw.cancionfondo);
-        mp.setVolume(0.5f,0.5f);
+        mp.setVolume(0.3f,0.3f);
         mp.setLooping(true);
     }
 
@@ -84,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
             iv2.setVisibility(View.INVISIBLE);
             iv.setVisibility(View.VISIBLE);
             musicaRep = true;
-            mp.setVolume(0.5f,0.5f);
+            mp.setVolume(0.3f,0.3f);
         }
     }
 
@@ -105,8 +105,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private static void startLoop(){
-        if(!mp.isPlaying()){
-            mp.start();
+        if(mp != null){
+            if(!mp.isPlaying()){
+                mp.start();
+            }
         }
     }
 

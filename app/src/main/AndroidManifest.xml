@@ -9,63 +9,88 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name="com.santidev.proyectodante.TatetiModoActivity"
-            android:screenOrientation="portrait"></activity>
-        <activity android:name="com.santidev.proyectodante.PlaysActivity.TatetiActivityDosJugadores"
-                    android:screenOrientation="portrait"/>
-        <activity android:name="com.santidev.proyectodante.PlaysActivity.TatetiActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name="com.santidev.proyectodante.PptModoActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name="com.santidev.proyectodante.PlaysActivity.PptActivityDosJugadores"
-            android:screenOrientation="portrait"/>
-        <activity android:name="com.santidev.proyectodante.PlaysActivity.PptActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name="com.santidev.proyectodante.JuegosActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name="com.santidev.proyectodante.NumTablaActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name="com.santidev.proyectodante.TablasActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name="com.santidev.proyectodante.NumFamiliaActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name="com.santidev.proyectodante.familiasActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name="com.santidev.proyectodante.PlaysActivity.FinJuegoActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name="com.santidev.proyectodante.PlaysActivity.HowPlayActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name="com.santidev.proyectodante.MatDificultadActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name="com.santidev.proyectodante.PlaysActivity.MatPlayActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name="com.santidev.proyectodante.PlaysActivity.PalabraPlayActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name="com.santidev.proyectodante.AnimalesActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name="com.santidev.proyectodante.CalculadoraActivity"
-            android:screenOrientation="portrait"/>
-        <activity
-            android:name="com.santidev.proyectodante.PrimerActivity"
+        <activity android:name=".LaunchScreenActivity"
             android:exported="true"
             android:screenOrientation="portrait">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
+
         </activity>
-        <activity android:name="com.santidev.proyectodante.MathActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name="com.santidev.proyectodante.LetraActivity"
-            android:screenOrientation="portrait"/>
         <activity
-            android:name="com.santidev.proyectodante.AbecedarioActivity"
+            android:name=".TatetiModoActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.santidev.proyectodante.MainActivity"
+            android:name=".PlaysActivity.TatetiActivityDosJugadores"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PlaysActivity.TatetiActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PptModoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PlaysActivity.PptActivityDosJugadores"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PlaysActivity.PptActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".JuegosActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".NumTablaActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".TablasActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".NumFamiliaActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".familiasActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PlaysActivity.FinJuegoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PlaysActivity.HowPlayActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MatDificultadActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PlaysActivity.MatPlayActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PlaysActivity.PalabraPlayActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AnimalesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CalculadoraActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PrimerActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".MathActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".LetraActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AbecedarioActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivity"
             android:screenOrientation="portrait" />
     </application>
-
 
 </manifest>

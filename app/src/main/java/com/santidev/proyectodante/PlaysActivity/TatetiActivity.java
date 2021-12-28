@@ -60,6 +60,7 @@ public class TatetiActivity extends AppCompatActivity {
         limpiarPantalla();
         actualizarDatos();
         txtMsgGanador.setText("Turno de el jugador");
+        txtMsgGanador.setTextColor(Color.parseColor("#F8A69A"));
     }
 
     private void actualizarDatos() {
@@ -129,11 +130,13 @@ public class TatetiActivity extends AppCompatActivity {
                 casillerosUsados++;
                 if(verificarGanador(3,1)){
                     txtMsgGanador.setText("Punto para el jugador!");
+                    txtMsgGanador.setTextColor(Color.parseColor("#F8A69A"));
                     jugador.setPuntos(jugador.getPuntos() + 1);
                     actualizarDatos();
                     botonesDips = false;
                     if(jugador.getPuntos() == condicionVictoria){
                         txtMsgGanador.setText("Ganó el jugador!");
+                        txtMsgGanador.setTextColor(Color.parseColor("#F8A69A"));
                         estadoBotones(View.VISIBLE);
                     }
                     else{
@@ -142,6 +145,7 @@ public class TatetiActivity extends AppCompatActivity {
                             public void run() {
                                 limpiarPantalla();
                                 txtMsgGanador.setText("Turno del jugador");
+                                txtMsgGanador.setTextColor(Color.parseColor("#F8A69A"));
                                 botonesDips = true;
                             }
                         }, 2000);
@@ -150,17 +154,20 @@ public class TatetiActivity extends AppCompatActivity {
                 }
                 else if(casillerosUsados == 9){
                     txtMsgGanador.setText("Empate");
+                    txtMsgGanador.setTextColor(Color.BLACK);
                     Handler handler = new Handler();
                     handler. postDelayed(new Runnable() {
                         public void run() {
                             limpiarPantalla();
                             txtMsgGanador.setText("Turno del jugador");
+                            txtMsgGanador.setTextColor(Color.parseColor("#F8A69A"));
                             botonesDips = true;
                         }
                     }, 2000);
                 }
                 else{
                     txtMsgGanador.setText("Turno de Duxi");
+                    txtMsgGanador.setTextColor(Color.parseColor("#9FADEE"));
                     botonesDips = false;
                     Handler handler = new Handler();
                     handler. postDelayed(new Runnable() {
@@ -184,10 +191,12 @@ public class TatetiActivity extends AppCompatActivity {
         if (verificarGanador(-3,-1)){
             botonesDips = false;
             txtMsgGanador.setText("Punto para Duxi!");
+            txtMsgGanador.setTextColor(Color.parseColor("#9FADEE"));
             cpu.setPuntos(cpu.getPuntos() + 1);
             actualizarDatos();
             if(cpu.getPuntos() == condicionVictoria){
                 txtMsgGanador.setText("Ganó Duxi!");
+                txtMsgGanador.setTextColor(Color.parseColor("#9FADEE"));
                 estadoBotones(View.VISIBLE);
             }
             else{
@@ -196,6 +205,7 @@ public class TatetiActivity extends AppCompatActivity {
                     public void run() {
                         limpiarPantalla();
                         txtMsgGanador.setText("Turno del jugador");
+                        txtMsgGanador.setTextColor(Color.parseColor("#F8A69A"));
                         botonesDips = true;
                     }
                 }, 2000);
@@ -203,6 +213,7 @@ public class TatetiActivity extends AppCompatActivity {
         }
         else{
             txtMsgGanador.setText("Turno del jugador");
+            txtMsgGanador.setTextColor(Color.parseColor("#F8A69A"));
             botonesDips = true;
         }
     }

@@ -68,8 +68,8 @@
     <string name="button_cal9">9</string>
     <string name="button_cal0">0</string>
     <string name="button_cal_res">=</string>
-    <string name="button_cal_borrar">Borrar</string>
-    <string name="button_cal_borrartodo">Borrar todo</string>
+    <string name="button_cal_borrar"></string>
+    <string name="button_cal_borrartodo">X</string>
 
     <string name="txt_animal_gato">Gato</string>
     <string name="txt_animal_perro">Gallina</string>

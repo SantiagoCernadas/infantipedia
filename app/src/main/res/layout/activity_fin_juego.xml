@@ -7,50 +7,73 @@
     android:background="@drawable/backgroundjuego"
     tools:context=".PlaysActivity.FinJuegoActivity">
 
-    <TextView
-        android:id="@+id/textView23"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="53dp"
-        android:fontFamily="@font/grandstanderdos"
-        android:gravity="center"
-        android:text="FIN DEL JUEGO"
-        android:textColor="#000000"
-        android:textSize="40sp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:background="#99000000"
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/txt_msj_puntos"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="false"
-        android:layout_marginTop="262dp"
-        android:fontFamily="@font/grandstanderdos"
-        android:gravity="center"
-        android:shadowColor="#000000"
-        android:shadowDx="3"
-        android:shadowDy="2"
-        android:shadowRadius="1"
-        android:text="Obtuviste 0 puntos"
-        android:textColor="#CF9FEE"
-        android:textSize="40sp" />
+        <TextView
+            android:id="@+id/textView23"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:fontFamily="@font/grandstanderdos"
+            android:gravity="center"
+            android:shadowColor="#000000"
+            android:shadowDx="3"
+            android:shadowDy="2"
+            android:shadowRadius="1"
+            android:text="FIN DEL JUEGO"
+            android:textColor="#F8A69A"
+            android:textSize="40sp" />
 
-    <Button
-        android:id="@+id/button14"
-        android:layout_width="250dp"
-        android:layout_height="80dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="83dp"
-        android:layout_marginLeft="83dp"
-        android:layout_marginTop="557dp"
-        android:background="#F8A69A"
-        android:fontFamily="@font/grandstanderdos"
-        android:onClick="volverMenu"
-        android:text="Volver al menu"
-        android:textSize="27sp" />
+        <TextView
+            android:id="@+id/txt_msj_puntos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:fontFamily="@font/grandstanderdos"
+            android:gravity="center"
+            android:shadowColor="#000000"
+            android:shadowDx="3"
+            android:shadowDy="2"
+            android:shadowRadius="1"
+            android:textColor="#CF9FEE"
+            android:textSize="40sp"
+            tools:text="Obtuviste 10 puntos" />
+
+        <TextView
+            android:id="@+id/txt_msj_final"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:fontFamily="@font/grandstanderdos"
+            android:gravity="center"
+            android:shadowColor="#000000"
+            android:shadowDx="3"
+            android:shadowDy="2"
+            android:shadowRadius="1"
+            android:textColor="#9FADEE"
+            android:textSize="40sp"
+            tools:text="Buen Intento!" />
+
+        <Button
+            android:id="@+id/button14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight=".5"
+            android:background="#F8A69A"
+            android:fontFamily="@font/grandstanderdos"
+            android:onClick="volverMenu"
+            android:text="Volver"
+            android:textSize="27sp" />
+    </LinearLayout>
+
 </RelativeLayout>

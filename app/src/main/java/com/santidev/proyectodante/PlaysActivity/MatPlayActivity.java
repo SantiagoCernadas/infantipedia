@@ -64,6 +64,8 @@ public class MatPlayActivity extends AppCompatActivity {
         generarProblema();
         if(cantSignos == 3){
             pista.setVisibility(View.INVISIBLE);
+            txtPistaCant.setVisibility(View.INVISIBLE);
+            txtPista.setVisibility(View.INVISIBLE);
         }
         pista.setEnabled(true);
         txtPista.setText("");
@@ -166,6 +168,8 @@ public class MatPlayActivity extends AppCompatActivity {
                     txtResultado.setText(resultadoAct + "9");
                     break;
                 case R.id.button_num_play0:
+                case R.id.button_num_play01:
+                case R.id.button_num_play02:
                     txtResultado.setText(resultadoAct + "0");
                     break;
                 default:

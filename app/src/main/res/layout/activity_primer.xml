@@ -7,69 +7,103 @@
     android:background="@drawable/mainb"
     tools:context=".PrimerActivity">
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="254dp"
-        android:layout_height="70sp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="350sp"
-        android:background="#BAF5A9"
-        android:fontFamily="@font/grandstanderclean"
-        android:onClick="logUsuario"
-        android:shadowColor="#888a8a"
-        android:shadowDx="3"
-        android:shadowDy="2"
-        android:shadowRadius="1"
-        android:text="@string/button_user"
-        android:textColor="#000000"
-        android:textSize="20sp" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="254dp"
-        android:layout_height="70sp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="450sp"
-        android:background="#9FADEE"
-        android:fontFamily="@font/grandstanderclean"
-        android:onClick="logInvitado"
-        android:shadowColor="#888a8a"
-        android:shadowDx="3"
-        android:shadowDy="2"
-        android:shadowRadius="1"
-        android:text="@string/button_invitado"
-        android:textColor="#000000"
-        android:textSize="20sp" />
-
-    <ImageView
-        android:id="@+id/imageView"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="476dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="-108dp"
-        android:contentDescription="@string/txt_img_ej"
-        app:srcCompat="@drawable/infantipedialogo" />
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="0dp"
+        android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/txt_nombreUser"
-        android:layout_width="330sp"
-        android:layout_height="60sp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="250sp"
-        android:background="#43CF9FEE"
-        android:fontFamily="@font/grandstanderdos"
-        android:gravity="center"
-        android:hint="@string/et_nombre"
-        android:inputType="textPersonName"
-        android:maxLength="20"
-        android:shadowColor="#000000"
-        android:shadowDx="2"
-        android:shadowDy="2"
-        android:shadowRadius="5"
-        android:textColor="#75f9f2"
-        android:textColorHint="#75f9f2"
-        android:textSize="30sp" />
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_weight="5"
+            android:contentDescription="@string/txt_img_ej"
+            android:scaleType="fitXY"
+            android:scaleY="1.7"
+            android:scrollY="-10dp"
+            app:srcCompat="@drawable/infantipedialogo" />
+
+        <EditText
+            android:id="@+id/txt_nombreUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_weight=".5"
+            android:background="#43CF9FEE"
+            android:fontFamily="@font/grandstanderdos"
+            android:gravity="center"
+            android:hint="@string/et_nombre"
+            android:inputType="textPersonName"
+            android:maxLength="20"
+            android:shadowColor="#000000"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="5"
+            android:textColor="#75f9f2"
+            android:textColorHint="#75f9f2"
+            android:textSize="25sp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="4"
+            android:gravity="start"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="50dp"
+                android:background="#BAF5A9"
+                android:fontFamily="@font/grandstanderclean"
+                android:onClick="logUsuario"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:shadowColor="#888a8a"
+                android:shadowDx="3"
+                android:shadowDy="2"
+                android:shadowRadius="1"
+                android:text="@string/button_user"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#9FADEE"
+                android:fontFamily="@font/grandstanderclean"
+                android:onClick="logInvitado"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:shadowColor="#888a8a"
+                android:shadowDx="3"
+                android:shadowDy="2"
+                android:shadowRadius="1"
+                android:text="@string/button_invitado"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
 </RelativeLayout>

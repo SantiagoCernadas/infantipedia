@@ -75,6 +75,7 @@ public class TatetiActivityDosJugadores extends AppCompatActivity {
         else{
             txtMsgGanador.setText("Turno de " + jugadores[i].getNombre()+ " ");
         }
+        txtMsgGanador.setTextColor(Color.parseColor(jugadores[i].getStringColor()));
     }
     public void imprimirPuntoJugador(int i){
         if(jugadores[i].getNombre().equals("jugador")){
@@ -83,6 +84,7 @@ public class TatetiActivityDosJugadores extends AppCompatActivity {
         else{
             txtMsgGanador.setText("Punto para " + jugadores[i].getNombre() + "! ");
         }
+        txtMsgGanador.setTextColor(Color.parseColor(jugadores[i].getStringColor()));
     }
     public void imprimirGanadorJugador(int i){
         if(jugadores[i].getNombre().equals("jugador")){
@@ -91,6 +93,7 @@ public class TatetiActivityDosJugadores extends AppCompatActivity {
         else{
             txtMsgGanador.setText("Ganó " + jugadores[i].getNombre()+ "! ");
         }
+        txtMsgGanador.setTextColor(Color.parseColor(jugadores[i].getStringColor()));
     }
 
 
