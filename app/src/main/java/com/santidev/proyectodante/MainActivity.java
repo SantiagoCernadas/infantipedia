@@ -2,19 +2,21 @@ package com.santidev.proyectodante;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     private TextView tv1;
-    private static MediaPlayer mp;
-    private ImageButton iv,iv2;
+    static MediaPlayer mp;
     private static String nombre;
+    static boolean pause;
+    static int volumenMusica,volumenEfecto;
 
     public static String getNombre() {
         return nombre;
@@ -24,22 +26,23 @@ public class MainActivity extends AppCompatActivity {
         this.nombre = nombre;
     }
 
-    private boolean musicaRep;
-    static boolean pause;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         nombre = getIntent().getStringExtra("usuario");
-        iv = findViewById(R.id.iv_musica);
-        iv2 = findViewById(R.id.iv_musica_off);
         tv1 = findViewById(R.id.txt_welcome);
+        pause = false;
         if (!nombre.equals("")) {
             tv1.setText("Hola " + nombre + "!");
         }
-        musicaRep = true;
+        volumenMusica = 50;
+        volumenEfecto = 50;
+        SharedPreferences sharedPreferences = getSharedPreferences("datos",Context.MODE_PRIVATE);
+        volumenMusica = sharedPreferences.getInt("volumenMusica",50);
+        volumenEfecto = sharedPreferences.getInt("volumenSonido",50);
         mp = MediaPlayer.create(this, R.raw.cancionfondo);
-        mp.setVolume(0.3f,0.3f);
+        mp.setVolume(volumenMusica / 50f,volumenMusica / 50f);
         mp.setLooping(true);
     }
 
@@ -64,8 +67,18 @@ public class MainActivity extends AppCompatActivity {
         startActivity(i);
     }
 
-    public void activity_dibujo(View view) {
+    public void activity_figuras(View view){
+        Intent i = new Intent(this,FigurasActivity.class);
+        startActivity(i);
+    }
+
+    public void activity_juegos(View view) {
         Intent i = new Intent(this,JuegosActivity.class);
+        startActivity(i);
+    }
+
+    public void activity_config(View view) {
+        Intent i = new Intent(this, ConfigActivity.class);
         startActivity(i);
     }
 
@@ -73,31 +86,16 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(this, "Proximamente...", Toast.LENGTH_SHORT).show();
     }
 
-    public void modificarEstadoMusica(View view){
-        if(musicaRep){
-            iv.setVisibility(View.INVISIBLE);
-            iv2.setVisibility(View.VISIBLE);
-            musicaRep = false;
-            mp.setVolume(0,0);
-        }
-        else{
-            iv2.setVisibility(View.INVISIBLE);
-            iv.setVisibility(View.VISIBLE);
-            musicaRep = true;
-            mp.setVolume(0.3f,0.3f);
-        }
-    }
-
     public static void start(){
-        pause= false;
+        pause = true;
         startLoop();
     }
     public static void pause(){
-        pause = true;
+        pause = false;
         new android.os.Handler().postDelayed(
                 new Runnable() {
                     public void run() {
-                        if(pause) {
+                        if(!pause) {
                             mp.pause();
                         }
                     }

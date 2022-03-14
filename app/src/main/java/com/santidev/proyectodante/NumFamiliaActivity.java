@@ -6,41 +6,63 @@ import android.media.AudioManager;
 import android.media.SoundPool;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageButton;
+import android.widget.TableLayout;
 import android.widget.TextView;
+
+import com.santidev.proyectodante.Manager.NombreNumsManager;
 
 import static com.santidev.proyectodante.MainActivity.pause;
 import static com.santidev.proyectodante.MainActivity.start;
 
 public class NumFamiliaActivity extends AppCompatActivity {
+    private ImageButton siguiente,anterior;
     private int[] nums;
+    private int num;
     private String[] nombreNums;
     private SoundPool[] sp;
     private int[] spRep;
     private TextView[] tv;
     private TextView txtTitulo;
+    private TableLayout tb;
+    private TextView tvCien;
+    private SoundPool spCien;
+    private int spRepCien;
+    private ImageButton microCien;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        num = 0;
         nums = new int[10];
         nombreNums = new String[10];
         sp = new SoundPool[10];
         spRep = new int[10];
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_num_familia);
-        nums = getIntent().getIntArrayExtra("numeros");
-        nombreNums = getIntent().getStringArrayExtra("nombres");
+        nums = generarNums(num);
+        nombreNums = NombreNumsManager.getFamilia0();
         tv = new TextView[20];
         txtTitulo = findViewById(R.id.txt_familia_titulo);
+        siguiente = findViewById(R.id.familia_siguiente);
+        anterior = findViewById(R.id.familia_anterior);
+        tb = findViewById(R.id.num_familia_tabla);
+        asignarSp();
         conectarID();
         setNumeros();
         setNombres();
         setSonidos(sp,spRep);
+        microCien.setVisibility(View.INVISIBLE);
+        tvCien.setVisibility(View.INVISIBLE);
         txtTitulo.setText("Familia del " + nums[0]);
     }
 
-    private void setSonidos(SoundPool[] sp, int[] spRep) {
+    private void asignarSp() {
         for(int i = 0;i < 10;i++){
             sp[i] = new SoundPool(1, AudioManager.STREAM_MUSIC,1);
         }
+        spCien = new SoundPool(1,AudioManager.STREAM_MUSIC,1);
+    }
+
+    private void setSonidos(SoundPool[] sp, int[] spRep) {
         switch (nums[0]){
             case 0:
                 getSonidos0(sp,spRep);
@@ -96,13 +118,22 @@ public class NumFamiliaActivity extends AppCompatActivity {
         tv[17] = findViewById(R.id.familia_nombre_7);
         tv[18] = findViewById(R.id.familia_nombre_8);
         tv[19] = findViewById(R.id.familia_nombre_9);
-
+        tvCien = findViewById(R.id.txt_cien);
+        microCien = findViewById(R.id.boton_cien);
     }
 
 
     private void setNumeros() {
         for(int i = 0;i < 10;i++){
             tv[i].setText(nums[i]+"- ");
+        }
+
+        if(nums[0] == 0){
+            anterior.setEnabled(false);
+        }
+        else{
+            anterior.setEnabled(true);
+            siguiente.setEnabled(true);
         }
     }
     private void setNombres() {
@@ -150,6 +181,10 @@ public class NumFamiliaActivity extends AppCompatActivity {
         sp[i].play(spRep[i],1,1,1,0,1);
     }
 
+    public void reproducirCien(View view){
+        spCien.play(spRepCien,1,1,1,0,1);
+    }
+
 
     public void getSonidos0(SoundPool sp[],int spRep[]){
         spRep[0] = sp[0].load(this,R.raw.sonidocero,1);
@@ -162,6 +197,7 @@ public class NumFamiliaActivity extends AppCompatActivity {
         spRep[7] = sp[7].load(this,R.raw.sonidosiete,1);
         spRep[8] = sp[8].load(this,R.raw.sonidoocho,1);
         spRep[9] = sp[9].load(this,R.raw.sonidonueve,1);
+        spRepCien = spCien.load(this,R.raw.sonidocien,1);
     }
     public void getSonidos10(SoundPool sp[],int spRep[]){
         spRep[0] = sp[0].load(this,R.raw.sonidodiez,1);
@@ -270,6 +306,86 @@ public class NumFamiliaActivity extends AppCompatActivity {
         spRep[7] = sp[7].load(this,R.raw.sonidonoventaysiete,1);
         spRep[8] = sp[8].load(this,R.raw.sonidonoventayocho,1);
         spRep[9] = sp[9].load(this,R.raw.sonidonoventaynueve,1);
+    }
+
+    public void getNombres(){
+        switch (num){
+            case 0:
+                nombreNums = NombreNumsManager.getFamilia0();
+                break;
+            case 10:
+                nombreNums = NombreNumsManager.getFamilia10();
+                break;
+            case 20:
+                nombreNums = NombreNumsManager.getFamilia20();
+                break;
+            case 30:
+                nombreNums = NombreNumsManager.getFamilia30();
+                break;
+            case 40:
+                nombreNums = NombreNumsManager.getFamilia40();
+                break;
+            case 50:
+                nombreNums = NombreNumsManager.getFamilia50();
+                break;
+            case 60:
+                nombreNums = NombreNumsManager.getFamilia60();
+                break;
+            case 70:
+                nombreNums = NombreNumsManager.getFamilia70();
+                break;
+            case 80:
+                nombreNums = NombreNumsManager.getFamilia80();
+                break;
+            case 90:
+                nombreNums = NombreNumsManager.getFamilia90();
+                break;
+        }
+    }
+
+    private int[] generarNums(int familia) {
+        int[] nums = new int[10];
+
+        for(int i = 0;i < nums.length;i++){
+            nums[i] = familia + i;
+        }
+
+        return nums;
+    }
+
+    public void familiaSig(View view) {
+        num += 10;
+        if(num == 100){
+            siguiente.setEnabled(false);
+            tb.setVisibility(View.INVISIBLE);
+            tvCien.setVisibility(View.VISIBLE);
+            microCien.setVisibility(View.VISIBLE);
+            txtTitulo.setText("100 ");
+        }
+        else{
+            nums = generarNums(num);
+            setNumeros();
+            getNombres();
+            setNombres();
+            setSonidos(sp,spRep);
+            txtTitulo.setText("Familia del " + num);
+        }
+
+    }
+
+    public void familiaAnt(View view) {
+        num -= 10;
+        if(num == 90){
+            tb.setVisibility(View.VISIBLE);
+            tvCien.setVisibility(View.INVISIBLE);
+            microCien.setVisibility(View.INVISIBLE);
+        }
+        nums = generarNums(num);
+        setNumeros();
+        getNombres();
+        setNombres();
+        setSonidos(sp,spRep);
+        txtTitulo.setText("Familia del " + num);
     }
 
     public void onPause() {

@@ -7,27 +7,56 @@
     android:background="@drawable/backgroundmat"
     tools:context=".NumFamiliaActivity">
 
+    <ImageButton
+        android:id="@+id/familia_anterior"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:background="#F8CA9A"
+        android:onClick="familiaAnt"
+        android:scaleType="fitCenter"
+        app:srcCompat="?attr/homeAsUpIndicator" />
+
+    <ImageButton
+        android:id="@+id/familia_siguiente"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="15dp"
+        android:background="#F8CA9A"
+        android:onClick="familiaSig"
+        android:rotation="180"
+        android:scaleType="fitCenter"
+        app:srcCompat="?attr/homeAsUpIndicator" />
+
     <TextView
         android:id="@+id/txt_familia_titulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:fontFamily="@font/grandstanderclean"
         android:shadowColor="#000000"
-        android:shadowDx="3"
+        android:shadowDx="2"
         android:shadowDy="2"
         android:shadowRadius="1"
         android:textColor="#9FADEE"
-        android:textSize="35sp"
+        android:textSize="30sp"
         tools:text="Familia del 0" />
 
     <TableLayout
+        android:id="@+id/num_familia_tabla"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_centerInParent="true"
-        android:layout_marginTop="180dp"
+        android:layout_below="@+id/txt_familia_titulo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
         android:background="#6AFDCAE1">
 
         <TableRow
@@ -45,7 +74,7 @@
                 android:layout_marginLeft="10dp"
                 android:fontFamily="@font/grandstanderdos"
                 android:shadowColor="#000000"
-                android:shadowDx="3"
+                android:shadowDx="2"
                 android:shadowDy="2"
                 android:shadowRadius="1"
                 android:textColor="#F8CA9A"
@@ -59,7 +88,7 @@
                 android:layout_gravity="center"
                 android:fontFamily="@font/grandstanderdos"
                 android:shadowColor="#000000"
-                android:shadowDx="3"
+                android:shadowDx="2"
                 android:shadowDy="2"
                 android:shadowRadius="1"
                 android:textColor="#F8CA9A"
@@ -68,8 +97,8 @@
 
             <ImageButton
                 android:id="@+id/rep_sonido_0"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="40dp"
+                android:layout_height="45dp"
                 android:layout_marginStart="10sp"
                 android:layout_marginLeft="10sp"
                 android:layout_marginTop="3dp"
@@ -97,7 +126,7 @@
                 android:layout_marginLeft="10dp"
                 android:fontFamily="@font/grandstanderdos"
                 android:shadowColor="#000000"
-                android:shadowDx="3"
+                android:shadowDx="2"
                 android:shadowDy="2"
                 android:shadowRadius="1"
                 android:textColor="#BAF5A9"
@@ -111,7 +140,7 @@
                 android:layout_gravity="center"
                 android:fontFamily="@font/grandstanderdos"
                 android:shadowColor="#000000"
-                android:shadowDx="3"
+                android:shadowDx="2"
                 android:shadowDy="2"
                 android:shadowRadius="1"
                 android:textColor="#BAF5A9"
@@ -120,8 +149,8 @@
 
             <ImageButton
                 android:id="@+id/rep_sonido_1"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="40dp"
+                android:layout_height="45dp"
                 android:layout_marginStart="10sp"
                 android:layout_marginLeft="10sp"
                 android:layout_marginTop="3dp"
@@ -149,7 +178,7 @@
                 android:layout_marginLeft="10dp"
                 android:fontFamily="@font/grandstanderdos"
                 android:shadowColor="#000000"
-                android:shadowDx="3"
+                android:shadowDx="2"
                 android:shadowDy="2"
                 android:shadowRadius="1"
                 android:textColor="#9FADEE"
@@ -163,7 +192,7 @@
                 android:layout_gravity="center"
                 android:fontFamily="@font/grandstanderdos"
                 android:shadowColor="#000000"
-                android:shadowDx="3"
+                android:shadowDx="2"
                 android:shadowDy="2"
                 android:shadowRadius="1"
                 android:textColor="#9FADEE"
@@ -172,8 +201,8 @@
 
             <ImageButton
                 android:id="@+id/rep_sonido_2"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="40dp"
+                android:layout_height="45dp"
                 android:layout_marginStart="10dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="3dp"
@@ -201,7 +230,7 @@
                 android:layout_marginLeft="10dp"
                 android:fontFamily="@font/grandstanderdos"
                 android:shadowColor="#000000"
-                android:shadowDx="3"
+                android:shadowDx="2"
                 android:shadowDy="2"
                 android:shadowRadius="1"
                 android:textColor="#FFF3A6"
@@ -215,7 +244,7 @@
                 android:layout_gravity="center"
                 android:fontFamily="@font/grandstanderdos"
                 android:shadowColor="#000000"
-                android:shadowDx="3"
+                android:shadowDx="2"
                 android:shadowDy="2"
                 android:shadowRadius="1"
                 android:textColor="#FFF3A6"
@@ -224,8 +253,8 @@
 
             <ImageButton
                 android:id="@+id/rep_sonido_3"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="40dp"
+                android:layout_height="45dp"
                 android:layout_marginStart="10sp"
                 android:layout_marginLeft="10sp"
                 android:layout_marginTop="3dp"
@@ -253,7 +282,7 @@
                 android:layout_marginLeft="10dp"
                 android:fontFamily="@font/grandstanderdos"
                 android:shadowColor="#000000"
-                android:shadowDx="3"
+                android:shadowDx="2"
                 android:shadowDy="2"
                 android:shadowRadius="1"
                 android:textColor="#9FEEEE"
@@ -267,7 +296,7 @@
                 android:layout_gravity="center"
                 android:fontFamily="@font/grandstanderdos"
                 android:shadowColor="#000000"
-                android:shadowDx="3"
+                android:shadowDx="2"
                 android:shadowDy="2"
                 android:shadowRadius="1"
                 android:textColor="#9FEEEE"
@@ -276,8 +305,8 @@
 
             <ImageButton
                 android:id="@+id/rep_sonido_4"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="40dp"
+                android:layout_height="45dp"
                 android:layout_marginStart="10sp"
                 android:layout_marginLeft="10sp"
                 android:layout_marginTop="3dp"
@@ -305,7 +334,7 @@
                 android:layout_marginLeft="10dp"
                 android:fontFamily="@font/grandstanderdos"
                 android:shadowColor="#000000"
-                android:shadowDx="3"
+                android:shadowDx="2"
                 android:shadowDy="2"
                 android:shadowRadius="1"
                 android:textColor="#F8CA9A"
@@ -319,7 +348,7 @@
                 android:layout_gravity="center"
                 android:fontFamily="@font/grandstanderdos"
                 android:shadowColor="#000000"
-                android:shadowDx="3"
+                android:shadowDx="2"
                 android:shadowDy="2"
                 android:shadowRadius="1"
                 android:textColor="#F8CA9A"
@@ -328,8 +357,8 @@
 
             <ImageButton
                 android:id="@+id/rep_sonido_5"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="40dp"
+                android:layout_height="45dp"
                 android:layout_marginStart="10dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="3dp"
@@ -357,7 +386,7 @@
                 android:layout_marginLeft="10dp"
                 android:fontFamily="@font/grandstanderdos"
                 android:shadowColor="#000000"
-                android:shadowDx="3"
+                android:shadowDx="2"
                 android:shadowDy="2"
                 android:shadowRadius="1"
                 android:textColor="#BAF5A9"
@@ -371,7 +400,7 @@
                 android:layout_gravity="center"
                 android:fontFamily="@font/grandstanderdos"
                 android:shadowColor="#000000"
-                android:shadowDx="3"
+                android:shadowDx="2"
                 android:shadowDy="2"
                 android:shadowRadius="1"
                 android:textColor="#BAF5A9"
@@ -380,8 +409,8 @@
 
             <ImageButton
                 android:id="@+id/rep_sonido_6"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="40dp"
+                android:layout_height="45dp"
                 android:layout_marginStart="10sp"
                 android:layout_marginLeft="10sp"
                 android:layout_marginTop="3dp"
@@ -408,7 +437,7 @@
                 android:layout_marginLeft="10dp"
                 android:fontFamily="@font/grandstanderdos"
                 android:shadowColor="#000000"
-                android:shadowDx="3"
+                android:shadowDx="2"
                 android:shadowDy="2"
                 android:shadowRadius="1"
                 android:textColor="#9FADEE"
@@ -422,7 +451,7 @@
                 android:layout_gravity="center"
                 android:fontFamily="@font/grandstanderdos"
                 android:shadowColor="#000000"
-                android:shadowDx="3"
+                android:shadowDx="2"
                 android:shadowDy="2"
                 android:shadowRadius="1"
                 android:textColor="#9FADEE"
@@ -431,8 +460,8 @@
 
             <ImageButton
                 android:id="@+id/rep_sonido_7"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="40dp"
+                android:layout_height="45dp"
                 android:layout_marginStart="10sp"
                 android:layout_marginLeft="10sp"
                 android:layout_marginTop="3dp"
@@ -460,7 +489,7 @@
                 android:layout_marginLeft="10dp"
                 android:fontFamily="@font/grandstanderdos"
                 android:shadowColor="#000000"
-                android:shadowDx="3"
+                android:shadowDx="2"
                 android:shadowDy="2"
                 android:shadowRadius="1"
                 android:textColor="#9FEEEE"
@@ -474,7 +503,7 @@
                 android:layout_gravity="center"
                 android:fontFamily="@font/grandstanderdos"
                 android:shadowColor="#000000"
-                android:shadowDx="3"
+                android:shadowDx="2"
                 android:shadowDy="2"
                 android:shadowRadius="1"
                 android:textColor="#9FEEEE"
@@ -483,8 +512,8 @@
 
             <ImageButton
                 android:id="@+id/rep_sonido_8"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="40dp"
+                android:layout_height="45dp"
                 android:layout_marginStart="10sp"
                 android:layout_marginLeft="10sp"
                 android:layout_marginTop="3dp"
@@ -512,7 +541,7 @@
                 android:layout_marginLeft="10dp"
                 android:fontFamily="@font/grandstanderdos"
                 android:shadowColor="#000000"
-                android:shadowDx="3"
+                android:shadowDx="2"
                 android:shadowDy="2"
                 android:shadowRadius="1"
                 android:textColor="#F8A69A"
@@ -526,7 +555,7 @@
                 android:layout_gravity="center"
                 android:fontFamily="@font/grandstanderdos"
                 android:shadowColor="#000000"
-                android:shadowDx="3"
+                android:shadowDx="2"
                 android:shadowDy="2"
                 android:shadowRadius="1"
                 android:text="(nueve)"
@@ -535,8 +564,8 @@
 
             <ImageButton
                 android:id="@+id/rep_sonido_9"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="40dp"
+                android:layout_height="45dp"
                 android:layout_marginStart="10sp"
                 android:layout_marginLeft="10sp"
                 android:layout_marginTop="3dp"
@@ -550,5 +579,34 @@
         </TableRow>
 
     </TableLayout>
+
+    <TextView
+        android:id="@+id/txt_cien"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_familia_titulo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:fontFamily="@font/grandstanderclean"
+        android:shadowColor="#000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="1"
+        android:text="100 (CIEN)"
+        android:textColor="#F8CA9A"
+        android:textSize="50sp" />
+
+    <ImageButton
+        android:id="@+id/boton_cien"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/txt_cien"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/boton_microfono"
+        android:onClick="reproducirCien"
+        android:scaleType="fitCenter"
+        app:srcCompat="@android:drawable/ic_lock_silent_mode_off"
+        app:tint="#000000" />
 
 </RelativeLayout>

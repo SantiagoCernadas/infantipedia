@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/mainb"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/iv_musica"
+        android:layout_marginBottom="0dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageView19"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:layout_marginTop="0dp"
+            android:layout_weight="1"
+            android:contentDescription="@string/txt_img_ej"
+            android:scaleType="fitXY"
+            android:scaleY="1.8"
+            android:scrollY="-10dp"
+            app:srcCompat="@drawable/infantipedialogo" />
+
+        <TextView
+            android:id="@+id/txt_welcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="0dp"
+            android:layout_weight=".01"
+            android:fontFamily="@font/grandstanderdos"
+            android:gravity="clip_horizontal"
+            android:shadowColor="#000000"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="1"
+            android:text="@string/txt_Bienvenida"
+            android:textColor="#F8A69A"
+            android:textSize="22sp" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_weight="1">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <ImageButton
+                            android:id="@+id/imageButton9"
+                            android:layout_width="300dp"
+                            android:layout_height="150dp"
+                            android:layout_margin="4dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_weight="1"
+                            android:background="#F8A69A"
+                            android:onClick="activity_abecedario"
+                            android:scaleType="fitCenter"
+                            app:srcCompat="@drawable/abc" />
+
+                        <ImageButton
+                            android:id="@+id/imageButton10"
+                            android:layout_width="300dp"
+                            android:layout_height="150dp"
+                            android:layout_margin="4dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_weight="1"
+                            android:background="#BAF5A9"
+                            android:onClick="activity_matematicas"
+                            android:scaleType="fitCenter"
+                            app:srcCompat="@drawable/matematicaslogotipo" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <ImageButton
+                            android:id="@+id/imageButton11"
+                            android:layout_width="300dp"
+                            android:layout_height="150dp"
+                            android:layout_margin="4dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_weight="1"
+                            android:background="#FFF3A6"
+                            android:onClick="activity_animales"
+                            android:scaleType="fitCenter"
+                            app:srcCompat="@drawable/gejgallina" />
+
+                        <ImageButton
+                            android:id="@+id/imageButton12"
+                            android:layout_width="300dp"
+                            android:layout_height="150dp"
+                            android:layout_margin="4dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_weight="1"
+                            android:background="#9FEEEE"
+                            android:onClick="activity_figuras"
+                            android:scaleType="fitCenter"
+                            app:srcCompat="@drawable/figuraslogotipo" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <ImageButton
+                            android:id="@+id/imageButton13"
+                            android:layout_width="300dp"
+                            android:layout_height="150dp"
+                            android:layout_margin="4dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_weight="1"
+                            android:background="#F8CA9A"
+                            android:onClick="activity_juegos"
+                            android:scaleType="fitCenter"
+                            app:srcCompat="@drawable/joystick" />
+
+                        <ImageButton
+                            android:id="@+id/imageButton14"
+                            android:layout_width="300dp"
+                            android:layout_height="150dp"
+                            android:layout_margin="4dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_weight="1"
+                            android:background="#CF9FEE"
+                            android:onClick="activity_config"
+                            android:scaleType="centerInside"
+                            app:srcCompat="@drawable/engranaje"
+                            tools:srcCompat="@drawable/engranaje" />
+                    </TableRow>
+
+                </TableLayout>
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -9,16 +9,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".LaunchScreenActivity"
+        <activity
+            android:name=".FigurasActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".ConfigActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".LaunchScreenActivity"
             android:exported="true"
             android:screenOrientation="portrait">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
         <activity
             android:name=".TatetiModoActivity"
@@ -51,9 +56,6 @@
             android:name=".NumFamiliaActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".familiasActivity"
-            android:screenOrientation="portrait" />
-        <activity
             android:name=".PlaysActivity.FinJuegoActivity"
             android:screenOrientation="portrait" />
         <activity
@@ -76,9 +78,7 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".PrimerActivity"
-            android:screenOrientation="portrait">
-
-        </activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".MathActivity"
             android:screenOrientation="portrait" />

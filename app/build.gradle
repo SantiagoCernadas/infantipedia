@@ -7,11 +7,11 @@ android {
     buildToolsVersion "31.0.0"
 
     defaultConfig {
-        applicationId "com.example.proyectodante"
-        minSdkVersion 22
+        applicationId "com.santidev.proyectodante"
+        minSdkVersion 19
         targetSdkVersion 31
-        versionCode 1
-        versionName "1.0"
+        versionCode 2
+        versionName "1.01"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }

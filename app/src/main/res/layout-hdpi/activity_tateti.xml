@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroundjuego"
+    tools:context=".PlaysActivity.TatetiActivity">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/txt_msg_ganador_tateti"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/tablerotateti">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/tateti_boton_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#00FFFFFF"
+                android:fontFamily="@font/grandstanderdos"
+                android:gravity="center"
+                android:onClick="setCasilleroJugador"
+                android:shadowColor="#000000"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="1"
+                android:textSize="45sp"
+                tools:text="X" />
+
+            <Button
+                android:id="@+id/tateti_boton_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="5dp"
+                android:layout_weight="1"
+                android:background="#00FFFFFF"
+                android:fontFamily="@font/grandstanderdos"
+                android:gravity="center"
+                android:onClick="setCasilleroJugador"
+                android:shadowColor="#000000"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="1"
+                android:textSize="45sp"
+                tools:text="X" />
+
+            <Button
+                android:id="@+id/tateti_boton_3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="3dp"
+                android:layout_weight="1"
+                android:background="#00FFFFFF"
+                android:fontFamily="@font/grandstanderdos"
+                android:gravity="center"
+                android:onClick="setCasilleroJugador"
+                android:shadowColor="#000000"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="1"
+                android:textSize="45sp"
+                tools:text="X" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/tateti_boton_4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#00FFFFFF"
+                android:fontFamily="@font/grandstanderdos"
+                android:gravity="center"
+                android:onClick="setCasilleroJugador"
+                android:shadowColor="#000000"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="1"
+                android:textSize="45sp"
+                tools:text="X" />
+
+            <Button
+                android:id="@+id/tateti_boton_5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="5dp"
+                android:layout_weight="1"
+                android:background="#00FFFFFF"
+                android:fontFamily="@font/grandstanderdos"
+                android:gravity="center"
+                android:onClick="setCasilleroJugador"
+                android:shadowColor="#000000"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="1"
+                android:textSize="45sp"
+                tools:text="X" />
+
+            <Button
+                android:id="@+id/tateti_boton_6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="4dp"
+                android:layout_weight="1"
+                android:background="#00FFFFFF"
+                android:fontFamily="@font/grandstanderdos"
+                android:gravity="center"
+                android:onClick="setCasilleroJugador"
+                android:shadowColor="#000000"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="1"
+                android:textSize="45sp"
+                tools:text="X" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/tateti_boton_7"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#00FFFFFF"
+                android:fontFamily="@font/grandstanderdos"
+                android:gravity="center"
+                android:onClick="setCasilleroJugador"
+                android:shadowColor="#000000"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="1"
+                android:textSize="45sp"
+                tools:text="X" />
+
+            <Button
+                android:id="@+id/tateti_boton_8"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="5dp"
+                android:layout_weight="1"
+                android:background="#00FFFFFF"
+                android:fontFamily="@font/grandstanderdos"
+                android:gravity="center"
+                android:onClick="setCasilleroJugador"
+                android:shadowColor="#000000"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="1"
+                android:textSize="45sp"
+                tools:text="X" />
+
+            <Button
+                android:id="@+id/tateti_boton_9"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="4dp"
+                android:layout_weight="1"
+                android:background="#00FFFFFF"
+                android:fontFamily="@font/grandstanderdos"
+                android:gravity="center"
+                android:onClick="setCasilleroJugador"
+                android:shadowColor="#000000"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="1"
+                android:textSize="45sp"
+                tools:text="X" />
+        </TableRow>
+
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/txt_msg_ganador_tateti"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="230dp"
+        android:fontFamily="@font/grandstanderdos"
+        android:gravity="center"
+        android:shadowColor="#000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="1"
+        android:textColor="#F8A69A"
+        android:textSize="24sp"
+        tools:text="Punto para el jugador!" />
+
+    <Button
+        android:id="@+id/ttt_volver_jugar"
+        android:layout_width="140dp"
+        android:layout_height="55dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="7dp"
+        android:layout_marginBottom="160dp"
+        android:background="#77dd77"
+        android:fontFamily="@font/grandstanderclean"
+        android:onClick="volverTTT"
+        android:textSize="16sp"
+        tools:text="Volver a jugar" />
+
+    <Button
+        android:id="@+id/ttt_salir"
+        android:layout_width="140dp"
+        android:layout_height="55dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="7dp"
+        android:layout_marginRight="7dp"
+        android:layout_marginBottom="160dp"
+        android:background="#ff6961"
+        android:fontFamily="@font/grandstanderclean"
+        android:onClick="salirTTT"
+        android:textSize="16sp"
+        tools:text="Salir" />
+
+    <TextView
+        android:id="@+id/txt_puntos_jugador_tateti"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="31dp"
+        android:layout_marginBottom="100dp"
+        android:fontFamily="@font/grandstanderdos"
+        android:gravity="center"
+        android:shadowColor="#000000"
+        android:shadowDx="3"
+        android:shadowDy="2"
+        android:shadowRadius="1"
+        android:textColor="#F8A69A"
+        android:textSize="25sp"
+        tools:text="Jugador: 0/5" />
+
+    <TextView
+        android:id="@+id/txt_puntos_cpu_tateti"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:fontFamily="@font/grandstanderdos"
+        android:gravity="center"
+        android:shadowColor="#000000"
+        android:shadowDx="3"
+        android:shadowDy="2"
+        android:shadowRadius="1"
+        android:textColor="#9FADEE"
+        android:textSize="25sp"
+        tools:text="Duxi: 0/5" />
+
+</RelativeLayout>

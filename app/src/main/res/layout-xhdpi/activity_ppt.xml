@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroundjuego"
+    tools:context=".PlaysActivity.PptActivity">
+
+    <LinearLayout
+        android:id="@+id/ppt_opciones2"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/imagen_tijera2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="#BAF5A9"
+            android:clickable="false"
+            android:contentDescription="@string/txt_vacio"
+            android:scaleType="centerInside"
+            android:src="@drawable/infantipedialogo" />
+
+        <ImageButton
+            android:id="@+id/imagen_papel2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="#FFF3A6"
+            android:clickable="false"
+            android:contentDescription="@string/txt_vacio"
+            android:scaleType="centerInside"
+            android:src="@drawable/infantipedialogo" />
+
+        <ImageButton
+            android:id="@+id/imagen_piedra2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="#F8A69A"
+            android:clickable="false"
+            android:contentDescription="@string/txt_vacio"
+            android:scaleType="centerInside"
+            android:src="@drawable/infantipedialogo" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ppt_opciones"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="0dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/imagen_tijera"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="#BAF5A9"
+            android:onClick="opcion"
+            android:scaleType="centerInside"
+            android:src="@drawable/tijera" />
+
+        <ImageButton
+            android:id="@+id/imagen_papel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="#FFF3A6"
+            android:onClick="opcion"
+            android:scaleType="centerInside"
+            android:src="@drawable/papel" />
+
+        <ImageButton
+            android:id="@+id/imagen_piedra"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="#F8A69A"
+            android:onClick="opcion"
+            android:scaleType="centerInside"
+            android:src="@drawable/piedra" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/ppt_salir"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_above="@+id/txt_puntos_jugador"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="20dp"
+        android:background="#ff6961"
+        android:fontFamily="@font/grandstanderclean"
+        android:onClick="salirppt"
+        android:text="Salir"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/ppt_volver_jugar"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_above="@+id/txt_puntos_jugador"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="6dp"
+        android:layout_marginBottom="20dp"
+        android:background="#77dd77"
+        android:fontFamily="@font/grandstanderclean"
+        android:onClick="volverAJugar"
+        android:text="Volver a jugar"
+        android:textSize="14sp" />
+
+    <ImageView
+        android:id="@+id/imagen_cpu"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_above="@+id/txt_ganador_ronda"
+        android:layout_below="@+id/txt_puntos_cpu"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:background="#00FFFFFF"
+        android:rotation="180"
+        android:scaleType="centerInside"
+        app:srcCompat="@drawable/tijera" />
+
+    <ImageView
+        android:id="@+id/imagen_jugador"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_above="@+id/txt_puntos_jugador"
+        android:layout_below="@+id/txt_ganador_ronda"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="12dp"
+        android:background="#00FFFFFF"
+        android:scaleType="centerInside"
+        app:srcCompat="@drawable/tijera" />
+
+    <TextView
+        android:id="@+id/txt_puntos_jugador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ppt_opciones"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="@font/grandstanderdos"
+        android:gravity="center"
+        android:shadowColor="#000000"
+        android:shadowDx="3"
+        android:shadowDy="2"
+        android:shadowRadius="1"
+        android:text="Jugador: 0/5"
+        android:textColor="#F8A69A"
+        android:textSize="22sp" />
+
+    <TextView
+        android:id="@+id/txt_ganador_ronda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:fontFamily="@font/grandstanderdos"
+        android:gravity="center"
+        android:selectAllOnFocus="false"
+        android:shadowColor="#000000"
+        android:shadowDx="3"
+        android:shadowDy="2"
+        android:shadowRadius="1"
+        android:text="Punto para el jugador!"
+        android:textColor="#CF9FEE"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/txt_puntos_cpu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ppt_opciones2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/grandstanderdos"
+        android:gravity="center"
+        android:shadowColor="#000000"
+        android:shadowDx="3"
+        android:shadowDy="2"
+        android:shadowRadius="1"
+        android:text="Duxi: 0/5"
+        android:textColor="#9FADEE"
+        android:textSize="22sp" />
+
+</RelativeLayout>

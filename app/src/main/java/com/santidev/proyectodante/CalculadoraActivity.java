@@ -49,12 +49,11 @@ public class CalculadoraActivity extends AppCompatActivity {
     }
 
     public void numPresionado(View view){
-
         int idNum = view.getId();
         if(txtSigno.getText().toString().equals("")){
             asignarNumero(txtNum1,idNum);
         }
-        else{
+        else if(txtIgual.getText().toString().equals("")){
             asignarNumero(txtNum2,idNum);
         }
     }

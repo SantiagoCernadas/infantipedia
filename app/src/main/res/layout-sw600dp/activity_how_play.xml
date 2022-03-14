@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroundjuego"
+    tools:context=".PlaysActivity.HowPlayActivity">
+
+    <TextView
+        android:id="@+id/txt_titulo_juego"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="false"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/grandstanderclean"
+        android:gravity="center"
+        android:shadowColor="#000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="1"
+        android:text="nombre minijuego"
+        android:textColor="#9FADEE"
+        android:textSize="40sp" />
+
+    <ScrollView
+        android:id="@+id/desc_juego"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_below="@+id/txt_titulo_juego"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:background="#BFFFFFFF">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_descripcion_juego"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/grandstanderdos"
+                android:gravity="center"
+                android:lineSpacingExtra="10dp"
+                android:shadowColor="#000000"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="1"
+                android:text="4 Palabras, 1 Correcta"
+                android:textColor="#CF9FEE"
+                android:textSize="35sp" />
+
+            <TextView
+                android:id="@+id/txt_descripcion_juego6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:fontFamily="@font/grandstanderdos"
+                android:gravity="center"
+                android:lineSpacingExtra="10dp"
+                android:shadowColor="#000000"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="1"
+                android:text="!Gana puntos por cada respuesta correcta!"
+                android:textColor="#77dd77"
+                android:textSize="35sp" />
+
+            <TextView
+                android:id="@+id/txt_descripcion_juego7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:fontFamily="@font/grandstanderdos"
+                android:gravity="center"
+                android:lineSpacingExtra="10dp"
+                android:shadowColor="#000000"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="1"
+                android:text="Tienes 3 vidas"
+                android:textColor="#ff6961"
+                android:textSize="35sp" />
+
+            <TextView
+                android:id="@+id/txt_descripcion_juego8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:fontFamily="@font/grandstanderdos"
+                android:gravity="center"
+                android:lineSpacingExtra="10dp"
+                android:shadowColor="#000000"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="1"
+                android:text="Tienes 3 pistas. úsalas sabiamente"
+                android:textColor="#F8CA9A"
+                android:textSize="35sp" />
+
+            <TextView
+                android:id="@+id/txt_descripcion_juego10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:fontFamily="@font/grandstanderdos"
+                android:gravity="center"
+                android:lineSpacingExtra="10dp"
+                android:shadowColor="#000000"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="1"
+                android:text="Diviértete!"
+                android:textColor="#9FEEEE"
+                android:textSize="35sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/button13"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="40dp"
+        android:background="#CF9FEE"
+        android:fontFamily="@font/grandstanderclean"
+        android:gravity="center"
+        android:onClick="jugar"
+        android:shadowColor="#888a8a"
+        android:shadowDx="3"
+        android:shadowDy="2"
+        android:shadowRadius="1"
+        android:text="Jugar"
+        android:textSize="40sp" />
+
+    <ImageView
+        android:id="@+id/imagen_ejemplo1"
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/desc_juego"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginBottom="137dp"
+        android:contentDescription="@string/txt_vacio"
+        tools:srcCompat="@drawable/matplayej1" />
+
+    <ImageView
+        android:id="@+id/imagen_ejemplo2"
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/button13"
+        android:layout_below="@+id/desc_juego"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginBottom="19dp"
+        android:contentDescription="@string/txt_vacio"
+        tools:srcCompat="@drawable/palabraplayej2" />
+
+</RelativeLayout>

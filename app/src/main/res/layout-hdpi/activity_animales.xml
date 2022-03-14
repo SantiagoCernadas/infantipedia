@@ -1,0 +1,587 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/animalesbackground"
+    tools:context=".AnimalesActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/grandstanderdos"
+                android:gravity="center"
+                android:shadowColor="#000000"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="2"
+                android:text="Conoce a los animales!"
+                android:textColor="#84b6f4"
+                android:textSize="45sp" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50sp"
+                android:fontFamily="@font/grandstanderdos"
+                android:gravity="center"
+                android:shadowColor="#888a8a"
+                android:shadowDx="3"
+                android:shadowDy="2"
+                android:shadowRadius="1"
+                android:text="Ballena"
+                android:textColor="#000000"
+                android:textSize="45sp" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                app:srcCompat="@drawable/bejballena" />
+
+            <ImageButton
+                android:id="@+id/sonido_ballena"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="40sp"
+                android:background="@drawable/boton_microfono"
+                android:onClick="sonidoAnimal"
+                app:srcCompat="@android:drawable/ic_lock_silent_mode_off"
+                app:tint="#000000" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50sp"
+                android:fontFamily="@font/grandstanderdos"
+                android:gravity="center"
+                android:shadowColor="#888a8a"
+                android:shadowDx="3"
+                android:shadowDy="2"
+                android:shadowRadius="1"
+                android:text="Caballo"
+                android:textColor="#000000"
+                android:textSize="45sp" />
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                app:srcCompat="@drawable/imagencaballo" />
+
+            <ImageButton
+                android:id="@+id/sonido_caballo"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/boton_microfono"
+                android:onClick="sonidoAnimal"
+                app:srcCompat="@android:drawable/ic_lock_silent_mode_off"
+                app:tint="#000000" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50sp"
+                android:fontFamily="@font/grandstanderdos"
+                android:gravity="center"
+                android:shadowColor="#888a8a"
+                android:shadowDx="3"
+                android:shadowDy="2"
+                android:shadowRadius="1"
+                android:text="Cerdo"
+                android:textColor="#000000"
+                android:textSize="45sp" />
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                app:srcCompat="@drawable/imagencerdo" />
+
+            <ImageButton
+                android:id="@+id/sonido_cerdo"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/boton_microfono"
+                android:onClick="sonidoAnimal"
+                app:srcCompat="@android:drawable/ic_lock_silent_mode_off"
+                app:tint="#000000" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50sp"
+                android:fontFamily="@font/grandstanderdos"
+                android:gravity="center"
+                android:shadowColor="#888a8a"
+                android:shadowDx="3"
+                android:shadowDy="2"
+                android:shadowRadius="1"
+                android:text="Delfín"
+                android:textColor="#000000"
+                android:textSize="45sp" />
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                app:srcCompat="@drawable/dejdelfin" />
+
+            <ImageButton
+                android:id="@+id/sonido_delfin"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/boton_microfono"
+                android:onClick="sonidoAnimal"
+                app:srcCompat="@android:drawable/ic_lock_silent_mode_off"
+                app:tint="#000000" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50sp"
+                android:fontFamily="@font/grandstanderdos"
+                android:gravity="center"
+                android:shadowColor="#888a8a"
+                android:shadowDx="3"
+                android:shadowDy="2"
+                android:shadowRadius="1"
+                android:text="Elefante"
+                android:textColor="#000000"
+                android:textSize="45sp" />
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                app:srcCompat="@drawable/eejelefante" />
+
+            <ImageButton
+                android:id="@+id/sonido_elefante"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/boton_microfono"
+                android:onClick="sonidoAnimal"
+                app:srcCompat="@android:drawable/ic_lock_silent_mode_off"
+                app:tint="#000000" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50sp"
+                android:fontFamily="@font/grandstanderdos"
+                android:gravity="center"
+                android:shadowColor="#888a8a"
+                android:shadowDx="3"
+                android:shadowDy="2"
+                android:shadowRadius="1"
+                android:text="Foca"
+                android:textColor="#000000"
+                android:textSize="45sp" />
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                app:srcCompat="@drawable/imagenfoca" />
+
+            <ImageButton
+                android:id="@+id/sonido_foca"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/boton_microfono"
+                android:onClick="sonidoAnimal"
+                app:srcCompat="@android:drawable/ic_lock_silent_mode_off"
+                app:tint="#000000" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50sp"
+                android:fontFamily="@font/grandstanderdos"
+                android:gravity="center"
+                android:shadowColor="#888a8a"
+                android:shadowDx="3"
+                android:shadowDy="2"
+                android:shadowRadius="1"
+                android:text="Gallina"
+                android:textColor="#000000"
+                android:textSize="45sp" />
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                app:srcCompat="@drawable/gejgallina" />
+
+            <ImageButton
+                android:id="@+id/sonido_gallina"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/boton_microfono"
+                android:onClick="sonidoAnimal"
+                app:srcCompat="@android:drawable/ic_lock_silent_mode_off"
+                app:tint="#000000" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50sp"
+                android:fontFamily="@font/grandstanderdos"
+                android:gravity="center"
+                android:shadowColor="#888a8a"
+                android:shadowDx="3"
+                android:shadowDy="2"
+                android:shadowRadius="1"
+                android:text="Gato"
+                android:textColor="#000000"
+                android:textSize="45sp" />
+
+            <ImageView
+                android:id="@+id/imageView9"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                app:srcCompat="@drawable/gejgato" />
+
+            <ImageButton
+                android:id="@+id/sonido_gato"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/boton_microfono"
+                android:onClick="sonidoAnimal"
+                app:srcCompat="@android:drawable/ic_lock_silent_mode_off"
+                app:tint="#000000" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50sp"
+                android:fontFamily="@font/grandstanderdos"
+                android:gravity="center"
+                android:shadowColor="#888a8a"
+                android:shadowDx="3"
+                android:shadowDy="2"
+                android:shadowRadius="1"
+                android:text="León"
+                android:textColor="#000000"
+                android:textSize="45sp" />
+
+            <ImageView
+                android:id="@+id/imageView10"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                app:srcCompat="@drawable/lejleon" />
+
+            <ImageButton
+                android:id="@+id/sonido_leon"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/boton_microfono"
+                android:onClick="sonidoAnimal"
+                app:srcCompat="@android:drawable/ic_lock_silent_mode_off"
+                app:tint="#000000" />
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50sp"
+                android:fontFamily="@font/grandstanderdos"
+                android:gravity="center"
+                android:shadowColor="#888a8a"
+                android:shadowDx="3"
+                android:shadowDy="2"
+                android:shadowRadius="1"
+                android:text="Lobo"
+                android:textColor="#000000"
+                android:textSize="45sp" />
+
+            <ImageView
+                android:id="@+id/imageView11"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                app:srcCompat="@drawable/imagenlobo" />
+
+            <ImageButton
+                android:id="@+id/sonido_lobo"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/boton_microfono"
+                android:onClick="sonidoAnimal"
+                app:srcCompat="@android:drawable/ic_lock_silent_mode_off"
+                app:tint="#000000" />
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50sp"
+                android:fontFamily="@font/grandstanderdos"
+                android:gravity="center"
+                android:shadowColor="#888a8a"
+                android:shadowDx="3"
+                android:shadowDy="2"
+                android:shadowRadius="1"
+                android:text="Oso"
+                android:textColor="#000000"
+                android:textSize="45sp" />
+
+            <ImageView
+                android:id="@+id/imageView12"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                app:srcCompat="@drawable/oejoso" />
+
+            <ImageButton
+                android:id="@+id/sonido_oso"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/boton_microfono"
+                android:onClick="sonidoAnimal"
+                app:srcCompat="@android:drawable/ic_lock_silent_mode_off"
+                app:tint="#000000" />
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50sp"
+                android:fontFamily="@font/grandstanderdos"
+                android:gravity="center"
+                android:shadowColor="#888a8a"
+                android:shadowDx="3"
+                android:shadowDy="2"
+                android:shadowRadius="1"
+                android:text="Oveja"
+                android:textColor="#000000"
+                android:textSize="45sp" />
+
+            <ImageView
+                android:id="@+id/imageView13"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                app:srcCompat="@drawable/oejoveja" />
+
+            <ImageButton
+                android:id="@+id/sonido_oveja"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/boton_microfono"
+                android:onClick="sonidoAnimal"
+                app:srcCompat="@android:drawable/ic_lock_silent_mode_off"
+                app:tint="#000000" />
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50sp"
+                android:fontFamily="@font/grandstanderdos"
+                android:gravity="center"
+                android:shadowColor="#888a8a"
+                android:shadowDx="3"
+                android:shadowDy="2"
+                android:shadowRadius="1"
+                android:text="Pato"
+                android:textColor="#000000"
+                android:textSize="45sp" />
+
+            <ImageView
+                android:id="@+id/imageView14"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                app:srcCompat="@drawable/imagenpato" />
+
+            <ImageButton
+                android:id="@+id/sonido_pato"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/boton_microfono"
+                android:onClick="sonidoAnimal"
+                app:srcCompat="@android:drawable/ic_lock_silent_mode_off"
+                app:tint="#000000" />
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50sp"
+                android:fontFamily="@font/grandstanderdos"
+                android:gravity="center"
+                android:shadowColor="#888a8a"
+                android:shadowDx="3"
+                android:shadowDy="2"
+                android:shadowRadius="1"
+                android:text="Perro"
+                android:textColor="#000000"
+                android:textSize="45sp" />
+
+            <ImageView
+                android:id="@+id/imageView15"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                app:srcCompat="@drawable/imagenperro" />
+
+            <ImageButton
+                android:id="@+id/sonido_perro"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/boton_microfono"
+                android:onClick="sonidoAnimal"
+                app:srcCompat="@android:drawable/ic_lock_silent_mode_off"
+                app:tint="#000000" />
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50sp"
+                android:fontFamily="@font/grandstanderdos"
+                android:gravity="center"
+                android:shadowColor="#888a8a"
+                android:shadowDx="3"
+                android:shadowDy="2"
+                android:shadowRadius="1"
+                android:text="Rana"
+                android:textColor="#000000"
+                android:textSize="45sp" />
+
+            <ImageView
+                android:id="@+id/imageView16"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                app:srcCompat="@drawable/rejrana" />
+
+            <ImageButton
+                android:id="@+id/sonido_rana"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/boton_microfono"
+                android:onClick="sonidoAnimal"
+                app:srcCompat="@android:drawable/ic_lock_silent_mode_off"
+                app:tint="#000000" />
+
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50sp"
+                android:fontFamily="@font/grandstanderdos"
+                android:gravity="center"
+                android:shadowColor="#888a8a"
+                android:shadowDx="3"
+                android:shadowDy="2"
+                android:shadowRadius="1"
+                android:text="Serpiente"
+                android:textColor="#000000"
+                android:textSize="45sp" />
+
+            <ImageView
+                android:id="@+id/imageView17"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                app:srcCompat="@drawable/sejserpiente" />
+
+            <ImageButton
+                android:id="@+id/sonido_serpiente"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/boton_microfono"
+                android:onClick="sonidoAnimal"
+                app:srcCompat="@android:drawable/ic_lock_silent_mode_off"
+                app:tint="#000000" />
+
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50sp"
+                android:fontFamily="@font/grandstanderdos"
+                android:gravity="center"
+                android:shadowColor="#888a8a"
+                android:shadowDx="3"
+                android:shadowDy="2"
+                android:shadowRadius="1"
+                android:text="Vaca"
+                android:textColor="#000000"
+                android:textSize="45sp" />
+
+            <ImageView
+                android:id="@+id/imageView18"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                app:srcCompat="@drawable/vejvaca" />
+
+            <ImageButton
+                android:id="@+id/sonido_vaca"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="40sp"
+                android:background="@drawable/boton_microfono"
+                android:onClick="sonidoAnimal"
+                app:srcCompat="@android:drawable/ic_lock_silent_mode_off"
+                app:tint="#000000" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

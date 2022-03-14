@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 import static com.santidev.proyectodante.MainActivity.pause;
 import static com.santidev.proyectodante.MainActivity.start;
+import static com.santidev.proyectodante.MainActivity.volumenEfecto;
 
 
 public class AnimalesActivity extends AppCompatActivity {
@@ -145,7 +146,7 @@ public class AnimalesActivity extends AppCompatActivity {
     }
 
     public void reproducirSonido(int ruta){
-        sp[ruta].play(sonido_reproduccion[ruta],1,1,1,0,1);
+        sp[ruta].play(sonido_reproduccion[ruta],volumenEfecto / 50f,volumenEfecto / 50f,1,0,1);
     }
 
     public void onPause() {

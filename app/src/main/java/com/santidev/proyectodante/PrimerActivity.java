@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -17,7 +18,9 @@ public class PrimerActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_primer);
         et1 = findViewById(R.id.txt_nombreUser);
+
     }
+
 
     public void logUsuario(View view){
         String nombre = et1.getText().toString();

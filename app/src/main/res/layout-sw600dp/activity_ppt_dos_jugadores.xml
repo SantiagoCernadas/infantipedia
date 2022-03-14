@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroundjuego"
+    tools:context=".PlaysActivity.PptActivityDosJugadores">
+
+    <LinearLayout
+        android:id="@+id/ppt_play2_opciones"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/imagen_tijera_jugador_2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="#BAF5A9"
+            android:onClick="presionOpcion2"
+            android:rotation="180"
+            android:scaleType="centerInside"
+            android:src="@drawable/tijera" />
+
+        <ImageButton
+            android:id="@+id/imagen_papel_jugador_2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="#FFF3A6"
+            android:onClick="presionOpcion2"
+            android:rotation="180"
+            android:scaleType="centerInside"
+            android:src="@drawable/papel" />
+
+        <ImageButton
+            android:id="@+id/imagen_piedra_jugador_2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="#F8A69A"
+            android:onClick="presionOpcion2"
+            android:rotation="180"
+            android:scaleType="centerInside"
+            android:src="@drawable/piedra" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ppt_play1_opciones"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="0dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/imagen_tijera_jugador_1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="#BAF5A9"
+            android:onClick="presionOpcion1"
+            android:scaleType="centerInside"
+            android:src="@drawable/tijera" />
+
+        <ImageButton
+            android:id="@+id/imagen_papel_jugador_1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="#FFF3A6"
+            android:onClick="presionOpcion1"
+            android:scaleType="centerInside"
+            android:src="@drawable/papel" />
+
+        <ImageButton
+            android:id="@+id/imagen_piedra_jugador_1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="#F8A69A"
+            android:onClick="presionOpcion1"
+            android:scaleType="centerInside"
+            android:src="@drawable/piedra" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/ppt_volver_jugar_2"
+        android:layout_width="150dp"
+        android:layout_height="80dp"
+        android:layout_above="@+id/ppt_salir_2"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="#77dd77"
+        android:fontFamily="@font/grandstanderclean"
+        android:onClick="volverAJugar"
+        android:text="Volver a jugar"
+        android:textSize="22sp" />
+
+    <Button
+        android:id="@+id/boton_ppt_siguiente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="#77dd77"
+        android:fontFamily="@font/grandstanderclean"
+        android:onClick="comenzarRonda"
+        android:text="Comenzar"
+        android:textSize="28sp" />
+
+    <Button
+        android:id="@+id/ppt_salir_2"
+        android:layout_width="150dp"
+        android:layout_height="80dp"
+        android:layout_above="@+id/txt_puntos_jugador_1"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="20dp"
+        android:background="#ff6961"
+        android:fontFamily="@font/grandstanderclean"
+        android:onClick="salirppt"
+        android:text="Salir"
+        android:textSize="22sp" />
+
+    <ImageView
+        android:id="@+id/imagen_jugador_1"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_above="@+id/txt_puntos_jugador_1"
+        android:layout_below="@+id/boton_ppt_siguiente"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="12dp"
+        android:background="#00FFFFFF"
+        android:scaleType="centerInside"
+        app:srcCompat="@drawable/tijera" />
+
+    <ImageView
+        android:id="@+id/imagen_jugador_2"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_above="@+id/boton_ppt_siguiente"
+        android:layout_below="@+id/txt_puntos_jugador_2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:background="#00FFFFFF"
+        android:rotation="180"
+        android:scaleType="centerInside"
+        app:srcCompat="@drawable/tijera" />
+
+    <TextView
+        android:id="@+id/txt_puntos_jugador_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ppt_play1_opciones"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="@font/grandstanderdos"
+        android:gravity="center"
+        android:shadowColor="#000000"
+        android:shadowDx="3"
+        android:shadowDy="2"
+        android:shadowRadius="1"
+        android:textColor="#F8A69A"
+        android:textSize="30sp"
+        tools:text="Jugador: 0/5" />
+
+    <TextView
+        android:id="@+id/txt_puntos_jugador_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ppt_play2_opciones"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/grandstanderdos"
+        android:gravity="center"
+        android:rotation="180"
+        android:shadowColor="#000000"
+        android:shadowDx="3"
+        android:shadowDy="2"
+        android:shadowRadius="1"
+        android:textColor="#9FADEE"
+        android:textSize="30sp"
+        tools:text="Jugador 2: 0/5" />
+
+    <TextView
+        android:id="@+id/txt_mensaje_jugador_2"
+        android:layout_width="150dp"
+        android:layout_height="120dp"
+        android:layout_below="@+id/txt_puntos_jugador_2"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="10dp"
+        android:fontFamily="@font/grandstanderdos"
+        android:gravity="center"
+        android:rotation="180"
+        android:shadowColor="#000000"
+        android:shadowDx="3"
+        android:shadowDy="2"
+        android:shadowRadius="1"
+        android:textColor="#9FADEE"
+        android:textSize="28sp"
+        tools:text="Punto para jugador 1" />
+
+    <TextView
+        android:id="@+id/txt_mensaje_jugador_1"
+        android:layout_width="150dp"
+        android:layout_height="120dp"
+        android:layout_above="@+id/txt_puntos_jugador_1"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="30dp"
+        android:fontFamily="@font/grandstanderdos"
+        android:gravity="center"
+        android:shadowColor="#000000"
+        android:shadowDx="3"
+        android:shadowDy="2"
+        android:shadowRadius="1"
+        android:textColor="#F8A69A"
+        android:textSize="28sp"
+        tools:text="Punto para jugador 1" />
+
+    <TextView
+        android:id="@+id/txt_cuenta_regresiva"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:fontFamily="@font/grandstanderdos"
+        android:gravity="center"
+        android:shadowColor="#000000"
+        android:shadowDx="3"
+        android:shadowDy="2"
+        android:shadowRadius="1"
+        android:textColor="#CF9FEE"
+        android:textSize="30sp"
+        tools:text="3" />
+
+</RelativeLayout>

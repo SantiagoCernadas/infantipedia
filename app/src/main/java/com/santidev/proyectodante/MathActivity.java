@@ -34,7 +34,7 @@ public class MathActivity extends AppCompatActivity {
     }
 
     public void familiaActivity(View view){
-        Intent i = new Intent(this, familiasActivity.class);
+        Intent i = new Intent(this, NumFamiliaActivity.class);
         startActivity(i);
     }
 

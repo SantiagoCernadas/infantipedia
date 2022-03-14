@@ -15,7 +15,6 @@
         android:layout_centerHorizontal="true"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
-        android:layout_weight=".1"
         android:fontFamily="@font/grandstanderclean"
         android:gravity="center"
         android:shadowColor="#000000"

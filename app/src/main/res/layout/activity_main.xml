@@ -11,18 +11,18 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@+id/iv_musica"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="0dp"
         android:orientation="vertical">
 
         <ImageView
             android:id="@+id/imageView19"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="60dp"
             android:layout_marginTop="0dp"
-            android:layout_weight="5"
+            android:layout_weight="1"
             android:contentDescription="@string/txt_img_ej"
             android:scaleType="fitXY"
-            android:scaleY="1.7"
+            android:scaleY="1.8"
             android:scrollY="-10dp"
             app:srcCompat="@drawable/infantipedialogo" />
 
@@ -32,137 +32,129 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="0dp"
-            android:layout_weight=".1"
+            android:layout_weight=".01"
             android:fontFamily="@font/grandstanderdos"
             android:gravity="clip_horizontal"
             android:shadowColor="#000000"
-            android:shadowDx="3"
+            android:shadowDx="2"
             android:shadowDy="2"
-            android:shadowRadius="1"
+            android:shadowRadius="2"
             android:text="@string/txt_Bienvenida"
             android:textColor="#F8A69A"
             android:textSize="22sp" />
 
-        <LinearLayout
-            android:id="@+id/menu_botones_main"
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_weight="1.5"
-            android:gravity="center"
-            android:orientation="vertical">
+            android:layout_height="250dp"
+            android:layout_weight="1">
 
-            <Button
-                android:id="@+id/button4"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
-                android:layout_weight=".8"
-                android:background="#F8CA9A"
-                android:fontFamily="@font/grandstanderclean"
-                android:onClick="activity_abecedario"
-                android:shadowColor="#888a8a"
-                android:shadowDx="3"
-                android:shadowDy="2"
-                android:shadowRadius="1"
-                android:text="@string/button_abecedario"
-                android:textSize="18sp" />
+                android:orientation="vertical">
 
-            <Button
-                android:id="@+id/button5"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
-                android:layout_weight=".8"
-                android:background="#BAF5A9"
-                android:fontFamily="@font/grandstanderclean"
-                android:onClick="activity_matematicas"
-                android:shadowColor="#888a8a"
-                android:shadowDx="3"
-                android:shadowDy="2"
-                android:shadowRadius="1"
-                android:text="@string/button_math"
-                android:textSize="18sp" />
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_weight="1">
 
-            <Button
-                android:id="@+id/button6"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
-                android:layout_weight=".8"
-                android:background="#9FADEE"
-                android:fontFamily="@font/grandstanderclean"
-                android:onClick="activity_animales"
-                android:shadowColor="#888a8a"
-                android:shadowDx="3"
-                android:shadowDy="2"
-                android:shadowRadius="1"
-                android:text="@string/button_animales"
-                android:textSize="18sp" />
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
 
-            <Button
-                android:id="@+id/button7"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight=".8"
-                android:background="#CF9FEE"
-                android:fontFamily="@font/grandstanderclean"
-                android:onClick="activity_dibujo"
-                android:shadowColor="#888a8a"
-                android:shadowDx="3"
-                android:shadowDy="2"
-                android:shadowRadius="1"
-                android:text="@string/button_juegos"
-                android:textSize="18sp" />
+                        <ImageButton
+                            android:id="@+id/imageButton9"
+                            android:layout_width="300dp"
+                            android:layout_height="150dp"
+                            android:layout_margin="4dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_weight="1"
+                            android:background="#F8A69A"
+                            android:onClick="activity_abecedario"
+                            android:scaleType="fitCenter"
+                            app:srcCompat="@drawable/abc" />
 
-        </LinearLayout>
+                        <ImageButton
+                            android:id="@+id/imageButton10"
+                            android:layout_width="300dp"
+                            android:layout_height="150dp"
+                            android:layout_margin="4dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_weight="1"
+                            android:background="#BAF5A9"
+                            android:onClick="activity_matematicas"
+                            android:scaleType="fitCenter"
+                            app:srcCompat="@drawable/matematicaslogotipo" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <ImageButton
+                            android:id="@+id/imageButton11"
+                            android:layout_width="300dp"
+                            android:layout_height="150dp"
+                            android:layout_margin="4dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_weight="1"
+                            android:background="#FFF3A6"
+                            android:onClick="activity_animales"
+                            android:scaleType="fitCenter"
+                            app:srcCompat="@drawable/gejgallina" />
+
+                        <ImageButton
+                            android:id="@+id/imageButton12"
+                            android:layout_width="300dp"
+                            android:layout_height="150dp"
+                            android:layout_margin="4dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_weight="1"
+                            android:background="#9FEEEE"
+                            android:onClick="activity_figuras"
+                            android:scaleType="fitCenter"
+                            app:srcCompat="@drawable/figuraslogotipo" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <ImageButton
+                            android:id="@+id/imageButton13"
+                            android:layout_width="300dp"
+                            android:layout_height="150dp"
+                            android:layout_margin="4dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_weight="1"
+                            android:background="#F8CA9A"
+                            android:onClick="activity_juegos"
+                            android:scaleType="fitCenter"
+                            app:srcCompat="@drawable/joystick" />
+
+                        <ImageButton
+                            android:id="@+id/imageButton14"
+                            android:layout_width="300dp"
+                            android:layout_height="150dp"
+                            android:layout_margin="4dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_weight="1"
+                            android:background="#CF9FEE"
+                            android:onClick="activity_config"
+                            android:scaleType="centerInside"
+                            app:srcCompat="@drawable/engranaje"
+                            tools:srcCompat="@drawable/engranaje" />
+                    </TableRow>
+
+                </TableLayout>
+            </LinearLayout>
+        </ScrollView>
+
     </LinearLayout>
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="-1dp"
-        android:layout_marginRight="-1dp"
-        android:layout_marginBottom="0dp"
-        android:text="@string/txt_version"
-        android:textSize="20sp" />
-
-    <ImageButton
-        android:id="@+id/iv_musica"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="5dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginBottom="5dp"
-        android:background="#FFF3A6"
-        android:onClick="modificarEstadoMusica"
-        app:srcCompat="@android:drawable/ic_lock_silent_mode_off"
-        app:tint="#000000" />
-
-    <ImageButton
-        android:id="@+id/iv_musica_off"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="5dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginBottom="5dp"
-        android:background="#F8A69A"
-        android:onClick="modificarEstadoMusica"
-        android:visibility="invisible"
-        app:srcCompat="@android:drawable/ic_lock_silent_mode"
-        app:tint="#000000" />
 
 </RelativeLayout>

@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 
 import com.santidev.proyectodante.PlaysActivity.TatetiActivity;
 import com.santidev.proyectodante.PlaysActivity.TatetiActivityDosJugadores;
@@ -18,6 +19,8 @@ public class TatetiModoActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ppt_modo);
+        TextView txtTitulo = findViewById(R.id.txt_play_title);
+        txtTitulo.setText("Ta te ti / Tres en raya");
     }
 
     public void modoCpu(View view){
