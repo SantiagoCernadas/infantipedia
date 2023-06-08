@@ -18,6 +18,7 @@ import com.santidev.proyectodante.R;
 
 import static com.santidev.proyectodante.MainActivity.pause;
 import static com.santidev.proyectodante.MainActivity.start;
+import static com.santidev.proyectodante.MainActivity.volumenEfecto;
 
 public class PptActivityDosJugadores extends AppCompatActivity {
     private boolean botonesDisp;
@@ -86,7 +87,7 @@ public class PptActivityDosJugadores extends AppCompatActivity {
 
     public void repSonido(int i){
         if(!cerrado){
-            sp[i].play(spRep[i],1,1,1,0,1);
+            sp[i].play(spRep[i],volumenEfecto / 50f,volumenEfecto / 50f,1,0,1);
         }
     }
 

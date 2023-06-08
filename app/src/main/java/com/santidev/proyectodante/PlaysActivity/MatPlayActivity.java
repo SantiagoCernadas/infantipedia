@@ -19,6 +19,7 @@ import com.santidev.proyectodante.R;
 
 import static com.santidev.proyectodante.MainActivity.pause;
 import static com.santidev.proyectodante.MainActivity.start;
+import static com.santidev.proyectodante.MainActivity.volumenEfecto;
 
 public class MatPlayActivity extends AppCompatActivity {
     private TextView txtNum1, txtNum2, txtSigno, txtResultado, txtDescripcion;
@@ -229,7 +230,7 @@ public class MatPlayActivity extends AppCompatActivity {
     }
 
     private void generarSonido(int i) {
-        sp[i].play(sonidosRep[i],1,1,1,0,1);
+        sp[i].play(sonidosRep[i],volumenEfecto / 50f,volumenEfecto / 50f,1,0,1);
     }
 
     public void borrarTodo(View view){

@@ -11,19 +11,22 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.santidev.proyectodante.PlaysActivity.FiguraPlayActivity;
+
 public class MainActivity extends AppCompatActivity {
     private TextView tv1;
     static MediaPlayer mp;
     private static String nombre;
     static boolean pause;
-    static int volumenMusica,volumenEfecto;
+    public static int volumenMusica;
+    public static int volumenEfecto;
 
     public static String getNombre() {
         return nombre;
     }
 
     public void setNombre(String nombre) {
-        this.nombre = nombre;
+        MainActivity.nombre = nombre;
     }
 
     @Override
@@ -36,10 +39,10 @@ public class MainActivity extends AppCompatActivity {
         if (!nombre.equals("")) {
             tv1.setText("Hola " + nombre + "!");
         }
-        volumenMusica = 50;
+        volumenMusica = 25;
         volumenEfecto = 50;
         SharedPreferences sharedPreferences = getSharedPreferences("datos",Context.MODE_PRIVATE);
-        volumenMusica = sharedPreferences.getInt("volumenMusica",50);
+        volumenMusica = sharedPreferences.getInt("volumenMusica",25);
         volumenEfecto = sharedPreferences.getInt("volumenSonido",50);
         mp = MediaPlayer.create(this, R.raw.cancionfondo);
         mp.setVolume(volumenMusica / 50f,volumenMusica / 50f);
@@ -68,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void activity_figuras(View view){
-        Intent i = new Intent(this,FigurasActivity.class);
+        Intent i = new Intent(this, FigurasActivity.class);
         startActivity(i);
     }
 

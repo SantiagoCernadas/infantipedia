@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroundmat"
+    tools:context=".PlaysActivity.FiguraPlayActivity">
+
+    <TextView
+        android:id="@+id/txt_figura_vidas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:background="#80FFFFFF"
+        android:fontFamily="@font/grandstanderclean"
+        android:shadowColor="#000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="5"
+        android:text="Vidas = 3 "
+        android:textColor="#ff6961"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/txt_figura_puntos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="0dp"
+        android:background="#80FFFFFF"
+        android:fontFamily="@font/grandstanderclean"
+        android:shadowColor="#000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="5"
+        android:text="Puntos = 0 "
+        android:textColor="#77dd77"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/txt_figura_titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/dragbutton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/grandstanderclean"
+        android:shadowColor="#888a8a"
+        android:shadowDx="5"
+        android:shadowDy="2"
+        android:shadowRadius="2"
+        android:text="en que lugar va?"
+        android:textColor="#000000"
+        android:textSize="45sp" />
+
+    <LinearLayout
+        android:id="@+id/fila_figuras1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="0dp"
+        android:background="#A8FDCAE1"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/drop_cuadrado"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:srcCompat="@drawable/imgcuadrado" />
+
+        <ImageView
+            android:id="@+id/drop_circulo"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:srcCompat="@drawable/imgcirculo" />
+
+        <ImageView
+            android:id="@+id/drop_triangulo"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:srcCompat="@drawable/imgtriangulo" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fila_figuras1"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:background="#A8FDCAE1"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/drop_rombo"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:srcCompat="@drawable/imgrombo" />
+
+        <ImageView
+            android:id="@+id/drop_rectangulo"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:srcCompat="@drawable/imgrectangulo" />
+
+        <ImageView
+            android:id="@+id/drop_estrella"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:srcCompat="@drawable/imgestrella" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/dragbutton"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        app:srcCompat="@drawable/imgcuadrado"
+        app:tint="#000000" />
+
+</RelativeLayout>

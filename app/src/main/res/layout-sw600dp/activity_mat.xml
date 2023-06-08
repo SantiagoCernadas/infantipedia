@@ -97,14 +97,17 @@
             android:layout_weight="1"
             android:background="#FFF3A6"
             android:contentDescription="@string/txt_vacio"
+            android:drawableStart="@drawable/joystickmini600sw"
             android:fontFamily="@font/grandstanderclean"
             android:onClick="howPlayActivity"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
             android:shadowColor="#888a8a"
             android:shadowDx="2"
             android:shadowDy="2"
             android:shadowRadius="1"
             android:text="Minijuego \n problemas matematicos"
-            android:textSize="30sp" />
+            android:textSize="25sp" />
 
     </LinearLayout>
 

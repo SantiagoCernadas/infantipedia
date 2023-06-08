@@ -17,13 +17,11 @@
         <ImageView
             android:id="@+id/imageView19"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginTop="0dp"
-            android:layout_weight="1"
+            android:layout_height="185dp"
             android:contentDescription="@string/txt_img_ej"
             android:scaleType="fitXY"
             android:scaleY="1.8"
-            android:scrollY="-10dp"
+            android:scrollY="-7dp"
             app:srcCompat="@drawable/infantipedialogo" />
 
         <TextView
@@ -37,8 +35,8 @@
             android:gravity="clip_horizontal"
             android:shadowColor="#000000"
             android:shadowDx="2"
-            android:shadowDy="2"
-            android:shadowRadius="2"
+            android:shadowDy="1"
+            android:shadowRadius="1"
             android:text="@string/txt_Bienvenida"
             android:textColor="#F8A69A"
             android:textSize="22sp" />

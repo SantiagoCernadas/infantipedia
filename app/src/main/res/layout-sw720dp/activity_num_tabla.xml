@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroundmat"
+    tools:context=".NumTablaActivity">
+
+    <ImageButton
+        android:id="@+id/tabla_siguiente"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:background="#F8CA9A"
+        android:onClick="tablaSig"
+        android:rotation="180"
+        android:scaleType="fitCenter"
+        app:srcCompat="?attr/homeAsUpIndicator" />
+
+    <ImageButton
+        android:id="@+id/tabla_anterior"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:background="#F8CA9A"
+        android:onClick="tablaAnt"
+        android:scaleType="fitCenter"
+        app:srcCompat="?attr/homeAsUpIndicator" />
+
+    <TextView
+        android:id="@+id/txt_tabla_titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/grandstanderclean"
+        android:shadowColor="#000000"
+        android:shadowDx="4"
+        android:shadowDy="2"
+        android:shadowRadius="2"
+        android:text="Tabla del 1"
+        android:textColor="#9FADEE"
+        android:textSize="60sp" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/txt_tabla_titulo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="#6AFDCAE1"
+        android:gravity="center">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tabla_ec_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/grandstanderdos"
+                android:gravity="center"
+                android:shadowColor="#000000"
+                android:shadowDx="4"
+                android:shadowDy="3"
+                android:shadowRadius="2"
+                android:textColor="#9FEEEE"
+                android:textSize="40sp"
+                tools:text="1 x 1 = 1" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tabla_ec_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/grandstanderdos"
+                android:gravity="center"
+                android:shadowColor="#000000"
+                android:shadowDx="4"
+                android:shadowDy="3"
+                android:shadowRadius="2"
+                android:textColor="#9FEEEE"
+                android:textSize="40sp"
+                tools:text="1" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tabla_ec_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/grandstanderdos"
+                android:gravity="center"
+                android:shadowColor="#000000"
+                android:shadowDx="4"
+                android:shadowDy="3"
+                android:shadowRadius="2"
+                android:textColor="#9FEEEE"
+                android:textSize="40sp"
+                tools:text="2" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tabla_ec_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/grandstanderdos"
+                android:gravity="center"
+                android:shadowColor="#000000"
+                android:shadowDx="4"
+                android:shadowDy="3"
+                android:shadowRadius="2"
+                android:textColor="#9FEEEE"
+                android:textSize="40sp"
+                tools:text="3" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tabla_ec_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/grandstanderdos"
+                android:gravity="center"
+                android:shadowColor="#000000"
+                android:shadowDx="4"
+                android:shadowDy="3"
+                android:shadowRadius="2"
+                android:textColor="#9FEEEE"
+                android:textSize="40sp"
+                tools:text="4" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tabla_ec_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/grandstanderdos"
+                android:gravity="center"
+                android:shadowColor="#000000"
+                android:shadowDx="4"
+                android:shadowDy="3"
+                android:shadowRadius="2"
+                android:textColor="#9FEEEE"
+                android:textSize="40sp"
+                tools:text="5" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tabla_ec_7"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:fontFamily="@font/grandstanderdos"
+                android:gravity="center"
+                android:shadowColor="#000000"
+                android:shadowDx="4"
+                android:shadowDy="3"
+                android:shadowRadius="2"
+                android:textColor="#9FEEEE"
+                android:textSize="40sp"
+                tools:text="6" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tabla_ec_8"
+                android:layout_width="20sp"
+                android:layout_gravity="center"
+                android:fontFamily="@font/grandstanderdos"
+                android:gravity="center"
+                android:shadowColor="#000000"
+                android:shadowDx="4"
+                android:shadowDy="3"
+                android:shadowRadius="2"
+                android:textColor="#9FEEEE"
+                android:textSize="40sp"
+                tools:text="7" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tabla_ec_9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/grandstanderdos"
+                android:gravity="center"
+                android:shadowColor="#000000"
+                android:shadowDx="4"
+                android:shadowDy="3"
+                android:shadowRadius="2"
+                android:textColor="#9FEEEE"
+                android:textSize="40sp"
+                tools:text="8" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tabla_ec_10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/grandstanderdos"
+                android:gravity="center"
+                android:shadowColor="#000000"
+                android:shadowDx="4"
+                android:shadowDy="3"
+                android:shadowRadius="2"
+                android:textColor="#9FEEEE"
+                android:textSize="40sp"
+                tools:text="9" />
+
+        </TableRow>
+
+    </TableLayout>
+</RelativeLayout>

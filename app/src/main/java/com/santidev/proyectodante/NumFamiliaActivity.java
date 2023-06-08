@@ -14,6 +14,7 @@ import com.santidev.proyectodante.Manager.NombreNumsManager;
 
 import static com.santidev.proyectodante.MainActivity.pause;
 import static com.santidev.proyectodante.MainActivity.start;
+import static com.santidev.proyectodante.MainActivity.volumenEfecto;
 
 public class NumFamiliaActivity extends AppCompatActivity {
     private ImageButton siguiente,anterior;
@@ -178,11 +179,11 @@ public class NumFamiliaActivity extends AppCompatActivity {
     }
 
     public void reproducirSonido(int i){
-        sp[i].play(spRep[i],1,1,1,0,1);
+        sp[i].play(spRep[i],volumenEfecto / 50f,volumenEfecto / 50f,1,0,1);
     }
 
     public void reproducirCien(View view){
-        spCien.play(spRepCien,1,1,1,0,1);
+        spCien.play(spRepCien,volumenEfecto / 50f,volumenEfecto / 50f,1,0,1);
     }
 
 

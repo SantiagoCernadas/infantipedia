@@ -34,12 +34,15 @@ public class HowPlayActivity extends AppCompatActivity {
 
     public void jugar(View view){
         String juego = txtTitulo.getText().toString();
-        Intent i;
+        Intent i = null;
         if(juego.equals("¿Que es?")){
             i = new Intent(this, PalabraPlayActivity.class);
         }
-        else{
+        else if (juego.equals("Problemas matematicos")){
             i = new Intent(this, MatDificultadActivity.class);
+        }
+        else if(juego.equals("En su lugar")){
+            i = new Intent(this,FiguraPlayActivity.class);
         }
         startActivity(i);
         finish();

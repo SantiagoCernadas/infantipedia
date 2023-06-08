@@ -17,9 +17,8 @@
         <ImageView
             android:id="@+id/imageView19"
             android:layout_width="match_parent"
-            android:layout_height="75dp"
+            android:layout_height="175dp"
             android:layout_marginTop="0dp"
-            android:layout_weight="1"
             android:contentDescription="@string/txt_img_ej"
             android:scaleType="fitXY"
             android:scaleY="1.8"

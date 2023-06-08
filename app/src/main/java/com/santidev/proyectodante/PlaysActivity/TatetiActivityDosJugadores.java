@@ -19,6 +19,7 @@ import com.santidev.proyectodante.R;
 
 import static com.santidev.proyectodante.MainActivity.pause;
 import static com.santidev.proyectodante.MainActivity.start;
+import static com.santidev.proyectodante.MainActivity.volumenEfecto;
 
 public class TatetiActivityDosJugadores extends AppCompatActivity {
     private int[] tablero;
@@ -169,7 +170,7 @@ public class TatetiActivityDosJugadores extends AppCompatActivity {
                 String color = jugadores[turnoJugador].getStringColor();
                 String signo = jugadores[turnoJugador].getSigno();
                 String nombreAct = jugadores[turnoJugador].getNombre();
-                sp.play(spRep,1,1,1,0,1);
+                sp.play(spRep,volumenEfecto / 50f,volumenEfecto / 50f,1,0,1);
                 setCasillero(opcion-1,signo,tablero,color);
                 casillerosUsados++;
 

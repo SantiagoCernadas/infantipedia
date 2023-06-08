@@ -19,6 +19,7 @@ import com.santidev.proyectodante.R;
 
 import static com.santidev.proyectodante.MainActivity.pause;
 import static com.santidev.proyectodante.MainActivity.start;
+import static com.santidev.proyectodante.MainActivity.volumenEfecto;
 
 public class TatetiActivity extends AppCompatActivity {
     private int[] tablero;
@@ -125,7 +126,7 @@ public class TatetiActivity extends AppCompatActivity {
             }
 
             if(esLibre(opcion-1)){
-                sp.play(spRep,1,1,1,0,1);
+                sp.play(spRep,volumenEfecto / 50f,volumenEfecto / 50f,1,0,1);
                 setCasillero(opcion-1,"X",1,"#F8A69A");
                 casillerosUsados++;
                 if(verificarGanador(3,1)){
@@ -185,7 +186,7 @@ public class TatetiActivity extends AppCompatActivity {
         while(!esLibre(opcion)){
             opcion = (int)(Math.random()*9+0);
         }
-        sp.play(spRep,1,1,1,0,1);
+        sp.play(spRep,volumenEfecto / 50f,volumenEfecto / 50f,1,0,1);
         setCasillero(opcion,"O",-1,"#9FADEE");
         casillerosUsados++;
         if (verificarGanador(-3,-1)){

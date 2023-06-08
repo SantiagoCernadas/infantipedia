@@ -478,21 +478,19 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_gravity="center"
         android:layout_marginStart="40dp"
-        android:layout_marginLeft="40dp"
         android:layout_marginEnd="40dp"
-        android:layout_marginRight="40dp"
         android:layout_marginBottom="20dp"
         android:background="#FFF3A6"
+        android:drawableStart="@drawable/joystickmini600sw"
         android:fontFamily="@font/grandstanderdos"
         android:onClick="howPlayActivity"
-        android:padding="15dp"
+        android:padding="5dp"
         android:shadowColor="#888a8a"
         android:shadowDx="3"
         android:shadowDy="2"
         android:shadowRadius="1"
         android:text="minijuego ¿que es?"
-        android:textSize="40dp" />
+        android:textSize="40sp" />
 
 </RelativeLayout>

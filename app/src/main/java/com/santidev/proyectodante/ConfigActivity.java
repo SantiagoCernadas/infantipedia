@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.media.AudioManager;
 import android.media.SoundPool;
 import android.os.Bundle;
 import android.view.View;
@@ -27,6 +28,9 @@ public class ConfigActivity extends AppCompatActivity {
         seekBarMusica.setProgress(volumenMusica);
         seekBarEfecto = findViewById(R.id.volumen_efecto);
         seekBarEfecto.setProgress(volumenEfecto);
+
+        sp = new SoundPool(1, AudioManager.STREAM_MUSIC,1);
+        spRep = sp.load(this,R.raw.tatetiding,1);
 
         seekBarMusica.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
@@ -70,7 +74,10 @@ public class ConfigActivity extends AppCompatActivity {
         });
     }
 
+    public void reproducir(View view){
+        sp.play(spRep,volumenEfecto / 50f,volumenEfecto / 50f,1,0,1);
 
+    }
 
     public void regresar(View view){
         finish();

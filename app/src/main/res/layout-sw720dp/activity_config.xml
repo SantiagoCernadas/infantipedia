@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/mainb"
+    tools:context=".ConfigActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#33000000"
+        android:orientation="horizontal"></LinearLayout>
+
+    <ImageButton
+        android:id="@+id/imageButton4"
+        android:layout_width="240dp"
+        android:layout_height="120dp"
+        android:layout_below="@+id/volumen_efecto"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="#FFF3A6"
+        android:contentDescription="@string/txt_vacio"
+        android:onClick="reproducir"
+        android:scaleType="fitCenter"
+        app:srcCompat="@android:drawable/ic_lock_silent_mode_off"
+        app:tint="#000000" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="10dp"
+        android:background="#BAF5A9"
+        android:fontFamily="@font/grandstanderdos"
+        android:onClick="regresar"
+        android:text="Aceptar"
+        android:textSize="70sp" />
+
+    <TextView
+        android:id="@+id/textoMusica"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/grandstanderclean"
+        android:shadowColor="#000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="2"
+        android:text="Música"
+        android:textColor="#84b6f4"
+        android:textSize="70sp" />
+
+    <SeekBar
+        android:id="@+id/volumen_musica"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_below="@+id/textoMusica"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/boton_volumenes"
+        android:max="50"
+        android:progress="0" />
+
+    <TextView
+        android:id="@+id/txt_abcedeario5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/volumen_musica"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/grandstanderclean"
+        android:shadowColor="#000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="2"
+        android:text="Audio"
+        android:textColor="#84b6f4"
+        android:textSize="70sp" />
+
+    <SeekBar
+        android:id="@+id/volumen_efecto"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_below="@+id/txt_abcedeario5"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/boton_volumenes"
+        android:max="50"
+        android:progress="20" />
+
+</RelativeLayout>

@@ -57,7 +57,7 @@
         android:layout_below="@+id/txt_familia_titulo"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
-        android:background="#6AFDCAE1">
+        android:background="#66FDCAE1">
 
         <TableRow
             android:layout_width="match_parent"
@@ -77,7 +77,7 @@
                 android:shadowDx="2"
                 android:shadowDy="2"
                 android:shadowRadius="1"
-                android:textColor="#F8CA9A"
+                android:textColor="#9FEEEE"
                 android:textSize="25sp"
                 tools:text="0" />
 
@@ -91,7 +91,7 @@
                 android:shadowDx="2"
                 android:shadowDy="2"
                 android:shadowRadius="1"
-                android:textColor="#F8CA9A"
+                android:textColor="#9FEEEE"
                 android:textSize="25sp"
                 tools:text="(cero)" />
 
@@ -129,7 +129,7 @@
                 android:shadowDx="2"
                 android:shadowDy="2"
                 android:shadowRadius="1"
-                android:textColor="#BAF5A9"
+                android:textColor="#9FEEEE"
                 android:textSize="25sp"
                 tools:text="1" />
 
@@ -143,7 +143,7 @@
                 android:shadowDx="2"
                 android:shadowDy="2"
                 android:shadowRadius="1"
-                android:textColor="#BAF5A9"
+                android:textColor="#9FEEEE"
                 android:textSize="25sp"
                 tools:text="(uno)" />
 
@@ -181,7 +181,7 @@
                 android:shadowDx="2"
                 android:shadowDy="2"
                 android:shadowRadius="1"
-                android:textColor="#9FADEE"
+                android:textColor="#9FEEEE"
                 android:textSize="25sp"
                 tools:text="2" />
 
@@ -195,7 +195,7 @@
                 android:shadowDx="2"
                 android:shadowDy="2"
                 android:shadowRadius="1"
-                android:textColor="#9FADEE"
+                android:textColor="#9FEEEE"
                 android:textSize="25sp"
                 tools:text="(dos)" />
 
@@ -233,7 +233,7 @@
                 android:shadowDx="2"
                 android:shadowDy="2"
                 android:shadowRadius="1"
-                android:textColor="#FFF3A6"
+                android:textColor="#9FEEEE"
                 android:textSize="25sp"
                 tools:text="3" />
 
@@ -247,7 +247,7 @@
                 android:shadowDx="2"
                 android:shadowDy="2"
                 android:shadowRadius="1"
-                android:textColor="#FFF3A6"
+                android:textColor="#9FEEEE"
                 android:textSize="25sp"
                 tools:text="(tres)" />
 
@@ -337,7 +337,7 @@
                 android:shadowDx="2"
                 android:shadowDy="2"
                 android:shadowRadius="1"
-                android:textColor="#F8CA9A"
+                android:textColor="#9FEEEE"
                 android:textSize="25sp"
                 tools:text="5" />
 
@@ -351,7 +351,7 @@
                 android:shadowDx="2"
                 android:shadowDy="2"
                 android:shadowRadius="1"
-                android:textColor="#F8CA9A"
+                android:textColor="#9FEEEE"
                 android:textSize="25sp"
                 tools:text="(cinco)" />
 
@@ -389,7 +389,7 @@
                 android:shadowDx="2"
                 android:shadowDy="2"
                 android:shadowRadius="1"
-                android:textColor="#BAF5A9"
+                android:textColor="#9FEEEE"
                 android:textSize="25sp"
                 tools:text="6" />
 
@@ -403,7 +403,7 @@
                 android:shadowDx="2"
                 android:shadowDy="2"
                 android:shadowRadius="1"
-                android:textColor="#BAF5A9"
+                android:textColor="#9FEEEE"
                 android:textSize="25sp"
                 tools:text="(seis)" />
 
@@ -440,7 +440,7 @@
                 android:shadowDx="2"
                 android:shadowDy="2"
                 android:shadowRadius="1"
-                android:textColor="#9FADEE"
+                android:textColor="#9FEEEE"
                 android:textSize="25sp"
                 tools:text="7" />
 
@@ -454,7 +454,7 @@
                 android:shadowDx="2"
                 android:shadowDy="2"
                 android:shadowRadius="1"
-                android:textColor="#9FADEE"
+                android:textColor="#9FEEEE"
                 android:textSize="25sp"
                 tools:text="(siete)" />
 
@@ -544,7 +544,7 @@
                 android:shadowDx="2"
                 android:shadowDy="2"
                 android:shadowRadius="1"
-                android:textColor="#F8A69A"
+                android:textColor="#9FEEEE"
                 android:textSize="25sp"
                 tools:text="9" />
 
@@ -559,7 +559,7 @@
                 android:shadowDy="2"
                 android:shadowRadius="1"
                 android:text="(nueve)"
-                android:textColor="#F8A69A"
+                android:textColor="#9FEEEE"
                 android:textSize="25sp" />
 
             <ImageButton
@@ -593,7 +593,7 @@
         android:shadowDy="2"
         android:shadowRadius="1"
         android:text="100 (CIEN)"
-        android:textColor="#F8CA9A"
+        android:textColor="#9FEEEE"
         android:textSize="50sp" />
 
     <ImageButton

@@ -9,6 +9,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.santidev.proyectodante.PlaysActivity.FiguraPlayActivity;
+
 import static com.santidev.proyectodante.MainActivity.pause;
 
 public class PrimerActivity extends AppCompatActivity {

@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import static com.santidev.proyectodante.MainActivity.pause;
 import static com.santidev.proyectodante.MainActivity.start;
+import static com.santidev.proyectodante.MainActivity.volumenEfecto;
 
 public class LetraActivity extends AppCompatActivity {
 
@@ -274,13 +275,13 @@ public class LetraActivity extends AppCompatActivity {
     }
 
     public void repSon1(View view){
-        sp1.play(sRep1,1,1,1,0,1);
+        sp1.play(sRep1,volumenEfecto / 50f,volumenEfecto / 50f,1,0,1);
     }
     public void repSon2(View view){
-        sp2.play(sRep2,1,1,1,0,1);
+        sp2.play(sRep2,volumenEfecto / 50f,volumenEfecto / 50f,1,0,1);
     }
     public void repSon3(View view){
-        sp3.play(sRep3,1,1,1,0,1);
+        sp3.play(sRep3,volumenEfecto / 50f,volumenEfecto / 50f,1,0,1);
     }
 
     public void onPause() {

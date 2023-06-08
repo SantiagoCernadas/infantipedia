@@ -21,6 +21,7 @@ import com.santidev.proyectodante.R;
 
 import static com.santidev.proyectodante.MainActivity.pause;
 import static com.santidev.proyectodante.MainActivity.start;
+import static com.santidev.proyectodante.MainActivity.volumenEfecto;
 
 public class PalabraPlayActivity extends AppCompatActivity {
     private final int NUM_PALABRAS = 81;
@@ -76,7 +77,7 @@ public class PalabraPlayActivity extends AppCompatActivity {
         sonidosRep[2] = sp[2].load(this,R.raw.sonidoohno,1);
     }
     public void generarSonido(int i){
-        sp[i].play(sonidosRep[i],1,1,1,0,1);
+        sp[i].play(sonidosRep[i],volumenEfecto / 50f,volumenEfecto / 50f,1,0,1);
     }
 
     public void opcionPresionada(View view){

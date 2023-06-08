@@ -9,12 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <activity android:name=".PlaysActivity.FiguraPlayActivity"></activity>
         <activity
             android:name=".FigurasActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".ConfigActivity"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".LaunchScreenActivity"
             android:exported="true"
@@ -48,9 +49,6 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".NumTablaActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".TablasActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".NumFamiliaActivity"

@@ -487,6 +487,7 @@
         android:layout_marginRight="40dp"
         android:layout_marginBottom="20dp"
         android:background="#FFF3A6"
+        android:drawableStart="@drawable/joystickmini"
         android:fontFamily="@font/grandstanderdos"
         android:onClick="howPlayActivity"
         android:padding="15dp"

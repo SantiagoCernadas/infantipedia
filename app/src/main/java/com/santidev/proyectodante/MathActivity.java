@@ -39,7 +39,7 @@ public class MathActivity extends AppCompatActivity {
     }
 
     public void tablasActivity(View view){
-        Intent i = new Intent(this, TablasActivity.class);
+        Intent i = new Intent(this, NumTablaActivity.class);
         startActivity(i);
     }
     public void onPause() {
