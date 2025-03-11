@@ -11,8 +11,6 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.santidev.proyectodante.PlaysActivity.FiguraPlayActivity;
-
 public class MainActivity extends AppCompatActivity {
     private TextView tv1;
     static MediaPlayer mp;

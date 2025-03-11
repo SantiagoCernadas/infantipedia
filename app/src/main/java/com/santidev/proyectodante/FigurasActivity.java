@@ -23,8 +23,8 @@ public class FigurasActivity extends AppCompatActivity {
         Intent i = new Intent(this, HowPlayActivity.class);
         i.putExtra("titulo","En su lugar");
         i.putExtra("descripcion","Arrastra la figura hacia su lugar indicado!");
-        i.putExtra("idimg1",R.drawable.palabraplayej1);
-        i.putExtra("idimg2",R.drawable.palabraplayej2);
+        i.putExtra("idimg1",R.drawable.figuraplayej1);
+        i.putExtra("idimg2",R.drawable.figuraplayej2);
         startActivity(i);
     }
 

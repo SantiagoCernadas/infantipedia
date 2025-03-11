@@ -3,13 +3,13 @@ plugins {
 }
 
 android {
-    compileSdkVersion 31
+    compileSdkVersion 34
     buildToolsVersion '30.0.3'
 
     defaultConfig {
-        applicationId "com.santidev.proyectodante"
-        minSdkVersion 19
-        targetSdk 30
+        applicationId 'com.santidev.infantipedia'
+        minSdkVersion 21
+        targetSdk 34
         versionCode 2
         versionName "1.01"
 
@@ -26,6 +26,7 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    namespace 'com.santidev.proyectodante'
 }
 
 dependencies {

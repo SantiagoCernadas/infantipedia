@@ -4,6 +4,8 @@ import android.annotation.SuppressLint;
 import android.content.ClipData;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.res.ColorStateList;
+import android.graphics.Color;
 import android.media.AudioManager;
 import android.media.SoundPool;
 import android.os.Bundle;
@@ -11,11 +13,13 @@ import android.os.Handler;
 import android.view.DragEvent;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.widget.ImageViewCompat;
 
 import com.santidev.proyectodante.R;
 
@@ -25,12 +29,15 @@ import static com.santidev.proyectodante.MainActivity.volumenEfecto;
 
 public class FiguraPlayActivity extends AppCompatActivity {
     private ImageView dragButton, dropCuadrado,dropCirculo,dropTriangulo,dropRectangulo;
+    private Button pista;
     private ImageView dropRombo, dropEstrella;
     private TextView titulo,txtVidas,txtPuntos;
     private int[] idFigura = new int[6];
     private int figuraAct,vidas, puntos;
     private SoundPool[] sp;
     private int[] sonidosRep;
+    private TextView txtPista,txtPistaCant;
+    private int cantPista;
 
     @SuppressLint("ClickableViewAccessibility")
     @Override
@@ -38,6 +45,7 @@ public class FiguraPlayActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_figura_play);
         getNums();
+        cantPista = 3;
         vidas = 3;
         puntos = 0;
         setIds();
@@ -48,6 +56,9 @@ public class FiguraPlayActivity extends AppCompatActivity {
         dragButton(dropRombo,3);
         dragButton(dropRectangulo,4);
         dragButton(dropEstrella,5);
+
+        txtPista.setText("");
+        txtPistaCant.setText(String.valueOf(cantPista));
 
         dragButton.setOnTouchListener(new View.OnTouchListener() {
             @Override
@@ -134,8 +145,11 @@ public class FiguraPlayActivity extends AppCompatActivity {
         Handler handler = new Handler();
         handler. postDelayed(new Runnable() {
             public void run() {
+                txtPista.setText("");
+                pista.setEnabled(true);
                 cambiarForma();
                 titulo.setText("en que lugar va?");
+                ImageViewCompat.setImageTintList(dragButton, ColorStateList.valueOf(Color.parseColor("#000000")));
                 dragButton.setVisibility(View.VISIBLE);
             }
         }, 2000);
@@ -162,6 +176,26 @@ public class FiguraPlayActivity extends AppCompatActivity {
         titulo = findViewById(R.id.txt_figura_titulo);
         txtPuntos = findViewById(R.id.txt_figura_puntos);
         txtVidas = findViewById(R.id.txt_figura_vidas);
+        pista = findViewById(R.id.button_pista_figura);
+        txtPista = findViewById(R.id.txt_pista_figura);
+        txtPistaCant = findViewById(R.id.txt_pista_figura_cant);
+    }
+
+    public void getPista(View view){
+        if(pista.isEnabled()){
+            if(cantPista > 0){
+                /*Logica de la pista*/
+                generarSonido(0);
+                pista.setEnabled(false);
+                cantPista--;
+                txtPistaCant.setText(String.valueOf(cantPista));
+                ImageViewCompat.setImageTintList(dragButton, null);
+            }
+            else{
+                txtPista.setText("No tienes pistas");
+            }
+
+        }
     }
 
     @Override

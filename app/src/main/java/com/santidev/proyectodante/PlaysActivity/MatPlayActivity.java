@@ -59,10 +59,12 @@ public class MatPlayActivity extends AppCompatActivity {
         rangoMult = Integer.parseInt(getIntent().getStringExtra("rango_multiplicacion"));
         botonesDisponibles = true;
         txtDescripcion.setText("");
+
         actualizarDatos();
         asignarSonidos();
         setSignos();
         generarProblema();
+
         if(cantSignos == 3){
             pista.setVisibility(View.INVISIBLE);
             txtPistaCant.setVisibility(View.INVISIBLE);

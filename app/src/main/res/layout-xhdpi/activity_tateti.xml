@@ -220,6 +220,7 @@
         android:background="#77dd77"
         android:fontFamily="@font/grandstanderclean"
         android:onClick="volverTTT"
+        android:text="Volver a jugar"
         android:textSize="18sp"
         tools:text="Volver a jugar" />
 
@@ -234,6 +235,7 @@
         android:background="#ff6961"
         android:fontFamily="@font/grandstanderclean"
         android:onClick="salirTTT"
+        android:text="Salir"
         android:textSize="18sp"
         tools:text="Salir" />
 
