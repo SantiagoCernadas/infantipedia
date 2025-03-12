@@ -55,8 +55,8 @@
                 <TableLayout
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginEnd="20dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
                     android:layout_weight="1">
 
                     <TableRow
@@ -70,8 +70,9 @@
                             android:layout_height="170dp"
                             android:layout_margin="4dp"
                             android:layout_marginBottom="10dp"
-                            android:layout_weight="1"
-                            android:background="#F8A69A"
+                            android:layout_weight="4"
+                            android:background="@drawable/boton_border"
+                            android:backgroundTint="#F8A69A"
                             android:onClick="activity_abecedario"
                             android:scaleType="fitCenter"
                             app:srcCompat="@drawable/abc" />
@@ -82,11 +83,13 @@
                             android:layout_height="170dp"
                             android:layout_margin="4dp"
                             android:layout_marginBottom="10dp"
-                            android:layout_weight="1"
-                            android:background="#BAF5A9"
+                            android:layout_weight="4"
+                            android:background="@drawable/boton_border"
+                            android:backgroundTint="#BAF5A9"
                             android:onClick="activity_matematicas"
                             android:scaleType="fitCenter"
                             app:srcCompat="@drawable/matematicaslogotipo" />
+
                     </TableRow>
 
                     <TableRow
@@ -101,7 +104,8 @@
                             android:layout_margin="4dp"
                             android:layout_marginBottom="10dp"
                             android:layout_weight="1"
-                            android:background="#FFF3A6"
+                            android:background="@drawable/boton_border"
+                            android:backgroundTint="#FFF3A6"
                             android:onClick="activity_animales"
                             android:scaleType="fitCenter"
                             app:srcCompat="@drawable/gejgallina" />
@@ -113,7 +117,8 @@
                             android:layout_margin="4dp"
                             android:layout_marginBottom="10dp"
                             android:layout_weight="1"
-                            android:background="#9FEEEE"
+                            android:background="@drawable/boton_border"
+                            android:backgroundTint="#9FEEEE"
                             android:onClick="activity_figuras"
                             android:scaleType="fitCenter"
                             app:srcCompat="@drawable/figuraslogotipo" />
@@ -131,7 +136,8 @@
                             android:layout_margin="4dp"
                             android:layout_marginBottom="10dp"
                             android:layout_weight="1"
-                            android:background="#F8CA9A"
+                            android:background="@drawable/boton_border"
+                            android:backgroundTint="#F8CA9A"
                             android:onClick="activity_juegos"
                             android:scaleType="fitCenter"
                             app:srcCompat="@drawable/joystick" />
@@ -143,7 +149,8 @@
                             android:layout_margin="4dp"
                             android:layout_marginBottom="10dp"
                             android:layout_weight="1"
-                            android:background="#CF9FEE"
+                            android:background="@drawable/boton_border"
+                            android:backgroundTint="#CF9FEE"
                             android:onClick="activity_config"
                             android:scaleType="centerInside"
                             app:srcCompat="@drawable/engranaje"

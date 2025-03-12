@@ -55,8 +55,8 @@
         android:layout_height="match_parent"
         android:layout_below="@+id/txt_tabla_titulo"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:background="#6AFDCAE1"
+        android:layout_marginTop="5dp"
+        android:background="#66000000"
         android:gravity="center">
 
         <TableRow

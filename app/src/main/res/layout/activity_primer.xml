@@ -69,7 +69,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
                 android:layout_marginBottom="25dp"
-                android:background="#BAF5A9"
                 android:fontFamily="@font/grandstanderclean"
                 android:onClick="logUsuario"
                 android:paddingTop="15dp"
@@ -80,13 +79,14 @@
                 android:shadowRadius="1"
                 android:text="@string/button_user"
                 android:textColor="#000000"
-                android:textSize="22sp" />
+                android:textSize="22sp"
+                android:background="@drawable/boton_border"
+                android:backgroundTint="#BAF5A9"/>
 
             <Button
                 android:id="@+id/button_entrar_invitado"
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
-                android:background="#9FADEE"
                 android:fontFamily="@font/grandstanderclean"
                 android:onClick="logInvitado"
                 android:paddingTop="15dp"
@@ -97,7 +97,10 @@
                 android:shadowRadius="1"
                 android:text="@string/button_invitado"
                 android:textColor="#000000"
-                android:textSize="22sp" />
+                android:textSize="22sp"
+                android:background="@drawable/boton_border"
+                android:backgroundTint="#9FADEE"
+                />
 
         </LinearLayout>
 

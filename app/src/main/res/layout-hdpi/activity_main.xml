@@ -55,8 +55,8 @@
                 <TableLayout
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginEnd="20dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
                     android:layout_weight="1">
 
                     <TableRow
@@ -71,10 +71,11 @@
                             android:layout_margin="4dp"
                             android:layout_marginBottom="10dp"
                             android:layout_weight="1"
-                            android:background="#F8A69A"
                             android:onClick="activity_abecedario"
                             android:scaleType="fitCenter"
-                            app:srcCompat="@drawable/abc" />
+                            app:srcCompat="@drawable/abc"
+                            android:background="@drawable/boton_border"
+                            android:backgroundTint="#F8A69A"/>
 
                         <ImageButton
                             android:id="@+id/imageButton10"
@@ -83,10 +84,11 @@
                             android:layout_margin="4dp"
                             android:layout_marginBottom="10dp"
                             android:layout_weight="1"
-                            android:background="#BAF5A9"
                             android:onClick="activity_matematicas"
                             android:scaleType="fitCenter"
-                            app:srcCompat="@drawable/matematicaslogotipo" />
+                            app:srcCompat="@drawable/matematicaslogotipo"
+                            android:background="@drawable/boton_border"
+                            android:backgroundTint="#BAF5A9"/>
                     </TableRow>
 
                     <TableRow
@@ -101,10 +103,11 @@
                             android:layout_margin="4dp"
                             android:layout_marginBottom="10dp"
                             android:layout_weight="1"
-                            android:background="#FFF3A6"
                             android:onClick="activity_animales"
                             android:scaleType="fitCenter"
-                            app:srcCompat="@drawable/gejgallina" />
+                            app:srcCompat="@drawable/gejgallina"
+                            android:background="@drawable/boton_border"
+                            android:backgroundTint="#FFF3A6"/>
 
                         <ImageButton
                             android:id="@+id/imageButton12"
@@ -113,10 +116,11 @@
                             android:layout_margin="4dp"
                             android:layout_marginBottom="10dp"
                             android:layout_weight="1"
-                            android:background="#9FEEEE"
                             android:onClick="activity_figuras"
                             android:scaleType="fitCenter"
-                            app:srcCompat="@drawable/figuraslogotipo" />
+                            app:srcCompat="@drawable/figuraslogotipo"
+                            android:background="@drawable/boton_border"
+                            android:backgroundTint="#9FEEEE"/>
                     </TableRow>
 
                     <TableRow
@@ -131,10 +135,11 @@
                             android:layout_margin="4dp"
                             android:layout_marginBottom="10dp"
                             android:layout_weight="1"
-                            android:background="#F8CA9A"
                             android:onClick="activity_juegos"
                             android:scaleType="fitCenter"
-                            app:srcCompat="@drawable/joystick" />
+                            app:srcCompat="@drawable/joystick"
+                            android:background="@drawable/boton_border"
+                            android:backgroundTint="#F8CA9A"/>
 
                         <ImageButton
                             android:id="@+id/imageButton14"
@@ -143,11 +148,12 @@
                             android:layout_margin="4dp"
                             android:layout_marginBottom="10dp"
                             android:layout_weight="1"
-                            android:background="#CF9FEE"
                             android:onClick="activity_config"
                             android:scaleType="centerInside"
                             app:srcCompat="@drawable/engranaje"
-                            tools:srcCompat="@drawable/engranaje" />
+                            tools:srcCompat="@drawable/engranaje"
+                            android:background="@drawable/boton_border"
+                            android:backgroundTint="#CF9FEE"/>
                     </TableRow>
 
                 </TableLayout>
