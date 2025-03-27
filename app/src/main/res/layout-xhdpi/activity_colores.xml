@@ -60,30 +60,33 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="#00FFFFFF"
+                android:onClick="teclaPresionada"
                 android:scaleType="fitCenter"
-                app:tint="#FFEB3B"
                 android:tintMode="src_in"
-                app:srcCompat="@drawable/manchapintura" />
+                app:srcCompat="@drawable/manchapintura"
+                app:tint="#FFEB3B" />
 
             <ImageButton
                 android:id="@+id/button_celeste"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                app:tint="#00BCD4"
                 android:background="#00FFFFFF"
+                android:onClick="teclaPresionada"
                 android:scaleType="fitCenter"
-                app:srcCompat="@drawable/manchapintura" />
+                app:srcCompat="@drawable/manchapintura"
+                app:tint="#00BCD4" />
 
             <ImageButton
                 android:id="@+id/button_rojo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                app:tint="#DA0000"
                 android:background="#00FFFFFF"
+                android:onClick="teclaPresionada"
                 android:scaleType="fitCenter"
-                app:srcCompat="@drawable/manchapintura" />
+                app:srcCompat="@drawable/manchapintura"
+                app:tint="#DA0000" />
         </TableRow>
 
         <TableRow
@@ -97,9 +100,10 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="#00FFFFFF"
-                app:tint="#673AB7"
+                android:onClick="teclaPresionada"
                 android:scaleType="fitCenter"
-                app:srcCompat="@drawable/manchapintura" />
+                app:srcCompat="@drawable/manchapintura"
+                app:tint="#673AB7" />
 
             <ImageButton
                 android:id="@+id/imageButton64"
@@ -126,10 +130,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                app:tint="#8BC34A"
                 android:background="#00FFFFFF"
+                android:onClick="teclaPresionada"
                 android:scaleType="fitCenter"
-                app:srcCompat="@drawable/manchapintura" />
+                app:srcCompat="@drawable/manchapintura"
+                app:tint="#8BC34A" />
         </TableRow>
 
         <TableRow
@@ -143,9 +148,10 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="#00FFFFFF"
+                android:onClick="teclaPresionada"
                 android:scaleType="fitCenter"
-                app:tint="#0037A4"
-                app:srcCompat="@drawable/manchapintura" />
+                app:srcCompat="@drawable/manchapintura"
+                app:tint="#0037A4" />
 
             <ImageButton
                 android:id="@+id/imageButton67"
@@ -172,10 +178,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                app:tint="#FF9800"
                 android:background="#00FFFFFF"
+                android:onClick="teclaPresionada"
                 android:scaleType="fitCenter"
-                app:srcCompat="@drawable/manchapintura" />
+                app:srcCompat="@drawable/manchapintura"
+                app:tint="#FF9800" />
         </TableRow>
 
         <TableRow
@@ -189,9 +196,10 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="#00FFFFFF"
+                android:onClick="teclaPresionada"
                 android:scaleType="fitCenter"
-                app:tint="#FF0080"
-                app:srcCompat="@drawable/manchapintura" />
+                app:srcCompat="@drawable/manchapintura"
+                app:tint="#FF0080" />
 
             <ImageButton
                 android:id="@+id/button_marron"
@@ -199,29 +207,32 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="#00FFFFFF"
+                android:onClick="teclaPresionada"
                 android:scaleType="fitCenter"
-                app:tint="#6C3B2A"
-                app:srcCompat="@drawable/manchapintura" />
+                app:srcCompat="@drawable/manchapintura"
+                app:tint="#6C3B2A" />
 
             <ImageButton
                 android:id="@+id/button_blanco"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                app:tint="#FFFFFF"
                 android:background="#00FFFFFF"
+                android:onClick="teclaPresionada"
                 android:scaleType="fitCenter"
-                app:srcCompat="@drawable/manchapintura" />
+                app:srcCompat="@drawable/manchapintura"
+                app:tint="#FFFFFF" />
 
             <ImageButton
                 android:id="@+id/button_negro"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                app:tint="#000000"
                 android:background="#00FFFFFF"
+                android:onClick="teclaPresionada"
                 android:scaleType="fitCenter"
-                app:srcCompat="@drawable/manchapintura" />
+                app:srcCompat="@drawable/manchapintura"
+                app:tint="#000000" />
         </TableRow>
     </TableLayout>
 </RelativeLayout>
