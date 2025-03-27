@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 public class ColoresActivity extends AppCompatActivity {
 
@@ -22,17 +23,48 @@ public class ColoresActivity extends AppCompatActivity {
     public void teclaPresionada(View view){
         switch (view.getId()){
             case R.id.button_amarillo:
-                startLetraActivity("amarillo");
+                startLetraActivity("Amarillo","#FFEB3B");
+                break;
+            case R.id.button_celeste:
+                startLetraActivity("Celeste","#00BCD4");
+                break;
+            case R.id.button_rojo:
+                startLetraActivity("Rojo","#DA0000");
+                break;
+            case R.id.button_verde:
+                startLetraActivity("Verde","#8BC34A");
+                break;
+            case R.id.button_naranja:
+                startLetraActivity("Naranja","#FF9800");
+                break;
+            case R.id.button_negro:
+                startLetraActivity("Negro","#000000");
+                break;
+            case R.id.button_blanco:
+                startLetraActivity("Blanco","#FFFFFF");
+                break;
+            case R.id.button_marron:
+                startLetraActivity("Marron","#6C3B2A");
+                break;
+            case R.id.button_rosa:
+                startLetraActivity("Rosa","#FF0080");
+                break;
+            case R.id.button_azul:
+                startLetraActivity("Azul" ,"#0037A4");
+                break;
+            case R.id.button_morado:
+                startLetraActivity("Morado","#673AB7");
                 break;
             default:
-                startLetraActivity("ERROR");
+                Toast.makeText(this,"Color no encontrado.",Toast.LENGTH_SHORT).show();
                 break;
         }
     }
 
-    public void startLetraActivity(String color){
-        Intent i = new Intent(this,LetraActivity.class);
+    public void startLetraActivity(String color,String colorHex){
+        Intent i = new Intent(this,ColorActivity.class);
         i.putExtra("color",color);
+        i.putExtra("colorHex",colorHex);
         startActivity(i);
     }
 

@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 import com.santidev.proyectodante.PlaysActivity.HowPlayActivity;
 
@@ -125,7 +126,7 @@ public class AbecedarioActivity extends AppCompatActivity {
                 startLetraActivity("Z");
                 break;
             default:
-                startLetraActivity("ERROR");
+                Toast.makeText(this,"Letra no encontrada.",Toast.LENGTH_SHORT).show();
                 break;
         }
     }
