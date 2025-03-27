@@ -42,33 +42,31 @@ public class FiguraPlayActivity extends AppCompatActivity {
     @SuppressLint("ClickableViewAccessibility")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_figura_play);
-        getNums();
-        cantPista = 3;
-        vidas = 3;
-        puntos = 0;
-        setIds();
-        asignarSonidos();
-        dragButton(dropCuadrado,0);
-        dragButton(dropCirculo,1);
-        dragButton(dropTriangulo,2);
-        dragButton(dropRombo,3);
-        dragButton(dropRectangulo,4);
-        dragButton(dropEstrella,5);
-
-        txtPista.setText("");
-        txtPistaCant.setText(String.valueOf(cantPista));
-
-        dragButton.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                ClipData data = ClipData.newPlainText("","");
-                View.DragShadowBuilder shadow = new View.DragShadowBuilder(dragButton);
-                v.startDrag(data,shadow,null,0);
-                return false;
-            }
-        });
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.activity_figura_play);
+            getNums();
+            cantPista = 3;
+            vidas = 3;
+            puntos = 0;
+            setIds();
+            asignarSonidos();
+            dragButton(dropCuadrado,0);
+            dragButton(dropCirculo,1);
+            dragButton(dropTriangulo,2);
+            dragButton(dropRombo,3);
+            dragButton(dropRectangulo,4);
+            dragButton(dropEstrella,5);
+            txtPista.setText("");
+            txtPistaCant.setText(String.valueOf(cantPista));
+            dragButton.setOnTouchListener(new View.OnTouchListener() {
+                @Override
+                public boolean onTouch(View v, MotionEvent event) {
+                    ClipData data = ClipData.newPlainText("","");
+                    View.DragShadowBuilder shadow = new View.DragShadowBuilder(dragButton);
+                    v.startDrag(data,shadow,null,0);
+                    return false;
+                }
+            });
     }
 
     public void asignarSonidos() {

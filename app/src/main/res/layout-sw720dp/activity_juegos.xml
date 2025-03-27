@@ -5,12 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/backgroundjuego"
-    tools:context=".JuegosActivity">
+    tools:context=".JuegosActivity"
+    android:backgroundTint="#40000000"
+    android:backgroundTintMode="src_over">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="60dp"
         android:orientation="vertical">
 
         <TextView
@@ -18,17 +20,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="50dp"
             android:layout_weight=".5"
             android:fontFamily="@font/grandstanderclean"
             android:gravity="center"
             android:shadowColor="#000000"
             android:shadowDx="2"
-            android:shadowDy="5"
-            android:shadowRadius="5"
+            android:shadowDy="3"
+            android:shadowRadius="3"
             android:text="¡Vamos a jugar!"
             android:textColor="#84b6f4"
-            android:textSize="60sp" />
+            android:textSize="50sp" />
 
         <Button
             android:id="@+id/button22"
@@ -39,7 +41,8 @@
             android:layout_marginTop="30dp"
             android:layout_marginEnd="40dp"
             android:layout_weight="1"
-            android:background="#BAF5A9"
+            android:backgroundTint="#BAF5A9"
+            android:background="@drawable/boton_border"
             android:contentDescription="@string/txt_vacio"
             android:fontFamily="@font/grandstanderclean"
             android:gravity="center"
@@ -49,7 +52,7 @@
             android:shadowDy="2"
             android:shadowRadius="1"
             android:text="Piedra papel \n o tijeras"
-            android:textSize="40sp" />
+            android:textSize="35sp" />
 
         <Button
             android:id="@+id/button17"
@@ -60,7 +63,8 @@
             android:layout_marginTop="30dp"
             android:layout_marginEnd="40dp"
             android:layout_weight="1"
-            android:background="#CF9FEE"
+            android:backgroundTint="#CF9FEE"
+            android:background="@drawable/boton_border"
             android:contentDescription="@string/txt_vacio"
             android:fontFamily="@font/grandstanderclean"
             android:gravity="center"
@@ -70,7 +74,7 @@
             android:shadowDy="2"
             android:shadowRadius="1"
             android:text="ta te ti \n tres en raya"
-            android:textSize="40sp" />
+            android:textSize="35sp" />
 
         <Button
             android:id="@+id/button8"
@@ -81,7 +85,8 @@
             android:layout_marginTop="30dp"
             android:layout_marginEnd="40dp"
             android:layout_weight="1"
-            android:background="#FFF3A6"
+            android:backgroundTint="#FFF3A6"
+            android:background="@drawable/boton_border"
             android:contentDescription="@string/txt_vacio"
             android:fontFamily="@font/grandstanderclean"
             android:gravity="center"
@@ -91,7 +96,7 @@
             android:shadowDy="2"
             android:shadowRadius="1"
             android:text="minijuego \n ¿que es?"
-            android:textSize="40sp" />
+            android:textSize="35sp" />
 
         <Button
             android:id="@+id/button10"
@@ -103,7 +108,8 @@
             android:layout_marginEnd="40dp"
             android:layout_marginBottom="10dp"
             android:layout_weight="1"
-            android:background="#FFF3A6"
+            android:backgroundTint="#FFF3A6"
+            android:background="@drawable/boton_border"
             android:contentDescription="@string/txt_vacio"
             android:fontFamily="@font/grandstanderclean"
             android:gravity="center"
@@ -113,7 +119,7 @@
             android:shadowDy="2"
             android:shadowRadius="1"
             android:text="Minijuego \n problemas matematicos"
-            android:textSize="40sp" />
+            android:textSize="35sp" />
     </LinearLayout>
 
 </RelativeLayout>

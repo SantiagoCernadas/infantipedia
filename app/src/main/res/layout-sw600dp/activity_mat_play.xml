@@ -5,7 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/backgroundmat"
-    tools:context=".PlaysActivity.MatPlayActivity">
+    tools:context=".PlaysActivity.MatPlayActivity"
+    android:backgroundTint="#40000000"
+    android:backgroundTintMode="src_over">
 
     <TextView
         android:id="@+id/txt_pista_mat_cant"
@@ -165,48 +167,52 @@
                 android:id="@+id/button_num_play1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="7dp"
+                android:layout_margin="10dp"
                 android:layout_weight="1"
-                android:background="#9FADEE"
+                android:background="@drawable/boton_border"
+                android:backgroundTint="#9FADEE"
                 android:fontFamily="@font/grandstanderclean"
                 android:onClick="botonPresionado"
                 android:text="@string/button_cal1"
                 android:textColor="#000000"
-                android:textSize="28sp" />
+                android:textSize="32sp" />
 
             <Button
                 android:id="@+id/button_num_play2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="7dp"
+                android:layout_margin="10dp"
                 android:layout_weight="1"
-                android:background="#9FADEE"
+                android:background="@drawable/boton_border"
+                android:backgroundTint="#9FADEE"
                 android:fontFamily="@font/grandstanderclean"
                 android:onClick="botonPresionado"
                 android:text="@string/button_cal2"
                 android:textColor="#000000"
-                android:textSize="28sp" />
+                android:textSize="32sp" />
 
             <Button
                 android:id="@+id/button_num_play3"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="7dp"
+                android:layout_margin="10dp"
                 android:layout_weight="1"
-                android:background="#9FADEE"
+                android:background="@drawable/boton_border"
+                android:backgroundTint="#9FADEE"
                 android:fontFamily="@font/grandstanderclean"
                 android:onClick="botonPresionado"
                 android:text="@string/button_cal3"
                 android:textColor="#000000"
-                android:textSize="28sp" />
+                android:textSize="32sp" />
 
             <ImageButton
                 android:id="@+id/imageButton6"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="7dp"
+                android:layout_margin="10dp"
                 android:layout_weight="1"
-                android:background="#ff6961"
+                android:background="@drawable/boton_border"
+                android:backgroundTint="#ff6961"
                 android:onClick="atras"
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
@@ -225,48 +231,52 @@
                 android:id="@+id/button_num_play4"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="7dp"
+                android:layout_margin="10dp"
                 android:layout_weight="1"
-                android:background="#9FADEE"
+                android:background="@drawable/boton_border"
+                android:backgroundTint="#9FADEE"
                 android:fontFamily="@font/grandstanderclean"
                 android:onClick="botonPresionado"
                 android:text="@string/button_cal4"
                 android:textColor="#000000"
-                android:textSize="28sp" />
+                android:textSize="32sp" />
 
             <Button
                 android:id="@+id/button_num_play5"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="7dp"
+                android:layout_margin="10dp"
                 android:layout_weight="1"
-                android:background="#9FADEE"
+                android:background="@drawable/boton_border"
+                android:backgroundTint="#9FADEE"
                 android:fontFamily="@font/grandstanderclean"
                 android:onClick="botonPresionado"
                 android:text="@string/button_cal5"
                 android:textColor="#000000"
-                android:textSize="28sp" />
+                android:textSize="32sp" />
 
             <Button
                 android:id="@+id/button_num_play6"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="7dp"
+                android:layout_margin="10dp"
                 android:layout_weight="1"
-                android:background="#9FADEE"
+                android:background="@drawable/boton_border"
+                android:backgroundTint="#9FADEE"
                 android:fontFamily="@font/grandstanderclean"
                 android:onClick="botonPresionado"
                 android:text="@string/button_cal6"
                 android:textColor="#000000"
-                android:textSize="28sp" />
+                android:textSize="32sp" />
 
             <ImageButton
                 android:id="@+id/imageButton5"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="7dp"
+                android:layout_margin="10dp"
                 android:layout_weight="1"
-                android:background="#ff6961"
+                android:background="@drawable/boton_border"
+                android:backgroundTint="#ff6961"
                 android:onClick="borrarTodo"
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
@@ -285,55 +295,59 @@
                 android:id="@+id/button_num_play7"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="7dp"
+                android:layout_margin="10dp"
                 android:layout_weight="1"
-                android:background="#9FADEE"
+                android:background="@drawable/boton_border"
+                android:backgroundTint="#9FADEE"
                 android:fontFamily="@font/grandstanderclean"
                 android:onClick="botonPresionado"
                 android:text="@string/button_cal7"
                 android:textColor="#000000"
-                android:textSize="28sp" />
+                android:textSize="32sp" />
 
             <Button
                 android:id="@+id/button_num_play8"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="7dp"
+                android:layout_margin="10dp"
                 android:layout_weight="1"
-                android:background="#9FADEE"
+                android:background="@drawable/boton_border"
+                android:backgroundTint="#9FADEE"
                 android:fontFamily="@font/grandstanderclean"
                 android:onClick="botonPresionado"
                 android:text="@string/button_cal8"
                 android:textColor="#000000"
-                android:textSize="28sp" />
+                android:textSize="32sp" />
 
             <Button
                 android:id="@+id/button_num_play9"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="7dp"
+                android:layout_margin="10dp"
                 android:layout_weight="1"
-                android:background="#9FADEE"
+                android:background="@drawable/boton_border"
+                android:backgroundTint="#9FADEE"
                 android:fontFamily="@font/grandstanderclean"
                 android:onClick="botonPresionado"
                 android:text="@string/button_cal9"
                 android:textColor="#000000"
-                android:textSize="28sp" />
+                android:textSize="32sp" />
 
             <Button
                 android:id="@+id/button11"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="7dp"
+                android:layout_margin="10dp"
                 android:layout_weight="1"
-                android:background="#77dd77"
+                android:background="@drawable/boton_border"
+                android:backgroundTint="#77dd77"
                 android:fontFamily="@font/grandstanderclean"
                 android:onClick="calcular"
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
                 android:text="@string/button_cal_res"
                 android:textColor="#000000"
-                android:textSize="28sp" />
+                android:textSize="32sp" />
         </TableRow>
 
         <TableRow
@@ -345,53 +359,50 @@
                 android:id="@+id/button_num_play01"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginStart="7dp"
-                android:layout_marginLeft="7dp"
-                android:layout_marginTop="7dp"
-                android:layout_marginBottom="7dp"
+                android:layout_margin="10dp"
                 android:layout_weight="1"
-                android:background="#9FADEE"
+                android:background="@drawable/boton_border"
+                android:backgroundTint="#9FADEE"
                 android:fontFamily="@font/grandstanderclean"
-                android:onClick="botonPresionado"
                 android:textColor="#000000"
-                android:textSize="22sp" />
+                android:textSize="22sp"
+                android:visibility="invisible" />
 
             <Button
                 android:id="@+id/button_num_play0"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="7dp"
-                android:layout_marginBottom="7dp"
+                android:layout_margin="10dp"
                 android:layout_weight="1"
-                android:background="#9FADEE"
+                android:background="@drawable/boton_border"
+                android:backgroundTint="#9FADEE"
                 android:fontFamily="@font/grandstanderclean"
                 android:onClick="botonPresionado"
                 android:text="@string/button_cal0"
                 android:textColor="#000000"
-                android:textSize="28sp" />
+                android:textSize="32sp" />
 
             <Button
                 android:id="@+id/button_num_play02"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="7dp"
-                android:layout_marginEnd="7dp"
-                android:layout_marginRight="7dp"
-                android:layout_marginBottom="7dp"
+                android:layout_margin="10dp"
                 android:layout_weight="1"
-                android:background="#9FADEE"
+                android:background="@drawable/boton_border"
+                android:backgroundTint="#9FADEE"
                 android:fontFamily="@font/grandstanderclean"
-                android:onClick="botonPresionado"
                 android:textColor="#000000"
-                android:textSize="22sp" />
+                android:textSize="22sp"
+                android:visibility="invisible" />
 
             <Button
                 android:id="@+id/button24"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="7dp"
+                android:layout_margin="10dp"
                 android:layout_weight="1"
-                android:background="#77dd77"
+                android:background="@drawable/boton_border"
+                android:backgroundTint="#77dd77"
                 android:fontFamily="@font/grandstanderclean"
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"

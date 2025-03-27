@@ -5,7 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/backgroundmat"
-    tools:context=".MatDificultadActivity">
+    tools:context=".MatDificultadActivity"
+    android:backgroundTint="#40000000"
+    android:backgroundTintMode="src_over">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -17,7 +19,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="30dp"
             android:layout_marginBottom="20dp"
             android:fontFamily="@font/grandstanderclean"
             android:gravity="center"
@@ -27,22 +29,23 @@
             android:shadowRadius="2"
             android:text="Seleccione una dificultad"
             android:textColor="#ff6961"
-            android:textSize="55sp" />
+            android:textSize="40sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginStart="50dp"
             android:layout_marginEnd="50dp"
-            android:layout_marginBottom="20dp"
+            android:layout_marginBottom="40dp"
             android:orientation="vertical">
 
             <Button
                 android:id="@+id/dif_principiante"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="#77dd77"
+                android:layout_weight=".2"
+                android:backgroundTint="#77dd77"
+                android:background="@drawable/boton_border"
                 android:contentDescription="@string/txt_vacio"
                 android:fontFamily="@font/grandstanderclean"
                 android:onClick="getDificultad"
@@ -51,7 +54,7 @@
                 android:shadowDy="2"
                 android:shadowRadius="1"
                 android:text="Principiante"
-                android:textSize="50sp" />
+                android:textSize="35sp" />
 
             <TextView
                 android:id="@+id/textView24"
@@ -68,14 +71,15 @@
                 android:shadowRadius="1"
                 android:text="Sumas y restas Simples"
                 android:textColor="#000000"
-                android:textSize="25sp" />
+                android:textSize="22sp" />
 
             <Button
                 android:id="@+id/dif_intermedia"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="#e2e37e"
+                android:layout_weight=".2"
+                android:backgroundTint="#e2e37e"
+                android:background="@drawable/boton_border"
                 android:contentDescription="@string/txt_vacio"
                 android:fontFamily="@font/grandstanderclean"
                 android:onClick="getDificultad"
@@ -84,7 +88,7 @@
                 android:shadowDy="2"
                 android:shadowRadius="1"
                 android:text="Intermedio"
-                android:textSize="50sp" />
+                android:textSize="35sp" />
 
             <TextView
                 android:id="@+id/textView25"
@@ -101,14 +105,15 @@
                 android:shadowRadius="1"
                 android:text="Sumas y restas intermedias"
                 android:textColor="#000000"
-                android:textSize="25sp" />
+                android:textSize="22sp" />
 
             <Button
                 android:id="@+id/dif_avanzada"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="#ffcc50"
+                android:layout_weight=".2"
+                android:backgroundTint="#ffcc50"
+                android:background="@drawable/boton_border"
                 android:contentDescription="@string/txt_vacio"
                 android:fontFamily="@font/grandstanderclean"
                 android:onClick="getDificultad"
@@ -117,7 +122,7 @@
                 android:shadowDy="2"
                 android:shadowRadius="1"
                 android:text="Avanzado"
-                android:textSize="50sp" />
+                android:textSize="35sp" />
 
             <TextView
                 android:id="@+id/textView26"
@@ -134,14 +139,15 @@
                 android:shadowRadius="1"
                 android:text="sumas y restas intermedias\n multiplicaciones simples\n sin pistas"
                 android:textColor="#000000"
-                android:textSize="25sp" />
+                android:textSize="22sp" />
 
             <Button
                 android:id="@+id/dif_experta"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="#e2504c"
+                android:layout_weight=".2"
+                android:backgroundTint="#e2504c"
+                android:background="@drawable/boton_border"
                 android:contentDescription="@string/txt_vacio"
                 android:fontFamily="@font/grandstanderclean"
                 android:onClick="getDificultad"
@@ -150,7 +156,7 @@
                 android:shadowDy="2"
                 android:shadowRadius="1"
                 android:text="Experto"
-                android:textSize="50sp" />
+                android:textSize="35sp" />
 
             <TextView
                 android:id="@+id/textView27"
@@ -167,7 +173,7 @@
                 android:shadowRadius="1"
                 android:text="sumas y restas avanzadas\n multiplicaciones intermedias\n sin pistas"
                 android:textColor="#000000"
-                android:textSize="25sp" />
+                android:textSize="22sp" />
         </LinearLayout>
 
     </LinearLayout>

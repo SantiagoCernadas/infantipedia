@@ -5,7 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/backgroundmat"
-    tools:context=".PlaysActivity.FiguraPlayActivity">
+    tools:context=".PlaysActivity.FiguraPlayActivity"
+    android:backgroundTint="#40000000"
+    android:backgroundTintMode="src_over">
 
     <TextView
         android:id="@+id/txt_figura_vidas"
@@ -18,12 +20,12 @@
         android:background="#80FFFFFF"
         android:fontFamily="@font/grandstanderclean"
         android:shadowColor="#000000"
-        android:shadowDx="2"
+        android:shadowDx="1"
         android:shadowDy="2"
-        android:shadowRadius="2"
+        android:shadowRadius="1"
         android:text="Vidas = 3 "
         android:textColor="#ff6961"
-        android:textSize="23sp" />
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/txt_figura_puntos"
@@ -34,12 +36,12 @@
         android:background="#80FFFFFF"
         android:fontFamily="@font/grandstanderclean"
         android:shadowColor="#000000"
-        android:shadowDx="2"
+        android:shadowDx="1"
         android:shadowDy="2"
-        android:shadowRadius="2"
+        android:shadowRadius="1"
         android:text="Puntos = 0 "
         android:textColor="#77dd77"
-        android:textSize="23sp" />
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/txt_figura_titulo"
@@ -47,15 +49,15 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/dragbutton"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="10dp"
         android:fontFamily="@font/grandstanderclean"
         android:shadowColor="#888a8a"
-        android:shadowDx="5"
+        android:shadowDx="2"
         android:shadowDy="2"
         android:shadowRadius="1"
         android:text="en que lugar va?"
         android:textColor="#000000"
-        android:textSize="30sp" />
+        android:textSize="20sp" />
 
     <LinearLayout
         android:id="@+id/fila_figuras1"
@@ -65,7 +67,7 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="0dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="50dp"
         android:layout_marginEnd="0dp"
         android:background="#A8FDCAE1"
         android:gravity="center"
@@ -73,20 +75,20 @@
 
         <ImageView
             android:id="@+id/drop_cuadrado"
-            android:layout_width="110dp"
-            android:layout_height="110dp"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
             app:srcCompat="@drawable/imgcuadrado" />
 
         <ImageView
             android:id="@+id/drop_circulo"
-            android:layout_width="110dp"
-            android:layout_height="110dp"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
             app:srcCompat="@drawable/imgcirculo" />
 
         <ImageView
             android:id="@+id/drop_triangulo"
-            android:layout_width="110dp"
-            android:layout_height="110dp"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
             app:srcCompat="@drawable/imgtriangulo" />
     </LinearLayout>
 
@@ -105,31 +107,31 @@
 
         <ImageView
             android:id="@+id/drop_rombo"
-            android:layout_width="110dp"
-            android:layout_height="110dp"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
             app:srcCompat="@drawable/imgrombo" />
 
         <ImageView
             android:id="@+id/drop_rectangulo"
-            android:layout_width="110dp"
-            android:layout_height="110dp"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
             app:srcCompat="@drawable/imgrectangulo" />
 
         <ImageView
             android:id="@+id/drop_estrella"
-            android:layout_width="110dp"
-            android:layout_height="110dp"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
             app:srcCompat="@drawable/imgestrella" />
 
     </LinearLayout>
 
     <ImageView
         android:id="@+id/dragbutton"
-        android:layout_width="110dp"
-        android:layout_height="110dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="100dp"
+        android:layout_marginBottom="60dp"
         app:srcCompat="@drawable/imgcuadrado"
         app:tint="#000000" />
 
@@ -140,7 +142,7 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="56dp"
-        android:layout_marginBottom="15dp"
+        android:layout_marginBottom="10dp"
         android:background="@drawable/boton_redondo"
         android:fontFamily="@font/grandstanderdos"
         android:onClick="getPista"
@@ -161,7 +163,7 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="130dp"
-        android:layout_marginBottom="26dp"
+        android:layout_marginBottom="20dp"
         android:fontFamily="@font/grandstanderclean"
         android:shadowColor="#888a8a"
         android:shadowDx="2"
@@ -169,7 +171,7 @@
         android:shadowRadius="5"
         android:text="despues del 9"
         android:textColor="#000000"
-        android:textSize="20sp"
+        android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -180,7 +182,7 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="36dp"
-        android:layout_marginBottom="26dp"
+        android:layout_marginBottom="20dp"
         android:fontFamily="@font/grandstanderclean"
         android:shadowColor="#888a8a"
         android:shadowDx="2"
@@ -188,7 +190,7 @@
         android:shadowRadius="5"
         android:text="3"
         android:textColor="#000000"
-        android:textSize="20sp"
+        android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

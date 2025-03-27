@@ -68,8 +68,15 @@ public class MainActivity extends AppCompatActivity {
         startActivity(i);
     }
 
+
+
     public void activity_figuras(View view){
         Intent i = new Intent(this, FigurasActivity.class);
+        startActivity(i);
+    }
+
+    public void activity_colores(View view) {
+        Intent i = new Intent(this,ColoresActivity.class);
         startActivity(i);
     }
 

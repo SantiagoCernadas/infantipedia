@@ -128,6 +128,20 @@
                         android:layout_weight="1">
 
                         <ImageButton
+                            android:id="@+id/imageButton15"
+                            android:layout_width="300dp"
+                            android:layout_height="150dp"
+                            android:layout_margin="4dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/boton_border"
+                            android:backgroundTint="#BAF5A9"
+                            android:onClick="activity_colores"
+                            android:scaleType="centerInside"
+                            app:srcCompat="@drawable/paletacolores"
+                            tools:srcCompat="@drawable/paletacolores" />
+
+                        <ImageButton
                             android:id="@+id/imageButton13"
                             android:layout_width="300dp"
                             android:layout_height="150dp"
@@ -140,6 +154,13 @@
                             android:background="@drawable/boton_border"
                             android:backgroundTint="#F8CA9A"/>
 
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
                         <ImageButton
                             android:id="@+id/imageButton14"
                             android:layout_width="300dp"
@@ -147,15 +168,16 @@
                             android:layout_margin="4dp"
                             android:layout_marginBottom="10dp"
                             android:layout_weight="1"
+                            android:background="@drawable/boton_border"
+                            android:backgroundTint="#CF9FEE"
                             android:onClick="activity_config"
                             android:scaleType="centerInside"
                             app:srcCompat="@drawable/engranaje"
-                            tools:srcCompat="@drawable/engranaje"
-                            android:background="@drawable/boton_border"
-                            android:backgroundTint="#CF9FEE"/>
+                            tools:srcCompat="@drawable/engranaje" />
                     </TableRow>
 
                 </TableLayout>
+
             </LinearLayout>
         </ScrollView>
 

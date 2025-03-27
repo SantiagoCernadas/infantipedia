@@ -5,7 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/backgroundjuego"
-    tools:context=".PlaysActivity.HowPlayActivity">
+    tools:context=".PlaysActivity.HowPlayActivity"
+    android:backgroundTint="#40000000"
+    android:backgroundTintMode="src_over">
 
     <TextView
         android:id="@+id/txt_titulo_juego"
@@ -139,9 +141,10 @@
         android:layout_marginEnd="40dp"
         android:layout_marginRight="40dp"
         android:layout_marginBottom="30dp"
-        android:background="#CF9FEE"
+        android:backgroundTint="#CF9FEE"
         android:fontFamily="@font/grandstanderclean"
         android:onClick="jugar"
+        android:background="@drawable/boton_border"
         android:shadowColor="#888a8a"
         android:shadowDx="3"
         android:shadowDy="2"
@@ -173,6 +176,7 @@
         android:layout_marginEnd="30dp"
         android:layout_marginBottom="20dp"
         android:contentDescription="@string/txt_vacio"
-        tools:srcCompat="@drawable/palabraplayej2" />
+        tools:srcCompat="@drawable/palabraplayej2"
+        />
 
 </RelativeLayout>

@@ -18,6 +18,7 @@
 
 
     <string name="txt_tv_abecedario">Presiona una letra!</string>
+    <string name="txt_tv_colores">Presiona un color!</string>
     <string name="button_a">A</string>
     <string name="button_b">B</string>
     <string name="button_c">C</string>

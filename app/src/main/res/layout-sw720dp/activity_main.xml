@@ -129,17 +129,38 @@
                         android:layout_weight="1">
 
                         <ImageButton
+                            android:id="@+id/imageButton15"
+                            android:layout_width="300dp"
+                            android:layout_height="300dp"
+                            android:layout_margin="8dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/boton_border"
+                            android:backgroundTint="#BAF5A9"
+                            android:onClick="activity_colores"
+                            android:scaleType="centerInside"
+                            app:srcCompat="@drawable/paletacolores"
+                            tools:srcCompat="@drawable/paletacolores" />
+
+                        <ImageButton
                             android:id="@+id/imageButton13"
                             android:layout_width="300dp"
                             android:layout_height="300dp"
                             android:layout_margin="8dp"
                             android:layout_marginBottom="10dp"
                             android:layout_weight="1"
+                            android:background="@drawable/boton_border"
+                            android:backgroundTint="#F8CA9A"
                             android:onClick="activity_juegos"
                             android:scaleType="fitCenter"
-                            app:srcCompat="@drawable/joystick"
-                            android:background="@drawable/boton_border"
-                            android:backgroundTint="#F8CA9A"/>
+                            app:srcCompat="@drawable/joystick" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
 
                         <ImageButton
                             android:id="@+id/imageButton14"

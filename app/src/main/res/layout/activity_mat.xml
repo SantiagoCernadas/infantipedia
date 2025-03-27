@@ -5,6 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/backgroundmat"
+    android:backgroundTint="#40000000"
+    android:backgroundTintMode="src_over"
     tools:context=".MathActivity">
 
     <TextView
@@ -19,11 +21,11 @@
         android:gravity="center"
         android:shadowColor="#000000"
         android:shadowDx="2"
-        android:shadowDy="5"
-        android:shadowRadius="5"
+        android:shadowDy="2"
+        android:shadowRadius="1"
         android:text="@string/txt_math"
         android:textColor="#84b6f4"
-        android:textSize="35sp" />
+        android:textSize="25sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -36,7 +38,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginRight="20dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="60dp"
         android:gravity="center"
         android:orientation="vertical">
 
@@ -45,16 +47,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="#F8CA9A"
+            android:background="@drawable/boton_border"
+            android:backgroundTint="#F8CA9A"
             android:contentDescription="@string/txt_vacio"
             android:fontFamily="@font/grandstanderclean"
             android:onClick="tablasActivity"
             android:shadowColor="#888a8a"
-            android:shadowDx="3"
-            android:shadowDy="2"
+            android:shadowDx="1"
+            android:shadowDy="1"
             android:shadowRadius="1"
             android:text="tablas de multiplicaciones"
-            android:textSize="20sp" />
+            android:textSize="14sp" />
 
         <Button
             android:id="@+id/button15"
@@ -62,16 +65,17 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:layout_weight="1"
-            android:background="#9FADEE"
+            android:background="@drawable/boton_border"
+            android:backgroundTint="#9FADEE"
             android:contentDescription="@string/txt_vacio"
             android:fontFamily="@font/grandstanderclean"
             android:onClick="familiaActivity"
             android:shadowColor="#888a8a"
-            android:shadowDx="3"
-            android:shadowDy="2"
+            android:shadowDx="1"
+            android:shadowDy="1"
             android:shadowRadius="1"
             android:text="familias del 0 al 100"
-            android:textSize="20sp" />
+            android:textSize="14sp" />
 
         <Button
             android:id="@+id/button3"
@@ -79,16 +83,17 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:layout_weight="1"
-            android:background="#BAF5A9"
+            android:background="@drawable/boton_border"
+            android:backgroundTint="#BAF5A9"
             android:contentDescription="@string/txt_vacio"
             android:fontFamily="@font/grandstanderclean"
             android:onClick="iniciarCalculadora"
             android:shadowColor="#888a8a"
-            android:shadowDx="3"
-            android:shadowDy="2"
+            android:shadowDx="1"
+            android:shadowDy="1"
             android:shadowRadius="1"
             android:text="@string/button_cal"
-            android:textSize="20sp" />
+            android:textSize="14sp" />
 
         <Button
             android:id="@+id/button12"
@@ -96,7 +101,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:layout_weight="1"
-            android:background="#FFF3A6"
+            android:background="@drawable/boton_border"
+            android:backgroundTint="#FFF3A6"
             android:contentDescription="@string/txt_vacio"
             android:drawableStart="@drawable/joystickmini"
             android:fontFamily="@font/grandstanderclean"
@@ -104,11 +110,8 @@
             android:paddingStart="20dp"
             android:paddingEnd="20dp"
             android:shadowColor="#888a8a"
-            android:shadowDx="3"
-            android:shadowDy="2"
-            android:shadowRadius="1"
             android:text="Minijuego \n problemas matematicos"
-            android:textSize="20sp" />
+            android:textSize="14sp" />
 
     </LinearLayout>
 

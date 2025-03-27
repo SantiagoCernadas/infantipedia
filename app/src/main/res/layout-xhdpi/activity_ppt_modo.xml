@@ -5,7 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/backgroundjuego"
-    tools:context=".PptModoActivity">
+    tools:context=".PptModoActivity"
+    android:backgroundTint="#40000000"
+    android:backgroundTintMode="src_over">
 
     <TextView
         android:id="@+id/txt_play_title"
@@ -14,15 +16,15 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_gravity="center"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="30dp"
         android:fontFamily="@font/grandstanderclean"
         android:gravity="center"
         android:shadowColor="#000000"
         android:shadowDx="2"
-        android:shadowDy="5"
+        android:shadowDy="3"
         android:shadowRadius="5"
         android:textColor="#84b6f4"
-        android:textSize="30sp"
+        android:textSize="28sp"
         tools:text="Piedra papel o tijeras" />
 
     <LinearLayout
@@ -30,18 +32,17 @@
         android:layout_height="match_parent"
         android:layout_below="@+id/txt_play_title"
         android:layout_marginTop="20dp"
+        android:layout_marginBottom="60dp"
         android:orientation="vertical">
 
         <Button
             android:id="@+id/button19"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginBottom="70dp"
+            android:layout_margin="30dp"
             android:layout_weight="1"
-            android:background="#BAF5A9"
+            android:background="@drawable/boton_border"
+            android:backgroundTint="#BAF5A9"
             android:contentDescription="@string/txt_vacio"
             android:fontFamily="@font/grandstanderclean"
             android:onClick="modoCpu"
@@ -50,18 +51,16 @@
             android:shadowDy="2"
             android:shadowRadius="1"
             android:text="Jugador vs Duxi"
-            android:textSize="30sp" />
+            android:textSize="22sp" />
 
         <Button
             android:id="@+id/button18"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="0dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginBottom="100dp"
+            android:layout_margin="30dp"
             android:layout_weight="1"
-            android:background="#FFF3A6"
+            android:background="@drawable/boton_border"
+            android:backgroundTint="#FFF3A6"
             android:contentDescription="@string/txt_vacio"
             android:fontFamily="@font/grandstanderclean"
             android:onClick="dosJugadores"
@@ -70,7 +69,7 @@
             android:shadowDy="2"
             android:shadowRadius="1"
             android:text="Jugador 1 vs jugador 2"
-            android:textSize="30sp" />
+            android:textSize="22sp" />
     </LinearLayout>
 
 </RelativeLayout>

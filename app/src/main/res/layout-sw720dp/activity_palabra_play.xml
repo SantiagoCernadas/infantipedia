@@ -5,7 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/backgroundabc"
-    tools:context=".PlaysActivity.PalabraPlayActivity">
+    tools:context=".PlaysActivity.PalabraPlayActivity"
+    android:backgroundTint="#40000000"
+    android:backgroundTintMode="src_over">
 
     <TextView
         android:id="@+id/txt_palabra_titulo"
@@ -131,7 +133,7 @@
     <TableLayout
         android:id="@+id/layout_palabraplay_opc"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="300dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"

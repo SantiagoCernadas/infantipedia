@@ -5,7 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/backgroundmat"
-    tools:context=".PlaysActivity.FiguraPlayActivity">
+    tools:context=".PlaysActivity.FiguraPlayActivity"
+    android:backgroundTint="#40000000"
+    android:backgroundTintMode="src_over">
 
     <TextView
         android:id="@+id/txt_pista_figura"
@@ -93,7 +95,7 @@
         android:shadowRadius="2"
         android:text="en que lugar va?"
         android:textColor="#000000"
-        android:textSize="60sp" />
+        android:textSize="40sp" />
 
     <LinearLayout
         android:id="@+id/fila_figuras1"
@@ -167,7 +169,7 @@
         android:layout_height="200dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="120dp"
+        android:layout_marginBottom="140dp"
         app:srcCompat="@drawable/imgcuadrado"
         app:tint="#000000" />
 
