@@ -23,37 +23,59 @@ public class ColoresActivity extends AppCompatActivity {
     public void teclaPresionada(View view){
         switch (view.getId()){
             case R.id.button_amarillo:
-                startLetraActivity("Amarillo","#FFEB3B");
+                startColorActivity("Amarillo","#FFEB3B"
+                        ,"Jirafa","Sol","Banana",
+                        R.drawable.jejjirafa,R.drawable.sejsol,R.drawable.imgbanana);
                 break;
             case R.id.button_celeste:
-                startLetraActivity("Celeste","#00BCD4");
+                startColorActivity("Celeste","#00BCD4"
+                        ,"Ballena","Agua","Iglú",
+                        R.drawable.bejballena,R.drawable.aejagua,R.drawable.iejiglu);
                 break;
             case R.id.button_rojo:
-                startLetraActivity("Rojo","#DA0000");
+                startColorActivity("Rojo","#DA0000"
+                        ,"Manzana","Cangrejo","Corazón",
+                        R.drawable.mejmanzana,R.drawable.imagencangrejo,R.drawable.imagencorazon);
                 break;
             case R.id.button_verde:
-                startLetraActivity("Verde","#8BC34A");
+                startColorActivity("Verde","#8BC34A"
+                        ,"Rana","Serpiente","Sandia",
+                        R.drawable.rejrana,R.drawable.sejserpiente,R.drawable.sejsandia);
                 break;
             case R.id.button_naranja:
-                startLetraActivity("Naranja","#FF9800");
+                startColorActivity("Naranja","#FF9800"
+                        ,"Naranja","Zanahoria","Calabaza",
+                        R.drawable.nejnaranja,R.drawable.zejzanahoria,R.drawable.imagencalabaza);
                 break;
             case R.id.button_negro:
-                startLetraActivity("Negro","#000000");
+                startColorActivity("Negro","#000000"
+                        ,"Araña","Gato","Sombrero",
+                        R.drawable.eneejarana,R.drawable.imagengatonegro,R.drawable.imagensombrero);
                 break;
             case R.id.button_blanco:
-                startLetraActivity("Blanco","#FFFFFF");
+                startColorActivity("Blanco","#FFFFFF"
+                        ,"Fantasma","Oveja","Papel",
+                        R.drawable.fejfantasma,R.drawable.oejoveja,R.drawable.papel);
                 break;
             case R.id.button_marron:
-                startLetraActivity("Marron","#6C3B2A");
+                startColorActivity("Marron","#6C3B2A"
+                        ,"Arbol","Oso","Perro",
+                        R.drawable.aejarbol,R.drawable.oejoso,R.drawable.imagenperro);
                 break;
             case R.id.button_rosa:
-                startLetraActivity("Rosa","#FF0080");
+                startColorActivity("Rosa","#FF0080"
+                        ,"Cerdo","Helado","Dona",
+                        R.drawable.imagencerdo,R.drawable.imagenheladorosa,R.drawable.imagendona);
                 break;
             case R.id.button_azul:
-                startLetraActivity("Azul" ,"#0037A4");
+                startColorActivity("Azul" ,"#0037A4"
+                        ,"Dado","Delfin","Helicoptero",
+                        R.drawable.dejdado,R.drawable.dejdelfin,R.drawable.hejhelicoptero);
                 break;
             case R.id.button_morado:
-                startLetraActivity("Morado","#673AB7");
+                startColorActivity("Morado","#673AB7"
+                        ,"Uva","Berenjena","Pulpo",
+                        R.drawable.uejuva,R.drawable.imagenberenjena,R.drawable.imagenpulpo);
                 break;
             default:
                 Toast.makeText(this,"Color no encontrado.",Toast.LENGTH_SHORT).show();
@@ -61,10 +83,22 @@ public class ColoresActivity extends AppCompatActivity {
         }
     }
 
-    public void startLetraActivity(String color,String colorHex){
+    public void startColorActivity(String color, String colorHex,
+                                   String nombre1, String nombre2, String nombre3
+                                    , int idImg1, int idImg2, int idImg3){
+
         Intent i = new Intent(this,ColorActivity.class);
         i.putExtra("color",color);
         i.putExtra("colorHex",colorHex);
+
+        i.putExtra("nombre1",nombre1);
+        i.putExtra("nombre2",nombre2);
+        i.putExtra("nombre3",nombre3);
+
+        i.putExtra("idImg1",idImg1);
+        i.putExtra("idImg2",idImg2);
+        i.putExtra("idImg3",idImg3);
+
         startActivity(i);
     }
 

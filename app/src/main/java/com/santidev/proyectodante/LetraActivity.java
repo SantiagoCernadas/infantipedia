@@ -23,7 +23,7 @@ public class LetraActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_letra);
-        String letraSeleccionada = getIntent().getStringExtra("color");
+        String letraSeleccionada = getIntent().getStringExtra("letra");
 
         titulo = findViewById(R.id.txt_letra_titulo);
         tv1 = findViewById(R.id.txt_letra_ej1);
