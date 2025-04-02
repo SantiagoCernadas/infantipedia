@@ -25,57 +25,68 @@ public class ColoresActivity extends AppCompatActivity {
             case R.id.button_amarillo:
                 startColorActivity("Amarillo","#FFEB3B"
                         ,"Jirafa","Sol","Banana",
-                        R.drawable.jejjirafa,R.drawable.sejsol,R.drawable.imgbanana);
+                        R.drawable.jejjirafa,R.drawable.sejsol,R.drawable.imgbanana
+                        , R.raw.audioamarillo);
                 break;
             case R.id.button_celeste:
                 startColorActivity("Celeste","#00BCD4"
                         ,"Ballena","Agua","Iglú",
-                        R.drawable.bejballena,R.drawable.aejagua,R.drawable.iejiglu);
+                        R.drawable.bejballena,R.drawable.aejagua,R.drawable.iejiglu
+                        , R.raw.audioceleste);
                 break;
             case R.id.button_rojo:
                 startColorActivity("Rojo","#DA0000"
                         ,"Manzana","Cangrejo","Corazón",
-                        R.drawable.mejmanzana,R.drawable.imagencangrejo,R.drawable.imagencorazon);
+                        R.drawable.mejmanzana,R.drawable.imagencangrejo,R.drawable.imagencorazon
+                        , R.raw.audiorojo);
                 break;
             case R.id.button_verde:
                 startColorActivity("Verde","#8BC34A"
                         ,"Rana","Serpiente","Sandia",
-                        R.drawable.rejrana,R.drawable.sejserpiente,R.drawable.sejsandia);
+                        R.drawable.rejrana,R.drawable.sejserpiente,R.drawable.sejsandia
+                        , R.raw.audioverde);
                 break;
             case R.id.button_naranja:
                 startColorActivity("Naranja","#FF9800"
                         ,"Naranja","Zanahoria","Calabaza",
-                        R.drawable.nejnaranja,R.drawable.zejzanahoria,R.drawable.imagencalabaza);
+                        R.drawable.nejnaranja,R.drawable.zejzanahoria,R.drawable.imagencalabaza
+                        , R.raw.audionaranjacolor);
                 break;
             case R.id.button_negro:
                 startColorActivity("Negro","#000000"
                         ,"Araña","Gato","Sombrero",
-                        R.drawable.eneejarana,R.drawable.imagengatonegro,R.drawable.imagensombrero);
+                        R.drawable.eneejarana,R.drawable.imagengatonegro,R.drawable.imagensombrero
+                        , R.raw.audionegro);
                 break;
             case R.id.button_blanco:
                 startColorActivity("Blanco","#FFFFFF"
                         ,"Fantasma","Oveja","Papel",
-                        R.drawable.fejfantasma,R.drawable.oejoveja,R.drawable.papel);
+                        R.drawable.fejfantasma,R.drawable.oejoveja,R.drawable.papel
+                        , R.raw.audioblanco);
                 break;
             case R.id.button_marron:
                 startColorActivity("Marron","#6C3B2A"
                         ,"Arbol","Oso","Perro",
-                        R.drawable.aejarbol,R.drawable.oejoso,R.drawable.imagenperro);
+                        R.drawable.aejarbol,R.drawable.oejoso,R.drawable.imagenperro
+                        , R.raw.audiomarron);
                 break;
             case R.id.button_rosa:
                 startColorActivity("Rosa","#FF0080"
                         ,"Cerdo","Helado","Dona",
-                        R.drawable.imagencerdo,R.drawable.imagenheladorosa,R.drawable.imagendona);
+                        R.drawable.imagencerdo,R.drawable.imagenheladorosa,R.drawable.imagendona
+                        , R.raw.audiorosa);
                 break;
             case R.id.button_azul:
                 startColorActivity("Azul" ,"#0037A4"
                         ,"Dado","Delfin","Helicoptero",
-                        R.drawable.dejdado,R.drawable.dejdelfin,R.drawable.hejhelicoptero);
+                        R.drawable.dejdado,R.drawable.dejdelfin,R.drawable.hejhelicoptero
+                        , R.raw.audioazul);
                 break;
             case R.id.button_morado:
                 startColorActivity("Morado","#673AB7"
                         ,"Uva","Berenjena","Pulpo",
-                        R.drawable.uejuva,R.drawable.imagenberenjena,R.drawable.imagenpulpo);
+                        R.drawable.uejuva,R.drawable.imagenberenjena,R.drawable.imagenpulpo
+                        , R.raw.audiomorado);
                 break;
             default:
                 Toast.makeText(this,"Color no encontrado.",Toast.LENGTH_SHORT).show();
@@ -85,7 +96,8 @@ public class ColoresActivity extends AppCompatActivity {
 
     public void startColorActivity(String color, String colorHex,
                                    String nombre1, String nombre2, String nombre3
-                                    , int idImg1, int idImg2, int idImg3){
+                                    , int idImg1, int idImg2, int idImg3,
+                                   int audio){
 
         Intent i = new Intent(this,ColorActivity.class);
         i.putExtra("color",color);
@@ -98,6 +110,7 @@ public class ColoresActivity extends AppCompatActivity {
         i.putExtra("idImg1",idImg1);
         i.putExtra("idImg2",idImg2);
         i.putExtra("idImg3",idImg3);
+        i.putExtra("audio",audio);
 
         startActivity(i);
     }

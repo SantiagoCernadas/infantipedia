@@ -68,7 +68,7 @@ public class ConfigActivity extends AppCompatActivity {
             public void onStopTrackingTouch(SeekBar seekBar) {
                 SharedPreferences preferencias = getSharedPreferences("datos",Context.MODE_PRIVATE);
                 SharedPreferences.Editor objEditor = preferencias.edit();
-                objEditor.putInt("volumenSonido",volumenMusica);
+                objEditor.putInt("volumenSonido",volumenEfecto);
                 objEditor.apply();
             }
         });

@@ -34,6 +34,18 @@
                 android:textColorHint="#000000"
                 android:textSize="60sp" />
 
+            <ImageButton
+                android:id="@+id/imageButton16"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="0dp"
+                android:background="@drawable/boton_microfono"
+                android:contentDescription="@string/txt_vacio"
+                android:onClick="repSon"
+                app:srcCompat="@android:drawable/ic_lock_silent_mode_off"
+                app:tint="#000000" />
+
             <TextView
                 android:id="@+id/txt_color_ej1"
                 android:layout_width="match_parent"

@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
         volumenMusica = sharedPreferences.getInt("volumenMusica",25);
         volumenEfecto = sharedPreferences.getInt("volumenSonido",50);
         mp = MediaPlayer.create(this, R.raw.cancionfondo);
-        mp.setVolume(volumenMusica / 50f,volumenMusica / 50f);
+        mp.setVolume(volumenMusica / 100f,volumenMusica / 100f);
         mp.setLooping(true);
     }
 
