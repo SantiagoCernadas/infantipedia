@@ -10,6 +10,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
+import com.santidev.proyectodante.PlaysActivity.HowPlayActivity;
+
 public class ColoresActivity extends AppCompatActivity {
 
 
@@ -112,6 +114,15 @@ public class ColoresActivity extends AppCompatActivity {
         i.putExtra("idImg3",idImg3);
         i.putExtra("audio",audio);
 
+        startActivity(i);
+    }
+
+    public void howPlayActivity(View view){
+        Intent i = new Intent(this, HowPlayActivity.class);
+        i.putExtra("titulo","¿Que color?");
+        i.putExtra("descripcion","Un objeto, varios colores. ¡Solo uno es correcto!");
+        i.putExtra("idimg1",R.drawable.palabraplayej1);
+        i.putExtra("idimg2",R.drawable.palabraplayej2);
         startActivity(i);
     }
 
