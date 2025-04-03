@@ -32,7 +32,7 @@
                 android:text="@string/txt_titulo_letra"
                 android:textColor="#F8A69A"
                 android:textColorHint="#000000"
-                android:textSize="60sp" />
+                android:textSize="50sp" />
 
             <ImageButton
                 android:id="@+id/imageButton16"

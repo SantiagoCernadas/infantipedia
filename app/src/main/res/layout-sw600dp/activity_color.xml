@@ -26,23 +26,24 @@
                 android:fontFamily="@font/grandstanderdos"
                 android:gravity="center"
                 android:shadowColor="#000000"
-                android:shadowDx="3"
+                android:shadowDx="2"
                 android:shadowDy="2"
-                android:shadowRadius="1"
+                android:shadowRadius="2"
                 android:text="@string/txt_titulo_letra"
                 android:textColor="#F8A69A"
                 android:textColorHint="#000000"
-                android:textSize="60sp" />
+                android:textSize="80sp" />
 
             <ImageButton
                 android:id="@+id/imageButton16"
-                android:layout_width="75dp"
-                android:layout_height="75dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="0dp"
                 android:background="@drawable/boton_microfono"
                 android:contentDescription="@string/txt_vacio"
                 android:onClick="repSon"
+                android:scaleType="fitCenter"
                 app:srcCompat="@android:drawable/ic_lock_silent_mode_off"
                 app:tint="#000000" />
 
@@ -54,17 +55,17 @@
                 android:fontFamily="@font/grandstanderdos"
                 android:gravity="center"
                 android:shadowColor="#000000"
-                android:shadowDx="3"
+                android:shadowDx="2"
                 android:shadowDy="2"
-                android:shadowRadius="1"
+                android:shadowRadius="2"
                 android:text="@string/txt_ej1"
                 android:textColor="#9FADEE"
-                android:textSize="50sp" />
+                android:textSize="80sp" />
 
             <ImageView
                 android:id="@+id/img_color_ej1"
                 android:layout_width="match_parent"
-                android:layout_height="250dp"
+                android:layout_height="300dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="30dp"
                 android:contentDescription="@string/txt_img_ej"
@@ -78,17 +79,17 @@
                 android:fontFamily="@font/grandstanderdos"
                 android:gravity="center"
                 android:shadowColor="#000000"
-                android:shadowDx="3"
+                android:shadowDx="2"
                 android:shadowDy="2"
-                android:shadowRadius="1"
+                android:shadowRadius="2"
                 android:text="@string/txt_ej2"
                 android:textColor="#BAF5A9"
-                android:textSize="50sp" />
+                android:textSize="80sp" />
 
             <ImageView
                 android:id="@+id/img_color_ej2"
                 android:layout_width="match_parent"
-                android:layout_height="250dp"
+                android:layout_height="300dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="30dp"
                 android:contentDescription="@string/txt_img_ej"
@@ -102,17 +103,17 @@
                 android:fontFamily="@font/grandstanderdos"
                 android:gravity="center"
                 android:shadowColor="#000000"
-                android:shadowDx="3"
+                android:shadowDx="2"
                 android:shadowDy="2"
-                android:shadowRadius="1"
+                android:shadowRadius="2"
                 android:text="@string/txt_ej3"
                 android:textColor="#CF9FEE"
-                android:textSize="50sp" />
+                android:textSize="80sp" />
 
             <ImageView
                 android:id="@+id/img_color_ej3"
                 android:layout_width="match_parent"
-                android:layout_height="250dp"
+                android:layout_height="300dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="30dp"
                 android:contentDescription="@string/txt_img_ej"
