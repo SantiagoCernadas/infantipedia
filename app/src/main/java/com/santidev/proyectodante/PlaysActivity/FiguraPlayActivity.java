@@ -21,6 +21,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.widget.ImageViewCompat;
 
+import com.santidev.proyectodante.Manager.MinijuegoManager;
 import com.santidev.proyectodante.R;
 
 import static com.santidev.proyectodante.MainActivity.pause;
@@ -29,15 +30,14 @@ import static com.santidev.proyectodante.MainActivity.volumenEfecto;
 
 public class FiguraPlayActivity extends AppCompatActivity {
     private ImageView dragButton, dropCuadrado,dropCirculo,dropTriangulo,dropRectangulo;
-    private Button pista;
     private ImageView dropRombo, dropEstrella;
-    private TextView titulo,txtVidas,txtPuntos;
+    private TextView titulo;
     private int[] idFigura = new int[6];
-    private int figuraAct,vidas, puntos;
+    private int figuraAct;
     private SoundPool[] sp;
     private int[] sonidosRep;
-    private TextView txtPista,txtPistaCant;
-    private int cantPista;
+
+    private MinijuegoManager minijuegoManager;
 
     @SuppressLint("ClickableViewAccessibility")
     @Override
@@ -45,9 +45,11 @@ public class FiguraPlayActivity extends AppCompatActivity {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_figura_play);
             getNums();
-            cantPista = 3;
-            vidas = 3;
-            puntos = 0;
+
+            minijuegoManager = new MinijuegoManager(3,0,3,
+                findViewById(R.id.txt_figura_vidas),findViewById(R.id.txt_figura_puntos),findViewById(R.id.txt_pista_figura),
+                findViewById(R.id.txt_pista_figura_cant),findViewById(R.id.button_pista_figura));
+
             setIds();
             asignarSonidos();
             dragButton(dropCuadrado,0);
@@ -56,8 +58,7 @@ public class FiguraPlayActivity extends AppCompatActivity {
             dragButton(dropRombo,3);
             dragButton(dropRectangulo,4);
             dragButton(dropEstrella,5);
-            txtPista.setText("");
-            txtPistaCant.setText(String.valueOf(cantPista));
+
             dragButton.setOnTouchListener(new View.OnTouchListener() {
                 @Override
                 public boolean onTouch(View v, MotionEvent event) {
@@ -109,15 +110,12 @@ public class FiguraPlayActivity extends AppCompatActivity {
         });
     }
 
-    public void actPuntos() {
-        txtPuntos.setText("Puntos = " + puntos + " ");
-        txtVidas.setText("Vidas = " + vidas + " ");
-    }
+
 
     public void cambiarForma() {
-        if(vidas == 0){
+        if(minijuegoManager.sinVidas()){
             Intent intent = new Intent(this,FinJuegoActivity.class);
-            intent.putExtra("puntos",puntos);
+            intent.putExtra("puntos",minijuegoManager.getPuntos());
             startActivity(intent);
             finish();
         }
@@ -128,23 +126,24 @@ public class FiguraPlayActivity extends AppCompatActivity {
 
     public void formaCorrecta(int i){
         dragButton.setVisibility(View.INVISIBLE);
+        minijuegoManager.getPista().setEnabled(false);
         if(figuraAct == i){
             generarSonido(0);
             titulo.setText("bien hecho!");
-            puntos++;
+            minijuegoManager.sumarPunto();
         }
         else{
             generarSonido(1);
             generarSonido(2);
             titulo.setText("ups.. no era");
-            vidas--;
+            minijuegoManager.restarVida();
         }
-        actPuntos();
+
         Handler handler = new Handler();
         handler. postDelayed(new Runnable() {
             public void run() {
-                txtPista.setText("");
-                pista.setEnabled(true);
+                minijuegoManager.getTxtPista().setText(" ");
+                minijuegoManager.getPista().setEnabled(true);
                 cambiarForma();
                 titulo.setText("en que lugar va?");
                 ImageViewCompat.setImageTintList(dragButton, ColorStateList.valueOf(Color.parseColor("#000000")));
@@ -172,25 +171,18 @@ public class FiguraPlayActivity extends AppCompatActivity {
         dropRombo = findViewById(R.id.drop_rombo);
         dropEstrella = findViewById(R.id.drop_estrella);
         titulo = findViewById(R.id.txt_figura_titulo);
-        txtPuntos = findViewById(R.id.txt_figura_puntos);
-        txtVidas = findViewById(R.id.txt_figura_vidas);
-        pista = findViewById(R.id.button_pista_figura);
-        txtPista = findViewById(R.id.txt_pista_figura);
-        txtPistaCant = findViewById(R.id.txt_pista_figura_cant);
     }
 
     public void getPista(View view){
-        if(pista.isEnabled()){
-            if(cantPista > 0){
-                /*Logica de la pista*/
+        if(minijuegoManager.getPista().isEnabled()){
+            if(minijuegoManager.getPistas() > 0){
                 generarSonido(0);
-                pista.setEnabled(false);
-                cantPista--;
-                txtPistaCant.setText(String.valueOf(cantPista));
+                minijuegoManager.getPista().setEnabled(false);
+                minijuegoManager.restarPísta();
                 ImageViewCompat.setImageTintList(dragButton, null);
             }
             else{
-                txtPista.setText("No tienes pistas");
+                minijuegoManager.getTxtPista().setText("No tienes pistas");
             }
 
         }
@@ -205,7 +197,7 @@ public class FiguraPlayActivity extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 Intent salir = new Intent(FiguraPlayActivity.this,FinJuegoActivity.class);
-                salir.putExtra("puntos",puntos);
+                salir.putExtra("puntos",minijuegoManager.getPuntos());
                 startActivity(salir);
                 finish();
             }

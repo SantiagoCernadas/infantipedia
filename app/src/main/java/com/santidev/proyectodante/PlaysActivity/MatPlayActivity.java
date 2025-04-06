@@ -15,6 +15,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.santidev.proyectodante.Manager.MinijuegoManager;
 import com.santidev.proyectodante.R;
 
 import static com.santidev.proyectodante.MainActivity.pause;
@@ -23,56 +24,47 @@ import static com.santidev.proyectodante.MainActivity.volumenEfecto;
 
 public class MatPlayActivity extends AppCompatActivity {
     private TextView txtNum1, txtNum2, txtSigno, txtResultado, txtDescripcion;
-    private TextView txtPuntos,txtVidas;
     private int resultadoInt;
     private String[] signos;
     private String signoSeleccionado;
-    private int vidas,puntos;
     private SoundPool[] sp;
     private int[] sonidosRep;
     private int cantSignos;
     private int rangoSumRes;
     private int rangoMult;
     private boolean botonesDisponibles;
-    private Button pista;
-    private TextView txtPista,txtPistaCant;
-    private int cantPista;
+
+    MinijuegoManager minijuegoManager;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mat_play);
+
+        minijuegoManager = new MinijuegoManager(3,0,3,
+                findViewById(R.id.txt_mat_vidas),findViewById(R.id.txt_mat_puntos),findViewById(R.id.txt_pista_mat),
+                findViewById(R.id.txt_pista_mat_cant),findViewById(R.id.button_pista_mat));
+
         txtNum1 = findViewById(R.id.txt_num1);
         txtNum2 = findViewById(R.id.txt_num2);
         txtSigno = findViewById(R.id.txt_signo);
         txtResultado = findViewById(R.id.txt_resultado);
-        txtVidas = findViewById(R.id.txt_mat_vidas);
-        txtPuntos = findViewById(R.id.txt_mat_puntos);
         txtDescripcion = findViewById(R.id.txt_mat_play_desc);
-        pista = findViewById(R.id.button_pista_mat);
-        txtPista = findViewById(R.id.txt_pista_mat);
-        txtPistaCant = findViewById(R.id.txt_pista_mat_cant);
-        cantPista = 3;
-        vidas = 3;
-        puntos = 0;
         cantSignos = Integer.parseInt(getIntent().getStringExtra("signos"));
         rangoSumRes = Integer.parseInt(getIntent().getStringExtra("rango_suma_resta"));
         rangoMult = Integer.parseInt(getIntent().getStringExtra("rango_multiplicacion"));
         botonesDisponibles = true;
         txtDescripcion.setText("");
 
-        actualizarDatos();
         asignarSonidos();
         setSignos();
         generarProblema();
 
         if(cantSignos == 3){
-            pista.setVisibility(View.INVISIBLE);
-            txtPistaCant.setVisibility(View.INVISIBLE);
-            txtPista.setVisibility(View.INVISIBLE);
+            minijuegoManager.getPista().setVisibility(View.INVISIBLE);
+            minijuegoManager.getTxtCantPistas().setVisibility(View.INVISIBLE);
+            minijuegoManager.getTxtPista().setVisibility(View.INVISIBLE);
         }
-        pista.setEnabled(true);
-        txtPista.setText("");
-        txtPistaCant.setText(String.valueOf(cantPista));
     }
 
     private void asignarSonidos() {
@@ -95,7 +87,7 @@ public class MatPlayActivity extends AppCompatActivity {
     }
 
     public void generarProblema() {
-        if(vidas > 0){
+        if(!minijuegoManager.sinVidas()){
             signoSeleccionado = signos[(int)(Math.random()*cantSignos+0)];
             int num2Int;
             int num1Int;
@@ -118,7 +110,7 @@ public class MatPlayActivity extends AppCompatActivity {
         }
         else{
             Intent i = new Intent(this,FinJuegoActivity.class);
-            i.putExtra("puntos",puntos);
+            i.putExtra("puntos",minijuegoManager.getPuntos());
             startActivity(i);
             finish();
         }
@@ -187,24 +179,22 @@ public class MatPlayActivity extends AppCompatActivity {
             if(!txtResultado.getText().toString().equals("")){
                 int resultadoUsuario = Integer.parseInt(txtResultado.getText().toString());
                 if(resultadoUsuario == resultadoInt){
-                    puntos++;
+                    minijuegoManager.sumarPunto();
                     generarSonido(0);
                     txtDescripcion.setText("Bien Hecho!");
                     txtResultado.setTextColor(Color.GREEN);
-                    if(puntos % 5 == 0 && cantSignos != 3){
-                        txtPista.setText("+1 pista!");
-                        cantPista++;
-                        txtPistaCant.setText(String.valueOf(cantPista));
+                    if(minijuegoManager.getPuntos() % 5 == 0 && cantSignos != 3){
+                        minijuegoManager.getTxtPista().setText("+1 pista!");
+                        minijuegoManager.sumarPista();
                     }
                 }
                 else{
-                    vidas--;
+                    minijuegoManager.restarVida();
                     generarSonido(1);
                     generarSonido(2);
                     txtDescripcion.setText("Ups.. la respuesta correcta era " + resultadoInt);
                     txtResultado.setTextColor(Color.RED);
                 }
-                actualizarDatos();
 
                 botonesDisponibles = false;
                 Handler handler = new Handler();
@@ -212,8 +202,8 @@ public class MatPlayActivity extends AppCompatActivity {
                     public void run() {
                         txtResultado.setTextColor(Color.BLACK);
                         txtDescripcion.setText("");
-                        pista.setEnabled(true);
-                        txtPista.setText("");
+                        minijuegoManager.getPista().setEnabled(true);
+                        minijuegoManager.getTxtPista().setText("");
                         botonesDisponibles = true;
                         txtResultado.setText("");
                         generarProblema();
@@ -226,10 +216,6 @@ public class MatPlayActivity extends AppCompatActivity {
         }
     }
 
-    public void actualizarDatos() {
-        txtVidas.setText("Vidas = " + vidas);
-        txtPuntos.setText("Puntos = " + puntos);
-    }
 
     private void generarSonido(int i) {
         sp[i].play(sonidosRep[i],volumenEfecto / 50f,volumenEfecto / 50f,1,0,1);
@@ -253,21 +239,20 @@ public class MatPlayActivity extends AppCompatActivity {
 
     public void getPista(View view){
 
-        if(pista.isEnabled() && botonesDisponibles){
-            if(cantPista > 0){
+        if(minijuegoManager.getPista().isEnabled() && botonesDisponibles){
+            if(minijuegoManager.getPistas() > 0){
                 int numero = (int)(Math.random()*2+1);
                 if(numero == 1){
-                    txtPista.setText("detras del " + (resultadoInt + 1) + " ");
+                    minijuegoManager.getTxtPista().setText("detras del " + (resultadoInt + 1) + " ");
                 }
                 else{
-                    txtPista.setText("delante del " + (resultadoInt - 1)+ " ");
+                    minijuegoManager.getTxtPista().setText("delante del " + (resultadoInt - 1)+ " ");
                 }
-                pista.setEnabled(false);
-                cantPista--;
-                txtPistaCant.setText(String.valueOf(cantPista));
+                minijuegoManager.getPista().setEnabled(false);
+                minijuegoManager.restarPísta();
             }
             else{
-                txtPista.setText("No tienes pistas");
+                minijuegoManager.getTxtPista().setText("No tienes pistas");
             }
 
         }
@@ -282,7 +267,7 @@ public class MatPlayActivity extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 Intent salir = new Intent(MatPlayActivity.this,FinJuegoActivity.class);
-                salir.putExtra("puntos",puntos);
+                salir.putExtra("puntos",minijuegoManager.getPuntos());
                 startActivity(salir);
                 finish();
             }

@@ -44,6 +44,13 @@ public class HowPlayActivity extends AppCompatActivity {
         else if(juego.equals("En su lugar")){
             i = new Intent(this,FiguraPlayActivity.class);
         }
+        else if(juego.equals("¿Que color?")){
+            i = new Intent(this,ColorPlayActivity.class);
+        }
+        else{
+            finish();
+            return;
+        }
         startActivity(i);
         finish();
     }

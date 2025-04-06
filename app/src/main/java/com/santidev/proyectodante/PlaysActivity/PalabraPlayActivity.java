@@ -16,6 +16,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.santidev.proyectodante.Manager.MinijuegoManager;
 import com.santidev.proyectodante.Manager.PalabraPlayManager;
 import com.santidev.proyectodante.R;
 
@@ -24,45 +25,41 @@ import static com.santidev.proyectodante.MainActivity.start;
 import static com.santidev.proyectodante.MainActivity.volumenEfecto;
 
 public class PalabraPlayActivity extends AppCompatActivity {
+
     private final int NUM_PALABRAS = 81;
-    private TextView vidasTxt,puntosTxt,txtPista,txtCantPistas;
     private Button[] opciones;
-    private Button pista;
     private ImageView imagen;
     private String palabraCorrecta;
     private int opcCorrecta;
     private String[] palabras;
     private int[] idImagen;
-    private int vidas,puntos;
     private SoundPool[] sp;
     private int[] sonidosRep;
     private TextView txt_titulo;
-    private int cantPistas;
+
+    private MinijuegoManager minijuegoManager;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_palabra_play);
         PalabraPlayManager manager = new PalabraPlayManager();
-        vidas = 3;
-        puntos = 0;
-        vidasTxt = findViewById(R.id.txt_palabra_vidas);
-        puntosTxt = findViewById(R.id.txt_palabra_puntos);
+
+        minijuegoManager = new MinijuegoManager(3,0,3,
+                findViewById(R.id.txt_palabra_vidas),findViewById(R.id.txt_palabra_puntos),findViewById(R.id.txt_pista_palabra),
+                findViewById(R.id.txt_pista_palabra_cant),findViewById(R.id.button_pista_palabra));
+
+
         opciones = new Button[4];
         palabras = new String[NUM_PALABRAS];
         idImagen = new int[NUM_PALABRAS];
         txt_titulo = findViewById(R.id.txt_palabra_titulo);
-        pista = findViewById(R.id.button_pista_palabra);
-        txtPista = findViewById(R.id.txt_pista_palabra);
+
         asignarSonidos();
         conectarID();
         manager.setImagenes(idImagen);
         manager.setPalabras(palabras);
         generarProblema();
-        txtPista.setText("");
-        pista.setEnabled(true);
-        cantPistas = 3;
-        txtCantPistas = findViewById(R.id.txt_pista_palabra_cant);
-        txtCantPistas.setText(String.valueOf(cantPistas));
     }
 
     public void asignarSonidos() {
@@ -101,14 +98,13 @@ public class PalabraPlayActivity extends AppCompatActivity {
         }
 
         bloquearOpciones(opciones);
-        actualizarDatos();
 
         Handler handler = new Handler();
         handler. postDelayed(new Runnable() {
             public void run() {
                     txt_titulo.setText("¿Que es?");
-                    pista.setEnabled(true);
-                    txtPista.setText("");
+                    minijuegoManager.getPista().setEnabled(true);
+                    minijuegoManager.getTxtPista().setText("");
                     habilitarOpciones(opciones);
                     generarProblema();
                 }
@@ -129,10 +125,6 @@ public class PalabraPlayActivity extends AppCompatActivity {
     }
 
 
-    public void actualizarDatos() {
-        puntosTxt.setText("Puntos = " + puntos);
-        vidasTxt.setText("Vidas = " + vidas);
-    }
 
     public void esCorrecto(int i) {
 
@@ -140,11 +132,9 @@ public class PalabraPlayActivity extends AppCompatActivity {
             opciones[i].setBackgroundColor(Color.GREEN);
             generarSonido(0);
             txt_titulo.setText("Bien Hecho!");
-            puntos++;
-            if(puntos % 5 == 0){
-                cantPistas++;
-                txtCantPistas.setText(String.valueOf(cantPistas));
-                txtPista.setText("+1 pista!");
+            minijuegoManager.sumarPunto();
+            if(minijuegoManager.getPuntos() % 5 == 0){
+                minijuegoManager.sumarPista();
             }
         }
         else{
@@ -152,7 +142,7 @@ public class PalabraPlayActivity extends AppCompatActivity {
             opciones[opcCorrecta].setBackgroundColor(Color.GREEN);
             generarSonido(1);
             generarSonido(2);
-            vidas--;
+            minijuegoManager.restarVida();
             txt_titulo.setText("Ups.. no era.");
         }
 
@@ -161,9 +151,9 @@ public class PalabraPlayActivity extends AppCompatActivity {
 
 
     public void generarProblema(){
-        if(vidas < 1){
+        if(minijuegoManager.sinVidas()){
             Intent i = new Intent(this,FinJuegoActivity.class);
-            i.putExtra("puntos",puntos);
+            i.putExtra("puntos",minijuegoManager.getPuntos());
             startActivity(i);
             finish();
         }
@@ -245,7 +235,7 @@ public class PalabraPlayActivity extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 Intent salir = new Intent(PalabraPlayActivity.this,FinJuegoActivity.class);
-                salir.putExtra("puntos",puntos);
+                salir.putExtra("puntos",minijuegoManager.getPuntos());
                 startActivity(salir);
                 finish();
             }
@@ -263,26 +253,25 @@ public class PalabraPlayActivity extends AppCompatActivity {
     }
 
     public void getPista(View view){
-        if(pista.isEnabled() && opciones[0].isEnabled()){
-            if(cantPistas > 0){
+        if(minijuegoManager.getPista().isEnabled() && opciones[0].isEnabled()){
+            if(minijuegoManager.getPistas() > 0){
                 if(opciones[opcCorrecta].getText().toString().contains(" ")){
-                    txtPista.setText("Empieza con " + opciones[opcCorrecta].getText().toString().charAt(0));
+                    minijuegoManager.getTxtPista().setText("Empieza con " + opciones[opcCorrecta].getText().toString().charAt(0));
                 }
                 else{
                     int numero = (int)(Math.random()*2+1);
                     if(numero == 1){
-                        txtPista.setText("Tiene " + opciones[opcCorrecta].getText().toString().length() + " Letras ");
+                        minijuegoManager.getTxtPista().setText("Tiene " + opciones[opcCorrecta].getText().toString().length() + " Letras ");
                     }
                     else{
-                        txtPista.setText("Empieza con " + opciones[opcCorrecta].getText().toString().charAt(0));
+                        minijuegoManager.getTxtPista().setText("Empieza con " + opciones[opcCorrecta].getText().toString().charAt(0));
                     }
                 }
-                pista.setEnabled(false);
-                cantPistas--;
-                txtCantPistas.setText(String.valueOf(cantPistas));
+                minijuegoManager.getPista().setEnabled(false);
+                minijuegoManager.restarPísta();
             }
             else{
-                txtPista.setText("No tienes pistas");
+                minijuegoManager.getTxtPista().setText("No tienes pistas");
             }
 
         }
