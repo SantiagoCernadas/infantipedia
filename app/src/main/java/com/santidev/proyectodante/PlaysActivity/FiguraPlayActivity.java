@@ -131,6 +131,9 @@ public class FiguraPlayActivity extends AppCompatActivity {
             generarSonido(0);
             titulo.setText("bien hecho!");
             minijuegoManager.sumarPunto();
+            if(minijuegoManager.getPuntos() % 5 == 0){
+                minijuegoManager.sumarPista();
+            }
         }
         else{
             generarSonido(1);
