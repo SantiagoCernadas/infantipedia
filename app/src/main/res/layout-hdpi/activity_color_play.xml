@@ -52,8 +52,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="126dp"
-        android:layout_marginBottom="26dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginBottom="20dp"
         android:fontFamily="@font/grandstanderclean"
         android:shadowColor="#888a8a"
         android:shadowDx="2"
@@ -61,7 +61,7 @@
         android:shadowRadius="5"
         android:text="tiene 7 letras"
         android:textColor="#000000"
-        android:textSize="25sp" />
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/txt_pista_color_cant"
@@ -70,7 +70,7 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="34dp"
-        android:layout_marginBottom="26dp"
+        android:layout_marginBottom="23dp"
         android:fontFamily="@font/grandstanderclean"
         android:shadowColor="#888a8a"
         android:shadowDx="2"
@@ -82,8 +82,8 @@
 
     <Button
         android:id="@+id/button_pista_color"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="50dp"
@@ -112,12 +112,12 @@
         android:background="#80FFFFFF"
         android:fontFamily="@font/grandstanderclean"
         android:shadowColor="#000000"
-        android:shadowDx="2"
-        android:shadowDy="2"
-        android:shadowRadius="5"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="1"
         android:text="Vidas = 3"
         android:textColor="#ff6961"
-        android:textSize="23sp" />
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/txt_color_puntos"
@@ -128,17 +128,17 @@
         android:background="#80FFFFFF"
         android:fontFamily="@font/grandstanderclean"
         android:shadowColor="#000000"
-        android:shadowDx="2"
-        android:shadowDy="2"
-        android:shadowRadius="5"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="1"
         android:text="Puntos = 0"
         android:textColor="#77dd77"
-        android:textSize="23sp" />
+        android:textSize="20sp" />
 
     <TableLayout
         android:id="@+id/layout_palabraplay_opc"
         android:layout_width="match_parent"
-        android:layout_height="230dp"
+        android:layout_height="200dp"
         android:layout_above="@+id/button_pista_color"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
@@ -148,7 +148,7 @@
         android:layout_marginLeft="30dp"
         android:layout_marginEnd="30dp"
         android:layout_marginRight="30dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="5dp"
         android:background="@drawable/boton_border_mini">
 
         <TableRow
