@@ -162,7 +162,6 @@ public class PalabraPlayActivity extends AppCompatActivity {
             int numCorrecto = (int)(Math.random()*NUM_PALABRAS+0);
             palabraCorrecta = palabras[numCorrecto];
             imagen.setImageResource(idImagen[numCorrecto]);
-
             opcCorrecta = (int)(Math.random()*4+0);
             opciones[opcCorrecta].setText(palabraCorrecta);
 

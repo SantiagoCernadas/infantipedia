@@ -153,7 +153,7 @@ public class ColorPlayActivity extends AppCompatActivity {
 
             if(colorCorrecto(colorSelec)){
                 generarSonido(0);
-                txt_titulo.setText("Correcto");
+                txt_titulo.setText("Bien Hecho!");
                 minijuegoManager.sumarPunto();
                 if(minijuegoManager.getPuntos() % 5 == 0){
                     minijuegoManager.sumarPista();
@@ -162,7 +162,7 @@ public class ColorPlayActivity extends AppCompatActivity {
             else{
                 generarSonido(1);
                 generarSonido(2);
-                txt_titulo.setText("Incorrecto");
+                txt_titulo.setText("Ups.. no era.");
                 minijuegoManager.restarVida();
             }
             ImageViewCompat.setImageTintList(imagen, null);

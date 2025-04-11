@@ -10,24 +10,21 @@
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity
             android:name=".PlaysActivity.ColorPlayActivity"
-            android:screenOrientation="portrait"
-            android:exported="false">
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
             android:name=".ColorActivity"
-            android:screenOrientation="portrait"
-            android:exported="false">
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
             android:name=".ColoresActivity"
-            android:screenOrientation="portrait"
-            android:exported="false">
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
