@@ -10,6 +10,7 @@
     android:backgroundTintMode="src_over">
 
     <TableLayout
+        android:id="@+id/memoria_tabla"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@+id/txt_memoria_temporizador"
@@ -30,62 +31,73 @@
             android:layout_height="match_parent"
             android:layout_weight="1">
 
-            <Button
+            <ImageButton
                 android:id="@+id/memoria_medio_carta_1"
-                android:layout_width="match_parent"
+                android:layout_width="1dp"
                 android:layout_height="match_parent"
                 android:layout_margin="4dp"
                 android:layout_weight="1"
                 android:background="@drawable/boton_border_mini"
                 android:fontFamily="@font/grandstanderclean"
                 android:onClick="teclaPresionada"
+                android:padding="5dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/aejagua"
                 android:text="¿?"
                 android:textColor="#000000"
-                android:textSize="22sp"
+                android:textSize="25sp"
                 app:backgroundTint="#895129" />
 
-            <Button
+            <ImageButton
                 android:id="@+id/memoria_medio_carta_2"
-                android:layout_width="match_parent"
+                android:layout_width="1dp"
                 android:layout_height="match_parent"
                 android:layout_margin="4dp"
                 android:layout_weight="1"
                 android:background="@drawable/boton_border_mini"
                 android:fontFamily="@font/grandstanderclean"
                 android:onClick="teclaPresionada"
+                android:padding="5dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/aejarbol"
                 android:text="¿?"
                 android:textColor="#000000"
-                android:textSize="22sp"
+                android:textSize="25sp"
                 app:backgroundTint="#895129" />
 
-            <Button
+            <ImageButton
                 android:id="@+id/memoria_medio_carta_3"
-                android:layout_width="match_parent"
+                android:layout_width="1dp"
                 android:layout_height="match_parent"
                 android:layout_margin="4dp"
                 android:layout_weight="1"
                 android:background="@drawable/boton_border_mini"
                 android:fontFamily="@font/grandstanderclean"
                 android:onClick="teclaPresionada"
+                android:padding="5dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/aejagua"
                 android:text="¿?"
                 android:textColor="#000000"
-                android:textSize="22sp"
+                android:textSize="25sp"
                 app:backgroundTint="#895129" />
 
-            <Button
+            <ImageButton
                 android:id="@+id/memoria_medio_carta_4"
-                android:layout_width="match_parent"
+                android:layout_width="1dp"
                 android:layout_height="match_parent"
                 android:layout_margin="4dp"
                 android:layout_weight="1"
                 android:background="@drawable/boton_border_mini"
                 android:fontFamily="@font/grandstanderclean"
                 android:onClick="teclaPresionada"
+                android:padding="5dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/aejarbol"
                 android:text="¿?"
                 android:textColor="#000000"
-                android:textSize="22sp"
+                android:textSize="25sp"
                 app:backgroundTint="#895129" />
-
         </TableRow>
 
         <TableRow
@@ -93,62 +105,73 @@
             android:layout_height="match_parent"
             android:layout_weight="1">
 
-            <Button
+            <ImageButton
                 android:id="@+id/memoria_medio_carta_5"
-                android:layout_width="match_parent"
+                android:layout_width="1dp"
                 android:layout_height="match_parent"
                 android:layout_margin="4dp"
                 android:layout_weight="1"
                 android:background="@drawable/boton_border_mini"
                 android:fontFamily="@font/grandstanderclean"
                 android:onClick="teclaPresionada"
+                android:padding="5dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/aejarbol"
                 android:text="¿?"
                 android:textColor="#000000"
-                android:textSize="22sp"
+                android:textSize="25sp"
                 app:backgroundTint="#895129" />
 
-            <Button
+            <ImageButton
                 android:id="@+id/memoria_medio_carta_6"
-                android:layout_width="match_parent"
+                android:layout_width="1dp"
                 android:layout_height="match_parent"
                 android:layout_margin="4dp"
                 android:layout_weight="1"
                 android:background="@drawable/boton_border_mini"
                 android:fontFamily="@font/grandstanderclean"
                 android:onClick="teclaPresionada"
+                android:padding="5dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/aejagua"
                 android:text="¿?"
                 android:textColor="#000000"
-                android:textSize="22sp"
+                android:textSize="25sp"
                 app:backgroundTint="#895129" />
 
-            <Button
+            <ImageButton
                 android:id="@+id/memoria_medio_carta_7"
-                android:layout_width="match_parent"
+                android:layout_width="1dp"
                 android:layout_height="match_parent"
                 android:layout_margin="4dp"
                 android:layout_weight="1"
                 android:background="@drawable/boton_border_mini"
                 android:fontFamily="@font/grandstanderclean"
                 android:onClick="teclaPresionada"
+                android:padding="5dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/aejarbol"
                 android:text="¿?"
                 android:textColor="#000000"
-                android:textSize="22sp"
+                android:textSize="25sp"
                 app:backgroundTint="#895129" />
 
-            <Button
+            <ImageButton
                 android:id="@+id/memoria_medio_carta_8"
-                android:layout_width="match_parent"
+                android:layout_width="1dp"
                 android:layout_height="match_parent"
                 android:layout_margin="4dp"
                 android:layout_weight="1"
                 android:background="@drawable/boton_border_mini"
                 android:fontFamily="@font/grandstanderclean"
                 android:onClick="teclaPresionada"
+                android:padding="5dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/aejagua"
                 android:text="¿?"
                 android:textColor="#000000"
-                android:textSize="22sp"
+                android:textSize="25sp"
                 app:backgroundTint="#895129" />
-
         </TableRow>
 
         <TableRow
@@ -156,62 +179,73 @@
             android:layout_height="match_parent"
             android:layout_weight="1">
 
-            <Button
+            <ImageButton
                 android:id="@+id/memoria_medio_carta_9"
-                android:layout_width="match_parent"
+                android:layout_width="1dp"
                 android:layout_height="match_parent"
                 android:layout_margin="4dp"
                 android:layout_weight="1"
                 android:background="@drawable/boton_border_mini"
                 android:fontFamily="@font/grandstanderclean"
                 android:onClick="teclaPresionada"
+                android:padding="5dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/aejagua"
                 android:text="¿?"
                 android:textColor="#000000"
-                android:textSize="22sp"
+                android:textSize="25sp"
                 app:backgroundTint="#895129" />
 
-            <Button
+            <ImageButton
                 android:id="@+id/memoria_medio_carta_10"
-                android:layout_width="match_parent"
+                android:layout_width="1dp"
                 android:layout_height="match_parent"
                 android:layout_margin="4dp"
                 android:layout_weight="1"
                 android:background="@drawable/boton_border_mini"
                 android:fontFamily="@font/grandstanderclean"
                 android:onClick="teclaPresionada"
+                android:padding="5dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/aejarbol"
                 android:text="¿?"
                 android:textColor="#000000"
-                android:textSize="22sp"
+                android:textSize="25sp"
                 app:backgroundTint="#895129" />
 
-            <Button
+            <ImageButton
                 android:id="@+id/memoria_medio_carta_11"
-                android:layout_width="match_parent"
+                android:layout_width="1dp"
                 android:layout_height="match_parent"
                 android:layout_margin="4dp"
                 android:layout_weight="1"
                 android:background="@drawable/boton_border_mini"
                 android:fontFamily="@font/grandstanderclean"
                 android:onClick="teclaPresionada"
+                android:padding="5dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/aejagua"
                 android:text="¿?"
                 android:textColor="#000000"
-                android:textSize="22sp"
+                android:textSize="25sp"
                 app:backgroundTint="#895129" />
 
-            <Button
+            <ImageButton
                 android:id="@+id/memoria_medio_carta_12"
-                android:layout_width="match_parent"
+                android:layout_width="1dp"
                 android:layout_height="match_parent"
                 android:layout_margin="4dp"
                 android:layout_weight="1"
                 android:background="@drawable/boton_border_mini"
                 android:fontFamily="@font/grandstanderclean"
                 android:onClick="teclaPresionada"
+                android:padding="5dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/aejarbol"
                 android:text="¿?"
                 android:textColor="#000000"
-                android:textSize="22sp"
+                android:textSize="25sp"
                 app:backgroundTint="#895129" />
-
         </TableRow>
 
     </TableLayout>
@@ -242,16 +276,16 @@
         android:layout_alignParentBottom="true"
         android:layout_marginStart="0dp"
         android:layout_marginEnd="0dp"
-        android:layout_marginBottom="26dp"
+        android:layout_marginBottom="20dp"
         android:fontFamily="@font/grandstanderclean"
         android:gravity="center"
-        android:shadowColor="#888a8a"
+        android:shadowColor="#000000"
         android:shadowDx="2"
         android:shadowDy="2"
-        android:shadowRadius="5"
+        android:shadowRadius="2"
         android:text="30"
         android:textColor="#000000"
-        android:textSize="24sp"
+        android:textSize="30sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </RelativeLayout>

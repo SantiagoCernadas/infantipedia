@@ -32,7 +32,7 @@ public class JuegosActivity extends AppCompatActivity {
 
     public void memoria(View view){
         Intent i = new Intent(this, MemoriaActivity.class);
-        i.putExtra("dificultad","Facil");
+        i.putExtra("dificultad","Dificil");
         startActivity(i);
     }
 

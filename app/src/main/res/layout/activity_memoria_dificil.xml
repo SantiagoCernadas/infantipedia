@@ -10,8 +10,9 @@
     android:backgroundTintMode="src_over">
 
     <TableLayout
+        android:id="@+id/memoria_tabla"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_above="@+id/txt_memoria_temporizador"
         android:layout_below="@+id/txt_memoria_puntos"
         android:layout_alignParentStart="true"
@@ -19,87 +20,81 @@
         android:layout_gravity="center"
         android:layout_marginStart="10dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="26dp"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="10dp"
         android:layout_marginRight="20dp"
-        android:layout_marginBottom="26dp"
-        android:gravity="center">
+        android:layout_marginBottom="30dp"
+        android:stretchColumns="*">
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1">
 
-            <Button
+            <ImageButton
                 android:id="@+id/memoria_dificil_carta_1"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_margin="4dp"
                 android:layout_weight="1"
+                android:adjustViewBounds="true"
                 android:background="@drawable/boton_border_mini"
-                android:fontFamily="@font/grandstanderclean"
                 android:onClick="teclaPresionada"
-                android:text="¿?"
-                android:textColor="#000000"
-                android:textSize="20sp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/sejserpiente"
                 app:backgroundTint="#895129" />
 
-            <Button
+            <ImageButton
                 android:id="@+id/memoria_dificil_carta_2"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_margin="4dp"
                 android:layout_weight="1"
+                android:adjustViewBounds="true"
                 android:background="@drawable/boton_border_mini"
-                android:fontFamily="@font/grandstanderclean"
                 android:onClick="teclaPresionada"
-                android:text="¿?"
-                android:textColor="#000000"
-                android:textSize="20sp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/sejserpiente"
                 app:backgroundTint="#895129" />
 
-            <Button
+            <ImageButton
                 android:id="@+id/memoria_dificil_carta_3"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_margin="4dp"
                 android:layout_weight="1"
+                android:adjustViewBounds="true"
                 android:background="@drawable/boton_border_mini"
-                android:fontFamily="@font/grandstanderclean"
                 android:onClick="teclaPresionada"
-                android:text="¿?"
-                android:textColor="#000000"
-                android:textSize="20sp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/sejserpiente"
                 app:backgroundTint="#895129" />
 
-            <Button
+            <ImageButton
                 android:id="@+id/memoria_dificil_carta_4"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_margin="4dp"
                 android:layout_weight="1"
+                android:adjustViewBounds="true"
                 android:background="@drawable/boton_border_mini"
-                android:fontFamily="@font/grandstanderclean"
                 android:onClick="teclaPresionada"
-                android:text="¿?"
-                android:textColor="#000000"
-                android:textSize="20sp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/sejserpiente"
                 app:backgroundTint="#895129" />
 
-            <Button
+            <ImageButton
                 android:id="@+id/memoria_dificil_carta_5"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_margin="4dp"
                 android:layout_weight="1"
+                android:adjustViewBounds="true"
                 android:background="@drawable/boton_border_mini"
-                android:fontFamily="@font/grandstanderclean"
                 android:onClick="teclaPresionada"
-                android:text="¿?"
-                android:textColor="#000000"
-                android:textSize="20sp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/sejserpiente"
                 app:backgroundTint="#895129" />
-
         </TableRow>
 
         <TableRow
@@ -107,76 +102,70 @@
             android:layout_height="match_parent"
             android:layout_weight="1">
 
-            <Button
+            <ImageButton
                 android:id="@+id/memoria_dificil_carta_6"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_margin="4dp"
                 android:layout_weight="1"
+                android:adjustViewBounds="true"
                 android:background="@drawable/boton_border_mini"
-                android:fontFamily="@font/grandstanderclean"
                 android:onClick="teclaPresionada"
-                android:text="¿?"
-                android:textColor="#000000"
-                android:textSize="20sp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/sejserpiente"
                 app:backgroundTint="#895129" />
 
-            <Button
+            <ImageButton
                 android:id="@+id/memoria_dificil_carta_7"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_margin="4dp"
                 android:layout_weight="1"
+                android:adjustViewBounds="true"
                 android:background="@drawable/boton_border_mini"
-                android:fontFamily="@font/grandstanderclean"
                 android:onClick="teclaPresionada"
-                android:text="¿?"
-                android:textColor="#000000"
-                android:textSize="20sp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/sejserpiente"
                 app:backgroundTint="#895129" />
 
-            <Button
+            <ImageButton
                 android:id="@+id/memoria_dificil_carta_8"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_margin="4dp"
                 android:layout_weight="1"
+                android:adjustViewBounds="true"
                 android:background="@drawable/boton_border_mini"
-                android:fontFamily="@font/grandstanderclean"
                 android:onClick="teclaPresionada"
-                android:text="¿?"
-                android:textColor="#000000"
-                android:textSize="20sp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/sejserpiente"
                 app:backgroundTint="#895129" />
 
-            <Button
+            <ImageButton
                 android:id="@+id/memoria_dificil_carta_9"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_margin="4dp"
                 android:layout_weight="1"
+                android:adjustViewBounds="true"
                 android:background="@drawable/boton_border_mini"
-                android:fontFamily="@font/grandstanderclean"
                 android:onClick="teclaPresionada"
-                android:text="¿?"
-                android:textColor="#000000"
-                android:textSize="20sp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/sejserpiente"
                 app:backgroundTint="#895129" />
 
-            <Button
+            <ImageButton
                 android:id="@+id/memoria_dificil_carta_10"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_margin="4dp"
                 android:layout_weight="1"
+                android:adjustViewBounds="true"
                 android:background="@drawable/boton_border_mini"
-                android:fontFamily="@font/grandstanderclean"
                 android:onClick="teclaPresionada"
-                android:text="¿?"
-                android:textColor="#000000"
-                android:textSize="20sp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/jejjugo"
                 app:backgroundTint="#895129" />
-
         </TableRow>
 
         <TableRow
@@ -184,76 +173,70 @@
             android:layout_height="match_parent"
             android:layout_weight="1">
 
-            <Button
+            <ImageButton
                 android:id="@+id/memoria_dificil_carta_11"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_margin="4dp"
                 android:layout_weight="1"
+                android:adjustViewBounds="true"
                 android:background="@drawable/boton_border_mini"
-                android:fontFamily="@font/grandstanderclean"
                 android:onClick="teclaPresionada"
-                android:text="¿?"
-                android:textColor="#000000"
-                android:textSize="20sp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/sejserpiente"
                 app:backgroundTint="#895129" />
 
-            <Button
+            <ImageButton
                 android:id="@+id/memoria_dificil_carta_12"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_margin="4dp"
                 android:layout_weight="1"
+                android:adjustViewBounds="true"
                 android:background="@drawable/boton_border_mini"
-                android:fontFamily="@font/grandstanderclean"
                 android:onClick="teclaPresionada"
-                android:text="¿?"
-                android:textColor="#000000"
-                android:textSize="20sp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/sejserpiente"
                 app:backgroundTint="#895129" />
 
-            <Button
+            <ImageButton
                 android:id="@+id/memoria_dificil_carta_13"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_margin="4dp"
                 android:layout_weight="1"
+                android:adjustViewBounds="true"
                 android:background="@drawable/boton_border_mini"
-                android:fontFamily="@font/grandstanderclean"
                 android:onClick="teclaPresionada"
-                android:text="¿?"
-                android:textColor="#000000"
-                android:textSize="20sp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/sejserpiente"
                 app:backgroundTint="#895129" />
 
-            <Button
+            <ImageButton
                 android:id="@+id/memoria_dificil_carta_14"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_margin="4dp"
                 android:layout_weight="1"
+                android:adjustViewBounds="true"
                 android:background="@drawable/boton_border_mini"
-                android:fontFamily="@font/grandstanderclean"
                 android:onClick="teclaPresionada"
-                android:text="¿?"
-                android:textColor="#000000"
-                android:textSize="20sp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/sejserpiente"
                 app:backgroundTint="#895129" />
 
-            <Button
+            <ImageButton
                 android:id="@+id/memoria_dificil_carta_15"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_margin="4dp"
                 android:layout_weight="1"
+                android:adjustViewBounds="true"
                 android:background="@drawable/boton_border_mini"
-                android:fontFamily="@font/grandstanderclean"
                 android:onClick="teclaPresionada"
-                android:text="¿?"
-                android:textColor="#000000"
-                android:textSize="20sp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/sejserpiente"
                 app:backgroundTint="#895129" />
-
         </TableRow>
 
         <TableRow
@@ -261,76 +244,70 @@
             android:layout_height="match_parent"
             android:layout_weight="1">
 
-            <Button
+            <ImageButton
                 android:id="@+id/memoria_dificil_carta_16"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_margin="4dp"
                 android:layout_weight="1"
+                android:adjustViewBounds="true"
                 android:background="@drawable/boton_border_mini"
-                android:fontFamily="@font/grandstanderclean"
                 android:onClick="teclaPresionada"
-                android:text="¿?"
-                android:textColor="#000000"
-                android:textSize="20sp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/sejserpiente"
                 app:backgroundTint="#895129" />
 
-            <Button
+            <ImageButton
                 android:id="@+id/memoria_dificil_carta_17"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_margin="4dp"
                 android:layout_weight="1"
+                android:adjustViewBounds="true"
                 android:background="@drawable/boton_border_mini"
-                android:fontFamily="@font/grandstanderclean"
                 android:onClick="teclaPresionada"
-                android:text="¿?"
-                android:textColor="#000000"
-                android:textSize="20sp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/sejserpiente"
                 app:backgroundTint="#895129" />
 
-            <Button
+            <ImageButton
                 android:id="@+id/memoria_dificil_carta_18"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_margin="4dp"
                 android:layout_weight="1"
+                android:adjustViewBounds="true"
                 android:background="@drawable/boton_border_mini"
-                android:fontFamily="@font/grandstanderclean"
                 android:onClick="teclaPresionada"
-                android:text="¿?"
-                android:textColor="#000000"
-                android:textSize="20sp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/sejserpiente"
                 app:backgroundTint="#895129" />
 
-            <Button
+            <ImageButton
                 android:id="@+id/memoria_dificil_carta_19"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_margin="4dp"
                 android:layout_weight="1"
+                android:adjustViewBounds="true"
                 android:background="@drawable/boton_border_mini"
-                android:fontFamily="@font/grandstanderclean"
                 android:onClick="teclaPresionada"
-                android:text="¿?"
-                android:textColor="#000000"
-                android:textSize="20sp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/sejserpiente"
                 app:backgroundTint="#895129" />
 
-            <Button
+            <ImageButton
                 android:id="@+id/memoria_dificil_carta_20"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_margin="4dp"
                 android:layout_weight="1"
+                android:adjustViewBounds="true"
                 android:background="@drawable/boton_border_mini"
-                android:fontFamily="@font/grandstanderclean"
                 android:onClick="teclaPresionada"
-                android:text="¿?"
-                android:textColor="#000000"
-                android:textSize="20sp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/sejserpiente"
                 app:backgroundTint="#895129" />
-
         </TableRow>
 
     </TableLayout>
@@ -361,16 +338,16 @@
         android:layout_alignParentBottom="true"
         android:layout_marginStart="0dp"
         android:layout_marginEnd="0dp"
-        android:layout_marginBottom="26dp"
+        android:layout_marginBottom="20dp"
         android:fontFamily="@font/grandstanderclean"
         android:gravity="center"
-        android:shadowColor="#888a8a"
+        android:shadowColor="#000000"
         android:shadowDx="2"
         android:shadowDy="2"
-        android:shadowRadius="5"
+        android:shadowRadius="2"
         android:text="30"
         android:textColor="#000000"
-        android:textSize="24sp"
+        android:textSize="30sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </RelativeLayout>

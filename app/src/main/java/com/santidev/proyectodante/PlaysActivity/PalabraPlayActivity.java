@@ -26,7 +26,6 @@ import static com.santidev.proyectodante.MainActivity.volumenEfecto;
 
 public class PalabraPlayActivity extends AppCompatActivity {
 
-    private final int NUM_PALABRAS = 81;
     private Button[] opciones;
     private ImageView imagen;
     private String palabraCorrecta;
@@ -43,7 +42,6 @@ public class PalabraPlayActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_palabra_play);
-        PalabraPlayManager manager = new PalabraPlayManager();
 
         minijuegoManager = new MinijuegoManager(3,0,3,
                 findViewById(R.id.txt_palabra_vidas),findViewById(R.id.txt_palabra_puntos),findViewById(R.id.txt_pista_palabra),
@@ -51,14 +49,12 @@ public class PalabraPlayActivity extends AppCompatActivity {
 
 
         opciones = new Button[4];
-        palabras = new String[NUM_PALABRAS];
-        idImagen = new int[NUM_PALABRAS];
         txt_titulo = findViewById(R.id.txt_palabra_titulo);
 
         asignarSonidos();
         conectarID();
-        manager.setImagenes(idImagen);
-        manager.setPalabras(palabras);
+        idImagen = PalabraPlayManager.setImagenes();
+        palabras =  PalabraPlayManager.setPalabras();
         generarProblema();
     }
 
@@ -159,7 +155,7 @@ public class PalabraPlayActivity extends AppCompatActivity {
         }
         else{
             pintarBotones(opciones);
-            int numCorrecto = (int)(Math.random()*NUM_PALABRAS+0);
+            int numCorrecto = (int)(Math.random()*idImagen.length+0);
             palabraCorrecta = palabras[numCorrecto];
             imagen.setImageResource(idImagen[numCorrecto]);
             opcCorrecta = (int)(Math.random()*4+0);
@@ -168,7 +164,7 @@ public class PalabraPlayActivity extends AppCompatActivity {
             for(int i = 0;i < opciones.length;i++){
                 if(i != opcCorrecta){
                     do{
-                        opciones[i].setText(palabras[(int)(Math.random()*NUM_PALABRAS+0)]);
+                        opciones[i].setText(palabras[(int)(Math.random()*idImagen.length+0)]);
                     }while (esRepetido(i));
 
                 }
