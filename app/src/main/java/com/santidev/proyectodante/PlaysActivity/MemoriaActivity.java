@@ -2,13 +2,18 @@ package com.santidev.proyectodante.PlaysActivity;
 
 import static com.santidev.proyectodante.MainActivity.pause;
 import static com.santidev.proyectodante.MainActivity.start;
+import static com.santidev.proyectodante.MainActivity.volumenEfecto;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.widget.ImageViewCompat;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.res.ColorStateList;
 import android.graphics.Color;
+import android.media.AudioManager;
+import android.media.SoundPool;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.Handler;
@@ -29,14 +34,19 @@ import java.util.List;
 import java.util.Random;
 
 public class MemoriaActivity extends AppCompatActivity {
-    private int puntos,cantCartas,cantFilas;
+    private int puntos,cantCartas,cantFilas, aciertos;
     private long segundos;
     private TextView txtPuntos,txtTiempo;
     private CountDownTimer countDownTimer,inicio;
-    private boolean botonesDisponibles,partidaIniciada,cartasDimensionadas;
+    private boolean botonesDisponibles,partidaIniciada;
     private ImageButton[] cartas;
     private int[] idImagenes;
     private int[] idImagenesProblema;
+    private SoundPool[] sp;
+    private int[] sonidosRep;
+    private int[] posCartasSeleccionadas;
+
+
     private TableLayout tabla;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,8 +56,7 @@ public class MemoriaActivity extends AppCompatActivity {
         idImagenes = PalabraPlayManager.setImagenes();
         botonesDisponibles = false;
         partidaIniciada = false;
-        cartasDimensionadas = false;
-
+        aciertos = 0;
 
 
         if(dif.equals("Facil")){
@@ -76,8 +85,38 @@ public class MemoriaActivity extends AppCompatActivity {
         idImagenesProblema = new int[cantCartas];
         txtTiempo = findViewById(R.id.txt_memoria_temporizador);
         tabla = findViewById(R.id.memoria_tabla);
-        getPartidaMemoria();
+        txtPuntos = findViewById(R.id.txt_memoria_puntos);
+        posCartasSeleccionadas = new int[]{-1,-1};
 
+        asignarSonidos();
+        ocultarCartas();
+
+
+        Handler handler = new Handler();
+        handler. postDelayed(new Runnable() {
+            public void run() {
+                dimensionarCartas();
+                getPartidaMemoria();
+            }
+        }, 100);
+
+    }
+
+    public void asignarSonidos() {
+        sp = new SoundPool[5];
+        sonidosRep = new int[5];
+
+        for(int i = 0;i < sp.length;i++){
+            sp[i] = new SoundPool(1, AudioManager.STREAM_MUSIC,1);
+        }
+        sonidosRep[0] = sp[0].load(this,R.raw.sonidocorrecto,1);
+        sonidosRep[1] = sp[1].load(this,R.raw.sonidofallar,1);
+        sonidosRep[2] = sp[2].load(this,R.raw.tatetiding,1);
+        sonidosRep[3] = sp[3].load(this,R.raw.sonidocuentaregresiva,1);
+        sonidosRep[4] = sp[4].load(this,R.raw.sonidocuentaregresiva2,1);
+    }
+    public void generarSonido(int i){
+        sp[i].play(sonidosRep[i],volumenEfecto / 20f,volumenEfecto / 20f,1,0,1);
     }
 
     private void dimensionarCartas() {
@@ -90,11 +129,13 @@ public class MemoriaActivity extends AppCompatActivity {
     private void mostrarCartas() {
         for(int i = 0;i < cartas.length;i++){
             cartas[i].setImageResource(idImagenesProblema[i]);
+            cartas[i].setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#77dd77")));
         }
 
     }
 
     private void getPartidaMemoria() {
+
 
         for(int i = 0; i < idImagenesProblema.length/2 ;i++){
             int randomAux;
@@ -115,20 +156,49 @@ public class MemoriaActivity extends AppCompatActivity {
         }
 
         mostrarCartas();
-
+        habilitarCartas();
         iniciarRonda(4);
     }
 
+    private void habilitarCartas() {
+        for(int i = 0;i < cartas.length;i++){
+            cartas[i].setEnabled(true);
+        }
+    }
+
     private void iniciarRonda(int tiempo) {
+        Handler handler = new Handler();
+        handler. postDelayed(new Runnable() {
+            public void run() {
+                generarSonido(3);
+            }
+        }, 1000);
+
+        handler. postDelayed(new Runnable() {
+            public void run() {
+                generarSonido(3);
+            }
+        }, 2000);
+
+        handler. postDelayed(new Runnable() {
+            public void run() {
+                generarSonido(3);
+            }
+        }, 3000);
+
+        handler. postDelayed(new Runnable() {
+            public void run() {
+                generarSonido(4);
+            }
+        }, 4000);
+
+
         inicio = new CountDownTimer(tiempo * 1000,1000){
 
             public void onTick(long millisUntilFinished) {
                 segundos = (millisUntilFinished /1000);
                 txtTiempo.setTextColor(Color.GREEN);
                 txtTiempo.setText(String.valueOf(segundos));
-                if(!cartasDimensionadas && segundos == 1){
-                    dimensionarCartas();
-                }
             }
 
             public void onFinish() {
@@ -142,6 +212,7 @@ public class MemoriaActivity extends AppCompatActivity {
     private void ocultarCartas() {
         for(int i = 0;i < cartas.length;i++){
             cartas[i].setImageResource(R.drawable.signospregunta);
+            cartas[i].setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#895129")));
         }
     }
 
@@ -156,8 +227,69 @@ public class MemoriaActivity extends AppCompatActivity {
 
     public void teclaPresionada(View view){
         if(botonesDisponibles){
+            //77dd77
+            //.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#77dd77")));
+
             int cartaPresionada = buscarCarta(cartas,view.getId());
-            cartas[cartaPresionada].setImageResource(idImagenesProblema[cartaPresionada]);
+            if(posCartasSeleccionadas[0] == -1){
+                posCartasSeleccionadas[0] = cartaPresionada;
+                cartas[cartaPresionada].setImageResource(idImagenesProblema[cartaPresionada]);
+                cartas[cartaPresionada].setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#77dd77")));
+                generarSonido(2);
+            }
+            else if(posCartasSeleccionadas[0] == cartaPresionada){
+                cartas[cartaPresionada].setImageResource(R.drawable.signospregunta);
+                posCartasSeleccionadas[0] = -1;
+                cartas[cartaPresionada].setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#895129")));
+            }
+            else{
+                botonesDisponibles = false;
+                posCartasSeleccionadas[1] = cartaPresionada;
+                cartas[cartaPresionada].setImageResource(idImagenesProblema[cartaPresionada]);
+                cartas[cartaPresionada].setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#77dd77")));
+                generarSonido(2);
+                if(idImagenesProblema[posCartasSeleccionadas[0]] == idImagenesProblema[posCartasSeleccionadas[1]]){
+                    puntos++;
+                    txtPuntos.setText("Puntos = " + puntos);
+                    generarSonido(0);
+                    cartas[posCartasSeleccionadas[0]].setEnabled(false);
+                    cartas[posCartasSeleccionadas[1]].setEnabled(false);
+                    posCartasSeleccionadas[0] = -1;
+                    posCartasSeleccionadas[1] = -1;
+                    aciertos++;
+                    botonesDisponibles = true;
+                    if(aciertos == cantCartas/2){
+                        aciertos = 0;
+                        botonesDisponibles = false;
+                        countDownTimer.cancel();
+                        getPartidaMemoria();
+                    }
+                }
+                else{
+                    Handler handler = new Handler();
+                    handler.postDelayed(new Runnable() {
+                        public void run() {
+                            generarSonido(1);
+                            cartas[posCartasSeleccionadas[0]].setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#ff6961")));
+                            cartas[posCartasSeleccionadas[1]].setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#ff6961")));
+                        }
+
+                    }, 500);
+
+                    handler.postDelayed(new Runnable() {
+                        public void run() {
+                            cartas[posCartasSeleccionadas[0]].setImageResource(R.drawable.signospregunta);
+                            cartas[posCartasSeleccionadas[1]].setImageResource(R.drawable.signospregunta);
+                            cartas[posCartasSeleccionadas[0]].setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#895129")));
+                            cartas[posCartasSeleccionadas[1]].setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#895129")));
+                            posCartasSeleccionadas[0] = -1;
+                            posCartasSeleccionadas[1] = -1;
+                            botonesDisponibles = true;
+                        }
+                    }, 1500);
+                }
+
+            }
         }
     }
 
