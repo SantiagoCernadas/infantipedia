@@ -129,7 +129,7 @@ public class MemoriaActivity extends AppCompatActivity {
     private void mostrarCartas() {
         for(int i = 0;i < cartas.length;i++){
             cartas[i].setImageResource(idImagenesProblema[i]);
-            cartas[i].setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#77dd77")));
+            cartas[i].setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#9FEEEE")));
         }
 
     }
@@ -234,7 +234,7 @@ public class MemoriaActivity extends AppCompatActivity {
             if(posCartasSeleccionadas[0] == -1){
                 posCartasSeleccionadas[0] = cartaPresionada;
                 cartas[cartaPresionada].setImageResource(idImagenesProblema[cartaPresionada]);
-                cartas[cartaPresionada].setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#77dd77")));
+                cartas[cartaPresionada].setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#9FEEEE")));
                 generarSonido(2);
             }
             else if(posCartasSeleccionadas[0] == cartaPresionada){
@@ -246,7 +246,8 @@ public class MemoriaActivity extends AppCompatActivity {
                 botonesDisponibles = false;
                 posCartasSeleccionadas[1] = cartaPresionada;
                 cartas[cartaPresionada].setImageResource(idImagenesProblema[cartaPresionada]);
-                cartas[cartaPresionada].setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#77dd77")));
+                cartas[cartaPresionada].setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#9FEEEE")));
+
                 generarSonido(2);
                 if(idImagenesProblema[posCartasSeleccionadas[0]] == idImagenesProblema[posCartasSeleccionadas[1]]){
                     puntos++;
@@ -254,6 +255,8 @@ public class MemoriaActivity extends AppCompatActivity {
                     generarSonido(0);
                     cartas[posCartasSeleccionadas[0]].setEnabled(false);
                     cartas[posCartasSeleccionadas[1]].setEnabled(false);
+                    cartas[posCartasSeleccionadas[0]].setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#77dd77")));
+                    cartas[posCartasSeleccionadas[1]].setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#77dd77")));
                     posCartasSeleccionadas[0] = -1;
                     posCartasSeleccionadas[1] = -1;
                     aciertos++;

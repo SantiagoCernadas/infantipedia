@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PlaysActivity.MemoriaActivity"
+    android:background="@drawable/backgroundjuego"
+    android:backgroundTint="#40000000"
+    android:backgroundTintMode="src_over">
+
+    <TableLayout
+        android:id="@+id/memoria_tabla"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/txt_memoria_temporizador"
+        android:layout_below="@+id/txt_memoria_puntos"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="center"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="26dp"
+        android:gravity="center">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageButton
+                android:id="@+id/memoria_medio_carta_1"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/boton_border_mini"
+                android:fontFamily="@font/grandstanderclean"
+                android:onClick="teclaPresionada"
+                android:padding="5dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/aejagua"
+                android:text="¿?"
+                android:textColor="#000000"
+                android:textSize="25sp"
+                app:backgroundTint="#895129" />
+
+            <ImageButton
+                android:id="@+id/memoria_medio_carta_2"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/boton_border_mini"
+                android:fontFamily="@font/grandstanderclean"
+                android:onClick="teclaPresionada"
+                android:padding="5dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/aejarbol"
+                android:text="¿?"
+                android:textColor="#000000"
+                android:textSize="25sp"
+                app:backgroundTint="#895129" />
+
+            <ImageButton
+                android:id="@+id/memoria_medio_carta_3"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/boton_border_mini"
+                android:fontFamily="@font/grandstanderclean"
+                android:onClick="teclaPresionada"
+                android:padding="5dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/aejagua"
+                android:text="¿?"
+                android:textColor="#000000"
+                android:textSize="25sp"
+                app:backgroundTint="#895129" />
+
+            <ImageButton
+                android:id="@+id/memoria_medio_carta_4"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/boton_border_mini"
+                android:fontFamily="@font/grandstanderclean"
+                android:onClick="teclaPresionada"
+                android:padding="5dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/aejarbol"
+                android:text="¿?"
+                android:textColor="#000000"
+                android:textSize="25sp"
+                app:backgroundTint="#895129" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageButton
+                android:id="@+id/memoria_medio_carta_5"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/boton_border_mini"
+                android:fontFamily="@font/grandstanderclean"
+                android:onClick="teclaPresionada"
+                android:padding="5dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/aejarbol"
+                android:text="¿?"
+                android:textColor="#000000"
+                android:textSize="25sp"
+                app:backgroundTint="#895129" />
+
+            <ImageButton
+                android:id="@+id/memoria_medio_carta_6"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/boton_border_mini"
+                android:fontFamily="@font/grandstanderclean"
+                android:onClick="teclaPresionada"
+                android:padding="5dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/aejagua"
+                android:text="¿?"
+                android:textColor="#000000"
+                android:textSize="25sp"
+                app:backgroundTint="#895129" />
+
+            <ImageButton
+                android:id="@+id/memoria_medio_carta_7"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/boton_border_mini"
+                android:fontFamily="@font/grandstanderclean"
+                android:onClick="teclaPresionada"
+                android:padding="5dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/aejarbol"
+                android:text="¿?"
+                android:textColor="#000000"
+                android:textSize="25sp"
+                app:backgroundTint="#895129" />
+
+            <ImageButton
+                android:id="@+id/memoria_medio_carta_8"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/boton_border_mini"
+                android:fontFamily="@font/grandstanderclean"
+                android:onClick="teclaPresionada"
+                android:padding="5dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/aejagua"
+                android:text="¿?"
+                android:textColor="#000000"
+                android:textSize="25sp"
+                app:backgroundTint="#895129" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageButton
+                android:id="@+id/memoria_medio_carta_9"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/boton_border_mini"
+                android:fontFamily="@font/grandstanderclean"
+                android:onClick="teclaPresionada"
+                android:padding="5dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/aejagua"
+                android:text="¿?"
+                android:textColor="#000000"
+                android:textSize="25sp"
+                app:backgroundTint="#895129" />
+
+            <ImageButton
+                android:id="@+id/memoria_medio_carta_10"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/boton_border_mini"
+                android:fontFamily="@font/grandstanderclean"
+                android:onClick="teclaPresionada"
+                android:padding="5dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/aejarbol"
+                android:text="¿?"
+                android:textColor="#000000"
+                android:textSize="25sp"
+                app:backgroundTint="#895129" />
+
+            <ImageButton
+                android:id="@+id/memoria_medio_carta_11"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/boton_border_mini"
+                android:fontFamily="@font/grandstanderclean"
+                android:onClick="teclaPresionada"
+                android:padding="5dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/aejagua"
+                android:text="¿?"
+                android:textColor="#000000"
+                android:textSize="25sp"
+                app:backgroundTint="#895129" />
+
+            <ImageButton
+                android:id="@+id/memoria_medio_carta_12"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/boton_border_mini"
+                android:fontFamily="@font/grandstanderclean"
+                android:onClick="teclaPresionada"
+                android:padding="5dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/aejarbol"
+                android:text="¿?"
+                android:textColor="#000000"
+                android:textSize="25sp"
+                app:backgroundTint="#895129" />
+        </TableRow>
+
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/txt_memoria_puntos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="0dp"
+        android:background="#80FFFFFF"
+        android:fontFamily="@font/grandstanderclean"
+        android:gravity="center"
+        android:shadowColor="#000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="2"
+        android:text="Puntos = 0 "
+        android:textColor="#77dd77"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/txt_memoria_temporizador"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/grandstanderclean"
+        android:gravity="center"
+        android:shadowColor="#000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="2"
+        android:text="30"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</RelativeLayout>
