@@ -1,0 +1,1 @@
+Infantipedia es una app 📱 que tiene como objetivo ser educativa y a la vez divertida! Lo comenze como un proyecto personal💻 🧑 para aprender a desarrollar aplicaciónes moviles y me gustaría lanzarla a la play store para compartirla con el mundo!. 
