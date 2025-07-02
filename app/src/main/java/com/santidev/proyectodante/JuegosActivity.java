@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.santidev.proyectodante.PlaysActivity.AhorcadoActivity;
 import com.santidev.proyectodante.PlaysActivity.HowPlayActivity;
 import com.santidev.proyectodante.PlaysActivity.MemoriaActivity;
 
@@ -32,6 +33,11 @@ public class JuegosActivity extends AppCompatActivity {
 
     public void memoria(View view){
         Intent i = new Intent(this, MemoriaDificultadActivity.class);
+        startActivity(i);
+    }
+
+    public void ahorcado(View view){
+        Intent i = new Intent(this, AhorcadoActivity.class);
         startActivity(i);
     }
 
