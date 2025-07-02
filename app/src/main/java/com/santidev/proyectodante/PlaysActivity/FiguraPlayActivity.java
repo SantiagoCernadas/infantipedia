@@ -71,15 +71,14 @@ public class FiguraPlayActivity extends AppCompatActivity {
     }
 
     public void asignarSonidos() {
-        sp = new SoundPool[3];
-        sonidosRep = new int[3];
+        sp = new SoundPool[2];
+        sonidosRep = new int[2];
 
         for(int i = 0;i < sp.length;i++){
             sp[i] = new SoundPool(1, AudioManager.STREAM_MUSIC,1);
         }
         sonidosRep[0] = sp[0].load(this,R.raw.sonidocorrecto,1);
         sonidosRep[1] = sp[1].load(this,R.raw.sonidofallar,1);
-        sonidosRep[2] = sp[2].load(this,R.raw.sonidoohno,1);
     }
 
     public void generarSonido(int i){
@@ -137,7 +136,6 @@ public class FiguraPlayActivity extends AppCompatActivity {
         }
         else{
             generarSonido(1);
-            generarSonido(2);
             titulo.setText("ups.. no era");
             minijuegoManager.restarVida();
         }

@@ -26,7 +26,6 @@ import static com.santidev.proyectodante.MainActivity.volumenEfecto;
 
 public class PalabraPlayActivity extends AppCompatActivity {
 
-    private final int NUM_PALABRAS = 81;
     private Button[] opciones;
     private ImageView imagen;
     private String palabraCorrecta;
@@ -43,7 +42,6 @@ public class PalabraPlayActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_palabra_play);
-        PalabraPlayManager manager = new PalabraPlayManager();
 
         minijuegoManager = new MinijuegoManager(3,0,3,
                 findViewById(R.id.txt_palabra_vidas),findViewById(R.id.txt_palabra_puntos),findViewById(R.id.txt_pista_palabra),
@@ -51,27 +49,24 @@ public class PalabraPlayActivity extends AppCompatActivity {
 
 
         opciones = new Button[4];
-        palabras = new String[NUM_PALABRAS];
-        idImagen = new int[NUM_PALABRAS];
         txt_titulo = findViewById(R.id.txt_palabra_titulo);
 
         asignarSonidos();
         conectarID();
-        manager.setImagenes(idImagen);
-        manager.setPalabras(palabras);
+        idImagen = PalabraPlayManager.setImagenes();
+        palabras =  PalabraPlayManager.setPalabras();
         generarProblema();
     }
 
     public void asignarSonidos() {
-        sp = new SoundPool[3];
-        sonidosRep = new int[3];
+        sp = new SoundPool[2];
+        sonidosRep = new int[2];
 
         for(int i = 0;i < sp.length;i++){
             sp[i] = new SoundPool(1,AudioManager.STREAM_MUSIC,1);
         }
         sonidosRep[0] = sp[0].load(this,R.raw.sonidocorrecto,1);
         sonidosRep[1] = sp[1].load(this,R.raw.sonidofallar,1);
-        sonidosRep[2] = sp[2].load(this,R.raw.sonidoohno,1);
     }
     public void generarSonido(int i){
         sp[i].play(sonidosRep[i],volumenEfecto / 50f,volumenEfecto / 50f,1,0,1);
@@ -141,7 +136,6 @@ public class PalabraPlayActivity extends AppCompatActivity {
             opciones[i].setBackgroundColor(Color.RED);
             opciones[opcCorrecta].setBackgroundColor(Color.GREEN);
             generarSonido(1);
-            generarSonido(2);
             minijuegoManager.restarVida();
             txt_titulo.setText("Ups.. no era.");
         }
@@ -159,7 +153,7 @@ public class PalabraPlayActivity extends AppCompatActivity {
         }
         else{
             pintarBotones(opciones);
-            int numCorrecto = (int)(Math.random()*NUM_PALABRAS+0);
+            int numCorrecto = (int)(Math.random()*idImagen.length+0);
             palabraCorrecta = palabras[numCorrecto];
             imagen.setImageResource(idImagen[numCorrecto]);
             opcCorrecta = (int)(Math.random()*4+0);
@@ -168,7 +162,7 @@ public class PalabraPlayActivity extends AppCompatActivity {
             for(int i = 0;i < opciones.length;i++){
                 if(i != opcCorrecta){
                     do{
-                        opciones[i].setText(palabras[(int)(Math.random()*NUM_PALABRAS+0)]);
+                        opciones[i].setText(palabras[(int)(Math.random()*idImagen.length+0)]);
                     }while (esRepetido(i));
 
                 }

@@ -8,10 +8,10 @@ android {
 
     defaultConfig {
         applicationId 'com.santidev.infantipedia'
-        minSdkVersion 21
-        targetSdk 34
-        versionCode 5
-        versionName "1.04"
+        minSdkVersion 23
+        targetSdk 36
+        versionCode 6
+        versionName "1.05"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }

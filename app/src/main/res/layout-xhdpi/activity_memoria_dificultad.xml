@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroundjuego"
+    tools:context=".MemoriaDificultadActivity"
+    android:backgroundTint="#40000000"
+    android:backgroundTintMode="src_over">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/grandstanderclean"
+            android:gravity="center"
+            android:shadowColor="#000000"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="1"
+            android:text="Seleccione una dificultad"
+            android:textColor="#ff6961"
+            android:textSize="24sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="30dp"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/memoria_dif_facil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".1"
+                android:background="@drawable/boton_border"
+                android:backgroundTint="#77dd77"
+                android:contentDescription="@string/txt_vacio"
+                android:fontFamily="@font/grandstanderclean"
+                android:onClick="getDificultad"
+                android:shadowColor="#888a8a"
+                android:shadowDx="3"
+                android:shadowDy="2"
+                android:shadowRadius="1"
+                android:text="Facil"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/textView24"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:layout_weight=".05"
+                android:fontFamily="@font/grandstanderclean"
+                android:gravity="center"
+                android:shadowColor="#000000"
+                android:shadowDx="3"
+                android:shadowDy="2"
+                android:shadowRadius="1"
+                android:text="6 cartas"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/memoria_dif_medio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".1"
+                android:background="@drawable/boton_border"
+                android:backgroundTint="#ffcc50"
+                android:contentDescription="@string/txt_vacio"
+                android:fontFamily="@font/grandstanderclean"
+                android:onClick="getDificultad"
+                android:shadowColor="#888a8a"
+                android:shadowDx="3"
+                android:shadowDy="2"
+                android:shadowRadius="1"
+                android:text="Medio"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/textView26"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:layout_weight=".05"
+                android:fontFamily="@font/grandstanderclean"
+                android:gravity="center"
+                android:shadowColor="#000000"
+                android:shadowDx="3"
+                android:shadowDy="2"
+                android:shadowRadius="1"
+                android:text="12 cartas"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/memoria_dif_dificil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".1"
+                android:background="@drawable/boton_border"
+                android:backgroundTint="#e2504c"
+                android:contentDescription="@string/txt_vacio"
+                android:fontFamily="@font/grandstanderclean"
+                android:onClick="getDificultad"
+                android:shadowColor="#888a8a"
+                android:shadowDx="3"
+                android:shadowDy="2"
+                android:shadowRadius="1"
+                android:text="Dificil"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/textView27"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:layout_weight=".05"
+                android:fontFamily="@font/grandstanderclean"
+                android:gravity="center"
+                android:shadowColor="#000000"
+                android:shadowDx="3"
+                android:shadowDy="2"
+                android:shadowRadius="1"
+                android:text="20 cartas"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>

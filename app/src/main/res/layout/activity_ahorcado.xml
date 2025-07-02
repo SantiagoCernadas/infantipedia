@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PlaysActivity.AhorcadoActivity"
+    android:background="@drawable/backgroundjuego"
+    android:backgroundTint="#40000000"
+    android:backgroundTintMode="src_over">
+
+    <TextView
+        android:id="@+id/txt_ahorcado_puntos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="0dp"
+        android:background="#80FFFFFF"
+        android:fontFamily="@font/grandstanderclean"
+        android:gravity="center"
+        android:shadowColor="#000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="2"
+        android:text="Puntos = 0 "
+        android:textColor="#77dd77"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/txt_titulo_ahorcado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_ahorcado_puntos"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/grandstanderclean"
+        android:shadowColor="#000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="2"
+        android:text="¿Que palabra es?"
+        android:textColor="#84b6f4"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/txt_ahorcado_palabra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/letras_ahorcado"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/grandstanderclean"
+        android:letterSpacing=".3"
+        android:shadowColor="#000000"
+        android:shadowDx="2"
+        android:shadowDy="5"
+        android:shadowRadius="5"
+        android:text="TI__E"
+        android:textColor="#84b6f4"
+        android:textSize="24sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/txt_ahorcado_palabra"
+        android:layout_below="@+id/txt_titulo_ahorcado"
+        android:layout_margin="10dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/img_ahorcado_persona"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#8FFFFFFF"
+            app:srcCompat="@drawable/ahorcadoimg2" />
+
+        <ImageView
+            android:id="@+id/img_ahorcado_enigma"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/signospregunta" />
+    </LinearLayout>
+
+    <TableLayout
+        android:id="@+id/letras_ahorcado"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/button_a_ahorcado"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/boton_border_mini"
+                android:fontFamily="@font/grandstanderclean"
+                android:onClick="teclaPresionada"
+                android:text="@string/button_a"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                app:backgroundTint="#9FEEEE" />
+
+            <Button
+                android:id="@+id/button_b_ahorcado"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/boton_border_mini"
+                android:fontFamily="@font/grandstanderclean"
+                android:onClick="teclaPresionada"
+                android:text="@string/button_b"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                app:backgroundTint="#9FEEEE" />
+
+            <Button
+                android:id="@+id/button_c_ahorcado"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/boton_border_mini"
+                android:fontFamily="@font/grandstanderclean"
+                android:onClick="teclaPresionada"
+                android:text="@string/button_c"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                app:backgroundTint="#9FEEEE" />
+
+            <Button
+                android:id="@+id/button_d_ahorcado"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/boton_border_mini"
+                android:fontFamily="@font/grandstanderclean"
+                android:onClick="teclaPresionada"
+                android:text="@string/button_d"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                app:backgroundTint="#9FEEEE" />
+
+            <Button
+                android:id="@+id/button_e_ahorcado"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/boton_border_mini"
+                android:fontFamily="@font/grandstanderclean"
+                android:onClick="teclaPresionada"
+                android:text="@string/button_e"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                app:backgroundTint="#9FEEEE" />
+
+            <Button
+                android:id="@+id/button_f_ahorcado"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/boton_border_mini"
+                android:fontFamily="@font/grandstanderclean"
+                android:onClick="teclaPresionada"
+                android:text="@string/button_f"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                app:backgroundTint="#9FEEEE" />
+
+            <Button
+                android:id="@+id/button_g_ahorcado"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/boton_border_mini"
+                android:fontFamily="@font/grandstanderclean"
+                android:onClick="teclaPresionada"
+                android:text="@string/button_g"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                app:backgroundTint="#9FEEEE" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/button_h_ahorcado"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/boton_border_mini"
+                android:fontFamily="@font/grandstanderclean"
+                android:onClick="teclaPresionada"
+                android:text="@string/button_h"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                app:backgroundTint="#9FEEEE" />
+
+            <Button
+                android:id="@+id/button_i_ahorcado"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/boton_border_mini"
+                android:fontFamily="@font/grandstanderclean"
+                android:onClick="teclaPresionada"
+                android:text="@string/button_i"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                app:backgroundTint="#9FEEEE" />
+
+            <Button
+                android:id="@+id/button_j_ahorcado"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/boton_border_mini"
+                android:fontFamily="@font/grandstanderclean"
+                android:onClick="teclaPresionada"
+                android:text="@string/button_j"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                app:backgroundTint="#9FEEEE" />
+
+            <Button
+                android:id="@+id/button_k_ahorcado"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/boton_border_mini"
+                android:fontFamily="@font/grandstanderclean"
+                android:onClick="teclaPresionada"
+                android:text="@string/button_k"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                app:backgroundTint="#9FEEEE" />
+
+            <Button
+                android:id="@+id/button_l_ahorcado"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/boton_border_mini"
+                android:fontFamily="@font/grandstanderclean"
+                android:onClick="teclaPresionada"
+                android:text="@string/button_l"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                app:backgroundTint="#9FEEEE" />
+
+            <Button
+                android:id="@+id/button_m_ahorcado"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/boton_border_mini"
+                android:fontFamily="@font/grandstanderclean"
+                android:onClick="teclaPresionada"
+                android:text="@string/button_m"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                app:backgroundTint="#9FEEEE" />
+
+            <Button
+                android:id="@+id/button_n_ahorcado"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/boton_border_mini"
+                android:fontFamily="@font/grandstanderclean"
+                android:onClick="teclaPresionada"
+                android:text="@string/button_n"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                app:backgroundTint="#9FEEEE" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/button_ñ_ahorcado"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/boton_border_mini"
+                android:fontFamily="@font/grandstanderclean"
+                android:onClick="teclaPresionada"
+                android:text="@string/button_ñ"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                app:backgroundTint="#9FEEEE" />
+
+            <Button
+                android:id="@+id/button_o_ahorcado"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/boton_border_mini"
+                android:fontFamily="@font/grandstanderclean"
+                android:onClick="teclaPresionada"
+                android:text="@string/button_o"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                app:backgroundTint="#9FEEEE" />
+
+            <Button
+                android:id="@+id/button_p_ahorcado"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/boton_border_mini"
+                android:fontFamily="@font/grandstanderclean"
+                android:onClick="teclaPresionada"
+                android:text="@string/button_p"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                app:backgroundTint="#9FEEEE" />
+
+            <Button
+                android:id="@+id/button_q_ahorcado"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/boton_border_mini"
+                android:fontFamily="@font/grandstanderclean"
+                android:onClick="teclaPresionada"
+                android:text="@string/button_q"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                app:backgroundTint="#9FEEEE" />
+
+            <Button
+                android:id="@+id/button_r_ahorcado"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/boton_border_mini"
+                android:fontFamily="@font/grandstanderclean"
+                android:onClick="teclaPresionada"
+                android:text="@string/button_r"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                app:backgroundTint="#9FEEEE" />
+
+            <Button
+                android:id="@+id/button_s_ahorcado"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/boton_border_mini"
+                android:fontFamily="@font/grandstanderclean"
+                android:onClick="teclaPresionada"
+                android:text="@string/button_s"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                app:backgroundTint="#9FEEEE" />
+
+            <Button
+                android:id="@+id/button_t_ahorcado"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/boton_border_mini"
+                android:fontFamily="@font/grandstanderclean"
+                android:onClick="teclaPresionada"
+                android:text="@string/button_t"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                app:backgroundTint="#9FEEEE" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/button_u_ahorcado"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/boton_border_mini"
+                android:fontFamily="@font/grandstanderclean"
+                android:onClick="teclaPresionada"
+                android:text="@string/button_u"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                app:backgroundTint="#9FEEEE" />
+
+            <Button
+                android:id="@+id/button_v_ahorcado"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/boton_border_mini"
+                android:fontFamily="@font/grandstanderclean"
+                android:onClick="teclaPresionada"
+                android:text="@string/button_v"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                app:backgroundTint="#9FEEEE" />
+
+            <Button
+                android:id="@+id/button_w_ahorcado"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/boton_border_mini"
+                android:fontFamily="@font/grandstanderclean"
+                android:onClick="teclaPresionada"
+                android:text="@string/button_w"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                app:backgroundTint="#9FEEEE" />
+
+            <Button
+                android:id="@+id/button_x_ahorcado"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/boton_border_mini"
+                android:fontFamily="@font/grandstanderclean"
+                android:onClick="teclaPresionada"
+                android:text="@string/button_x"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                app:backgroundTint="#9FEEEE" />
+
+            <Button
+                android:id="@+id/button_y_ahorcado"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/boton_border_mini"
+                android:fontFamily="@font/grandstanderclean"
+                android:onClick="teclaPresionada"
+                android:text="@string/button_y"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                app:backgroundTint="#9FEEEE" />
+
+            <Button
+                android:id="@+id/button_z_ahorcado"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/boton_border_mini"
+                android:fontFamily="@font/grandstanderclean"
+                android:onClick="teclaPresionada"
+                android:text="@string/button_z"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                app:backgroundTint="#9FEEEE" />
+
+            <Button
+                android:id="@+id/button_z2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/grandstanderclean"
+                android:onClick="teclaPresionada"
+                android:text="@string/button_z"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                android:visibility="invisible"
+                app:backgroundTint="#9FEEEE" />
+        </TableRow>
+
+    </TableLayout>
+
+</RelativeLayout>
